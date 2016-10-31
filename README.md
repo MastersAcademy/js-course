@@ -52,21 +52,19 @@ Projects for teams(це загальні теми, вони будуть уто�
  * Yana Tsylinska (https://github.com/yana-tsulya)
 
 
-# [Hometasks](https://github.com/MastersAcademy/js-course/issues/1)
+# [Hometasks](https://github.com/MastersAcademy/js-course/issues/)
 
 
 # Useful links
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Markdown Cheatsheet")
  * [Try GitHub](https://try.github.io)
- * [Node.js](https://nodejs.org/)
- * [Npm docs](https://docs.npmjs.com/)
 
 
 Course structure
 ----------------------
 ## Intro.
 
-1. GIT Инструменты для фронтенд разработки.
+1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
 
 ## Введение в JavaScript.
 
