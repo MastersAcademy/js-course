@@ -1,0 +1,19 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "first_pack_json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello!\";"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MastersAcademy/js-course.git"
+  },
+  "author": "Viacheslav_Karpenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MastersAcademy/js-course/issues"
+  },
+  "homepage": "https://github.com/MastersAcademy/js-course#readme"
+}
