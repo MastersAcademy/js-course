@@ -1,0 +1,11 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "First homework made with love",
+  "main": "index.js",
+  "scripts": {
+    "test": "alert(42);"
+  },
+  "author": "Olya Dowgal",
+  "license": "ISC"
+}
