@@ -1,0 +1,15 @@
+{
+  "name": "sergiy",
+  "version": "3.10.8",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "var HTTPServer = require('http-server');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SiegfriedIX/js-course/upload/master/homeworks/Sergiy.Reva_SiegfriedIX/homework_1"
+  },
+  "author": "Serg",
+  "license": "ISC"
+}
