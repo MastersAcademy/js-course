@@ -1,2 +1,2 @@
-nodejs v4.2.6
-npm v3.5.2
+nodejs v6.9.1
+npm v3.10.8
