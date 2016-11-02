@@ -1,7 +1,7 @@
 {
   "name": "homework_1",
   "version": "1.0.0",
-  "description": "Hi there!   node v5.12.0   npm v3.10.8",
+  "description": "Hi there!   node v6.9.1   npm v3.10.8",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
