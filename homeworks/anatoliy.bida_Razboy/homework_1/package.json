@@ -1,0 +1,19 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "Hello World",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello World\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Razboy/js-course.git"
+  },
+  "author": "Razboy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Razboy/js-course/issues"
+  },
+  "homepage": "https://github.com/Razboy/js-course#readme"
+}
