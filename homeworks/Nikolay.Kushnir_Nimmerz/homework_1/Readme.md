@@ -1,3 +1,3 @@
 First homework with creating Package.json
 
-node 4.2.6 npm v3.5.2
+node 7.0.0 npm v3.10.9
