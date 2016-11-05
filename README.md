@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+﻿node version 6.9.1 npm version 3.10.8
+=======
 # **JS Course**
 
 Masters Academy JavaScript courses project for season 2016/2017
@@ -87,3 +90,4 @@ Course structure
 4. Обмен данными с сервером. XMLHTTPRequest vs jQuery.ajax(). 
 
 ## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
+>>>>>>> c2a35cd25f4a69268b0be7979fa2e044911c02d2
