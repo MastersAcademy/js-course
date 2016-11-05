@@ -1,3 +1,3 @@
-nodejs 4.2.6
+nodejs 6.9.1
 npm 3.5.2
 
