@@ -1,0 +1,21 @@
+{
+  "name": "js-course",
+  "version": "1.0.0",
+  "description": "homework1",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KateSyrotchuk/js-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KateSyrotchuk/js-course/issues"
+  },
+  "homepage": "https://github.com/KateSyrotchuk/js-course#readme"
+}
