@@ -1,0 +1,19 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "homework_1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/julyalitvin/js-course.git"
+  },
+  "author": "Julya Litvin <julya.lv95@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julyalitvin/js-course/issues"
+  },
+  "homepage": "https://github.com/julyalitvin/js-course#readme"
+}
