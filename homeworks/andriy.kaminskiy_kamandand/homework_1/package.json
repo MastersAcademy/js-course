@@ -6,6 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Andriy Kaminskiy",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamandand/js-course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kamandand/js-course/issues"
+  },
+  "homepage": "https://github.com/kamandand/js-course#readme"
 }
