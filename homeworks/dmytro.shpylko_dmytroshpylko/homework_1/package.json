@@ -1,0 +1,11 @@
+{
+  "name": "test-for-homework",
+  "version": "1.0.0",
+  "description": "Test for my first homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dmytroshpylko",
+  "license": "ISC"
+}
