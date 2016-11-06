@@ -1,0 +1,21 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "nodejs = 7.0.0; npm = 3.10.8",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KateSyrotchuk/js-course.git"
+  },
+  "author": "Kate Syrotchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KateSyrotchuk/js-course/issues"
+  },
+  "homepage": "https://github.com/KateSyrotchuk/js-course#readme"
+}
