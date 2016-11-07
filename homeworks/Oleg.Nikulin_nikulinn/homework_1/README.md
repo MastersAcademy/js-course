@@ -1,2 +1,2 @@
-npm version 2.15.9
-node version 4.6.1
+npm version 3.8.6
+node version 6.0.0
