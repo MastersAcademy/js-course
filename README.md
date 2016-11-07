@@ -78,6 +78,6 @@ Projects for teams(це загальні теми, вони будуть уто�
 
 2. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
 
-3. Обмен данными с сервером. XMLHTTPRequest vs jQuery.ajax(). 
+3. Обмен данными с сервером, формат JSON. XMLHTTPRequest vs jQuery.ajax(). 
 
 ## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
