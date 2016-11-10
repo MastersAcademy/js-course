@@ -73,7 +73,7 @@
     console.log('*************************************************************************');
 
     console.log(arr1.sort(function (a, b){
-
+    //
         if(a > b){
 
             return 1;
@@ -105,7 +105,7 @@
 
         if(number1 > number2){
 
-            number2 += 150
+            number2 += 150;
 
         }
 

@@ -4,6 +4,28 @@ Masters Academy JavaScript courses project for season 2016/2017
 -----------------------------------------------------------------------
 [![Join the chat at https://gitter.im/Masters-Academy/js-course-2016](https://badges.gitter.im/ZhuChara2004/MA-Summer-Practice-2016.svg)](https://gitter.im/Masters-Academy/js-course-2016?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+# Course structure
+
+## Intro.
+
+1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
+
+## Введение в JavaScript.
+
+1. Синтаксис языка. Объявление переменных, массивы, объекты и функции. Условные операторы. Циклы и итераторы.
+   [Best practices, style guides, patterns, libraries and more](http://jstherightway.org/)
+    
+2. Контекст выполнения, замыкания, рекурсия и функции высшего порядка.
+
+## Работа с [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), [jQuery](https://jquery.com/).
+
+1. Основы HTML5, CSS3
+
+2. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
+
+3. Обмен данными с сервером, формат JSON. XMLHTTPRequest vs jQuery.ajax(). 
+
+## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
 
 Terms and conditions
 --------------------
@@ -58,26 +80,3 @@ Projects for teams(це загальні теми, вони будуть уто�
 # Useful links
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Markdown Cheatsheet")
  * [Try GitHub](https://try.github.io)
-
-
-# Course structure
-
-## Intro.
-
-1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
-
-## Введение в JavaScript.
-
-1. Синтаксис языка. Объявление переменных, массивы, объекты и функции. Условные операторы. Циклы и итераторы.
-
-2. Контекст выполнения, замыкания, рекурсия и функции высшего порядка.
-
-## Работа с [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), [jQuery](https://jquery.com/).
-
-1. Основы HTML5, CSS3
-
-2. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
-
-3. Обмен данными с сервером, формат JSON. XMLHTTPRequest vs jQuery.ajax(). 
-
-## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
