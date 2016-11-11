@@ -17,7 +17,7 @@ console.log(x);
 
 // part 3
 function findMinMax(array, behavior) {
-	if (behavior == 'min' || behavior == 'max')
+	if (typeof array !== 'undefined' && (behavior == 'min' || behavior == 'max'))
 		return Math[behavior](...array);
 
 	return null;
@@ -31,8 +31,8 @@ console.log(findMinMax(x, 'max'));
 function convertArrayToObj(array) {
 	console.log(array);
 
-	if (array.length) {
-		let res = {}
+	if (typeof array !== 'undefined' && array.length) {
+		let res = {},
 			i = 0,
 			an = 'a'.charCodeAt(0), 
 			zn = 'z'.charCodeAt(0);
@@ -49,17 +49,19 @@ function convertArrayToObj(array) {
 	return {};
 }
 
-var xo = convertArrayToObj();
+var xo = convertArrayToObj(x);
 console.log(typeof xo, xo);
 
 
 // part 5
 Array.prototype.filterTheSame = function(array) {
-	for (let i in array) {
-		let idx = this.indexOf(array[i]);
+	if (typeof array !== 'undefined' && array.length) {
+		for (let i in array) {
+			let idx = this.indexOf(array[i]);
 
-		if (idx !== -1)
-			this.splice(idx, 1);
+			if (idx !== -1)
+				this.splice(idx, 1);
+		}
 	}
 }
 
