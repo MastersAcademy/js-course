@@ -13,7 +13,9 @@ Masters Academy JavaScript courses project for season 2016/2017
 ## Введение в JavaScript.
 
 1. Синтаксис языка. Объявление переменных, массивы, объекты и функции. Условные операторы. Циклы и итераторы.
-   [Best practices, style guides, patterns, libraries and more](http://jstherightway.org/)
+   [**Домашняя работа**](https://github.com/MastersAcademy/js-course/tree/master/lectures/lecture1/homework)
+   Вспомогательные материалы : [Best practices, style guides, patterns, libraries and more](http://jstherightway.org/)
+   
     
 2. Контекст выполнения, замыкания, рекурсия и функции высшего порядка.
 
