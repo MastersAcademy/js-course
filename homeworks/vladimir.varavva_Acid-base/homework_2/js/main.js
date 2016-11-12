@@ -48,21 +48,15 @@
   
     function convertArrayToObj(array) {
       var obj = {},
-          index = 1,
+          counter = 0,
           value;
 
       for (var i = 0; i < array.length; i++) {
-        if (i < 26) {
-          value = String.fromCharCode(index + 96);
-          index++;
-        } 
-        else if (i > 25) {
-          value = index - 26;
-          index++;
-        } 
+        if (i < 26) value = String.fromCharCode(counter + 97);
+        else if (i > 25) value = counter - 25;
+        counter++;
         obj[value] = array[i];
       }
-      
       return obj;
     }
   
@@ -85,7 +79,6 @@
       oldData = [12, 5, 7, 17, 22, 32];
 
   filterNew(newData, oldData);
-  
   console.log(newData); 
-  
+
 })();
