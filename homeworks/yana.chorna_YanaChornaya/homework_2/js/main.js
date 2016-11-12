@@ -31,10 +31,15 @@
 
 //Написать функцию преобразования массива в объект
 	function convertArrayToObj (array) {
-    	var obj = {};
-    	var field = 'abcdefghijklmnopqrstuvwxyz123456789';
+    	var obj = {}, j = 1;
+    	var field = 'abcdefghijklmnopqrstuvwxyz';
     	for(var i = 0; i < array.length; i++) {
-    		obj[field.charAt(i)] = array[i];
+    		if (i < 26) {
+    			obj[field.charAt(i)] = array[i];
+    		}
+    		else if (i > 25) {
+    			obj[j++] = array[i];
+    		}
     	}
     	return obj;
 	}
