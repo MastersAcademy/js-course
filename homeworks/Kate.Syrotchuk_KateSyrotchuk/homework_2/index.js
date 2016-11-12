@@ -1,8 +1,9 @@
+(function () {
 var arr = [];
 for (var i = 0; i < 100; i++) {
-    arr.push(Math.round(Math.random() * 100));
+    arr.push(Math.floor(Math.random() * 100 + 1));
 }
-// console.log(arr);
+console.log(arr);
 
 function findMinMax(arr, param) {
     if (param == undefined) {
@@ -28,7 +29,8 @@ function findMinMax(arr, param) {
 }
 
 // arr = [-1, -5, 5 , 10];
-// console.log(findMinMax(arr, 'min'));
+console.log(findMinMax(arr, 'min'));
+console.log(findMinMax(arr, 'max'));
 
 function arrayToObject(arr) {
     var s, obj = {}, i = 0, j = 1;
@@ -68,3 +70,4 @@ var oldData = [12, 5, 7, 17, 22, 32];
 filterNew(newData, oldData);
 
 console.log(newData);
+})();
