@@ -63,20 +63,20 @@
 
     // 5) An array filter function
 
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
-    var index;
-
     function filterNew(arr1, arr2) {
-        for (var i = 0; i < arr2.length; i++) {
-            index = arr1.indexOf(arr2[i]);
-            if (index > -1) {
-                arr1.splice(index, 1);
+        for (var i=0; i < arr1.length; i++) {
+            for (var j=0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    arr1.splice(i, 1);
+                    i = -1;
+                }
             }
         }
     }
 
-    filterNew(newData, oldData);
-    console.log(newData);
+    var arr1 = [2, 2, 3, 3, 15];
+    var arr2 = [2, 3, 10];
+    filterNew(arr1, arr2);
+    console.log(arr1);
 
 })();
