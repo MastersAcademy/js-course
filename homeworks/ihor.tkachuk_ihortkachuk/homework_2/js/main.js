@@ -51,13 +51,20 @@
      * @param { Array } arr2 - Second array.
      */
     function filterNew(arr1, arr2) {
-        arr2.forEach(function (element) {
-            var index = arr1.indexOf(element);
-            if (index !== -1) {
-                arr1.splice(index, 1)
+        var index = 0;
+        while (index <= arr1.length) {
+            if (arr2.indexOf(arr1[index]) !== -1) {
+                arr1.splice(index, 1);
+                continue;
             }
-        });
+            index++;
+        }
     }
+
+    var arr1 = [2, 2, 3, 3, 15];
+    var arr2 = [2, 3, 10];
+    filterNew(arr1, arr2);
+    console.log(arr1);
 
     /**
      * Returns a random number between min and max.
