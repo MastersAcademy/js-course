@@ -170,5 +170,18 @@ task_5
 	
 	filterNew(newData, oldData);
 	console.log("Answer for task_5: " + newData);
+
+
+	// Проверь решение filterNew с таким примером
+	
+	var arr1 = [2, 2, 3, 3, 15 ] ; 
+	var arr2 = [2, 3, 10]; 
+	
+
+
+	filterNew(arr1, arr2);
+	console.log("Answer for task_5.1: " + arr1);
+	console.log(arr1);
+
 	
 })();
