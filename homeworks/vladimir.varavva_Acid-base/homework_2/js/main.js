@@ -52,7 +52,6 @@
           value;
 
       for (var i = 0; i < array.length; i++) {
-  
         if (i < 26) {
           value = String.fromCharCode(index + 96);
           index++;
@@ -60,8 +59,7 @@
         else if (i > 25) {
           value = index - 26;
           index++;
-        }
-        
+        } 
         obj[value] = array[i];
       }
       
@@ -76,9 +74,7 @@
    ===========================*/
 
   function filterNew(arr1, arr2) {
-
     for (var i = 0; i < arr1.length; i++) {
-
       for (var n = 0; n < arr2.length; n++) {
         if (arr1[i] === arr2[n]) arr1.splice(i, 1);
       }
@@ -91,6 +87,5 @@
   filterNew(newData, oldData);
   
   console.log(newData); 
-
-
+  
 })();
