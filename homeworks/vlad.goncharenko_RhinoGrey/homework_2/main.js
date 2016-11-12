@@ -34,7 +34,7 @@
 
         if (MinMax == 'max') {
 
-            for (var index in arrayToFind) {
+            for (var index = 0; index < arrayToFind.length; index++) {
 
                 if (minMaxValue < arrayToFind[index]) {
 
@@ -44,7 +44,7 @@
 
         } else if (MinMax == 'min') {
 
-            for (var index in arrayToFind) {
+            for (var index = 0; index < arrayToFind.length; index++) {
 
                 if (minMaxValue > arrayToFind[index]) {
 
@@ -78,7 +78,7 @@
 
         obj = {};
 
-        for (var index in randomNumbers) {
+        for (var index = 0; index < randomNumbers.length; index++) {
 
             if (index < 26) {
 
@@ -106,9 +106,9 @@
 
     function filterNew (newData, oldData) { //Array comparator
 
-        for (var indexOld in oldData ) {
+        for (var indexOld = 0; indexOld < oldData.length; indexOld++) {
 
-            for (var indexNew in newData) {
+            for (var indexNew = 0; indexNew < newData.length; indexNew++) {
 
                 if (newData[indexNew] == oldData[indexOld]) {
 
