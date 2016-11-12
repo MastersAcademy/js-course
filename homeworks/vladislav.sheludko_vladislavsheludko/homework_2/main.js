@@ -15,9 +15,9 @@
      Функция должна называться findMinMax , принимать в параметрах массив для
      поиска и строку, определяющую действие функции. Функция должна возвратить найденный элемент
      */
-    function findMinMax(arrToFind, MaxMin) {
+    function findMinMax(arrToFind, maxMin) {
         var n = arrToFind[0];
-        if (MaxMin == 'min') {
+        if (maxMin == 'min') {
             for (i = 0; i < arrToFind.length; i++) {
                 if (n > arrToFind[i]) {
                     n = arrToFind[i];
@@ -25,7 +25,7 @@
             }
         }
 
-        else if (MaxMin == 'max') {
+        else if (maxMin == 'max') {
             for (i = 0; i < arrToFind.length; i++) {
                 if (n < arrToFind[i]) {
                     n = arrToFind[i];
@@ -79,12 +79,13 @@
             for (var n = 0; n < arr2.length; n++) {
                 if (arr1[i] == arr2[n]) {
                     arr1.splice(i, 1);
+                    i--;
                 }
             }
         }
     }
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
+    var newData = [2, 2, 3, 3, 15];
+    var oldData = [2, 3, 10];
     filterNew(newData, oldData);
     console.log(newData);
 
