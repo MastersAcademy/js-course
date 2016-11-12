@@ -4,17 +4,17 @@
   */
   var array = [];
   console.log("\n\nResults of task 1\n");
-  console.log("Array has " + array.length + " elements.");
+  console.log("Array has been created. Array has " + array.length + " elements");
 
   /*
-      2) to fill array with 100 integer numbers from 1 to 100,
+      2) fill array with 100 integer numbers from 1 to 100,
       used Math.random(), 0 ≤ Math.random() < 1
    */
   function getRandomInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   for (var i = 0; i < 100; i++) {
-    array.push(getRandomInteger(1,100));
+    array.push(getRandomInteger(1, 100));
   }
   console.log("\n\nResults of task 2\n");
   console.log(array.toString());
@@ -55,7 +55,7 @@
   console.log(resultMin != null ? resultMin :  "doesn\'t define criteria of search method!"); // -6
 
   /*
-      4) function which fills property\'s object\'s values  with values from array :
+      4) function fills property\'s object\'s values  with values from array :
       plus first 26 object field\'s keys must called like small letters of English alphabet - a..z,
       other object field\'s keys must called like arabic numbers 1..n
   */
@@ -76,19 +76,34 @@
       arrStorage[k] = k + 1;
   }
   var object = convertArrayToObj(arrStorage);
-  var objectInTxtFormat = "{\n";
-
+  var objectInTxtFormat = "{\n\t";
+  var temp = "";
+  /*
+    js doesn\'t guarantee the order for object\'s fields, so there is order in string temp object\'s keys like -
+    at first - numbers keys and after that - letters keys
+  */
   for (var key in object) {
     if (object.hasOwnProperty(key)) {
-      objectInTxtFormat += "\t\'" + key + "\' : "+ object[key] + ",\n";
+      temp += "\t\'" + key + "\' : "+ object[key] + ",\n";
     }
+  }
+  /* find position object\'s key 'a' and push temp string to output result string objectInTxtFormat
+     from this position to position of last element\'s with letter\'s key
+  */
+  var pos = temp.search(/\s+'a\'\s+:/);
+  for (var t = pos; t  < temp.length; t++) {
+    objectInTxtFormat += temp[t];
+  }
+  // push rest part of temp string in output result string objectIntTxtFormat
+  for (var b = 0; b < pos; b++) {
+    objectInTxtFormat += temp[b];
   }
   objectInTxtFormat += "\n}";
   //delete last extra comma from string objectInTxtFormat before output
-  console.log(objectInTxtFormat.replace(/,(?![^,]*,)/m, ""));
+  console.log(objectInTxtFormat.replace(/,\s+}\s*$/, "\n}"));
 
   /*
-      5) function filterNew(arr1, arr2) what deletes from one array(arr1)
+      5) function filterNew(arr1, arr2) deletes from one array(arr1)
       all elements of second array(arr2)
   */
   function filterNew(arr1, arr2) {
