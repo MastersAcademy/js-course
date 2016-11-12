@@ -76,29 +76,69 @@
       arrStorage[k] = k + 1;
   }
   var object = convertArrayToObj(arrStorage);
+  /*
+  // - 1 -
+  // modify string output with correct order of object\'s keys
   var objectInTxtFormat = "{\n\t";
   var temp = "";
-  /*
-    js doesn\'t guarantee the order for object\'s fields, so there is order in string temp object\'s keys like -
-    at first - numbers keys and after that - letters keys
-  */
   for (var key in object) {
     if (object.hasOwnProperty(key)) {
       temp += "\t\'" + key + "\' : "+ object[key] + ",\n";
     }
   }
-  /* find position object\'s key 'a' and push temp string to output result string objectInTxtFormat
-     from this position to position of last element\'s with letter\'s key
-  */
   var pos = temp.search(/\s+'a\'\s+:/);
   for (var t = pos; t  < temp.length; t++) {
     objectInTxtFormat += temp[t];
   }
-  // push rest part of temp string in output result string objectIntTxtFormat
-  for (var b = 0; b < pos; b++) {
+   for (var b = 0; b < pos; b++) {
     objectInTxtFormat += temp[b];
   }
   objectInTxtFormat += "\n}";
+  */
+
+  // - 2 -
+
+  var objectInTxtFormat = "{\n";
+ // define new array which consists with object\'s keys - in order 1..n then 'a'..'z'
+  var arrOfObjKeys = Object.keys(object);
+  function compare(x, y) {
+    return x > y ? 1 : -1;
+  }
+  function isItChar(element) {
+    return element.charCodeAt() >= 97 && element.charCodeAt() <= 122 ? true : false;
+  }
+
+  // make from chars element in arrOfObjKeys array - integer negative values -
+  // - to sort them with other integer keys
+  // - to defines right keys order at first 'a'..'z' then 1..n
+  arrOfObjKeys.sort( function(a, b) {
+    var tmp1 = 0, tmp2 = 0;
+    if (isItChar(a) && !isItChar(b)) {
+      tmp1 = a.charCodeAt() - 200;
+      return compare(tmp1, parseInt(b));
+    }
+    if (!isItChar(a) && isItChar(b)) {
+      tmp2 = b.charCodeAt() - 200;
+      return compare(parseInt(a), tmp2);
+    }
+    if (isItChar(a) && isItChar(b)) {
+      tmp1 = a.charCodeAt() - 200;
+      tmp2 = b.charCodeAt() - 200;
+      return compare(tmp1, tmp2);
+    }
+    if (!isItChar(a) && !isItChar(b)) {
+      return compare(parseInt(a), parseInt(b));
+    }
+  });
+  // build output object\'s fields by order with define in arrOfObjKeys array
+  for (var key in arrOfObjKeys) {
+    if (arrOfObjKeys.hasOwnProperty(key)) {
+      objectInTxtFormat += "\t\'" + arrOfObjKeys[key] + "\' : "+ object[arrOfObjKeys[key]] + ",\n";
+    }
+  }
+
+  objectInTxtFormat += "\n}";
+  console.log("\n\nResults of task 4\n");
   //delete last extra comma from string objectInTxtFormat before output
   console.log(objectInTxtFormat.replace(/,\s+}\s*$/, "\n}"));
 
