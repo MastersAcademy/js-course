@@ -48,6 +48,7 @@
     }
 
     function filterNew(arrayNew, arrayOld) {
+
        for (i = 0; i < arrayNew.length; i++) {
            for (var k = 0; k < arrayOld.length; k++) {
                if (arrayNew[i] === arrayOld[k]) {
@@ -57,4 +58,5 @@
            }
        }
     }
+
 })();
