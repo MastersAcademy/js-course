@@ -1,30 +1,24 @@
 (function () {
   'use strict';
+ 
+// 1
+ 
+    var integers = [];
+  
+// 2
 
-    /*============================
-            1
-     ===========================*/
-  
-    var integer = [];
-  
-    /*============================
-            2
-     ===========================*/
-  
     function getRandom(min, max) {
       return Math.round( Math.random() * (max - min) + min );
     }
   
     for (var i = 0; i < 100; i++) {
-      integer[i] = getRandom(1, 100);
+      integers[i] = getRandom(1, 100);
     }
   
-    console.log(integer);
-  
-    /*============================
-            3
-     ===========================*/
-  
+    console.log(integers);
+
+// 3
+
     function compareNumeric(a, b) {
       return a - b;
     }
@@ -42,30 +36,23 @@
     console.log(resultMax);
     console.log(resultMin);
   
-    /*============================
-            4
-     ===========================*/
-  
-    function convertArrayToObj(array) {
-      var obj = {},
-          counter = 0,
-          value;
+// 4
 
-      for (var i = 0; i < array.length; i++) {
-        if (i < 26) value = String.fromCharCode(counter + 97);
-        else if (i > 25) value = counter - 25;
-        counter++;
-        obj[value] = array[i];
+    function convertArrayToObj(arr) {
+      var key, obj = {};
+          
+      for (var i = 0; i < arr.length; i++) {
+        i < 26 ? key = String.fromCharCode(i + 97)
+               : key = i - 25;
+        obj[key] = arr[i];
       }
       return obj;
     }
   
     console.log( convertArrayToObj(arrayToFind) );
-    console.log( convertArrayToObj(integer) );
+    console.log( convertArrayToObj(integers) );
 
-  /*============================
-          5
-   ===========================*/
+// 5
 
   function filterNew(arr1, arr2) {
     for (var i = 0; i < arr1.length; i++) {
