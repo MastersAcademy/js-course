@@ -2,7 +2,7 @@
 
 (function () {
 
-	/* Get array */
+	/* Get array filled with random numbers from min to max*/
     function getArray() {
         var arr = [];
         var min = 1;
@@ -48,10 +48,10 @@
 
         array.forEach(function(value,i){
             if (data[i] !== undefined) {
-                obj[data[i]] = value;
+                obj[data[i]] = value; //alphabet keys 
                 alphabetIterations ++;
             } else {
-                obj[i - alphabetIterations + 1] = value;
+                obj[i - alphabetIterations + 1] = value; //numeric keys, starts from 1 
             }
         });
         return obj;
@@ -72,7 +72,7 @@
     }
     
     var ourArray = getArray();
-	console.log('init array:');
+	console.log('create array and fill it with number from 1 to 100:');
     console.log(ourArray);
 	
 	console.log('min in array:');
