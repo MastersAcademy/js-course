@@ -2,6 +2,7 @@
 
 (function () {
 
+	/* Get array */
     function getArray() {
         var arr = [];
         var min = 1;
@@ -16,7 +17,8 @@
         }
         return arr;
     }
-
+	
+	/* Find min or max in array */
     function findMinMax(array, minmax) {
         if ( minmax == "max" ) {
             array.max = function () {
@@ -32,7 +34,8 @@
         }
         return 'incorrect arguments';
     }
-
+	
+	/* convert Array to Obj */
     function convertArrayToObj(array) {
         var obj = {};
         var data = [];
@@ -56,7 +59,8 @@
 
     var newData = [2, 12, 22, 6, 32];
     var oldData = [12, 5, 7, 17, 22, 32];
-
+	
+	/*compare arrays and remove duplicates from the 1 one*/
     function filterNew(arr1, arr2) {
         for (var i = arr1.length; i >= 0; --i){
             for (var j = arr2.length; j >= 0; --j){
@@ -66,30 +70,20 @@
             }
         }
     }
-    /* Not working
-    function filterNew(arr1, arr2) {
-        arr1.filter(function (item, i) {
-            return arr2.indexOf(item) < 0;
-        });
-    }
-
-    function filterNew2(arr1, arr2) {
-        arr1.forEach(function(item, i) {
-            arr2.forEach(function(item2,j) {
-                if (item == item2) {
-                    arr1.splice(i,1);
-                }
-            })
-        });
-    }*/
-
-
+    
     var ourArray = getArray();
+	console.log('init array:');
     console.log(ourArray);
+	
+	console.log('min in array:');
     console.log(findMinMax(ourArray,'min'));
+	console.log('max in array:');
     console.log(findMinMax(ourArray,'max'));
+	
+	console.log('convert Array To Obj:');
     console.log(convertArrayToObj(ourArray));
 
+	console.log('array newData wth removed duplicates:');
     filterNew(newData, oldData);
     console.log(newData);
 
