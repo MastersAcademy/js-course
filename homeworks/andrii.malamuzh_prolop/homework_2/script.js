@@ -41,4 +41,21 @@
         return obj;
     }
     console.log(convertArrayToObj(numbers));
+
+    function filterNew(arr1, arr2) {
+        for (var i = 0; i < arr1.length; i++) {
+            for (var j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    arr1.splice(i, 1);
+                }
+            }
+        }
+    }
+
+    var newData = [2, 12, 22, 6, 32];
+    var oldData = [12, 5, 7, 17, 22, 32];
+
+    filterNew(newData, oldData);
+
+    console.log(newData);
 })();
