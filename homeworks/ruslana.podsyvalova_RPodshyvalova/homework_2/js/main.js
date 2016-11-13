@@ -1,13 +1,13 @@
 (function () {
   /*
-      1) create empty array
+      1) create an empty array
   */
   var array = [];
   console.log("\n\nResults of task 1\n");
-  console.log("Array has been created. Array has " + array.length + " elements");
+  console.log("An empty array has been created. Array has " + array.length + " elements");
 
   /*
-      2) fill array with 100 integer numbers from 1 to 100,
+      2) fill the array with 100 integer numbers from 1 to 100,
       used Math.random(), 0 ≤ Math.random() < 1
    */
   function getRandomInteger(min, max) {
@@ -21,9 +21,9 @@
   console.log("array\'s length is - " + array.length + " elements");
 
   /*
-      3) function findMinMax(arr , str) it must return minimum or maximum value of array,
-      first parameter arr -  array where looking for element,
-      second parameter str - string "min" or "max", which element looking for
+      3) function findMinMax(arr , str), it must return minimum or maximum value of array
+      first parameter of function is arr -  searching array
+      second parameter of function is str - string, that can equal one of two parameter: "min" or "max"
   */
   function findMinMax(arr, str) {
     var elementForCompare = arr[0];
@@ -55,10 +55,11 @@
   console.log(resultMin != null ? resultMin :  "doesn\'t define criteria of search method!"); // -6
 
   /*
-      4) function fills property\'s object\'s values  with values from array :
-      plus first 26 object field\'s keys must called like small letters of English alphabet - a..z,
-      other object field\'s keys must called like arabic numbers 1..n
+      4) function fills object's property's values  with data from array arr,
+      first 26 object's field's keys must named like small letters of English alphabet - a..z,
+      other object's field's keys must named like arabic numbers 1..n
   */
+  // function convertArrayToObj(arr) cteates object obj ans fills its properties from array's data
   function convertArrayToObj(arr) {
     var obj = {};
     for (var i = 0; i < arr.length; i++) {
@@ -70,15 +71,21 @@
     }
     return obj;
   }
-  console.log("\n\nResults of task 4\n");
+
   var arrStorage = [];
-  for (var k = 0; k < 100; k++) {
+  //var count = 10;
+  var count = 130;
+  for (var k = 0; k < count; k++) {
       arrStorage[k] = k + 1;
   }
+
   var object = convertArrayToObj(arrStorage);
+
+  // output object
+
   /*
   // - 1 -
-  // modify string output with correct order of object\'s keys
+  // modify string output with correct order of object's keys
   var objectInTxtFormat = "{\n\t";
   var temp = "";
   for (var key in object) {
@@ -97,20 +104,26 @@
   */
 
   // - 2 -
-
   var objectInTxtFormat = "{\n";
- // define new array which consists with object\'s keys - in order 1..n then 'a'..'z'
+ // define new array - arrOfObjKeys - which consists from object's keys
   var arrOfObjKeys = Object.keys(object);
   function compare(x, y) {
     return x > y ? 1 : -1;
   }
+
+  // test element if it's a char symbol -  'a' (ascii 97) <= element <= 'z' (ascii 122)
   function isItChar(element) {
     return element.charCodeAt() >= 97 && element.charCodeAt() <= 122 ? true : false;
   }
 
-  // make from chars element in arrOfObjKeys array - integer negative values -
-  // - to sort them with other integer keys
-  // - to defines right keys order at first 'a'..'z' then 1..n
+  /*
+   sort array of object's keys arrOfObjKeys and determine right keys order in array: at first 'a'..'z' then 1..n
+   so define pattern of output.
+   Because of content of array of keys arrOfObjKeys is numbers and chars - it is necessary to view char keys as integer,
+   so it is possible by use ascii code of char keys
+   and transform them to negative values for determine right keys order in array of object's keys,
+   at first 'a'..'z' then 1..n
+   */
   arrOfObjKeys.sort( function(a, b) {
     var tmp1 = 0, tmp2 = 0;
     if (isItChar(a) && !isItChar(b)) {
@@ -130,7 +143,7 @@
       return compare(parseInt(a), parseInt(b));
     }
   });
-  // build output object\'s fields by order with define in arrOfObjKeys array
+  // build output object's fields by order what determine in array of object's keys arrOfObjKeys
   for (var key in arrOfObjKeys) {
     if (arrOfObjKeys.hasOwnProperty(key)) {
       objectInTxtFormat += "\t\'" + arrOfObjKeys[key] + "\' : "+ object[arrOfObjKeys[key]] + ",\n";
@@ -139,7 +152,7 @@
 
   objectInTxtFormat += "\n}";
   console.log("\n\nResults of task 4\n");
-  //delete last extra comma from string objectInTxtFormat before output
+  //delete last extra comma from result string objectInTxtFormat before output
   console.log(objectInTxtFormat.replace(/,\s+}\s*$/, "\n}"));
 
   /*
@@ -147,10 +160,12 @@
       all elements of second array(arr2)
   */
   function filterNew(arr1, arr2) {
-    for (var n = 0; n < arr2.length; n++) {
-      for (var m =0; m < arr1.length; m++) {
-        if (arr2[n] === arr1[m]) {
-          arr1.splice(m, 1);
+    for (var n = 0; n < arr1.length; n++) {
+      for (var m =0; m < arr2.length; m++) {
+        if (arr1[n] === arr2[m]) {
+          arr1.splice(n, 1);
+          n--;
+          break;
         }
       }
     }
