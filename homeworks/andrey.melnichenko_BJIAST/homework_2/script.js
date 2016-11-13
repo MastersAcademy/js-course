@@ -46,13 +46,13 @@ function convertArrayToObj (array) {
 	str="abcdefghijklmnopqrstuvwxyz",
 	obj = {};
 	
-	for (var i = 1; i <= arr.length; i++){
+	for (var i = 1; i <= array.length; i++){
 		if (i <= 26){
 			key = str.charAt(i-1);
-			obj[key]=arr[i];
+			obj[key]=array[i];
 		}else if (i > 26) {
 			key = i-26;
-			obj[key]=arr[i];
+			obj[key]=array[i];
 		}
 	}
 	return obj;
