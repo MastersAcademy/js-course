@@ -4,6 +4,30 @@ Masters Academy JavaScript courses project for season 2016/2017
 -----------------------------------------------------------------------
 [![Join the chat at https://gitter.im/Masters-Academy/js-course-2016](https://badges.gitter.im/ZhuChara2004/MA-Summer-Practice-2016.svg)](https://gitter.im/Masters-Academy/js-course-2016?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+# Course structure
+
+## Intro.
+
+1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
+
+## Введение в JavaScript.
+
+1. Синтаксис языка. Объявление переменных, массивы, объекты и функции. Условные операторы. Циклы и итераторы.
+   [**Домашняя работа**](https://github.com/MastersAcademy/js-course/tree/master/lectures/lecture1/homework)
+   Вспомогательные материалы : [Best practices, style guides, patterns, libraries and more](http://jstherightway.org/)
+   
+    
+2. Контекст выполнения, замыкания, рекурсия и функции высшего порядка.
+
+## Работа с [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), [jQuery](https://jquery.com/).
+
+1. Основы HTML5, CSS3
+
+2. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
+
+3. Обмен данными с сервером, формат JSON. XMLHTTPRequest vs jQuery.ajax(). 
+
+## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
 
 Terms and conditions
 --------------------
@@ -26,7 +50,7 @@ Terms and conditions
    * мова коментарів - виключно англійська
    * символ табуляції - два пробіли
    * перевід строки - Unix (LF)
- * Запитання можна задавати електронною поштою, або у гіттері.
+ * Всі запитання, які стосуються курсів, задавати у гіттері.
 
 
 Project structure
@@ -58,32 +82,3 @@ Projects for teams(це загальні теми, вони будуть уто�
 # Useful links
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Markdown Cheatsheet")
  * [Try GitHub](https://try.github.io)
-
-
-Course structure
-----------------------
-## Intro.
-
-1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
-
-## Введение в JavaScript.
-
-1. Синтаксис языка. Объявление переменных, массивы, объекты и функции. Условные операторы. Циклы и итераторы.
-
-2. Замыкания, рекурсия и функции высшего порядка.
-
-3. Функциональное программирование в JS.
-
-4. ООП в JavaScript. Prototype(ES5) vs Class(ES6).
-
-## Работа с [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), [jQuery](https://jquery.com/).
-
-1. Основы HTML5
-
-2. Основы CSS3
-
-3. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
-
-4. Обмен данными с сервером. XMLHTTPRequest vs jQuery.ajax(). 
-
-## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
