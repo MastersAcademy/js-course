@@ -11,16 +11,16 @@ console.log("-------------------------------");
 function findMinMax(arr, action) {
 	var extremum = arr[0];
 	if (action == 'max') {
-		for (var i of arr) {
-			if (i > extremum) {
-				extremum = i;
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] > extremum) {
+				extremum = arr[i];
 			}	
 		}
 	}
 	if (action == 'min') {
-		for (var i of arr) {
-			if (i < extremum) {
-				extremum = i;
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] < extremum) {
+				extremum = arr[i];
 			}	
 		}
 	}
@@ -53,10 +53,6 @@ console.log(convertArrayToObj(arr));
 console.log("-------------------------------");
 
 function filterNew (arr1, arr2) {
-	//var newDataSet = new Set(arr1);
-	//var oldDataSet = new Set(arr2);
-	//var a = newDataSet.delete(oldDataSet);
-	//newData = Array.from(a);
 	newData = arr1.filter(function(x) {
 		return arr2.indexOf(x) < 0
 	});
@@ -71,3 +67,4 @@ for (var i = 0; i < 10; i++) {
 console.log(newData);
 console.log(oldData);
 filterNew(newData, oldData);
+
