@@ -70,16 +70,16 @@
             }
         }
     }
-    
-    var ourArray = getArray();
+
+	var ourArray = getArray();
 	console.log('create array and fill it with number from 1 to 100:');
 	console.log(ourArray);
-	
+
 	console.log('min in array:');
 	console.log(findMinMax(ourArray,'min'));
 	console.log('max in array:');
 	console.log(findMinMax(ourArray,'max'));
-	
+
 	console.log('convert Array To Obj:');
 	console.log(convertArrayToObj(ourArray));
 
