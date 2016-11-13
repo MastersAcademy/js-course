@@ -61,21 +61,22 @@
 
     // 5 remove elements of the first array
 
+
     function filterNew(array1, array2) {
-        array2.forEach(function (element) {
-            var findElem = array1.indexOf(element);
-            if (findElem !== -1) {
-                array1.splice(findElem, 1)
+        var findElem = 0;
+            while (findElem <= array1.length) {
+                if (array2.indexOf(array1[findElem]) !== -1) {
+                    array1.splice(findElem, 1);
+                    continue;
+                }
+                    findElem++;
             }
-        });
     }
 
-    var newData = [ 12, 22, 6, 32, 8, 9, 10, 33];
 
-    var oldData = [12, 5, 7, 17, 22, 32, 33];
-
-    filterNew(newData, oldData);
-
-    console.log(newData);
+    var arr1 = [2, 2, 3, 3, 15 ] ;
+    var arr2 = [2, 3, 10];
+    filterNew(arr1, arr2);
+    console.log(arr1);
 
 })();
