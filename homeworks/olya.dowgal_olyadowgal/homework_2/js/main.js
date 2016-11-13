@@ -6,7 +6,6 @@
         arr[i] = Math.floor(Math.random() * 99 + 1);
     }
 
-
     function findMinMax(arrToFind, strFunc) {
         var temp;
         if (strFunc == "max") {
@@ -14,8 +13,8 @@
             arrToFind.forEach(function (element) {
                     if (temp < element) temp = element;
                 }
-            )
-            return ("Max in array is: "+temp);
+            );
+            return ("Max in array is: " + temp);
 
         } else {
             if (strFunc == "min") {
@@ -23,8 +22,8 @@
                 arrToFind.forEach(function (element) {
                         if (temp > element) temp = element;
                     }
-                )
-                return ("Min in array is: "+temp);
+                );
+                return ("Min in array is: " + temp);
             } else {
                 return ("Your's string had some problems. It's looks like :" + strFunc + ". When it's must be min of max.");
             }
@@ -51,22 +50,22 @@
         arr2.forEach(function (element) {
                 var ind = arr1.indexOf(element);
                 while (ind != -1) {
-                    arr1.splice(ind,1);
-                    var ind = arr1.indexOf(element);
+                    arr1.splice(ind, 1);
+                    ind = arr1.indexOf(element);
                 }
             }
         )
-
     }
+
     //Task 1,2 test
 
     console.log(arr);
 
     //Task 3 test
 
-    var testMin = findMinMax(arr,"min");
+    var testMin = findMinMax(arr, "min");
     var testMax = findMinMax(arr, "max");
-    var testException = findMinMax(arr,"equals");
+    var testException = findMinMax(arr, "equals");
     console.log(testMin);
     console.log(testMax);
     console.log(testException);
@@ -78,9 +77,9 @@
 
     //Task 5 test
 
-    var arrTest1 = [1,2,3,4,5,6,7,8,9];
-    var arrTest2 = [2,4,6,8];
-    filterNew(arrTest1,arrTest2);
+    var arrTest1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var arrTest2 = [2, 4, 6, 8];
+    filterNew(arrTest1, arrTest2);
     console.log(arrTest1);
 
 })();
