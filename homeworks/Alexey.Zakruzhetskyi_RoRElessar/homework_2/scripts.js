@@ -52,6 +52,7 @@
             for (var j = 0; j < newData.length; j++) {
                 if (newData[j] == oldData[i]) {
                     newData.splice(j, 1);
+                    i--;
                 };
             };
         };
