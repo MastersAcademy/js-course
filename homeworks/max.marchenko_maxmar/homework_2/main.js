@@ -1,5 +1,3 @@
-'use strict';
-
 // part 1
 var count = 100,
 	x = []; 
@@ -7,32 +5,30 @@ var count = 100,
 
 // part 2
 function setArr(array) {
-	for (let i = 0; i < count; i++)
+	for (var i = 0; i < count; i++)
 		array.push(Math.floor(Math.random() * 100 + 1));
 }
 
 setArr(x); 
-console.log(x);
+console.log('Set 100 elements in array: ', x, "\n\n\n");
 
 
 // part 3
 function findMinMax(array, behavior) {
 	if (typeof array !== 'undefined' && (behavior == 'min' || behavior == 'max'))
-		return Math[behavior](...array);
+		return Math[behavior].apply(null, array);
 
 	return null;
 }
 
-console.log(findMinMax(x, 'min'));
-console.log(findMinMax(x, 'max'));
+console.log('Min element of array: ', findMinMax(x, 'min'));
+console.log('Max element of array: ', findMinMax(x, 'max'), "\n\n\n");
 
 
 // part 4
 function convertArrayToObj(array) {
-	console.log(array);
-
 	if (typeof array !== 'undefined' && array.length) {
-		let res = {},
+		var res = {},
 			i = 0,
 			an = 'a'.charCodeAt(0), 
 			zn = 'z'.charCodeAt(0);
@@ -50,18 +46,22 @@ function convertArrayToObj(array) {
 }
 
 var xo = convertArrayToObj(x);
-console.log(typeof xo, xo);
+console.log('Converted to object: ', typeof xo, xo, "\n\n\n");
 
 
 // part 5
 Array.prototype.filterTheSame = function(array) {
 	if (typeof array !== 'undefined' && array.length) {
-		for (let i in array) {
-			let idx = this.indexOf(array[i]);
+		var self = this;
 
-			if (idx !== -1)
-				this.splice(idx, 1);
-		}
+		Object.keys(array).forEach(function (key) {
+            if (array.hasOwnProperty(key)) {
+				var idx = self.indexOf(array[key]);
+
+				if (idx !== -1)
+					self.splice(idx, 1);
+            }
+        });
 	}
 }
 
