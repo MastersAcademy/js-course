@@ -48,19 +48,22 @@
 	console.log(convertArrayToObj(data));
 	
 //Написать функцию фильтрации массива filterNew(arr1, arr2)
-	function filterNew(arr1, arr2) {
-		for (var i = 0; i < arr1.length; i++) {
-			for (var j = 0; j < arr2.length; j++) {
-				if (arr1[i] == arr2[j]) {
-					arr1.splice(i, 1);
-				}
-			}
-		}
-	}
 
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
-    filterNew(newData, oldData);
-    console.log(newData); // in console : [2, 6];
+    function filterNew(arr1, arr2) {
+   	 	var index;
+        for (var i = 0; i < arr2.length; i++) {
+             index = arr1.indexOf(arr2[i]);
+             while (index != -1) {
+                 arr1.splice(index, 1);
+                 index = arr1.indexOf(arr2[i]);
+             }
+         }
+ 	}
+
+    var arr1 = [2, 2, 3, 3, 15 ] ; 
+	var arr2 = [2, 3, 10]; 
+	filterNew(arr1, arr2);
+	console.log(arr1);
+
 
 })();
