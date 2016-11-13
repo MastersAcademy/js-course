@@ -64,7 +64,7 @@
             for (var n = 0; n < arr2.length; n++) {
                 if (arr1[i] == arr2[n]) {
                     arr1.splice(i, 1);
-                    i--;
+                    i--; //fix
                 }
             }
         }
