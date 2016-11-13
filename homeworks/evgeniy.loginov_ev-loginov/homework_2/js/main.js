@@ -32,13 +32,13 @@
 
     }
 
-    var resultMax = findMinMax(arr, "max");
+    var resultMax = findMinMax(arr, 'max');
 	
-    var resultMin = findMinMax(arr, "min");
+    var resultMin = findMinMax(arr, 'min');
 
-    console.log("Max:" + resultMax);
+    console.log('Max:' + resultMax);
 
-    console.log("Min:" + resultMin);
+    console.log('Min:' + resultMin);
 
     console.log('**********4. Array to Object**********');
 	
