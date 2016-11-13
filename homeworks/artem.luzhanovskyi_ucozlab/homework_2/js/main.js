@@ -43,7 +43,6 @@
 		}
 
 		return obj;
-
 	}
 
 	var resultConvertArrayToObj = convertArrayToObj(array);
@@ -52,13 +51,10 @@
 	// task5
 
 	var newData = [2, 12, 22, 6, 32];
-
 	var oldData = [12, 5, 7, 17, 22, 32];
-
 	filterNew(newData, oldData);
 
 	function filterNew(array1, array2) {
-
 		for (var i = 0; i < array1.length; i++) {
 			array2.forEach(function(j) {
 				if (array1[i] === j) {
@@ -66,8 +62,6 @@
 				}
 			});
 		}
-
-		console.log(array1);
 	}
 
 	console.log(newData); // in console : [2, 6];
