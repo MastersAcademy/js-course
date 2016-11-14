@@ -22,26 +22,23 @@
 		for(var x = 0; x < secondArr.length; x++) {
 			if (resultMax < secondArr[x]) resultMax = secondArr[x];
 			else if (resultMin > secondArr[x]) resultMin = secondArr[x];
-		} 		
+		}
 		console.log(secondArr);
 		console.log('max =', resultMax);
 		console.log('min =', resultMin);
 	}
 	findMinMax();
 	
-	/* написать функцию прелбразования массива в объект где именами полей объекта должны быть буквы латинского алфавита. Когда(если) алфавит закончится, ключи должны начать формироваться в виде цифр, начиная с 1. */
+	/* написать функцию преобразования массива в объект где именами полей объекта должны быть буквы латинского алфавита. Когда(если) алфавит закончится, ключи должны начать формироваться в виде цифр, начиная с 1. */
 	function convertArrayToObj(firstArr){
 		var alfb = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-		// var array;
 		var obj = {};
 		var j = 1;
-		for(var i = 0; i < alfb.length; i++){
+		for(var i = 0; i < firstArr.length; i++){
+			if (i<= alfb.length) {
 			obj[alfb[i]] = firstArr[i];
-		}
-		if(i != firstArr.length){
-			while(i < firstArr.length){
-				obj[j] = firstArr[i];
-				i++;
+			} else {
+				obj [j] = firstArr[i];
 				j++;
 			}
 		}
