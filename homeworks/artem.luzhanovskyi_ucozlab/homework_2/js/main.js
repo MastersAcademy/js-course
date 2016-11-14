@@ -20,8 +20,11 @@
 	}
 
 	var resultMax = findMinMax(array, 'max');
+    
 	var resultMin = findMinMax(array, 'min');
+    
 	console.log(resultMax);
+    
 	console.log(resultMin);
 
 	function convertArrayToObj(array) {	// task 4
@@ -70,8 +73,11 @@
 	// fixes
 
 	var arr1 = [2,2,3,3,15];
+    
 	var arr2 = [2,3,10];
+    
 	filterNew(arr1, arr2);
+
 	console.log(arr1);
 
 })();
