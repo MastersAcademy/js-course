@@ -66,11 +66,12 @@ console.log("Array1: ", array1);
            for (var j=0; j<oldData.length; j++){
                if (newData[i]==oldData[j]) {
                     newData.splice(i,1);
-                   newData.concat(newData);
+
                    oldData.splice(j, 1);
                }
            }
        }
+       newData.concat(newData);
    }
 
     filterNew (firstArray, secondArray);
