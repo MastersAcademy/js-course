@@ -72,16 +72,19 @@
 
 	function filterNew (firstArray, secondArray) {
 
-		secondArray.forEach( function(value) {
+		for (var i = 0; i < firstArray.length; i ++) {
 
-			var arrayElement = firstArray.indexOf(value);
+			secondArray.forEach( function(value) {
+				var arrayElement = firstArray.indexOf(value);
 
-			if (arrayElement != -1 ) {
-				firstArray.splice(arrayElement, 1);
-			}
+				if (arrayElement > -1 ) {
+					firstArray.splice(arrayElement, 1);
+					arrayElement = firstArray.indexOf(secondArray[value]);
+				}
 
-		});
+			});
 
+		}
 	}
 	
 	console.log('Array newData = ' + newData);
@@ -92,6 +95,13 @@
 	filterNew(newData, oldData);
 
 	console.log('The filter newData = ' + newData);
+
+	var arr1 = [2, 2, 3, 3, 15]; 
+	var arr2 = [2, 3, 10]; 
+
+	filterNew(arr1, arr2);
+
+	console.log('The filter arr1 = ' + arr1);
 
 
 })();
