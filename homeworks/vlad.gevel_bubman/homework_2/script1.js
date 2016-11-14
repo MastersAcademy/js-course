@@ -92,18 +92,20 @@ console.log(convertArrayToObj(array));
 //z5
 
 function filterNew(arr1, arr2){
-
-    for (var i = 0; i <= arr1.length;i++){
-
-        if (arr2.indexOf(arr1[i]) !== -1){
-
-            arr1.splice(i,1);
-
-            i = 0;
-
-        }
-
-    }
+	
+	for (var i = 0; i <= arr1.length;i++){
+	
+		for (var j = 0; j <= arr2.length; j++){
+	
+			if (arr2.indexOf(arr1[i]) !== -1){
+	
+				arr1.splice(i,1);
+	
+			}
+	
+		}
+	
+	}
 
 }
 
