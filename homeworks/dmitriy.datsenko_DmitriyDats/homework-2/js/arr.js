@@ -42,23 +42,21 @@
 
         var obj = {};
 
-        var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'y', 'z'];
+        var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
+        for (var i = 0, j = 1; i < myArray.length, j < myArray.length; i++, j++) {
 
-        for (var i = 0, j = 1; i < myArray.length; i++, j++) {
-
-            if (i < 23) {
+            if (i < 26) {
                 obj[alphabet[i]] = myArray[i];
             }
-            else if (j > 23) {
+            else if (j > 26) {
                 obj[j - alphabet.length] = myArray[i];
             }
         }
         return obj;
     }
 
-    var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
-
+    var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 16, 17, 18, 19, 20];
     console.log(convertArrayToObj(myArray));
 
 
@@ -66,25 +64,22 @@
      remove from the first array elements, which are in the first and in the second array. The function returns nothing
      and modifies the array directly first. Example of functions: */
 
-    function filterNew(newData, oldData) {
-        for (var i = 0; i < newData.length; i++) {
-            for (var j = 0; j < oldData.length; j++) {
-                if (newData[i] == oldData[j]) {
-                    newData.splice(i, 1);
-                    /*The splice method - is a versatile folding knife to work with arrays.
-                     Able to all: delete items, insert elements, to replace elements - one by one
-                     and the same time. https://learn.javascript.ru/array-methods*/
-
+    function filterNew(arr1, arr2) {
+        for (var i = 0; i < arr1.length; i++) {
+            for (var j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    arr1.splice(i, 1);
+                    i--
                 }
             }
         }
     }
 
-    var newData = [2, 12, 22, 6, 32];
+    var arr1 = [2, 2, 3, 3, 15];
 
-    var oldData = [12, 5, 7, 17, 22, 32];
+    var arr2 = [2, 3, 10];
 
-    filterNew(newData, oldData);
+    filterNew(arr1, arr2);
 
-    console.log(newData);
+    console.log(arr1);
 })();

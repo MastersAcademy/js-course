@@ -1,1 +1,1 @@
-Homework lecture ¹1
+Homework lecture â„–1
