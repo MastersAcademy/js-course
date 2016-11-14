@@ -3,17 +3,16 @@ function filterNew(mainArr, filterArr) {
         throw new TypeError();
     }
 
-    mainArr.forEach(function (val, ind) {
-        filterArr.forEach(function (v) {
-            if (v === val) {
-                mainArr[ind] = null;
+    for (var i = 0; i < mainArr.length; i++) {
+        filterArr.forEach(function (val) {
+            if (val === mainArr[i]) {
+                mainArr.splice(i, 1);
+                --i;
             }
         })
-    });
+    }
 
-    return mainArr.filter(function (n) {
-        return n != undefined
-    });
+    return mainArr;
 }
 
 function convertArrayToObj(array) {
@@ -25,10 +24,10 @@ function convertArrayToObj(array) {
     var i = 97, j = 0, k = 1;
     while (j < array.length) {
         if (i <= 122) {
-            obj['\'' + String.fromCharCode(i) + '\''] = array[j];
+            obj[String.fromCharCode(i)] = array[j];
             i++;
         } else {
-            obj['\'' + k + '\''] = array[j];
+            obj[k] = array[j];
             k++;
         }
         j++;
@@ -38,9 +37,6 @@ function convertArrayToObj(array) {
 }
 
 function findMinMax(arr, str) {
-    if (typeof str !== 'string') {
-        throw new TypeError();
-    }
     if (!arr instanceof Array) {
         throw new TypeError();
     }
