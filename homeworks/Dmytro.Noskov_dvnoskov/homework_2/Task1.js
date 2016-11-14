@@ -13,26 +13,12 @@
     
     function findMinMax(arrayToFind, fun){
         switch(fun) {
-		case 'max' :
-	        var max = arrayToFind [1];
-                 for (var i = 0; i < arrayToFind.length; i++) {
-		        if (arrayToFind[i] > max) {;
-                 	     max = arrayToFind [i];
-		         }
-	         }
-	        return max;
+		    case 'max' :
+                return Math.max.apply(null,arrayToFind);
 	        case 'min' :
-	        var min = arrayToFind [1];
-                 for (var i = 0; i < arrayToFind.length; i++) {
-		        if (arrayToFind[i] < min) {;
-                 	     min = arrayToFind [i];
-		         }
-	         }
-	        return min;
-	        }
-    
-       }
-    
+	            return Math.min.apply(null,arrayToFind);
+        }
+    }
     var arrayToFind = [3, 6, 0, -6, 12];
 
     var resultMax = findMinMax(arrayToFind, 'max');
@@ -47,16 +33,13 @@
     
     var obj = {};
     
-    for ( var i = 0; i < array.length; i++ ) {
-	    
-        var k
-	
-       if (i < 32) {  k = String.fromCharCode(i+1072); //32 от а до я + 1072
-                   } else { k = i - 32;
-			  };
+        for ( var i = 0; i < array.length; i++ ) {	    
+        var k	
+            if (i < 26) {  k = String.fromCharCode(i+97); 
+			} else  k = i - 26 ;   
         obj[k] = array[i];
-     }
-     return obj;
+        }
+    return obj;
     }
     convertArrayToObj (newArray);
     console.log(convertArrayToObj (newArray));
@@ -66,7 +49,7 @@
 	
 	for ( var i = 0; i < arr1.length; i++ ) {
 		for ( var j = 0; j < arr2.length; j++ ) {
-		if (arr1[i] == arr2[j]) {
+		    if (arr1[i] == arr2[j]) {
 		     arr1.splice(i,1)}
 		}
 	}
@@ -81,4 +64,3 @@
     console.log(newData); // in console : [2, 6];
     console.log ('*************************************************************************');
 })();
-
