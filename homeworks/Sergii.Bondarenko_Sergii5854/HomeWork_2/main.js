@@ -45,7 +45,9 @@ while(myArr.length < 100) {
 	var randomNumber = Math.ceil(Math.random()*100);
     
     if(myArr.indexOf(randomNumber) > -1) continue;
+   
     myArr[myArr.length] = randomNumber;
+   
 }
 
 console.log("Answer for task 2: " + myArr);
@@ -161,7 +163,7 @@ function filterNew(arr1, arr2){
 			if(arr1[i] === arr2[j]){
 				
 				arr1.splice(i, 1);
-								
+											
 			}
 			
 		}
@@ -177,11 +179,25 @@ console.log("Answer for task 5: " + newData);
 var arr1 = [2, 2, 3, 3, 15 ] ; 
 var arr2 = [2, 3, 10]; 
 
+  function filterNewB(arr1, arr2) {
+
+    for (var i = 0; i < arr2.length; i++) {
+
+      var indexArr1 = arr1.indexOf(arr2[i]);
+
+      while (indexArr1 > -1) {
+
+        arr1.splice(indexArr1, 1);        
+        indexArr1 = arr1.indexOf(arr2[i]);
+      }
+    }
+  }
 
 
-filterNew(arr1, arr2);
-console.log("Answer for task 5.1: " + arr1);
+filterNewB(arr1, arr2);
+console.log("Answer for task 5.2: " + arr1);
 console.log(arr1);
+
 
 
 })();
