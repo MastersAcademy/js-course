@@ -3,9 +3,9 @@
     console.log ("1 & 2 Create emty array and fill it with 100 integers from 1 to 100 with Math.random()");
 
     var array = [];
-        for (i = 0; i < 100; i++) {
-            array.push(Math.trunc(Math.random()*100)+1);
-        }
+    for (i = 0; i < 100; i++) {
+        array.push(Math.trunc(Math.random()*100)+1);
+    }
 
     console.log (array);
 
@@ -16,8 +16,7 @@
         if (string == "max") {
             max = Math.max.apply(null, array);
             console.log(max);
-        }
-        else {
+        }   else {
             if (string == 'min') {
                 min = Math.min.apply(null, array);
                 console.log(min);
@@ -38,8 +37,7 @@
         for (var i = 0; i < arr.length; i++) {
             if (charCount > 0) {
                 obj[String.fromCharCode(97 + i)] = arr[i];
-            } 
-            else {
+            }   else {
                 obj[num] = arr[i];
                 num++;
             }
@@ -53,7 +51,7 @@
     console.log("5. FilterNew");
 
     function filterNew(firstArr, secondArr) {
-         for (var i = 0; i < firstArr.length; i++) {
+        for (var i = 0; i < firstArr.length; i++) {
             secondArr.forEach(function(element){
                 if (firstArr[i] == element){
                     firstArr.splice(i, 1);
