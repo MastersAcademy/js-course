@@ -44,12 +44,12 @@
 		str="abcdefghijklmnopqrstuvwxyz",
 		obj = {};
 		
-		for (var i = 1; i <= array.length; i++){
-			if (i <= 26){
-				key = str.charAt(i-1);
+		for (var i = 0; i < array.length; i++){
+			if (i < str.length){
+				key = str.charAt(i);
 				obj[key]=array[i];
-			}else if (i > 26) {
-				key = i-26;
+			}else if (i >= str.length) {
+				key = i-(str.length-1);
 				obj[key]=array[i];
 			}
 		}
