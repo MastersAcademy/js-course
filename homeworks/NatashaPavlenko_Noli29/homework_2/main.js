@@ -11,34 +11,49 @@
         return arr;
     }
     var arrRandom = getRandomArray(1, 101);
-    console.log(arrRandom);
+    console.log('Random array:', arrRandom);
 
 
 
     //Task 3
-    function findMinMax (arr) {
-        for(i = 0; i < arr.length; i++) {
-            arr[i];
+    var arrayToFind = [-3, -106, 50, -10, 18, 20, 50.3, -106.7];
+
+    function findMinMax (arrayToFind, str) {
+
+        if (str == 'max'){
+            return Math.max.apply(null, arrayToFind);
+        } else if (str == 'min'){
+            return Math.min.apply(null, arrayToFind);
         }
-        var max = Math.max.apply(null, arr);
-        return max;
 
     }
 
     var resultMax = findMinMax(arrayToFind, 'max');
 
-        var resultMin = findMinMax(arrayToFind, 'min');
+    var resultMin = findMinMax(arrayToFind, 'min');
 
-    console.log(resultMax); // 12
-
-    console.log(resultMin); // -6
-    var arrRandom = getRandomArray(1, 101);
-    console.log(arrRandom)
-
-    //Task 4
+    console.log('Max:', resultMax);
+    console.log('Min:', resultMin);
 
 
 
     //Task 5
+    var newData = [2, 3, 13, 14, 22, 6, 18];
+
+    var oldData = [12, 18, 3, 17, 22, 32];
+
+    function filterNew(arr1, arr2) {
+        for( var i = 0; i < arr1.length; i++ ){
+            for( var j = 0; j < arr2.length; j++ ){
+                if(arr1[i] === arr2[j]){
+                    arr1.splice(i, 1);
+                }
+            }
+        }
+        return arr1;
+    }
+    newData = filterNew(newData, oldData);
+
+    console.log('New Array1', newData);
   }
 )();
