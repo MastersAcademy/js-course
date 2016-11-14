@@ -33,7 +33,7 @@ task_5
 // task_1
 //1. Создать пустой массив.
 
-	var my_arr = [];
+	var myArr = [];
 
 		
 //task_2
@@ -41,16 +41,16 @@ task_5
 
 
 	
-while(my_arr.length < 100) {
-    var random_number = Math.ceil(Math.random()*100)
+while(myArr.length < 100) {
+    var randomNumber = Math.ceil(Math.random()*100)
     
-    if(my_arr.indexOf(random_number) > -1) continue;
-    my_arr[my_arr.length] = random_number;
+    if(myArr.indexOf(randomNumber) > -1) continue;
+    myArr[myArr.length] = randomNumber;
 }
 
-console.log("Answer for task_2: " + my_arr);
+console.log("Answer for task 2: " + myArr);
 
-console.log("Checked for task_2: " + my_arr.sort()); // для зручності перевірки від 1-100 цілих чисел 
+console.log("Checked for task 2: " + myArr.sort()); // для зручності перевірки від 1-100 цілих чисел 
 	
 
 /*
@@ -94,11 +94,11 @@ task_3
 		return m;
 	}
 	
-	var resultMax = findMinMax(my_arr, "max");
-	var resultMin = findMinMax(my_arr, "min");
+	var resultMax = findMinMax(myArr, "max");
+	var resultMin = findMinMax(myArr, "min");
 	
-	console.log("Answer for task_3: " + "Max = " + resultMax);
-	console.log("Answer for task_3: " + "Min = " + resultMin);
+	console.log("Answer for task 3: " + "Max = " + resultMax);
+	console.log("Answer for task 3: " + "Min = " + resultMin);
 /*
 	var arrayToFind = [3, 6, 0, -6, 12]; - використовувати даний масив для пошуку 'max' і  'min' значиння? чи наший начальний масив ? 
 	*/
@@ -121,7 +121,7 @@ task_4
 		for(i = 0; i < names.length; i++){
 			
 			obj[names[i]] = arrToObj;
-			console.log(i);
+			
 		}
 		
 		if(i != arrToObj.length){
@@ -137,11 +137,11 @@ task_4
 		}
 		
 		return obj;
-		console.log(i);
+		
 	}
 	
-	my_arr = convertArrayToObj(my_arr);
-	console.log(my_arr);
+	myArr = convertArrayToObj(myArr);
+	console.log(myArr);
 
 /*
 task_5
@@ -156,9 +156,9 @@ task_5
 	function filterNew(arr1, arr2){
 		
 		for(i = 0; i < arr1.length; i++)			
-			for(j = 0; j < arr2.length; j++){
+			for(j = 0; j <= arr2.length; j++){
 				
-				if(arr1[i] == arr2[j]){
+				if(arr1[i] === arr2[j]){
 					
 					arr1.splice(i, 1);
 					
@@ -169,18 +169,18 @@ task_5
 	}
 	
 	filterNew(newData, oldData);
-	console.log("Answer for task_5: " + newData);
+	console.log("Answer for task 5: " + newData);
 
 
 	// Проверь решение filterNew с таким примером
-	
+
 	var arr1 = [2, 2, 3, 3, 15 ] ; 
 	var arr2 = [2, 3, 10]; 
 	
 
 
 	filterNew(arr1, arr2);
-	console.log("Answer for task_5.1: " + arr1);
+	console.log("Answer for task 5.1: " + arr1);
 	console.log(arr1);
 
 	
