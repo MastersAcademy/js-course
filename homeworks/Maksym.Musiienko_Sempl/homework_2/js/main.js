@@ -23,7 +23,7 @@
 
     	if (element == 'max') {
     		
-    	   return max[arr1.length - 1];
+    	   return max[array.length - 1];
     	}
     	if (element == 'min') {
     		return max[0];
@@ -43,14 +43,14 @@
         var obj = {};
         var m = 1;
 
-        for (var i = 0; i < arr1.length; i++) {
+        for (var i = 0; i < array.length; i++) {
 
             if (i > abc.length) {
-                obj[m++] = arr1[i];
+                obj[m++] = array[i];
             }
 
             else if (i <= abc.length) {
-                obj[abc[i]] = arr1[i];
+                obj[abc[i]] = array[i];
             }
         }
 
@@ -63,16 +63,14 @@
       var newData = [2, 12, 22, 6, 32];
 
       var oldData = [12, 5, 7, 17, 22, 32];
-      var len1 = newData.length;
+     
 
-      function filterNew(newData, oldData){
-      	for (i=0; i<len1; i++){
-      		for (j=0; j<oldData.length; j++){
-      			if (newData[i] == oldData[j])  {
-      				newData.splice (i,1);
+      function filterNew(array1, array2 ){
+      	for (i=0; i<array1.length; i++){
+      		for (j=0; j<array2.length; j++){
+      			if (array1[i] == array2[j])  {
+      			  array1.splice (i,1);
       				i--;
-      				len1--;
-
       			};
 
       		}
