@@ -4,11 +4,11 @@
 
 (function () {
 
-    // 1. Создать пустой массив
+
 
     var array = [];
 
-    // 2. Добавить в него 100 целых чисел от 1 до 100 с помощью метода Math.random
+
 
     for (var i = 0; i < 100; i++) {
         array.push(getRandomInt(1, 100));
@@ -17,9 +17,9 @@
             return Math.floor(Math.random() * (max - min)) + min;
         }
     console.log("***2***")
-    console.log(array); //проверка задания
+    console.log(array); //РїСЂРѕРІРµСЂРєР° Р·Р°РґР°РЅРёСЏ
 
-    // 3.Написать функцию поиска и вывода в консоль максимального или минимального элемента.
+
 
     function findMinMax(array, get) {
         if (get == 'max') {
@@ -33,7 +33,7 @@
     console.log(findMinMax(array, 'min'));
     console.log(findMinMax(array, 'max'));
 
-    // 4.Написать функцию преобразования массива в объект
+
 
     function convertArrayToObj(array) {
         var x,
@@ -52,9 +52,9 @@
         return obj;
     }
     console.log("***4***")
-    console.log(convertArrayToObj(array)); //проверка задания
+    console.log(convertArrayToObj(array));
 
-    // 5.Написать функцию фильтрации массива
+
 
     function filterNew(arr1, arr2) {
         for (var i=0; i < arr1.length; i++) {
@@ -70,6 +70,6 @@
     var arr2 = [2, 4, 10, 'b', 'a', "Orange", "Apple", "Mango"];
     filterNew(arr1, arr2);
     console.log("***5***")
-    console.log(arr1); //проверка задания
+    console.log(arr1);
 
 })();
