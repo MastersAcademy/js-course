@@ -39,17 +39,17 @@ function findMinMax(array,extr) {
             lit="abcdefghijklmnopqrstuvwxyz",
             obj = {};
         for (var i = 0; i < arr.length; i++){
-            if (i < lit.length){
+            if (i < 26){
                 key = lit.charAt(i);
                 obj[key]=arr[i];
-            }else if (i >= lit.length) {
-                key = i-(lit.length-1);
+            }else if (i >= 26) {
+                key = i-(26-1);
                 obj[key]=arr[i];
             }
         }
         return obj;
     }
- 	console.log(convertArrayToObj(array));
+    console.log(convertArrayToObj(array));
 
 
 //z5
