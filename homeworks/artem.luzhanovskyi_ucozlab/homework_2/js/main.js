@@ -73,6 +73,7 @@
 	// fixes
 
 	var arr1 = [2, 2, 3, 3, 15];
+	
 	var arr2 = [2, 3, 10];
 
 	filterNew(arr1, arr2);
