@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
 //  // task  1 and 2
 var firstArray = [];
 
@@ -10,33 +10,25 @@ for(var i =0; i<100; i++) {
 console.log(firstArray);
 
 // //  task 3
+var arrayToFind = [3, 6, 0, -6, 12];
+var resultMax = findMinMax(arrayToFind, 'max');
+var resultMin = findMinMax(arrayToFind, 'min');
+    function findMinMax(array, str) {
+        if ( str == "max") {
+            return resultMax =  Math.max.apply( null, array );
+        }else{
+            return resultMin =  Math.min.apply( null, array );
+        }
+    }
 
- var arrayToFind = [3, 6, 0, -6, 12];
+console.log(resultMax); // 12
 
-   var resultMax = findMinMax(arrayToFind, 'max');
-
-   var resultMin = findMinMax(arrayToFind, 'min');
-
-   function findMinMax(array, str) {
-      if ( str == "max") {
-        return resultMax =  Math.max.apply( null, array );
-      }else{
-        return resultMin =  Math.min.apply( null, array );
-      }
-
-   }
-
-   console.log(resultMax); // 12
-
-   console.log(resultMin); // -6
-
-
+console.log(resultMin); // -6
 
 // // task 4
 // used firstArray from task 2
    
-   function convertArrayToObj (array) {
-
+function convertArrayToObj (array) {
     var obj = {};
 
      // Staff to convert array to obj 
@@ -51,10 +43,9 @@ console.log(firstArray);
         }
         
     }
-     return (obj);
-
-
+    return (obj);
 }
+
 convertArrayToObj (firstArray);
  
 // // task 5
@@ -72,6 +63,7 @@ var oldData = [13, 5, 7, 17, 22,  2];
             }
         }
     }
+
 filterNew(newData, oldData);
 console.log(newData); 
 
