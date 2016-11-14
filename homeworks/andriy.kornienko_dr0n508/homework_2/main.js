@@ -74,7 +74,7 @@
         for (var k = 0; k < arr1.length; k++) {
             for (i = 0; i < arr2.length; i++) {
                 if (arr1[k] === arr2[i]) {
-                    arr1.splice(k, 1);
+                    arr1.splice(k--, 1);
                 }
             }
         }
