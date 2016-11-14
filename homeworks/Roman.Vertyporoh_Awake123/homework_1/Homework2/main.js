@@ -1,7 +1,7 @@
-//1. Создать пустой массив
+//1. Create empty array.
      var arr = [];
 
-//2. Добавить в него 100 целых чисел от 1 до 100 с помощью метода Math.random()
+//2. Filled with 100 integer numbers. 
 
      function addRandom(min, max) {
 
@@ -14,9 +14,7 @@
           }
      console.log(arr);
 
-/*3. Написать функцию поиска и вывода в консоль максимального или минимального элемента.
-Функция должна называться findMinMax , принимать в параметрах массив для поиска и строку, определяющую действие функции.
-Функция должна возвратить найденный элемент Пример использования функции */
+//3. Function of searching min/max array element done.
 
      var arrayToFind = [3, 6, 0, -6, 12];
      var resultMax = findMinMax(arrayToFind, 'max');
@@ -42,8 +40,7 @@
      console.log(resultMax);
      console.log(resultMin);
 
-/*4. Написать функцию преобразования массива в объект. где именами полей объекта должны быть буквы латинского алфавита.
-Когда(если) алфавит закончится, ключи должны начать формироваться в виде цифр, начиная с 1*/
+//4. Convert array into object
 
      function convertArrayToObj(array) {
 
@@ -57,7 +54,7 @@
                          obj[alphabet.charAt(i)] = array[i];
 
           }
-                    else if(i>alphabet.length) {
+                    else if(i > alphabet.length) {
                          obj[j++] = array[i];
           }
      }
@@ -68,10 +65,7 @@
      console.log(convertArrayToObj(arr));
 
 
-/*5. Написать функцию фильтрации массива filterNew(arr1, arr2).
-Функция должна принимать на вход два массива и удалять из первого массива элементы, которые есть и в первом и во втором массиве.
-Функция ничего не возвращает, а изменяет напрямую первый массив. Пример использования функции:
- */
+//5. Array filter function.
 
      var newData = [2, 12, 22, 6, 32];
      var oldData = [12, 5, 7, 17, 22, 32];
