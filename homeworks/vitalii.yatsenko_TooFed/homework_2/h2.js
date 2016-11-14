@@ -2,19 +2,19 @@
 
 // 1 hometask
 	console.log('------------------- 1 -------------------');
-	var EmptyArray = [];
-	console.log(EmptyArray);
+	var emptyArray = [];
+	console.log(emptyArray);
 // 2 hometask
 	function getRandomArbitrary(min, max) {
   		return Math.random() * (max - min) + min;
 	}
 
 	for (var i = 1; i <= 100; i++) {
-		EmptyArray.push(Math.floor(getRandomArbitrary(1, 100)));	
+		emptyArray.push(Math.floor(getRandomArbitrary(1, 100)));	
 	}
 	console.log('------------------- 2 -------------------');
-	console.log(EmptyArray.length);
-	console.log(EmptyArray);
+	console.log(emptyArray.length);
+	console.log(emptyArray);
 
 // 3 hometask
 	function findMinMax(arrayToFind, str) {
@@ -38,14 +38,14 @@
 		return result;
 	}
 	console.log('------------------- 3 -------------------');
-	console.log(findMinMax(EmptyArray, 'min'));
-	console.log(findMinMax(EmptyArray, 'Max'));
+	console.log(findMinMax(emptyArray, 'min'));
+	console.log(findMinMax(emptyArray, 'Max'));
 
 
 //4 hometask
-	var TestArray = [];
+	var testArray = [];
 	for (var i = 1; i <= 100; i++) {
-		TestArray.push(i);	
+		testArray.push(i);	
 	}
 	function convertArrayToObj(array) {
 		var obj = {};
@@ -59,7 +59,7 @@
 		return obj;
 	}
 	console.log('------------------- 4 -------------------');
-	console.log(convertArrayToObj(TestArray));
+	console.log(convertArrayToObj(testArray));
 
 //5 hometask
 	function filterNew(arr1, arr2){
@@ -67,13 +67,16 @@
 			for (var j = 0; j < arr2.length; j++) {
 				if (arr1[i]==arr2[j]){  
 					arr1.splice(i, 1);
+					i--;
 				}
 			}
 		}
 	}
 
-	var newData = [2,12,22,6,32];
-	var oldData = [12,5,7,17,22,32];
+	//var newData = [2,12,22,6,32];
+	//var oldData = [12,5,7,17,22,32];
+	var newData = [2, 2, 3, 3, 15 ] ; 
+	var oldData = [2, 3, 10]; 
 	filterNew(newData, oldData);
 	console.log('------------------- 5 -------------------');
 	console.log(newData);
