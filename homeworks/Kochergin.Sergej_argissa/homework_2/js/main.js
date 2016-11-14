@@ -61,22 +61,19 @@
 
     /* 5 */
 
-    var newData = [2, 12, 5, 8, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
+    var newData = [2, 2, 3, 3, 15];
+    var oldData = [2, 3, 10];
 
     function filterNew(array1, array2) {
 
-        for (var i = 0; i < array1.length; i++)
-            for (var j = 0; j < array2.length; j++) {
-
-                if (array1[i] == array2[j]) {
-
+        for (var i = 0; i < array1.length; i++) {
+            array2.forEach(function(element){
+                if (array1[i] == element){
                     array1.splice(i, 1);
-
+                    i--;
                 }
-
-            }
-
+            });
+        }
     }
 
     filterNew(newData, oldData);
