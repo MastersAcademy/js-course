@@ -32,10 +32,10 @@
     function convertArrToObj(arr1){
     var obj = {};
     for(var i=0;i<arr1.length;i++){
-        for(i;i<=26;i++){
+        for(i;i<=25;i++){
             obj[String.fromCharCode(i+97)]=arr1[i];
         }
-        obj[i-26] = arr1[i];}
+        obj[i-25] = arr1[i];}
     return obj
     }
     console.log(convertArrToObj(arr2));
