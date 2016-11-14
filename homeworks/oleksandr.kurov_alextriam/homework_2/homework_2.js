@@ -39,187 +39,40 @@ console.log("Array1: ", array1);
     console.log(resultMin); // -6
 
 // task #4
-
-
-
-
-
-
-/*
- //Exsampes
-     var firstVar;
-
-    var secondVar = 'Text string';
-
-    var boolVar = true;
-
-    firstVar = 15;
-
-    console.log(firstVar);
-
-    console.log(secondVar);
-
-    console.log(boolVar);
-
-    firstVar = 'String instead of number in the same variable';
-
-    console.log(firstVar + ' (Length : ' + firstVar.length + ')');
-
-    console.log('*************************************************************************');
-
-    var arr1 = [5, 22, 2, 7, 17];
-
-    console.log(arr1.toString());
-
-    console.log(arr1.sort());
-
-    var obj = {
-
-        '1' : 5,
-
-        field2 : 'Green',
-
-        field3 : {
-
-            subField : ['a', 'b', 'c']
-
-        },
-
-        field4 : function () {
-
-            console.log('hello');
-
+    function convertArrayToObj (array) {
+        var alfabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+        var obj1 = {};
+        for (var i=0; i<array.length; i++){
+            if (i<26){
+                obj1[alfabet[i]]=array[i];
+            }
+            else {
+                obj1[i-25]=array[i];
+            }
         }
-
-    };
-
-    console.log(obj);
-
-    console.log(obj.field3.subField);
-
-    var objA = obj;
-
-    objA.field1 = 'New value';
-
-    objA['field2'] = 'Red';
-
-    obj[1] = 10;
-
-    console.log(obj);
-
-    console.log(objA);
-
-    var arr2 = objA.field3.subField;
-
-    arr2[0] = 1;
-
-    console.log(obj);
-
-    console.log('*************************************************************************');
-
-    console.log(arr1.sort(function (a, b){
-        //
-        if(a > b){
-
-            return 1;
-
-        }
-
-        else{
-
-            return -1;
-
-        }
-
-    }));
-
-    console.log(arr1.sort(function (a, b){
-
-        return a > b ? 1 : -1;
-
-    }));
-
-
-    function multiplyArguments (number1, number2) {
-
-        return number1 * number2;
-
+        return obj1;
     }
+    console.log (convertArrayToObj(array1));
 
-    function multiplyArgumentsWider (number1, number2) {
+// task #5
 
-        if(number1 > number2){
+    var firstArray = [2, 12, 22, 6, 32, 44, 28, 25, 65, 11];
 
-            number2 += 150;
+    var secondArray = [12, 5, 7, 17, 22, 32, 28, 65, 11];
 
-        }
+   function filterNew(newData, oldData){
 
-        return number1 * number2;
+       for (var i=0; i<newData.length; i++){
+           for (var j=0; j<oldData.length; j++){
+               if (newData[i]==oldData[j]) {
+                   delete newData[i];
+                   delete oldData[j];
+               }
+           }
+       }
+   }
 
-    }
-
-    var funcVar = function () {
-
-        console.log('Function set as value of the variable');
-
-    };
-
-    funcVar();
-
-    console.log(multiplyArguments(5, 1));
-
-    console.log(multiplyArgumentsWider(5, 1));
-
-
-    console.log('*************************************************************************');
-
-    var newArray = [];
-
-    for(var i = 0; i <= 100; i++){
-
-        if(i % 10 == 0){
-
-            newArray.push(i);
-
-        }
-
-    }
-
-    console.log(newArray);
-
-    var n = 10;
-
-    while(i <= 200){
-
-        if(i % 10 == 0){
-
-            newArray.push(n * i);
-
-        }
-
-        i++;
-
-    }
-
-    newArray.forEach(function (element, array) {
-
-        console.log(element);
-
-    });
-
-    for(var key in objA){
-
-        if(objA.hasOwnProperty(key)){
-
-            console.log(key + ':' + objA[key]);
-
-        }
-
-    }
-
-
-
-
-*/
+    filterNew (firstArray, secondArray);
+    console.log(firstArray); // in console : [2, 6];
 
 })();
