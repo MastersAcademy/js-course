@@ -4,7 +4,7 @@
     //2.
     var randomNum;
     while(arr.length<=100){
-        randomNum = Math.floor(Math.random()*100);
+        randomNum = Math.floor(Math.random()*(100+1));
         if (arr.indexOf(randomNum)!= 0){
             arr.push(randomNum);
         }
