@@ -16,13 +16,13 @@
     var resultMax = findMinMax(newArr, 'max');
     var resultMin = findMinMax(newArr, 'min');
 
-    function findMinMax(newArr, MinMax) {
+    function findMinMax(newArr, minMax) {
 
-        if (MinMax == 'max') {
+        if (minMax == 'max') {
             return Math.max.apply(null, newArr);
         }
 
-        else if (MinMax == 'min') {
+        else if (minMax == 'min') {
             return Math.min.apply(null, newArr);
         }
     }
@@ -59,15 +59,18 @@
 
     console.log('/* --------------------------------- Task 5 ------------------------------ */');
 
+    var newData = [2, 2, 3, 3, 15 ] ;
+    var oldData = [2, 3, 10];
 
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
+    // var newData = [2, 12, 22, 6, 32];
+    // var oldData = [12, 5, 7, 17, 22, 32];
 
     function filterNew(newData, oldData) {
         for (var i = 0; i < newData.length; i++) {
             for (var a = 0; a < oldData.length; a++) {
                 if (newData[i] == oldData[a]) {
                     newData.splice(i, 1);
+                    --i;
                 }
             }
         }
