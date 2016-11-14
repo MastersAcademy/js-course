@@ -25,30 +25,29 @@ function getRandomInt(min, max) {
 
 function findMinMax(array,extr) {
 
-    var max = Math.max.apply(null, array);
-
-    var min = Math.min.apply(null, array);
-
     if (extr == "max") {
+
+        var max = Math.max.apply(Math, arr);
 
         return max;
 
     }else if (extr == "min") {
+
+        var min = Math.min.apply(Math, arr);
 
         return min;
 
     }else {
 
         console.log("error")
-
+        	};
     };
-};
 
 (function () {
 
-    var resultMax = findMinMax(array, 'max');
+    var resultMax = findMinMax(arr, 'max');
 
-    var resultMin = findMinMax(array, 'min');
+    var resultMin = findMinMax(arr, 'min');
 
     console.log("Макс: " + resultMax);
 
