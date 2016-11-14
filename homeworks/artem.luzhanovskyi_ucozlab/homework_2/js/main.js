@@ -3,13 +3,13 @@
  */
 (function () {
 
-	var array = [];	// task 1
+	var array = []; // task 1
 
 	for (var i = 0; i < 100; i++) {
-		array.push(Math.round(Math.random() * 100));	// task 2
+		array.push(Math.round(Math.random() * 100)); // task 2
 	}
 
-	function findMinMax(arrayToFind, string) {	// task 3
+	function findMinMax(arrayToFind, string) { // task 3
 		if (string == 'max') {
 			return Math.max.apply(Math, array);
 		} else if (string == 'min') {
@@ -20,14 +20,14 @@
 	}
 
 	var resultMax = findMinMax(array, 'max');
-    
+
 	var resultMin = findMinMax(array, 'min');
-    
+
 	console.log(resultMax);
-    
+
 	console.log(resultMin);
 
-	function convertArrayToObj(array) {	// task 4
+	function convertArrayToObj(array) { // task 4
 
 		var obj = {},
 			j = 1;
@@ -72,10 +72,10 @@
 
 	// fixes
 
-	var arr1 = [2,2,3,3,15];
-    
-	var arr2 = [2,3,10];
-    
+	var arr1 = [2, 2, 3, 3, 15];
+
+	var arr2 = [2, 3, 10];
+
 	filterNew(arr1, arr2);
 
 	console.log(arr1);
