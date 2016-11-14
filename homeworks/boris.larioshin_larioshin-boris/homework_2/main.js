@@ -81,4 +81,20 @@ var oldData = [12, 5, 7, 17, 22, 32];
     filterNew(newData, oldData);
     console.log('*****Exercise № 5********');
     console.log(newData);
+//Array filtering function correct working version
+function filterNewVersion2(arrOne, arrTwo) {
+    var i = 0;
+    while (i < arrOne.length){
+        for (var j = 0; j < arrTwo.length; j++){
+            if (arrOne[i] == arrTwo[j]){
+                arrOne.splice(i, 1);
+                }
+        }
+        i++;
+    }
+}
+var arr1 = [2, 2, 3, 3, 15 ] ;
+var arr2 = [2, 3, 10];
+    filterNewVersion2(arr1, arr2);
+    console.log(arr1);
 })();
