@@ -49,13 +49,13 @@
         function findMinMax(arrayToFind,randomNumber) {
 
             var zero = 0;
-            var maxValue = Math.max.apply(zero, arrayToFind);
-            var minValue = Math.min.apply(zero, arrayToFind);
 
             if (randomNumber == "maxValue") {
+                var maxValue = Math.max.apply(zero, arrayToFind);
                 return maxValue;
             }
             else if (randomNumber == "minValue") {
+                var minValue = Math.min.apply(zero, arrayToFind);
                 return minValue;
             }
             else {
@@ -102,7 +102,7 @@
     // -----------------------------------------------------
         // filter array function
         var newData = [2, 12, 22, 6, 32];
-        var oldData = [12, 5, 7, 17, 22, 32];
+        var oldData = [12, 5, 7, 17, 22, 32];	
          function filterNew(arr1, arr2) {
              for (var i = 0; i < arr1.length; i++) {
                  for (var j = 0; j < arr2.length; j++) {
