@@ -22,16 +22,19 @@
     console.log(resultMin);//and max
 
     function convertArrayToObj(array) {
-
         var obj = {};
-        var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-        const generateName = i => (i< 26) ? String.fromCharCode(97 + i) : (i - 25);
-        for (var i in array) {
-            obj[generateName(i)] = array[i]
-        }
-
+        var string = "abcdefghijklmnopqrstuvwxyz";
+        var num = 1;
+        array.forEach(function(value, i) {
+            var code = string.charCodeAt(i);
+            if (i >= string.length) {
+                obj[num] = value;
+                num++;
+            } else {
+                obj[String.fromCharCode(code)] = value;
+            }
+        });
         return obj;
-
     }
     console.log(convertArrayToObj(arr));
 
