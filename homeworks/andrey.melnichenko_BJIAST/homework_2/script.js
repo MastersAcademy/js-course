@@ -24,11 +24,9 @@ console.log("======================Массив====================")
 // findMinMax function
 function findMinMax(array,extr) {
 	if (extr == "max") {
-		var max = Math.max.apply(Math, arr);
-		return max;
+		return Math.max.apply(Math, arr);;
 	}else if (extr == "min") {
-		var min = Math.min.apply(Math, arr);
-		return min;
+		return Math.min.apply(Math, arr);;
 	}else {
 		console.log("Неизвестное понятие")
 	};
