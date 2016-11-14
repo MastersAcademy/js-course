@@ -1,18 +1,18 @@
 (function () {
     
-	console.log ("1 & 2 Create emty array and fill it with 100 integers from 1 to 100 with Math.random()");
-	
+    console.log ("1 & 2 Create emty array and fill it with 100 integers from 1 to 100 with Math.random()");
+
     var array = [];
-		for (i = 0; i < 100; i++) {
-        	array.push(Math.trunc(Math.random()*100)+1);
-     	}
-	
-	console.log (array);
-		
-	
-	console.log ("3. Find Max and Min in array");
-	
-	var findMinMax = function (array, string) {
+        for (i = 0; i < 100; i++) {
+            array.push(Math.trunc(Math.random()*100)+1);
+        }
+
+    console.log (array);
+
+
+    console.log ("3. Find Max and Min in array");
+
+    var findMinMax = function (array, string) {
         if (string == "max") {
             max = Math.max.apply(null, array);
             console.log(max);
@@ -25,13 +25,13 @@
         }
     };
     
-	var resultMax = findMinMax(array, 'max');
+    var resultMax = findMinMax(array, 'max');
     var resultMin = findMinMax(array, 'min');
     
-	
-	console.log ("4. Array to Object")
 
-	function ArrToObj(arr) {
+    console.log ("4. Array to Object")
+
+    function ArrToObj(arr) {
         var obj = {};
         var charCount = 26;
         var num = 1;
@@ -39,20 +39,20 @@
             if (charCount > 0) {
                 obj[String.fromCharCode(97 + i)] = arr[i];
             } 
-			else {
+            else {
                 obj[num] = arr[i];
                 num++;
             }
             charCount--;
         }
         return obj;
-	}
-	console.log(ArrToObj(array));
-	
-	
-	console.log("5. FilterNew");
-	
-	function filterNew(firstArr, secondArr) {
+    }
+    console.log(ArrToObj(array));
+
+
+    console.log("5. FilterNew");
+
+    function filterNew(firstArr, secondArr) {
          for (var i = 0; i < firstArr.length; i++) {
             secondArr.forEach(function(element){
                 if (firstArr[i] == element){
