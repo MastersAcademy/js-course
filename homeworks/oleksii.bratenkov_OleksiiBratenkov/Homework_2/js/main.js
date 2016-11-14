@@ -1,4 +1,5 @@
 //Создать пустой массив. Добавить в него 100 целых чисел от 1 до 100 с помощью метода Math.random()
+(function () {
 var arr1 = [];
 for (var i = 0; i<100; i++) {
 	arr1.push((Math.floor(Math.random() * 100)+1))
@@ -59,3 +60,4 @@ function filterNew(arr1, arr2) {
  var arr2 = [12, 5, 7, 17, 22, 32];
  filterNew(arr1, arr2);
  console.log(arr1)
+ })();
