@@ -46,25 +46,23 @@
 
   //5. Function to to filter array
   function filterNew(arr1, arr2) {
-    for (var i = 0; i < arr1.length; i++) {
-      arr2.forEach(function (element) {
-        if (element == arr1[i]) {
-          arr1.splice(i, 1);
-        }
-      });
+    for (var i = 0; i < arr2.length; i++) {
+      var index_arr1 = arr1.indexOf(arr2[i]);
+      while (index_arr1 > -1) {
+        arr1.splice(index_arr1, 1);
+        index_arr1 = arr1.indexOf(arr2[i]);
+      }
     }
   }
 
-  var newData = [2, 12, 22, 8, 6, 32];
-  var oldData = [12, 5, 7, 17, 22, 32];
-
-  filterNew(newData, oldData);
-
+  var arr1 = [2, 2, 6, 2, 3, 3, 15, 22 ] ;
+  var arr2 = [2, 3, 10];
+  filterNew(arr1, arr2);
 
   console.log("Random array of integer numbers: [" + arrayToFind + "]");
   console.log("Max of array = " + resultMax);
   console.log("Min of array = " + resultMin);
   console.log(convertArrayToObj(arrayToFind));
-  console.log(newData);
+  console.log(arr1);
 
 })();
