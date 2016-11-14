@@ -66,15 +66,15 @@
         
         var n = 1;
 
-        for (var i = 0; i < array1.length; i++) {
+        for (var i = 0; i < array.length; i++) {
 
             if (i <= alphabet.length) {
                 
-                obj[alphabet[i]] = array1[i];
+                obj[alphabet[i]] = array[i];
             
             }
 
-            else obj[n++] = array1[i];
+            else obj[n++] = array[i];
                         
         }
 
@@ -82,7 +82,7 @@
     }
 
     console.log(convertArrayToObj(array1));
-    
+
     console.log('*******************************************');
 
 
