@@ -4,6 +4,8 @@
         randomDigits[i] = Math.ceil(Math.random() * 100);
     }
 
+    console.log(randomDigits);
+
     var findMinMax = function (arrayToFind, criteria) {
         var result;
         if (criteria == 'max') {
@@ -27,6 +29,12 @@
         return result;
     };
 
+    var arrayToFind = [3, 6, 0, -6, 12];
+    var resultMax = findMinMax(arrayToFind, 'max');
+    var resultMin = findMinMax(arrayToFind, 'min');
+    console.log(resultMax);
+    console.log(resultMin);
+
     function convertArrayToObj(array) {
         var obj = {};
         var i = 0;
@@ -40,6 +48,8 @@
         });
         return obj;
     }
+
+    console.log(convertArrayToObj(randomDigits));
 
     var filterNew = function (arr1, arr2) {
         arr1.forEach(function (elementArr1) {
@@ -59,4 +69,9 @@
 
         arr1.length = i;
     };
+
+    var newData = [2, 12, 22, 6, 32];
+    var oldData = [12, 5, 7, 17, 22, 32];
+    filterNew(newData, oldData);
+    console.log(newData);
 })();
