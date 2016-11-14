@@ -26,7 +26,7 @@
     console.log(resultMin);
     //4.
     var arr2=[];
-    for(var i=0;i<=36;i++){
+    for(var i=0;i<=35;i++){
     arr2.push(i);
     }
     function convertArrToObj(arr1){
