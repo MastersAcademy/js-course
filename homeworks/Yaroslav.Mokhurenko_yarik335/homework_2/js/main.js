@@ -68,14 +68,17 @@
     console.log('*****************************5  Task********************************************');
 
 
-    var newData = [2, 12, 22, 6, 32];
+   /* var newData = [2, 12, 22, 6, 32];
 
-    var oldData = [12, 5, 7, 17, 22, 32];
+    var oldData = [12, 5, 7, 17, 22, 32];*/
+    var newData = [12, 12, 22, 22, 6, 32];
+    var oldData = [22,32,6,22, 32];
 
     function filterNew(firstarr, secondarr) {
         secondarr.forEach(function (item) {
-            if (firstarr.indexOf(item) >= 0) {
+            while(firstarr.indexOf(item) != -1) {
                 newData.splice(firstarr.indexOf(item), 1);
+
             }
         });
     }
