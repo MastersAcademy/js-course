@@ -34,22 +34,23 @@ function findMinMax(array,extr) {
 }());
 
 //z4
-function convertArrayToObj (arr) {
-    var key,
-        lit = "abcdefghijklmnopqrstuvwxyz",
-        obj = {};
-    for (var i = 1; i <= arr.length; i++){
-        if (i <= 26){
-            key = lit.charAt(i-1);
-            obj[key]=arr[i];
-        }else if (i > 26) {
-            key = i-26;
-            obj[key]=arr[i];
+   function convertArrayToObj (arr) {
+        var key,
+            lit="abcdefghijklmnopqrstuvwxyz",
+            obj = {};
+        for (var i = 0; i < arr.length; i++){
+            if (i < lit.length){
+                key = lit.charAt(i);
+                obj[key]=arr[i];
+            }else if (i >= lit.length) {
+                key = i-(lit.length-1);
+                obj[key]=arr[i];
+            }
         }
+        return obj;
     }
-    return obj;
-}
-console.log(convertArrayToObj(array));
+ 	console.log(convertArrayToObj(array));
+
 
 //z5
 function filterNew(arr1, arr2){
