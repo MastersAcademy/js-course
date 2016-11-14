@@ -21,16 +21,10 @@
     /* Find min or max in array */
     function findMinMax(array, minmax) {
         if ( minmax == "max" ) {
-            array.max = function () {
-                return Math.max.apply(Math, array);
-            };
-            return array.max();
+            return Math.max.apply(Math, array);
         }
         else if ( minmax == "min" ) {
-            array.min = function () {
-                return Math.min.apply(Math, array);
-            };
-            return array.min();
+            return Math.min.apply(Math, array);
         }
         return 'incorrect arguments';
     }
@@ -59,7 +53,10 @@
 
     var newData = [2, 12, 22, 6, 32];
     var oldData = [12, 5, 7, 17, 22, 32];
-	
+
+    var arr1 = [2, 2, 3, 3, 15 ] ;
+    var arr2 = [2, 3, 10];
+
     /*compare arrays and remove duplicates from the 1 one*/
     function filterNew(arr1, arr2) {
         for (var i = arr1.length; i >= 0; --i){
@@ -87,4 +84,7 @@
     filterNew(newData, oldData);
     console.log(newData);
 
+    console.log('array arr1 wth removed duplicates:');
+    filterNew(arr1, arr2);
+    console.log(arr1);
 })();
