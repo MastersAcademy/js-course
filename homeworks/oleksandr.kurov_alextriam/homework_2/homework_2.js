@@ -26,16 +26,17 @@ console.log("Array1: ", array1);
         if (minMax=="max") {
         return Math.max.apply(null, arrayToFind);
         }
-        if (minMax=="min"){
+        else if (minMax=="min"){
             return Math.min.apply(null, arrayToFind);
-    }
+        }
+        else {console.log('Second parameter is wrong! Use min or max! ');}
     }
     var resultMax = findMinMax(array1, 'max');
     var resultMin = findMinMax(array1, 'min');
 
-    console.log(resultMax); // 12
+    console.log(resultMax);
 
-    console.log(resultMin); // -6
+    console.log(resultMin);
 
 // task #4
     function convertArrayToObj (array) {
