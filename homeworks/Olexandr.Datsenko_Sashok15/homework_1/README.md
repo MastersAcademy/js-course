@@ -1,2 +1,2 @@
-NodeJS - v4.2.6
-npm - 3.5.2
+NodeJS - v7.0.0
+npm - 3.10.9
