@@ -7,7 +7,7 @@
     var z;
 
     for (var i=0; i<100; i++){
-        z=Math.round(Math.random()*100);
+        z=Math.round(Math.random()*i+1);
         array1.push(z);
     }
 console.log("Array1: ", array1);
