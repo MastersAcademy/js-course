@@ -44,7 +44,7 @@
 
         if (element == 'max') {
     		
-            return max[arrayToFind.length - 1];
+            return max[array.length - 1];
         
         }
 
@@ -91,25 +91,21 @@
       var newData = [2, 12, 22, 6, 32];
       
       var oldData = [12, 5, 7, 17, 22, 32];
-      
-      var len1 = newData.length;
 
-      function filterNew(newData, oldData) {
+      function filterNew(arr1, arr2) {
 
-          for (i=0; i<len1; i++) {
+          for (i=0; i<arr1.length; i++) {
 
-              for (j=0; j<oldData.length; j++) {
+              for (j=0; j<arr2.length; j++) {
 
-                  if (newData[i] == oldData[j]) {
+                  if (arr1[i] == arr2[j]) {
                     
-                      newData.splice(i,1);
-      				      
-                      i--;
-      				      
-                      len1--;
-                
+                      arr1.splice(i,1);
+
                   }
+
               }
+
           }
 
       }
