@@ -80,7 +80,8 @@
 	
                 if (arr1[i] == arr2[j]) {
 	
-                    arr1.splice(i, 1);
+                    arr1.splice(i--, 1);
+					
 
                 }
 
@@ -90,10 +91,10 @@
 
     }
 
-    var newData = [5, 1, 55, 8, 58, 34];
+    var newData = [2, 2, 3, 3, 15, 55, 10, 10, 10, 8]; 
 
-    var oldData = [4, 50, 5, 58, 34, 2, 76];
-    
+    var oldData = [2, 3, 10, 6, 8]; 
+
     filterNew(newData, oldData);
 	
     console.log(newData);
