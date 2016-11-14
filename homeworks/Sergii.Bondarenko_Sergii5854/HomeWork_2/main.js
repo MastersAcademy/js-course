@@ -27,35 +27,33 @@ task_5
 
 */
 	
-
 (function(){
 	
-// task_1
+// task 1
 //1. Создать пустой массив.
 
-	var myArr = [];
+    var myArr = [];
 
 		
-//task_2
+//task 2
 //2. Добавить в него 100 целых чисел от 1 до 100 с помощью метода Math.random().
 
 
 	
-while(myArr.length < 100) {
+	while(myArr.length < 100) {
 
-    var randomNumber = Math.ceil(Math.random()*100)
-    
-    if(myArr.indexOf(randomNumber) > -1) continue;
-    myArr[myArr.length] = randomNumber;
-}
+		var randomNumber = Math.ceil(Math.random()*100);
+	    
+	    if(myArr.indexOf(randomNumber) > -1) continue;
+	    myArr[myArr.length] = randomNumber;
+	}
 
 console.log("Answer for task 2: " + myArr);
-
 console.log("Checked for task 2: " + myArr.sort()); // для зручності перевірки від 1-100 цілих чисел 
 	
 
 /*
-task_3
+task 3
 3. Написать функцию поиска и вывода в консоль максимального или минимального элемента.
 Функция должна называться findMinMax , принимать в параметрах массив для поиска и строку,
 определяющую действие функции. Функция должна возвратить найденный элемент.
@@ -95,17 +93,17 @@ function findMinMax(arrayToFind, minMax){
 	return m;
 }
 
-var resultMax = findMinMax(myArr, "max");
-var resultMin = findMinMax(myArr, "min");
+	var resultMax = findMinMax(myArr, "max");
+	var resultMin = findMinMax(myArr, "min");
 
-console.log("Answer for task 3: " + "Max = " + resultMax);
-console.log("Answer for task 3: " + "Min = " + resultMin);
+	console.log("Answer for task 3: " + "Max = " + resultMax);
+	console.log("Answer for task 3: " + "Min = " + resultMin);
 /*
 	var arrayToFind = [3, 6, 0, -6, 12]; - використовувати даний масив для пошуку 'max' і  'min' значиння? чи наший начальний масив ? 
 	*/
 	
 /*
-task_4
+task 4
 4. Написать функцию преобразования массива в объект где именами полей объекта должны быть
 буквы латинского алфавита. Когда(если) алфавит закончится, ключи должны начать формироваться
 в виде цифр, начиная с 1.
@@ -156,17 +154,18 @@ var oldData = [12, 5, 7, 17, 22, 32];
 
 function filterNew(arr1, arr2){
 	
-	for(i = 0; i < arr1.length; i++)			
-		for(j = 0; j <= arr2.length; j++){
+	for(var i = 0; i < arr1.length; i++){	
+			
+		for(var j = 0; j <= arr2.length; j++){
 			
 			if(arr1[i] === arr2[j]){
 				
 				arr1.splice(i, 1);
-				
+								
 			}
 			
 		}
-	
+	}
 }
 
 filterNew(newData, oldData);
@@ -186,3 +185,4 @@ console.log(arr1);
 
 
 })();
+
