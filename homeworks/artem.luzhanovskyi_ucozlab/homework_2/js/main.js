@@ -20,11 +20,9 @@
 	}
 
 	var resultMax = findMinMax(array, 'max');
-
 	var resultMin = findMinMax(array, 'min');
 
 	console.log(resultMax);
-
 	console.log(resultMin);
 
 	function convertArrayToObj(array) { // task 4
@@ -49,14 +47,14 @@
 	}
 
 	var resultConvertArrayToObj = convertArrayToObj(array);
+
 	console.log(resultConvertArrayToObj);
 
 	// task5
 
 	var newData = [2, 12, 22, 6, 32];
-	
 	var oldData = [12, 5, 7, 17, 22, 32];
-	
+
 	filterNew(newData, oldData);
 
 	function filterNew(array1, array2) {
@@ -75,7 +73,6 @@
 	// fixes
 
 	var arr1 = [2, 2, 3, 3, 15];
-
 	var arr2 = [2, 3, 10];
 
 	filterNew(arr1, arr2);
