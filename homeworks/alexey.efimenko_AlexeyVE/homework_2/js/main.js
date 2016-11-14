@@ -68,15 +68,15 @@
 	console.log('4)',convertArrayToObj(arr));
 	
 	//5
-	var newData = [1,1,66,67,898,1,1,1,7,6,7,8,90,-3];
-	var oldData = [1,1,1,1,1,1,1,7,1,1,1,11,1,1,111,1,1,1,66,67,898];
+	var newData = [1,2,3,4,5,6,7,8,9,55,55,55,55,55,55,999,99,99,9,4,5,6,7,8,4];
+	var oldData = [9,88,77,99,999,8,7,55,6,4,4,3,2,1,5,5,5];
 	function filterNew(newData, oldData) {
 		for (var indNew = 0; indNew < newData.length; indNew++) {
 			for (var indOld = 0; indOld < oldData.length; indOld++) {
 				if (newData[indNew] == oldData[indOld]) {
 					var idx = newData.indexOf(oldData[indOld]);
 					newData.splice(idx, 1);
-					indNew=0;
+					indNew=-1;
 				};
 			};
 		};
