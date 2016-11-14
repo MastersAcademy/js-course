@@ -54,7 +54,9 @@
 	// task5
 
 	var newData = [2, 12, 22, 6, 32];
+	
 	var oldData = [12, 5, 7, 17, 22, 32];
+	
 	filterNew(newData, oldData);
 
 	function filterNew(array1, array2) {
