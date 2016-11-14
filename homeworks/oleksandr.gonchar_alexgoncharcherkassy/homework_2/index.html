@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 2</title>
+</head>
+<body>
+
+</body>
+<script src="main.js"></script>
+<script>
+    var originalArray = generateRandomArray(100);
+    console.log('Original array: ' + originalArray);
+
+    console.log('Max element array: ' + findMinMax(originalArray, 'max'));
+    console.log('Min element array: ' + findMinMax(originalArray, 'min'));
+
+    console.log('Array to object:');
+    console.log(convertArrayToObj(originalArray));
+
+    var newData = [2, 12, 22, 6, 32];
+    var oldData = [12, 5, 7, 17, 22, 32];
+    console.log('Sort two array: [' + newData + '] [' + oldData + ']');
+    console.log(filterNew(newData, oldData));
+</script>
+</html>
