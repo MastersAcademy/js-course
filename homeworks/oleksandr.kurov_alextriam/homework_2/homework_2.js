@@ -8,7 +8,6 @@
 
     for (var i=0; i<100; i++){
         z=Math.round(Math.random()*100);
-        //console.log(z);
         array1.push(z);
     }
 console.log("Array1: ", array1);
@@ -33,7 +32,7 @@ console.log("Array1: ", array1);
     }
     var resultMax = findMinMax(array1, 'max');
     var resultMin = findMinMax(array1, 'min');
-   // console.log (Math.max.apply(null, array1));
+
     console.log(resultMax); // 12
 
     console.log(resultMin); // -6
@@ -75,6 +74,6 @@ console.log("Array1: ", array1);
    }
 
     filterNew (firstArray, secondArray);
-    console.log(firstArray); // in console : [2, 6];
+    console.log(firstArray);
 
 })();
