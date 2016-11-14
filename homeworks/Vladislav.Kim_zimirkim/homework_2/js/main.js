@@ -1,5 +1,5 @@
 (function(){
-  /*******************Exersice #1 & #2**********************************************/
+  /*******************Exersice #1 & #2***********************************************/
 
   var randomArray = [];
   for (var i = 0; i < 100; i++) {
@@ -10,52 +10,52 @@
   /*********************************************************************************/
 
   /**********************Exersice #3************************************************/
-  var arrayex3=[12,5,-8,22,44,92,-1];
-  var min=9999;
-  var max=-9999;
-  function findMinMax(arr,minmax){
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i]>max) {
-        max=arr[i];
+  randomArray[10]=101;
+  randomArray[20]=-1;
+
+  function findMinMax(arr,min_or_max){
+    if (min_or_max == 'min') {
+      var min= arr[0];
+      for (var i = 0; i < arr.length; i++) {
+        if (min>arr[i]) {
+          min=arr[i];
+        }
       }
-    }
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i]<min) {
-        min=arr[i];
-      }
-    }
-    if (minmax=='min') {
       return min;
-    }
-    if (minmax=='max'){
+    } else if (min_or_max == 'max'){
+      var max = arr[0];
+      for (var i = 0; i < arr.length; i++) {
+        if (max<arr[i]) {
+          max=arr[i];
+        }
+      }
       return max;
     }
   }
-  var resultmin = findMinMax(arrayex3,'min');
-  var resultmax = findMinMax(arrayex3,'max');
+
+  var resultmin = findMinMax(randomArray,'min');
+  var resultmax = findMinMax(randomArray,'max');
   console.log(resultmin);
   console.log(resultmax);
 
   /*********************************************************************************/
 
   /**********************Exersice #4************************************************/
-
+  var test_short_array=[1,2,3,4,5,6,7,8,9,10];
    function convertArrayToObj(array){
      var obj={};
-     var index_letter=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-     var index_numb=1;
-       for(i = 0; i < index_letter.length; i++){
-         obj[index_letter[i]] = array[i];
-     }
-     if (i != array.length){
-         while(i < array.length){
-             obj[index_numb] = array[i];
-             i++;
-             index_numb++;
-         }
+     for (var i = 0; i < array.length; i++) {
+       if (i<=25) {
+         obj[String.fromCharCode(i+97)]=array[i];
+       }
+       else {
+         obj[i-25]=array[i];
+       }
      }
      return obj;
    }
+   obj=convertArrayToObj(test_short_array);
+   console.log(obj);
    obj=convertArrayToObj(randomArray);
    console.log(obj);
 
@@ -63,18 +63,18 @@
 
   /**********************Exersice #5************************************************/
 
-  var newData=[10,20,30,40,50,60];
-  var oldData=[10,20,50,80,120];
-  function filterNew(newData,oldData) {
-    for (var i = 0; i < oldData.length; i++) {
-      for (var k = 0; k < newData.length; k++) {
-        if (newData[i]==oldData[k]) {
-          newData.splice(i,1);
-          i--;
+  var newData=[1,1,4,5,7,7,9,2,1];
+  var oldData=[1,4,7,10];
+  function filterNew(newwarray,olddarray) {
+    for (var i = 0; i < newwarray.length; i++) {
+            for (var k = 0; k < olddarray.length; k++) {
+                if (newwarray[i] == olddarray[k]) {
+                    newwarray.splice(i, 1);
+                    i--;
+                }
+            }
         }
-      }
     }
-  }
   filterNew(newData,oldData);
   console.log(newData);
 
