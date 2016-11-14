@@ -71,30 +71,36 @@ function filterNew(arr1, arr2) {
         for (var j = 0; j < arr2.length; j++){
             if (arr1[i] == arr2[j]){
                 arr1.splice(i, 1);
+                i--;
             }
         }
     }
 
 }
+console.log('*****Exercise № 5********');
 var newData = [2, 12, 22, 6, 32];
 var oldData = [12, 5, 7, 17, 22, 32];
-    filterNew(newData, oldData);
-    console.log('*****Exercise № 5********');
-    console.log(newData);
-//Array filtering function correct working version
+console.log(newData);
+console.log(oldData);
+filterNew(newData, oldData);
+console.log(newData);
+//Array filtering function correct working version version 2
 function filterNewVersion2(arrOne, arrTwo) {
     var i = 0;
-    while (i < arrOne.length){
-        for (var j = 0; j < arrTwo.length; j++){
-            if (arrOne[i] == arrTwo[j]){
-                arrOne.splice(i, 1);
-                }
+    while (i < arrTwo.length){
+        var idx = arrOne.indexOf(arrTwo[i]);
+        if (idx != -1){
+            arrOne.splice(idx, 1);
         }
-        i++;
+        else i++;
     }
+
 }
 var arr1 = [2, 2, 3, 3, 15 ] ;
 var arr2 = [2, 3, 10];
-    filterNewVersion2(arr1, arr2);
-    console.log(arr1);
+console.log('**Exercise №5 version 2**');
+console.log(arr1);
+console.log(arr2);
+filterNewVersion2(arr1, arr2);
+console.log(arr1);
 })();
