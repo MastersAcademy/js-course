@@ -11,18 +11,16 @@ console.log(firstArray);
 
 // //  task 3
 
- var arrayToFind = [3, 6, 0, -6, 12];
+var arrayToFind = [3, 6, 0, -6, 12];
+var resultMax = findMinMax(arrayToFind, 'max');
+var resultMin = findMinMax(arrayToFind, 'min');
 
-   var resultMax = findMinMax(arrayToFind, 'max');
-
-   var resultMin = findMinMax(arrayToFind, 'min');
-
-   function findMinMax(array, str) {
-      if ( str == "max") {
-        return resultMax =  Math.max.apply( null, array );
-      }else{
-        return resultMin =  Math.min.apply( null, array );
-      }
+    function findMinMax(array, str) {
+        if ( str == "max") {
+            return resultMax =  Math.max.apply( null, array );
+        }else{
+            return resultMin =  Math.min.apply( null, array );
+        }
 
    }
 
@@ -35,7 +33,7 @@ console.log(firstArray);
 // // task 4
 // used firstArray from task 2
    
-   function convertArrayToObj (array) {
+function convertArrayToObj (array) {
 
     var obj = {};
 
