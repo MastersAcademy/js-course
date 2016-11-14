@@ -47,13 +47,14 @@
             for (var j = 0; j < arr2.length; j++) {
                 if (arr1[i] == arr2[j]) {
                     arr1.splice(i, 1);
+                    i--;
                 }
             }
         }
     }
 
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
+    var newData = [2, 2, 3, 3, 15];
+    var oldData = [2, 3, 10];
 
     filterNew(newData, oldData);
 
