@@ -40,13 +40,13 @@ task_5
 
 
 	
-	while(myArr.length < 100) {
+while(myArr.length < 100) {
 
-		var randomNumber = Math.ceil(Math.random()*100);
-	    
-	    if(myArr.indexOf(randomNumber) > -1) continue;
-	    myArr[myArr.length] = randomNumber;
-	}
+	var randomNumber = Math.ceil(Math.random()*100);
+    
+    if(myArr.indexOf(randomNumber) > -1) continue;
+    myArr[myArr.length] = randomNumber;
+}
 
 console.log("Answer for task 2: " + myArr);
 console.log("Checked for task 2: " + myArr.sort()); // для зручності перевірки від 1-100 цілих чисел 
@@ -155,7 +155,7 @@ var oldData = [12, 5, 7, 17, 22, 32];
 function filterNew(arr1, arr2){
 	
 	for(var i = 0; i < arr1.length; i++){	
-			
+
 		for(var j = 0; j <= arr2.length; j++){
 			
 			if(arr1[i] === arr2[j]){
