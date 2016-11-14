@@ -23,11 +23,11 @@ console.log("======================Массив====================")
 
 // findMinMax function
 function findMinMax(array,extr) {
-	var max = Math.max.apply(null, arr);
-	var min = Math.min.apply(null, arr);
 	if (extr == "max") {
+		var max = Math.max.apply(Math, arr);
 		return max;
 	}else if (extr == "min") {
+		var min = Math.min.apply(Math, arr);
 		return min;
 	}else {
 		console.log("Неизвестное понятие")
@@ -62,9 +62,10 @@ console.log(convertArrayToObj(arr));
 // arr filter
 function filterNew(arr1, arr2){
 	for (var i = 0; i <= arr1.length;i++){
-		if (arr2.indexOf(arr1[i]) !== -1){
-			arr1.splice(i,1);
-			i = 0;
+		for (var j = 0; j <= arr2.length; j++){
+			if (arr2.indexOf(arr1[i]) !== -1){
+				arr1.splice(i,1);
+			}
 		}
 	}
 }
