@@ -5,7 +5,7 @@
 
     // //2. Add to array integer numbers from 1 to 100
     for (var i = 1; i <= 100; i++) {
-        arrayToFind.push(Math.round(Math.random() * 100))
+        arrayToFind.push(Math.ceil(Math.random() * 100))
     }
 
     console.log(arrayToFind);
