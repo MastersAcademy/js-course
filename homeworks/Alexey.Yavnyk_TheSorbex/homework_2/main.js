@@ -4,9 +4,8 @@
     var arr = new Array();
 
     //2
-
     for (var i = 0; i < 100; i++) {
-	      arr[i] = Math.floor(Math.random()*100);
+        arr[i] = Math.floor(Math.random()*100);
     }
 
     //3
@@ -14,26 +13,24 @@
     var arrayToFind = [3, 6, 0, -6, 12];
 
     function findMinMax(array, value){
-
         var min = array[0], max = array[0];
-
         if (value == 'max') {
-   	        for (var i = 0; i < array.length; i++) {
-   		          if (max < array[i]) {
-   			        max = array[i];
-   		          }
-   	         }
+            for (var i = 0; i < array.length; i++) {
+                if (max < array[i]) {
+                    max = array[i];
+                }
+            }
 
-   	    return max;
+            return max;
         } else if (value == 'min') {
-   	        for (var i = 0; i < array.length; i++) {
-   		          if (min > array[i]) {
-   			            min = array[i];
-   		          }
-   	        }
+            for (var i = 0; i < array.length; i++) {
+                if (min > array[i]) {
+                    min = array[i];
+                }
+            }
 
-   	    return min;
-   	    }
+            return min;
+        }
     }
 
     var resultMax = findMinMax(arrayToFind, 'max');
@@ -45,25 +42,25 @@
     //4
 
     function convertArrayToObj(array){
-	      var obj = {};
-	      var startStr = 97, endStr = 122;
-	      var k = 0;
-	      var keyNumb = 1;
+        var obj = {};
+        var startStr = 97, endStr = 122;
+        var k = 0;
+        var keyNumb = 1;
 
-	      while(k < array.length){
-		        if (startStr <= endStr) {
-		        key = String.fromCharCode(startStr);
-		        obj[key] = array[k];
-		        startStr++;
+        while(k < array.length){
+            if (startStr <= endStr) {
+                key = String.fromCharCode(startStr);
+                obj[key] = array[k];
+                startStr++;
             } else {
-		        obj[keyNumb] = array[k];
-		        keyNumb++;
-	      }
+                obj[keyNumb] = array[k];
+                keyNumb++;
+            }
 
-	      k++;
+            k++;
         }
 
-    return obj;
+        return obj;
     }
 
     console.log(convertArrayToObj(arr));
@@ -77,8 +74,8 @@
         for (var i = 0; i < array2.length; i++) {
             for (var j = 0; j < array1.length; j++) {
       	        if (array2[i] == array1[j]) {
-      		          array1.splice(j,1);
-      		          j--;
+      	            array1.splice(j,1);
+                    j--;
       	        }
             }
         }
