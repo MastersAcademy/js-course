@@ -2,14 +2,14 @@
 //1------------------------------------------------------------
 var arr = [];
 //2------------------------------------------------------------
-for(var i = 0; i < 100; i++){
+for(var i = 0; i < 100; i++)
   arr[i] = getRandomInt(1, 100);
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
+
 //3-------------------------------------------------------------
 var arrayToFind = [3, 6, 0, -6, 12];
 var resultMax = findMinMax(arrayToFind, 'max');
@@ -36,12 +36,12 @@ function findMinMax(arr1, find) {
 }
 //4---------------------------------------------------------------
 function convertArrayToObj (array) {
-  var obj = {};
+  var obj = {}, alphabetLength = 26, asciiA = 97;
   for (var i = 0; i < array.length; i++)
-    if (i < 123 - 97)
-      obj[String.fromCharCode(97 + i)] = array[i];
+    if (i < alphabetLength)
+      obj[String.fromCharCode(asciiA + i)] = array[i];
     else
-      obj[i - 25] = array[i];
+      obj[i - alphabetLength - 1] = array[i];
   console.log(obj);
   return obj;
 }
