@@ -49,7 +49,7 @@
         {
             if(j <= 25)
             {
-                obj[String.fromCharCode(97 + 0)] = array[j];
+                obj[String.fromCharCode(97 + j)] = array[j];
             }
             else if (j > 25)
             {
@@ -59,6 +59,11 @@
 
         return obj;
     }
+
+    var test = {};
+    test = convertArrayToObj(array);
+    for(var key in test)
+        console.log('test[' + key + '] = ' + test[key]);
 
     // 5 task
     var newData = [2, 12, 22, 6, 32];
