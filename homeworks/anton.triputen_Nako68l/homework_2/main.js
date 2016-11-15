@@ -15,21 +15,21 @@
     var min = arrayToFind[0];
     //3
     var findMinMax = function(arr, par) {
-        for (i = 0; i < 100; i++){
-            if (min > arr[i]){
-                min = arr[i];
-            }
-        }
-        for (i = 0; i < 100; i++) {
-            if (max < arr[i]) {
-                max = arr[i];
-            }
-        }
         if (par == 'min') {
+            for (i = 0; i < 100; i++) {
+                if (min > arr[i]) {
+                    min = arr[i];
+                }
+            }
             return min;
         }else if (par == 'max') {
+            for (i = 0; i < 100; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
             return max;
-        }else {
+        } else {
             console.log('In this function you can enter only "min" or "max" as argument');
         }
     };
@@ -38,12 +38,12 @@
     console.log(resultMax);
     console.log(resultMin);
     //5
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
+    var newData = [1, 1, 2, 2, 3];
+    var oldData = [1, 2, 5];
     var filterNew = function (newDataArg, oldDataArg) {
         metka:
-            for (i = 0; i < 100; i++){
-                for (j = 0; j < 100; j++){
+            for (i = 0; i < newDataArg.length; i++){
+                for (j = 0; j < oldDataArg.length; j++){
                     if (newDataArg[i] === oldDataArg[j]){
                         newDataArg.splice(i, 1);
                         continue metka;
