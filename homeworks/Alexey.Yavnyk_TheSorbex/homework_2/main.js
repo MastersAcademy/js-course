@@ -8,26 +8,33 @@
     for (var i = 0; i < 100; i++) {
 	    arr[i] = Math.floor(Math.random()*100);
     }
+
     //3
 
     var arrayToFind = [3, 6, 0, -6, 12];
 
     function findMinMax(array, value){
+
        var min = array[0], max = array[0];
+
        if (value == 'max') {
    	    for (var i = 0; i < array.length; i++) {
    		    if (max < array[i]) {
    			    max = array[i];
    		    }
    	    }
+
    	    return max;
+
        } else if (value == 'min') {
    	    for (var i = 0; i < array.length; i++) {
    		    if (min > array[i]) {
    			    min = array[i];
    		    }
    	    }
+
    	    return min;
+
    	    }
     }
 
@@ -44,6 +51,7 @@
 	    var startStr = 97, endStr = 122;
 	    var k = 0;
 	    var keyNumb = 1;
+
 	    while(k < array.length){
 		    if (startStr <= endStr) {
 		    key = String.fromCharCode(startStr);
@@ -53,9 +61,12 @@
 		    obj[keyNumb] = array[k];
 		    keyNumb++;
 	    }
+
 	    k++;
     }
+
     return obj;
+
     }
 
     console.log(convertArrayToObj(arr));
@@ -64,6 +75,7 @@
 
     var newData = [2, 12, 22, 6, 32];
     var oldData = [12, 5, 7, 17, 22, 32];
+
     function filterNew(array1, array2){
        for (var i = 0; i < array2.length; i++) {
           for (var j = 0; j < array1.length; j++) {
@@ -74,6 +86,7 @@
           }
        }
     }
+    
     filterNew(newData, oldData);
 
     console.log(newData); // in console : [2, 6];
