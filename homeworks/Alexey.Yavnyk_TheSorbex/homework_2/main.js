@@ -25,7 +25,6 @@
    	    }
 
    	    return max;
-
        } else if (value == 'min') {
    	    for (var i = 0; i < array.length; i++) {
    		    if (min > array[i]) {
@@ -34,8 +33,7 @@
    	    }
 
    	    return min;
-
-   	    }
+   	}
     }
 
     var resultMax = findMinMax(arrayToFind, 'max');
@@ -66,7 +64,6 @@
     }
 
     return obj;
-
     }
 
     console.log(convertArrayToObj(arr));
@@ -86,7 +83,7 @@
           }
        }
     }
-    
+
     filterNew(newData, oldData);
 
     console.log(newData); // in console : [2, 6];
