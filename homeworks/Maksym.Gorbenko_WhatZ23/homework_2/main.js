@@ -66,9 +66,9 @@
         
         var n = 1;
 
-        for (var i = 0; i < array.length; i++) {
+         for (var i = 0; i < array.length; i++) {
 
-            if (i <= alphabet.length) {
+            if (i+1 <= alphabet.length) {
                 
                 obj[alphabet[i]] = array[i];
             
