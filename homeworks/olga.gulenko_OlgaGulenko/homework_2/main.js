@@ -22,7 +22,7 @@
 
     console.log(resultMax);
     console.log(resultMin);
-// Task 4.
+    // Task 4.
     function convertArrayToObj(arr) {
         var n;
         n       = 'abcdefghijklmnopqrstuvwxyz';
@@ -41,8 +41,8 @@
         return obj;
     }
 
-//console.log( convertArrayToObj(arrayToFind) );
-//Task 5.
+    //console.log( convertArrayToObj(arrayToFind) );
+    //Task 5.
     function filterNew(arrayNew, arrayOld) {
         for (var m = 0; m < arrayNew.length; m++) {
             for (var l = 0; l < arrayOld.length; l++) {
