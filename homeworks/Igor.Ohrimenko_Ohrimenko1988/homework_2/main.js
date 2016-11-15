@@ -66,9 +66,9 @@
         console.log('test[' + key + '] = ' + test[key]);
 
     // 5 task
-    var newData = [2, 12, 22, 6, 32];
+    var newData = [2, 2, 12, 22, 6, 32];
+    var oldData = [2, 12, 5, 7, 17, 22, 32];
 
-    var oldData = [12, 5, 7, 17, 22, 32];
 
     function filterNew(newData , oldData)
     {
@@ -77,7 +77,10 @@
             for(var k = 0 ; k < newData.length ; k++)
             {
                 if(oldData[j] == newData[k])
-                newData.splice(k,1);
+                    k--;
+                    newData.splice(k+1,1);
+
+
             }
         }
     }
