@@ -18,15 +18,16 @@
 
     //___________________________________________________3rd task_____________________________________________________//
     //third task: Search max and min number in array
-    function findMaxMin(actions) {
+    var arrayToFind = [3,6,0,-6,12]
+    function findMinMax(array,actions) {
         if (actions == 'max') {
-            return Math.max.apply(null,newArray);
+            return Math.max.apply(null,array);
         } else if (actions == 'min') {
-            return Math.min.apply(null,newArray);
+            return Math.min.apply(null,array);
         }
     }
-    console.log(findMaxMin('max'));
-    console.log(findMaxMin('min'));
+    console.log(findMinMax(arrayToFind, 'max'));
+    console.log(findMinMax(arrayToFind, 'min'));
     //________________________________________________________________________________________________________________//
 
     //___________________________________________________4th task_____________________________________________________//
