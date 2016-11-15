@@ -55,7 +55,8 @@
 		        key = String.fromCharCode(startStr);
 		        obj[key] = array[k];
 		        startStr++;
-	          } else {
+	          } 
+            else {
 		        obj[keyNumb] = array[k];
 		        keyNumb++;
 	      }
