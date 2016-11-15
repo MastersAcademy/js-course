@@ -26,14 +26,19 @@
     function convertArrayToObj (array) {
 
         var obj = {};
+        var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        var i = 0;
+        var key;
 
-        /* Staff to convert array to obj
-         //...
-         */
+        while (i < array.length) {
+            key = i < alphabet.length ? alphabet[i] : i - alphabet.length + 1;
+            obj[key] = array[i];
+            i++;
+        }
 
         return obj;
-
     }
+
 
     // task 1
     var arrayNatural = [];
@@ -53,5 +58,10 @@
     console.log(resultMax); // 12
 
     console.log(resultMin); // -6
+
+    // task 4
+    console.log(convertArrayToObj(arrayToFind));
+
+    console.log(convertArrayToObj(arrayNatural));
 
 })();
