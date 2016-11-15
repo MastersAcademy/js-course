@@ -37,14 +37,14 @@ function convertArrayToObj (array) {
     for (var i = 1; i <= array.length; i++){
         alphabetArray.push(i);
     }
-        for (var i = 0; i < array.length; i++) {
-            obj[alphabetArray[i]] = array[i];
-        }
-        return obj;
+    for (var i = 0; i < array.length; i++) {
+        obj[alphabetArray[i]] = array[i];
+    }
+     return obj;
     }
 console.log(convertArrayToObj(myArray));
 
-console.log("****************5. Array filter*****************");
+console.log("**********************5. Array filter**********************");
 
 function filterNew(arr1, arr2){	
     for (var i = 0; i < arr1.length; i++){
