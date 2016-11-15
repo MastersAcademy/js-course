@@ -2,8 +2,8 @@
 var firstArray = [];
 
 //2
-    for (i=0; i<100; i++){
-    	firstArray[i]=(Math.floor(Math.random() * (100)));
+    for (i = 0; i<99; i++){
+    	firstArray[i] = (Math.floor(Math.random() * (99)));
     }
     firstArray.push(i);
     console.log(firstArray);
@@ -35,9 +35,9 @@ console.log(findMax, findMin);
 // 4
 var objectArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
     function convertArrayToObj(array){
-    	var object={};
-    	var alphabetArray=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    	var o=1;
+    	var object = {};
+    	var alphabetArray = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    	var o = 1;
     	for(i = 0; i < alphabetArray.length; i++){
     		object[alphabetArray[i]] = array[i];
     	}
