@@ -12,33 +12,43 @@
 	// 3
 	var arrayToFind = [3, 6, 0, -6, 12];
 	var resultMax = function findMinMax(arrayToFind) {
-		var max = 0;
 		if (!(arrayToFind instanceof Array)) {
 			console.warn(arrayToFind, 'is not Array');
 			return;
 		}
-		arrayToFind.map(function (curent, i, array) {
+
+		return arrayToFind.reduce(function (previous, curent, i, array) {
 			// console.log(arguments);
-			max = Math.max(curent, max);
+			return Math.max(curent, previous);
 		});
-		return(max);
 	}
 	console.log(resultMax(arrayToFind));
 
 	var resultMin = function findMinMax(arrayToFind) {
-		var min = 0;
 		if (!(arrayToFind instanceof Array)) {
 			console.warn(arrayToFind, 'is not Array');
 			return;
 		}
-		arrayToFind.map(function (curent, i, array) {
+		return arrayToFind.reduce(function (previous, curent, i, array) {
 			// console.log(arguments);
-			min = Math.min(curent, min);
+			return Math.min(curent, previous);
 		});
-		return(min);
 	}
 	console.log(resultMin(arrayToFind));
 	// 4
+	function convertArrayToObj (array) {
+
+		var obj = {};
+
+		/* Staff to convert array to obj
+		 //...
+		 */
+
+		return obj;
+
+	}
 
 	// 5
+
+
 })();
