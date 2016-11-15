@@ -75,6 +75,33 @@
         // Output numberArr
         console.log("----------------Task 2----------------");
         console.log("Output numberArr: ");
+(function () {
+
+    // --------------------------Task 1---------------------
+    // -----------------------------------------------------
+        // created an empty array
+        console.log("----------------Task 1----------------");
+        console.log("Created an empty array");
+        console.log("--------------------------------------");
+        var numberArr = [];
+    // -----------------------------------------------------
+
+    // --------------------------Task 2---------------------
+    // -----------------------------------------------------
+        // create function randomNumberArray for random number from 0 to 100 items
+        function randomNumberArray(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        };
+
+        // Pushing to numberArr items from 0 to 100
+        for (var i = 0; i < 100; i++) {
+            for (var i = 0; i < 100; i++ ){
+                numberArr.push(randomNumberArray(1, 100));
+            };
+        };
+        // Output numberArr
+        console.log("----------------Task 2----------------");
+        console.log("Output numberArr: ");
         console.log(numberArr);
         console.log("--------------------------------------");
     // -----------------------------------------------------
