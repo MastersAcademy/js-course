@@ -32,18 +32,21 @@
     var index = 1;
     console.log(convertArrayToObj(arrayToFind));
 
-    var newData = [2, 12, 22, 6, 32];
-    var oldData = [12, 5, 7, 17, 22, 32];
+    // var newData = [2, 12, 22, 6, 32];
+    // var oldData = [12, 5, 7, 17, 22, 32];
+    var newData = [2, 2, 3, 2, 5];
+    var oldData = [2, 3, 5];
     filterNew(newData, oldData);
     console.log(newData); // in console : [2, 6];
 
 
     function filterNew(arr1, arr2) {
         var elementsToDelete = [];
-        arr2.forEach(function (element, index) {
-            var findIndex = arr1.indexOf(element);
-            if (findIndex !== -1) {
-                elementsToDelete.push(findIndex)
+        arr2.forEach(function (elementOfArr2, indexOfArr2) {
+            for (var indexOfArr1 = 0; indexOfArr1 < arr1.length; indexOfArr1++) {
+                if (elementOfArr2 == arr1[indexOfArr1]) {
+                    elementsToDelete.push(indexOfArr1);
+                }
             }
         });
         elementsToDelete.sort();
