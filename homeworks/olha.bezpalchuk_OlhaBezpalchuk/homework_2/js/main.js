@@ -94,10 +94,19 @@
 
     function filterNew(arr1, arr2){
         for(var i = 0; i < arr2.length; i++){
-            while(arr1.includes(arr2[i])){
+            while(elementIncludes(arr1, arr2[i])){
                 arr1.splice(arr1.indexOf(arr2[i]), 1);
             }
         }
+    }
+
+    function elementIncludes(array, element){
+        for(var i = 0; i < array.length; i++){
+            if(array[i] == element){
+                return true;
+            }
+        }
+        return false;
     }
 
     //testing task #5
