@@ -1,70 +1,77 @@
-(function () {
-    var arr = [];
-    var arr1 = [];
-    for(var i=0; i<100; i++){
-        arr[i] = Math.floor(Math.random()*100);
-    }
-    for(var i=0; i<100; i++){
-        arr1[i] = Math.floor(Math.random()*100);
-    }
-    console.log(arr);
-    console.log(arr1);
-    var max = arr[0];
-    var min = arr[0];
-var findMinMax = function(arr, par) {
-        for (i = 0; i < 100; i++){
-            if (min > arr[i]){
-                min = arr[i];
-            }
+    (function () {
+        //1
+        var arrayToFind = [];
+        var arrayToFind1 = [];
+        //2
+        for(var i = 0; i < 100; i++){
+            arrayToFind[i] = Math.floor(Math.random()*100 + 1);
         }
-     for (i = 0; i < 100; i++) {
-      if (max < arr[i]) {
-          max = arr[i];
-      }
-  }
- if (par == 'min') {
-     return min;
- }else if (par == 'max') {
-     return max;
- }else {
-     console.log('In this function you can enter only "min" or "max" as argument');
- }
-}
-    console.log(findMinMax(arr, 'min'));
-    console.log(findMinMax(arr, 'max'));
-    console.log(findMinMax(arr, 'mox'));
-    console.log(findMinMax(arr1, 'max'));
-   var filter = function (mas, mas1) {
-            metka:
-        for (i=0; i < 100; i++){
-            for (j=0; j < 100; j++){
-                if (mas[i] === mas1[j]){
-                    mas.splice(i, 1);
-                    continue metka;
+        for(var i = 0; i < 100; i++){
+            arrayToFind1[i] = Math.floor(Math.random()*100 + 1);
+        }
+        console.log(arrayToFind);
+        console.log(arrayToFind1);
+        var max = arrayToFind[0];
+        var min = arrayToFind[0];
+        //3
+    var findMinMax = function(arr, par) {
+            for (i = 0; i < 100; i++){
+                if (min > arr[i]){
+                    min = arr[i];
                 }
             }
-        }
-        return mas;
+         for (i = 0; i < 100; i++) {
+          if (max < arr[i]) {
+              max = arr[i];
+          }
+      }
+     if (par == 'min') {
+         return min;
+     }else if (par == 'max') {
+         return max;
+     }else {
+         console.log('In this function you can enter only "min" or "max" as argument');
+     }
     }
-    filter(arr, arr1);
-    console.log(arr, 'we have left only ' + arr.length + ' elements in our first array');
-    function arrayToObject(arr) {
-        var abv;
-        var obj = {};
-        var i = 0, j = 1;
-        abv = 'abcdefghijklmnopqrstuvwxyz';
-        while (arr[i] !== undefined && abv[i]) {
-            obj[abv[i]] = arr[i];
-            i++;
+        var resultMax = findMinMax(arrayToFind, 'min');
+        var resultMin = findMinMax(arrayToFind, 'max');
+        console.log(resultMax);
+        console.log(resultMin);
+        //5
+        var newData = [2, 12, 22, 6, 32];
+        var oldData = [12, 5, 7, 17, 22, 32];
+        var filterNew = function (newDataArg, oldDataArg) {
+                metka:
+            for (i=0; i < 100; i++){
+                for (j=0; j < 100; j++){
+                    if (newDataArg[i] === oldDataArg[j]){
+                        newDataArg.splice(i, 1);
+                        continue metka;
+                    }
+                }
+            }
+            return newDataArg;
         }
-        while (arr[i] !== undefined) {
-            obj[j] = arr[i];
-            i++; j++;
-        }
+        filterNew(newData, oldData);
+        console.log(newData, 'we have left only ' + newData.length + ' elements in our first array');
+        //4
+        function arrayToObject(arr) {
+            var abc;
+            var obj = {};
+            var i = 0, j = 1;
+            abc = 'abcdefghijklmnopqrstuvwxyz';
+            while (arr[i] !== undefined && abc[i]) {
+                obj[abc[i]] = arr[i];
+                i++;
+            }
+            while (arr[i] !== undefined) {
+                obj[j] = arr[i];
+                i++; j++;
+            }
 
-        return obj;
-    }
-    console.log(arrayToObject(arr1));
-})();
+            return obj;
+        }
+        console.log(arrayToObject(arrayToFind1));
+    })();
 
     
