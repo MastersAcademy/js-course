@@ -40,15 +40,12 @@
     }
 
     function filterNew (array1, array2) {
-        var counter = 0;
-
-        array1.forEach(function(e1){
-            array2.forEach(function(e2){
-                if (e1 == e2) {
-                    delete array1[counter];
-                }
-            });
-            counter++;
+        array2.forEach(function(e2){
+            var index = array1.indexOf(e2);
+            while (index != -1) {
+                array1.splice(index, 1);
+                index = array1.indexOf(e2);
+            }
         });
     }
 
