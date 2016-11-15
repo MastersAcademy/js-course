@@ -33,10 +33,10 @@
     function convertArrayToObj(array) {
         var obj = {};
             for (var e = 1; e <= array.length; e++ ){
-                if(e <= 26){
+                if(e <= 25){
                     obj[String.fromCharCode(97 + (e - 1))] = array[e]
                 }else{
-                    obj[e -26 ] = array[e -1 ]
+                    obj[e -25 ] = array[e -1 ]
                 }
             }
         return obj;
@@ -48,12 +48,15 @@
     var newData = [2, 12, 22, 6, 32];
 
     var oldData = [12, 5, 7, 17, 22, 32];
-    function filterNew(array1,array2) {
-        array1.forEach(function(item, i) {
-            if(array2.indexOf(item) + 1){
-                delete array1[i]
+
+    function filterNew(array1, array2) {
+        for (var a = array1.length; a >= 0; --a) {
+            for (var j = array2.length; j >= 0; --j) {
+                if (array1[a] === array2[j]) {
+                    array1.splice(a, 1);
+                }
             }
-        });
+        }
     }
 
     filterNew(newData, oldData);
