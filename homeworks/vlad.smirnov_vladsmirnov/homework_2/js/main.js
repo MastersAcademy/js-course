@@ -40,13 +40,16 @@
 
     // Fourth task
 
+
+
+
     function convertArrayToObj (array) {
         var obj = {};
         for (var i = 0; i <= array.length; i++) {
-            if (i <= 26) {
+            if (i <= 25) {
                 obj[String.fromCharCode(97 + i)] = array[i];
             } else {
-                obj[i - 26] = array[i - 1];
+                obj[i - 25] = array[i - 1];
             }
         }
         return obj;
@@ -57,18 +60,24 @@
     // Fifth task
 
     var newData = [2, 12, 22, 6, 32];
-
     var oldData = [12, 5, 7, 17, 22, 32];
 
     function filterNew(firstArray, secondArray) {
-        firstArray.forEach(function(item, i) {
-            if(secondArray.indexOf(item) + 1){
-                delete firstArray[i]
+        var index = 0;
+
+        while(index < firstArray.length) {
+            var val = firstArray[index];
+            var pos = secondArray.indexOf(val);
+
+            if (pos > -1) {
+                firstArray.splice(index, 1);
+            } else {
+                index++;
             }
-        });
+        }
     }
     filterNew(newData, oldData);
-    console.dir(newData.filter(function(n){ return n != undefined }));
+    console.log(newData);
 
 
 })();
