@@ -16,8 +16,8 @@
 
     console.log('Task 3');
     function maxMin (array){
-        var max = Math.max.apply(null, arr1);
-        var min = Math.min.apply(null, arr1);
+        var max = Math.max.apply(null, array);
+        var min = Math.min.apply(null, array);
         console.log('Max = ', max);
         console.log('Min = ', min);}
 
