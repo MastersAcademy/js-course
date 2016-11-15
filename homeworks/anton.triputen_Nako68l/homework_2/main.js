@@ -32,7 +32,7 @@
      }else {
          console.log('In this function you can enter only "min" or "max" as argument');
      }
-    }
+    };
         var resultMax = findMinMax(arrayToFind, 'min');
         var resultMin = findMinMax(arrayToFind, 'max');
         console.log(resultMax);
@@ -42,8 +42,8 @@
         var oldData = [12, 5, 7, 17, 22, 32];
         var filterNew = function (newDataArg, oldDataArg) {
                 metka:
-            for (i=0; i < 100; i++){
-                for (j=0; j < 100; j++){
+            for (i = 0; i < 100; i++){
+                for (j = 0; j < 100; j++){
                     if (newDataArg[i] === oldDataArg[j]){
                         newDataArg.splice(i, 1);
                         continue metka;
@@ -51,7 +51,7 @@
                 }
             }
             return newDataArg;
-        }
+        };
         filterNew(newData, oldData);
         console.log(newData, 'we have left only ' + newData.length + ' elements in our first array');
         //4
