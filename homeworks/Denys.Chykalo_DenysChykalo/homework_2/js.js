@@ -15,10 +15,14 @@
     console.log('____________________________________');
 
     console.log('Task 3');
-    var max = Math.max.apply(null, arr1);
-    var min = Math.min.apply(null, arr1);
-    console.log(max);
-    console.log(min);
+    function maxMin (array){
+	    var max = Math.max.apply(null, arr1);
+        var min = Math.min.apply(null, arr1);
+        console.log('Max = ', max);
+        console.log('Min = ', min);}
+
+    maxMin (arr0);
+    maxMin (arr1);
 
     console.log('____________________________________');
 
