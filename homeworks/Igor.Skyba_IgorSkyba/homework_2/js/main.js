@@ -65,24 +65,21 @@
         return obj;
     }
 
-    function filterNew (array1, array2) {
+    function filterNew(array1, array2) {
 
-        var counter = 0;
+        for (var a = array1.length; a >= 0; --a) {
 
-        array1.forEach(function(el1){
-            array2.forEach(function(el2){
-                if (el1 == el2) {
-                    array1.splice(counter, 1);
-                }
-            });
-            counter++;
-        });
+            if (array2.indexOf(array1[a]) > -1){
+                array1.splice(a, 1);
+            }
+        }
     }
 
-    var arrayToFilter1 = createRandomNumbersArray(100, false);
-    var arrayToFilter2 = createRandomNumbersArray(100, false);
+    var newData = [2, 12, 22, 6, 32];
 
-    filterNew(arrayToFilter1, arrayToFilter2);
+    var oldData = [12, 5, 7, 17, 22, 32];
+
+    filterNew(newData, oldData);
 
     console.log('*** Random Numbers Array ***');
     console.log(randomArray);
@@ -95,7 +92,7 @@
     console.log(convertArrayToObj(randomArray));
     console.log('******');
     console.log('*** Filter Array ***');
-    console.log(arrayToFilter1);
+    console.log(newData);
     console.log('******');
 
 })();
