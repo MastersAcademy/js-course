@@ -14,8 +14,8 @@
             } else {
                 arr.push(roundNumber);
             }
-        }
-        console.log('2)', arr, 'Array length: ' , arr.length)
+        };
+        console.log('2)', arr, 'Array length: ' , arr.length);
     };
     randomNumber();
 
