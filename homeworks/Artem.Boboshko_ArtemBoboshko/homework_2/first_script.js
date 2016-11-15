@@ -24,30 +24,25 @@ function findMinMax(array, element){
 
 function convertArrayToObj (array) {
 
-       var obj = {};
-
-        var abcd = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
-        var a = 1;
-		
-        for (var i = 0; i < arr.length; i++) {
-	
-            if (i < abcd.length) {
-			
-                obj[abcd[i]] = arr[i];
-
-            } else {
-
-                obj[a++] = arr[i];
-
-            }
+        var obj = {};
+         var abcd = 97;
+         for (var i = 0; i < array.length; ++i) {
  
-        }
-        return obj;
-}
+             if (abcd <= 122) {
+ 
+                 obj[String.fromCharCode(abcd)] = array[i];
+                 ++abcd;
+             }
+             else {
+                 obj[i - 25] = array[i];
+             }
+         }
+ 
+         return obj;
+     }
 
 //5) Filter two array
-var arr1=[2, 5, 8, 1, 14, 22, 43];
+var arr1=[1,1,2,3,4,4,1];
 
 var arr2=[3, 4, 6, 8, 2, 43, 14, 7];
  
@@ -56,7 +51,7 @@ var arr2=[3, 4, 6, 8, 2, 43, 14, 7];
 		 for (var b=0; b < arr2.length; b++) {
 			 if (arr1[a] == arr2[b]) {
 				 arr1.splice(a, 1);
-				 i--;
+				 a--;
 			 }
 		 }
 	 }
