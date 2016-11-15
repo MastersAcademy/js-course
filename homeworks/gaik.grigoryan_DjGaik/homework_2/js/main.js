@@ -18,7 +18,6 @@
 		}
 
 		return arrayToFind.reduce(function (previous, curent, i, array) {
-			// console.log(arguments);
 			return Math.max(curent, previous);
 		});
 	}
@@ -30,7 +29,6 @@
 			return;
 		}
 		return arrayToFind.reduce(function (previous, curent, i, array) {
-			// console.log(arguments);
 			return Math.min(curent, previous);
 		});
 	}
