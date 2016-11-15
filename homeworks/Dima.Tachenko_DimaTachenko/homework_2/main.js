@@ -56,7 +56,6 @@
                 }
             }
         }
-        return arr1;
     }
 
     var newData = [2, 12, 22, 6, 32];
