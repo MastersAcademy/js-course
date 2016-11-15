@@ -63,6 +63,21 @@
 	console.log( arrayToObject(testArray) );
 
 	// 5
+	var newData = [2, 12, 22, 6, 32];
+	var oldData = [12, 5, 7, 17, 22, 32];
 
+	filterNew(newData, oldData);
+
+	function filterNew(newData,oldData) {
+		for (var i = 0; i < oldData.length; i++){
+			for (var x = newData.length - 1; x !== 0 ; x--) {
+				if (newData[x] == oldData[i]){
+					newData.splice(x,1);
+				}
+			}
+		}
+	}
+
+	console.log(newData);
 
 })();
