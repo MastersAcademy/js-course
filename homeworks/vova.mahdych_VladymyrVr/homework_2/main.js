@@ -9,7 +9,7 @@
     var i = 0;
 
     while (i < 100) {
-        randArr.push(Math.ceil((Math.random() * 100)));  //fixed
+        randArr.push(Math.floor(Math.random() * 100 + 1 ));  //fixed
         i++
     }
 
@@ -73,6 +73,7 @@
                 }
             }
         }
+        //delete Return
     }
 
     var newData = [2, 12, 22, 6, 32];
