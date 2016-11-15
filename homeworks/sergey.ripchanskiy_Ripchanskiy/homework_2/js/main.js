@@ -12,7 +12,7 @@
     }
     console.log(integerArr);
 
-     //3. Search function and output to the console the max or min element
+     //3. Search function and output to the console the max or min elem
      function compareNumeric(a, b) {
       return a - b;
     }
