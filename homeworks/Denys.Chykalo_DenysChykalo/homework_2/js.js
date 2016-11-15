@@ -33,7 +33,7 @@
                 value = String.fromCharCode(index);
                 index++;
 			} else if (i => 26) {
-                value = index - 123;
+                value = index - 122;
                 index++;
             }
             obj[value] = array[i];
@@ -47,7 +47,7 @@
     console.log('Task 5');
     var arr2 = [1, 55, 213, 57, 88, 2, 3, 1];
     var arr3 = [1, 33, 454, 12, 55, 2, 3, 11];
-    function Filter(array1, array2){
+    function filterNew(array1, array2){
         for (i = 0; i < array1.length; i++){
             for (j = 0; j < array2.length; j++){
                 if (array1[i] == array2[j]){
@@ -58,5 +58,5 @@
         }
     console.log(array1);
     }
-    Filter(arr2,arr3);
+    filterNew(arr2,arr3);
 })();
