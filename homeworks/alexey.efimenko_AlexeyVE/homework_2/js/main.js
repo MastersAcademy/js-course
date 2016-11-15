@@ -10,7 +10,7 @@
             var roundNumber = Math.ceil(randomNumber);
             if (roundNumber > 100 || randomNumber == 0) {
                 console.log('error!!! Array contains a number greater than 100');
-            return false;
+                return false;
             } else {
                 arr.push(roundNumber);
             }
@@ -58,9 +58,9 @@
             if(i < letters.length){
                 obj[letters[i]]=array[i];
             }
-        else if(i >= letters.length){
-            var prop=(i-letters.length)+1;
-            obj[prop]=array[i];
+            else if(i >= letters.length){
+                var prop=(i-letters.length)+1;
+                obj[prop]=array[i];
             }
         };
         return obj; 
