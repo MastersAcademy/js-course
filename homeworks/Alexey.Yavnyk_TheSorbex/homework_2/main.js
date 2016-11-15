@@ -39,7 +39,7 @@
 
     //4
 
-    function convertArrayToObject(array){
+    function convertArrayToObj(array){
 	    var obj = {};
 	    var startStr = 97, endStr = 122;
 	    var k = 0;
@@ -58,7 +58,7 @@
     return obj;
     }
 
-    console.log(convertArrayToObject(arr));
+    console.log(convertArrayToObj(arr));
 
     //5
 
