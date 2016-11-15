@@ -9,11 +9,11 @@
 
     function findMinMax(array, value) {
         if (value == "max") {
-            return Math.max.apply(null, numbers);
+            return Math.max.apply(null, array);
         }
 
         if (value == "min") {
-            return Math.min.apply(null, numbers);
+            return Math.min.apply(null, array);
         }
     }
 
@@ -29,12 +29,10 @@
         var j = 1;
 
         for (var i = 0; i < array.length; i++) {
-            if (i > abc.length) {
-                obj[j++] = array[i];
-            }
-
             if (i < abc.length) {
                 obj[abc[i]] = array[i];
+            } else {
+                obj[j++] = array[i];
             }
         }
 
@@ -46,7 +44,7 @@
         for (var i = 0; i < arr1.length; i++) {
             for (var j = 0; j < arr2.length; j++) {
                 if (arr1[i] == arr2[j]) {
-                    arr1.splice(i, 1);
+                    arr1.splice(i , 1);
                     i--;
                 }
             }
