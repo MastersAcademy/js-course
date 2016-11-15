@@ -13,7 +13,7 @@
     
     function findMinMax(arrayToFind, fun){
         switch(fun) {
-		    case 'max' :
+		case 'max' :
                 return Math.max.apply(null,arrayToFind);
 	        case 'min' :
 	            return Math.min.apply(null,arrayToFind);
