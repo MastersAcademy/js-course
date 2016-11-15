@@ -31,30 +31,22 @@
 
     function convertArrayToObj(array) {
 
-        var names = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         var obj = {};
-        var j = 1;
+        var name = 97;
+        for (var i = 0; i < array.length; ++i) {
 
-        for (i = 0; i < names.length; i++) {
+            // ASCII code (97 - 122)
+            if (name <= 122) {
 
-            obj[names[i]] = array[i];
-
-        }
-
-        if (i != array.length) {
-
-            while (i < array.length) {
-
-                obj[j] = array[i];
-                i++;
-                j++;
-
+                obj[String.fromCharCode(name)] = array[i];
+                ++name;
             }
-
+            else {
+                obj[i - 25] = array[i];
+            }
         }
 
         return obj;
-
     }
 
     console.log(convertArrayToObj(array));
@@ -67,8 +59,8 @@
     function filterNew(array1, array2) {
 
         for (var i = 0; i < array1.length; i++) {
-            array2.forEach(function(element){
-                if (array1[i] == element){
+            array2.forEach(function (element) {
+                if (array1[i] == element) {
                     array1.splice(i, 1);
                     i--;
                 }
