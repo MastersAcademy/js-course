@@ -1,19 +1,15 @@
 
-// Empty array
+
 
  var arr = [];
 
-// Random from 1 to 100 in array
+
 
 var arrayRandom = [];
    for(i = 0; i < 100; i++) {
    arrayRandom[i] = Math.floor(( Math.random() * 100 ) + 1);
 }
-alert(arrayRandom)
-console.log(arrayRandom)
-console.log(arrayRandom.length)
 
-// Find max and min values in array
 
    var arrayToFind = [3, 6, 0, -6, 12];
 
@@ -30,13 +26,13 @@ console.log(arrayRandom.length)
       return Math.min.apply(null, arrayToFind);
      } 
 
-   console.log(resultMax); 
+  
 
-   console.log(resultMin); 
+   
 
   
  
-// 
+ 
     readyArray = createArray(30);
     doneArray = convertArrayToObj(readyArray);
     console.dir(doneArray);
@@ -48,7 +44,7 @@ console.log(arrayRandom.length)
         }
         return result;
     }
-    console.log(readyArray);
+   
 
     function convertArrayToObj(newArray) {
       var obj = {};
@@ -65,7 +61,7 @@ console.log(arrayRandom.length)
       return obj;
     }
  
-// 
+
 
   var newData = [22,2, 12, 6, 32];
   var oldData = [12, 5, 7, 17, 22, 32];
@@ -80,4 +76,4 @@ console.log(arrayRandom.length)
          }
        }
      }
-  console.log(array1);
+  
