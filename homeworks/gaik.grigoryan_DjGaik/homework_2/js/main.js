@@ -34,17 +34,33 @@
 	}
 	console.log(resultMin(arrayToFind));
 	// 4
-	function convertArrayToObj (array) {
-
+	function arrayToObject (array) {
+		if ( !(array instanceof Array) ) {
+			console.warn(array, ' is not Array');
+			return;
+		}
 		var obj = {};
 
-		/* Staff to convert array to obj
-		 //...
-		 */
+		array.forEach(function (value, i) {
+			var key;
+			if ( i < 26 ) {
+				key = String.fromCharCode(i + 97);
+			} else {
+				key = i - 25;
+			}
+			obj[key] = value;
+		});
 
 		return obj;
-
 	}
+
+	var testArray = [];
+
+	for (let y = 0; y < 100; y++) {
+		testArray.push('value ' + (y + 1));
+	}
+
+	console.log( arrayToObject(testArray) );
 
 	// 5
 
