@@ -9,9 +9,9 @@
     var i = 0;
 
     while (i < 100) {
-        randArr.push(Math.floor(Math.random() * 100 ) + 1);  //fixed
+        randArr.push(Math.floor((Math.random() * 100 ) + 1));  //fixed
         i++
-    }
+    }   
 
 
     console.log(randArr.toString());
