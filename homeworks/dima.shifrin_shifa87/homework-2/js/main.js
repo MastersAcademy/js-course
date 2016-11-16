@@ -32,11 +32,11 @@
 
     function convertArrayToObj(array) {
         var obj = {};
-            for (var e = 1; e <= array.length; e++ ){
+            for (var e = 0; e <= array.length; e++ ){
                 if(e <= 25){
-                    obj[String.fromCharCode(97 + (e - 1))] = array[e]
+                    obj[String.fromCharCode(97 + e)] = array[e]
                 }else{
-                    obj[e -25 ] = array[e -1 ]
+                    obj[e - 25] = array[e - 1]
                 }
             }
         return obj;
