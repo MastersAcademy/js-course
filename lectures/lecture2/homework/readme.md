@@ -84,7 +84,7 @@
         return result; 
     }
     
-    var pipe = createPipe(originalFnk, [filterDigits, filterSpecial, filterWhiteSpaces]);
+    var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
      
     pipe('on345l90y    te**x((((t     h$&er@@@e'); // logs 'Only Text Here' 
     
