@@ -31,4 +31,23 @@
         };
     };
 
+    //3
+    function freeze(delay, fnc) {
+        function count() {
+            marker = false;
+        }
+        var marker = true,
+            timeout;
+
+        return function () {
+            var args = arguments;
+            timeout = nativeSetTimeOut(function () {
+                if (marker) {
+                    fnc.apply(this, args);
+                    count();
+                }
+            }, delay);
+        };
+    }
+
 })();
