@@ -19,6 +19,9 @@
 
     /**
      * Overwrite default setInterval function.
+     *
+     * @param {Function} callback - The function will be executed after a delay.
+     * @param {Number} delay - The intervals (in milliseconds) on how often to execute the callback function.
      */
     function customSetInterval(callback, delay) {
         setTimeout(delay, function () {
@@ -45,7 +48,7 @@
      * Freeze function on a given delay.
      *
      * @param {Number} delay - Time in milliseconds for which freeze function.
-     * @param {Function} fnc - The function which to be called after a delay.
+     * @param {Function} fnc - The function will be executed after a delay.
      * @returns {Function}
      */
     function freeze(delay, fnc) {
@@ -79,7 +82,7 @@
      * Decorator for filter string.
      *
      * @param {Function} originalFnc
-     * @param {Array} [filters] - Array of filters.
+     * @param {Array} filters - Array of filters.
      * @returns {Function}
      */
     function createPipe(originalFnc, filters) {
@@ -87,10 +90,8 @@
         return function (string) {
             var result = string;
 
-            if (filters) {
-                for (var i = 0; i < filters.length; i++) {
-                    result = filters[i](result);
-                }
+            for (var i = 0; i < filters.length; i++) {
+                result = filters[i](result);
             }
 
             return originalFnc(result);
