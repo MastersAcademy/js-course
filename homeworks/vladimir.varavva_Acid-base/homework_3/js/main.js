@@ -3,7 +3,6 @@
 
     //1
     var nativeSetTimeOut = window.setTimeout;
-
     window.setTimeout = function (delay, callback) {
         var args = Array.prototype.slice.call(arguments, 2);
         if (typeof callback === 'function') {
@@ -17,12 +16,10 @@
     window.setInterval = function (callback, delay) {
         var args = Array.prototype.slice.call(arguments, 2),
             timeout;
-
         (function loop() {
             callback.apply(this, args);
             timeout = setTimeout(delay, loop);
         }());
-
         return function () {
             if (timeout) {
                 clearTimeout(timeout);
@@ -33,18 +30,13 @@
 
     //3
     function freeze(delay, fnc) {
-        function count() {
-            marker = false;
-        }
-        var marker = true,
-            timeout;
-
+        var timeout = true;
         return function () {
             var args = arguments;
             timeout = nativeSetTimeOut(function () {
-                if (marker) {
+                if (timeout) {
                     fnc.apply(this, args);
-                    count();
+                    timeout = false;
                 }
             }, delay);
         };
@@ -72,14 +64,14 @@
     }
 
     function filterWhiteSpaces(string) {
-        var result = string.replace(/\s+/g,' ');
+        var result = string.replace(/\s+/g, ' ');
         return result;
     }
 
     function createPipe(fn, arr) {
-        return function(str) {
-                for (var i =0 ; i < arr.length; i++) {
-                    str = arr[i](str);
+        return function (str) {
+            for (var i = 0; i < arr.length; i++) {
+                str = arr[i](str);
             }
             return fn(str);
         };
