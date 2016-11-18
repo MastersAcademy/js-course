@@ -3,8 +3,8 @@
     /**
      * Overwrite default SetTimeout function.
      *
-     * @param {function} defaultFn - Original function.
-     * @returns {function}
+     * @param {Function} defaultFn - Original function.
+     * @returns {Function}
      */
     function customSetTimeout(defaultFn) {
         return function (delay, callback) {
@@ -20,10 +20,12 @@
     /**
      * Overwrite default setInterval function.
      *
-     * @param {function} defaultFn - Original function.
+     * @param {Function} defaultFn - Original function.
      */
     function customSetInterval(defaultFn) {
+        return function (callback, delay) {
 
+        }
     }
 
     /**
@@ -31,14 +33,19 @@
      */
     window.setInterval = customSetInterval(setInterval);
 
+    setInterval(function () {
+        console.log(1);
+    }, 1000);
+
     function fncToDelay(param) {
         console.log('Delayed run : ' + param);
     }
 
     /**
+     * Freeze function on a given delay.
      *
-     * @param delay
-     * @param fnc
+     * @param {Number} delay - Time in milliseconds for which freeze function.
+     * @param {Function} fnc - The function which to be called after a delay.
      * @returns {Function}
      */
     function freeze(delay, fnc) {
@@ -47,17 +54,16 @@
         return function () {
             var args = arguments;
 
-            if (timeout) {
-                clearTimeout(timeout);
+            if (!timeout) {
+                timeout = setTimeout(delay, function () {
+                    fnc.apply(this, args);
+                    timeout = null;
+                });
             }
-
-            timeout = setTimeout(delay, function () {
-                fnc.apply(this, args);
-            });
         }
     }
 
-    var frozenFunc = freeze(100, fncToDelay);
+    var frozenFunc = freeze(1000, fncToDelay);
 
     frozenFunc('1');
     frozenFunc('2');
@@ -72,29 +78,29 @@
     /**
      * Decorator for filter string.
      *
-     * @param {function} originalFnc
-     * @param {array} filters - Array of filters.
-     * @returns {function}
+     * @param {Function} originalFnc
+     * @param {Array} filters - Array of filters.
+     * @returns {Function}
      */
     function createPipe(originalFnc, filters) {
 
         return function (string) {
-            var initialStr = string;
+            var result = string;
 
-            if (filters) {
+            if (filters.length != 0) {
                 for (var i = 0; i < filters.length; i++) {
-                    initialStr = filters[i](initialStr);
+                    result = filters[i](result);
                 }
             }
 
-            return originalFnc(initialStr);
+            return originalFnc(result);
         }
     }
 
     /**
      * Capitalize first letter of each word in string
      *
-     * @param string
+     * @param {String} string
      */
     function originalFnc(string) {
         var result,
@@ -112,8 +118,8 @@
     /**
      * Remove all digits from string.
      *
-     * @param {string} string - String to remove.
-     * @returns {string}
+     * @param {String} string - String to remove.
+     * @returns {String}
      */
     function filterDigits(string) {
         return string.replace(/\d+/g, '');
@@ -122,8 +128,8 @@
     /**
      * Remove all special symbols from string.
      *
-     * @param {string} string - String to remove.
-     * @returns {string}
+     * @param {String} string - String to remove.
+     * @returns {String}
      */
     function filterSpecial(string) {
         return string.replace(/[!@#$%^&*()+=]/g, '');
@@ -132,14 +138,11 @@
     /**
      * Replace two and more white spaces to one.
      *
-     * @param {string} string - String to remove.
-     * @returns {string}
+     * @param {String} string - String to remove.
+     * @returns {String}
      */
     function filterWhiteSpaces(string) {
         return string.replace(/\s\s+/g, ' ');
     }
 
-    var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
-
-    pipe('on345l90y    te**x((((t     h$&er@@@e'); // logs 'Only Text Here'
 })();
