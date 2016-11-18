@@ -3,24 +3,24 @@
 
     //1
     var nativeSetTimeOut = window.setTimeout;
-    window.setTimeout = function (delay, callback) {
+    window.setTimeout = function(delay, callback) {
         var args = Array.prototype.slice.call(arguments, 2);
         if (typeof callback === 'function') {
-            nativeSetTimeOut(function () {
+            nativeSetTimeOut(function() {
                 callback.apply(this, args);
             }, delay);
         }
     };
 
     //2
-    window.setInterval = function (callback, delay) {
+    window.setInterval = function(callback, delay) {
         var args = Array.prototype.slice.call(arguments, 2),
             timeout;
         (function loop() {
             callback.apply(this, args);
             timeout = setTimeout(delay, loop);
         }());
-        return function () {
+        return function() {
             if (timeout) {
                 clearTimeout(timeout);
                 timeout = 0;
@@ -31,7 +31,7 @@
     //3
     function freeze(delay, fnc) {
         var timeout = true;
-        return function () {
+        return function() {
             var args = arguments;
             timeout = nativeSetTimeOut(function () {
                 if (timeout) {
@@ -69,7 +69,7 @@
     }
 
     function createPipe(fn, arr) {
-        return function (str) {
+        return function(str) {
             for (var i = 0; i < arr.length; i++) {
                 str = arr[i](str);
             }
