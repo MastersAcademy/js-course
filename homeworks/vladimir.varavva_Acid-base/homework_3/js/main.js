@@ -58,18 +58,15 @@
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         }
         result = arr.join(' ');
-        result = filterSpecial(result);
-        result = filterWhiteSpaces(result);
-        result = filterDigits(result);
         return console.log(result);
     }
-    
+
     function filterDigits(string) {
         var result = string.replace(/[0-9]/g, '');
         return result;
     }
 
-   function filterSpecial(string) {
+    function filterSpecial(string) {
         var result = string.replace(/[!@#$%^&*()+=]/g, '');
         return result;
     }
@@ -79,8 +76,13 @@
         return result;
     }
 
-    function createPipe (fn, arr) {
-        return fn;
+    function createPipe(fn, arr) {
+        return function(str) {
+                for (var i =0 ; i < arr.length; i++) {
+                    str = arr[i](str);
+            }
+            return fn(str);
+        };
     }
 
 })();
