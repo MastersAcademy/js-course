@@ -20,23 +20,17 @@
     /**
      * Overwrite default setInterval function.
      */
-    function customSetInterval() {
-        return function interval(callback, delay) {
-            setTimeout(delay, function () {
-                callback();
-                interval(callback, delay);
-            });
-        };
+    function customSetInterval(callback, delay) {
+        setTimeout(delay, function () {
+            callback();
+            customSetInterval(callback, delay);
+        });
     }
 
     /**
      * Export customSetInterval function.
      */
-    window.setInterval = customSetInterval();
-
-    setInterval(function () {
-        console.log(1);
-    }, 1000);
+    window.setInterval = customSetInterval;
 
     /**
      * Helper function that displays a message in the console of browser.
