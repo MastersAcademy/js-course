@@ -1,32 +1,35 @@
 (function () {
 
     /**
-     * Overwrite function setTimeout
+     * Overwrite default SetTimeout function
      *
      * @param setTimeout
      * @returns {Function}
      */
-    function mуTimeout(setTimeout) {
+    function customSetTimeout(setTimeout) {
         return function (delay, callback) {
             return setTimeout(callback, delay);
         };
     }
 
-    window.setTimeout = mуTimeout(setTimeout);
-
-    setTimeout(1000, function () {
-        console.log(11);
-    });
+    /**
+     * Export customSetTimeout function
+     */
+    window.setTimeout = customSetTimeout(setTimeout);
 
     /**
-     * Overwrite function setInterval
+     * Overwrite default setInterval function
      *
-     * @param callback
-     * @param delay
+     * @param setInterval
      */
-    window.setInterval = function (callback, delay) {
+    function customSetInterval(setInterval) {
 
-    };
+    }
+
+    /**
+     * Export customSetInterval function
+     */
+    window.setInterval = customSetInterval(setInterval);
 
     function fncToDelay(param) {
         console.log('Delayed run : ' + param);
@@ -66,5 +69,29 @@
     frozenFunc('8');
     frozenFunc('9');
 
+    function createPipe(originalFnc) {
 
+    }
+
+    function originalFnc(string) {
+
+
+        console.log(result);
+    }
+
+    function filterDigits(string) {
+        return string.replace(/\d+/g, '');
+    }
+
+    function filterSpecial(string) {
+        return string.replace(/[^a-zA-Z ]/g, '');
+    }
+
+    function filterWhiteSpaces(string) {
+        return string.replace(/\s\s+/g, ' ');
+    }
+
+    // var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
+
+    // pipe('on345l90y    te**x((((t     h$&er@@@e'); // logs 'Only Text Here'
 })();
