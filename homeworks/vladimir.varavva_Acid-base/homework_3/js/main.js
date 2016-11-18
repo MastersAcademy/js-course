@@ -51,14 +51,17 @@
     }
 
     //4
-   function originalFnc(string) {
+    function originalFnc(string) {
         var arr = string.split(' '),
-            result; 
+            result;
         for (var i = 0; i < arr.length; i++) {
-            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);   
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         }
         result = arr.join(' ');
-        console.log(result);
+        result = filterSpecial(result);
+        result = filterWhiteSpaces(result);
+        result = filterDigits(result);
+        return console.log(result);
     }
     
     function filterDigits(string) {
@@ -66,15 +69,18 @@
         return result;
     }
 
-    function filterSpecial(string) {
-        var result = string.replace(/[^A-Za-zА-Яа-яЁё,^0-9]/g, ' ');
+   function filterSpecial(string) {
+        var result = string.replace(/[!@#$%^&*()+=]/g, '');
         return result;
     }
 
     function filterWhiteSpaces(string) {
-        var result = string
-            .replace(/\s{2,}/g, ' ')
-            .replace(/^\s+/, '');
+        var result = string.replace(/\s+/g,' ');
         return result;
     }
+
+    function createPipe (fn, arr) {
+        return fn;
+    }
+
 })();
