@@ -74,10 +74,21 @@
     }
 
     function originalFnc(string) {
+        var result,
+            words = string.toLowerCase().split(' ');
 
+        for (var i = 0; i < words.length; i++) {
+            var letters = words[i].split('');
+            letters[0] = letters[0].toUpperCase();
+            words[i] = letters.join('');
+        }
+
+        result = words.join(' ');
 
         console.log(result);
     }
+
+    originalFnc('test sTriNg conSole');
 
     /**
      * Remove all digits from string.
