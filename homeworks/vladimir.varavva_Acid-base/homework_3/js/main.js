@@ -50,4 +50,16 @@
         };
     }
 
+    //4
+    function originalFnc(string) {
+        var arr = string.split(' ');
+        for (var i = 0; i < arr.length; i++) {
+            string = arr[i];
+            string = string[0].toUpperCase() + string.slice(1);
+            arr[i] = string;
+        }
+        arr = arr.join(' ');
+        console.log(arr);
+    }
+
 })();
