@@ -79,7 +79,7 @@
      * Decorator for filter string.
      *
      * @param {Function} originalFnc
-     * @param {Array} filters - Array of filters.
+     * @param {Array} [filters] - Array of filters.
      * @returns {Function}
      */
     function createPipe(originalFnc, filters) {
@@ -87,7 +87,7 @@
         return function (string) {
             var result = string;
 
-            if (filters.length != 0) {
+            if (filters) {
                 for (var i = 0; i < filters.length; i++) {
                     result = filters[i](result);
                 }
