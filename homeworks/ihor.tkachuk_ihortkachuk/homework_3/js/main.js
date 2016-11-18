@@ -3,12 +3,12 @@
     /**
      * Overwrite default SetTimeout function.
      *
-     * @param setTimeout
-     * @returns {Function}
+     * @param {function} defaultFn - Original function.
+     * @returns {function}
      */
-    function customSetTimeout(setTimeout) {
+    function customSetTimeout(defaultFn) {
         return function (delay, callback) {
-            return setTimeout(callback, delay);
+            return defaultFn(callback, delay);
         };
     }
 
@@ -20,9 +20,9 @@
     /**
      * Overwrite default setInterval function.
      *
-     * @param setInterval
+     * @param {function} defaultFn - Original function.
      */
-    function customSetInterval(setInterval) {
+    function customSetInterval(defaultFn) {
 
     }
 
@@ -57,7 +57,7 @@
         }
     }
 
-    var frozenFunc = freeze(1000, fncToDelay);
+    var frozenFunc = freeze(100, fncToDelay);
 
     frozenFunc('1');
     frozenFunc('2');
@@ -69,26 +69,45 @@
     frozenFunc('8');
     frozenFunc('9');
 
-    function createPipe(originalFnc) {
+    /**
+     * Decorator for filter string.
+     *
+     * @param {function} originalFnc
+     * @param {array} filters - Array of filters.
+     * @returns {function}
+     */
+    function createPipe(originalFnc, filters) {
 
+        return function (string) {
+            var initialStr = string;
+
+            if (filters) {
+                for (var i = 0; i < filters.length; i++) {
+                    initialStr = filters[i](initialStr);
+                }
+            }
+
+            return originalFnc(initialStr);
+        }
     }
 
+    /**
+     * Capitalize first letter of each word in string
+     *
+     * @param string
+     */
     function originalFnc(string) {
         var result,
-            words = string.toLowerCase().split(' ');
+            splitStr = string.toLowerCase().split(' ');
 
-        for (var i = 0; i < words.length; i++) {
-            var letters = words[i].split('');
-            letters[0] = letters[0].toUpperCase();
-            words[i] = letters.join('');
+        for (var i = 0; i < splitStr.length; i++) {
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
         }
 
-        result = words.join(' ');
+        result = splitStr.join(' ');
 
         console.log(result);
     }
-
-    originalFnc('test sTriNg conSole');
 
     /**
      * Remove all digits from string.
@@ -120,7 +139,7 @@
         return string.replace(/\s\s+/g, ' ');
     }
 
-    // var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
+    var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
 
-    // pipe('on345l90y    te**x((((t     h$&er@@@e'); // logs 'Only Text Here'
+    pipe('on345l90y    te**x((((t     h$&er@@@e'); // logs 'Only Text Here'
 })();
