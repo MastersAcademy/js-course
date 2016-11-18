@@ -1,5 +1,5 @@
 (function () {
-	//1.Переписать дефолтный метод window.setTimeout(callback, delay)
+    //1.Переписать дефолтный метод window.setTimeout(callback, delay)
 
     var nativeSetTimeout = window.setTimeout;
     window.setTimeout = function(delay, callback) {
