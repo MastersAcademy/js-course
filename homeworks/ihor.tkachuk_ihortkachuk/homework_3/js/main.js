@@ -19,24 +19,30 @@
 
     /**
      * Overwrite default setInterval function.
-     *
-     * @param {Function} defaultFn - Original function.
      */
-    function customSetInterval(defaultFn) {
-        return function (callback, delay) {
-
-        }
+    function customSetInterval() {
+        return function interval(callback, delay) {
+            setTimeout(delay, function () {
+                callback();
+                interval(callback, delay);
+            });
+        };
     }
 
     /**
      * Export customSetInterval function.
      */
-    window.setInterval = customSetInterval(setInterval);
+    window.setInterval = customSetInterval();
 
     setInterval(function () {
         console.log(1);
     }, 1000);
 
+    /**
+     * Helper function that displays a message in the console of browser.
+     *
+     * @param param
+     */
     function fncToDelay(param) {
         console.log('Delayed run : ' + param);
     }
@@ -100,7 +106,7 @@
     /**
      * Capitalize first letter of each word in string
      *
-     * @param {String} string
+     * @param {String} string - String to capitalize.
      */
     function originalFnc(string) {
         var result,
