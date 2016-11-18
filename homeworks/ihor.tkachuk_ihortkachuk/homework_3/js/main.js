@@ -1,7 +1,7 @@
 (function () {
 
     /**
-     * Overwrite default SetTimeout function
+     * Overwrite default SetTimeout function.
      *
      * @param setTimeout
      * @returns {Function}
@@ -13,12 +13,12 @@
     }
 
     /**
-     * Export customSetTimeout function
+     * Export customSetTimeout function.
      */
     window.setTimeout = customSetTimeout(setTimeout);
 
     /**
-     * Overwrite default setInterval function
+     * Overwrite default setInterval function.
      *
      * @param setInterval
      */
@@ -27,7 +27,7 @@
     }
 
     /**
-     * Export customSetInterval function
+     * Export customSetInterval function.
      */
     window.setInterval = customSetInterval(setInterval);
 
@@ -79,14 +79,32 @@
         console.log(result);
     }
 
+    /**
+     * Remove all digits from string.
+     *
+     * @param {string} string - String to remove.
+     * @returns {string}
+     */
     function filterDigits(string) {
         return string.replace(/\d+/g, '');
     }
 
+    /**
+     * Remove all special symbols from string.
+     *
+     * @param {string} string - String to remove.
+     * @returns {string}
+     */
     function filterSpecial(string) {
-        return string.replace(/[^a-zA-Z ]/g, '');
+        return string.replace(/[!@#$%^&*()+=]/g, '');
     }
 
+    /**
+     * Replace two and more white spaces to one.
+     *
+     * @param {string} string - String to remove.
+     * @returns {string}
+     */
     function filterWhiteSpaces(string) {
         return string.replace(/\s\s+/g, ' ');
     }
