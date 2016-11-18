@@ -7,7 +7,7 @@
     window.setTimeout = function (delay, callback) {
         var args = Array.prototype.slice.call(arguments, 2);
         if (typeof callback === 'function') {
-             nativeSetTimeOut(function () {
+            nativeSetTimeOut(function () {
                 callback.apply(this, args);
             }, delay);
         }
@@ -52,14 +52,19 @@
 
     //4
     function originalFnc(string) {
-        var arr = string.split(' ');
+        var arr = string.split(' '),
+            result;
         for (var i = 0; i < arr.length; i++) {
             string = arr[i];
             string = string[0].toUpperCase() + string.slice(1);
             arr[i] = string;
         }
-        arr = arr.join(' ');
-        console.log(arr);
+        result = arr.join(' ');
+        console.log(result);
     }
 
+    function filterDigits(string) {
+        var result = string.replace(/[0-9]/g, '');
+        return result;
+    }
 })();
