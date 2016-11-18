@@ -51,20 +51,30 @@
     }
 
     //4
-    function originalFnc(string) {
+   function originalFnc(string) {
         var arr = string.split(' '),
-            result;
+            result; 
         for (var i = 0; i < arr.length; i++) {
-            string = arr[i];
-            string = string[0].toUpperCase() + string.slice(1);
-            arr[i] = string;
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);   
         }
         result = arr.join(' ');
         console.log(result);
     }
-
+    
     function filterDigits(string) {
         var result = string.replace(/[0-9]/g, '');
+        return result;
+    }
+
+    function filterSpecial(string) {
+        var result = string.replace(/[^A-Za-zА-Яа-яЁё,^0-9]/g, ' ');
+        return result;
+    }
+
+    function filterWhiteSpaces(string) {
+        var result = string
+            .replace(/\s{2,}/g, ' ')
+            .replace(/^\s+/, '');
         return result;
     }
 })();
