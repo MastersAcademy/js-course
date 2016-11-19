@@ -24,7 +24,7 @@
     };
 
 
-    window.setInterval(functionToDelay, 2000, 'interval');
+    // window.setInterval(functionToDelay, 2000, 'interval');
 
     window.setInterval = function (callback, delay) {
 
