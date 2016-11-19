@@ -20,7 +20,7 @@
             return id++;
         };
     }
-      
+
     //2
     window.setInterval = newSetInterval();
     function newSetInterval() {
@@ -54,7 +54,7 @@
                 }
             });
         };
-    } 
+    }
 
     //4
     function originalFnc(string) {
@@ -64,7 +64,7 @@
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         }
         result = arr.join(' ');
-        return console.log(result);
+        console.log(result);
     }
 
     function filterDigits(string) {
