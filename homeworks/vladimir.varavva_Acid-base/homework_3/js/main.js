@@ -12,21 +12,32 @@
                 nativeSetTimeout(function() {
                     callback.apply(this, args);
                 }, delay);
+            } else if (typeof callback === 'string') {
+                nativeSetTimeout(function() {
+                    eval(callback);
+              }, delay);
             }
             return id++;
         };
     }
-     
+      
     //2
     window.setInterval = newSetInterval();
     function newSetInterval() {
         var id = 1;
         return function(callback, delay) {
             var args = Array.prototype.slice.call(arguments, 2);
-            setTimeout(delay, function loop() {
-                callback.apply(this, args);
-                setTimeout(delay, loop);
-            });
+            if (typeof callback === 'function') {
+                setTimeout(delay, function loop() {
+                    callback.apply(this, args);
+                    setTimeout(delay, loop);
+                });
+            } else if (typeof callback === 'string') {
+                setTimeout(delay, function loop() {
+                    eval(callback);
+                    setTimeout(delay, loop);
+                });
+            }
             return id++;
         };
     }
