@@ -24,7 +24,7 @@
     };
 
 
-    //window.setInterval(functionToDelay, 2000, 'interval');
+    window.setInterval(functionToDelay, 2000, 'interval');
 
     window.setInterval = function (callback, delay) {
 
@@ -43,8 +43,6 @@
 
                 callback();
             }
-
-            callback.apply(this, Array.prototype.slice.call(args, 2));
 
             setTimeout(delay, window.setInterval[intervalID]);
         };
@@ -106,7 +104,7 @@
     function originalFnc(string) {
 
         console.log(string.replace(
-            
+
             /\w\S*/g,
 
             function (txt) {
