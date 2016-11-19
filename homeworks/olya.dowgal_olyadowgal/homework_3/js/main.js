@@ -4,14 +4,6 @@
 
 (function () {
 
-    var funcTimeout = function () {
-        console.log('timeOut in 1 second work!');
-    };
-
-    var funcInterval = function () {
-        console.log('own Interval: one more sec left');
-    };
-
     //Task 1
 
     var defaultTimeout = window.setTimeout;
@@ -21,6 +13,10 @@
     };
 
     // Task 1 Test
+
+    var funcTimeout = function () {
+        console.log('own timeOut for 1 time work!');
+    };
 
     window.setTimeout(1000, funcTimeout);
 
@@ -36,6 +32,10 @@
     };
     //Task 2 Test
 
+    var funcInterval = function () {
+        console.log('own Interval: one more sec left');
+    };
+
     window.setInterval(funcInterval, 1000);
 
     // return Timeout and Interval to default
@@ -50,9 +50,7 @@
     }
 
     function freeze(delay, fnc) {
-
         var timeout;
-
         return function () {
             var args = arguments;
             if (!timeout) {
@@ -98,7 +96,6 @@
         }
         var result = charArr.join("");
         console.log('After originalFnc: ' + result);
-        return result;
     }
 
     function filterDigits(string) {
@@ -113,7 +110,7 @@
         return string.replace(/\s\s+/g, ' ');
     }
 
-    function createPipeы(original, functions) {
+    function createPipe(original, functions) {
         return function (result) {
             functions.forEach(function (func) {
                 result = func(result);
@@ -130,6 +127,5 @@
     const TESTSTRING = 'on345l90y    te**x((((t     h$&er@@@e';
     console.log('Original string: ' + TESTSTRING);
     createPipe(ORIGINAL, FILTER_ARR)(TESTSTRING);
-
 
 })();
