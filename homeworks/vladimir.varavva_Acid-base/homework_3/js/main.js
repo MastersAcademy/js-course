@@ -1,25 +1,35 @@
-(function () {
+(function() {
     'use strict';
 
     //1
     var nativeSetTimeOut = window.setTimeout;
-    window.setTimeout = function(delay, callback) {
-        var args = Array.prototype.slice.call(arguments, 2);
-        if (typeof callback === 'function') {
-            nativeSetTimeOut(function () {
-                callback.apply(this, args);
-            }, delay);
-        }
-    };
+    window.setTimeout = newSetTimeout();
+    function newSetTimeout() {
+        var i = 1;
+        return function(delay, callback) {
+            var args = Array.prototype.slice.call(arguments, 2);
+            if (typeof callback === 'function') {
+                nativeSetTimeOut(function() {
+                    callback.apply(this, args);
+                }, delay);
+            }
+            return i++;
+        };
+    }
 
     //2
-    window.setInterval = function(callback, delay) {
-        var args = Array.prototype.slice.call(arguments, 2);
-        setTimeout(delay, function loop() {
-            callback.apply(this, args);
-            setTimeout(delay, loop);
-        });
-    };
+    window.setInterval = newSetInterval();
+    function newSetInterval() {
+        var i = 1;
+        return function(callback, delay) {
+            var args = Array.prototype.slice.call(arguments, 2);
+            setTimeout(delay, function loop() {
+                callback.apply(this, args);
+                setTimeout(delay, loop);
+            });
+            return i++;
+        };
+    }
 
     //3
     function freeze(delay, fnc) {
