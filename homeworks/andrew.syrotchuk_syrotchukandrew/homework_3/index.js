@@ -1,19 +1,48 @@
 (function () {
 
+    //window.setTimeout(2000, functionToDelay, 'timeout');
+
     var timeOut = window.setTimeout;
 
     window.setTimeout = function (delay, callback) {
 
-        return timeOut(callback, delay, Array.prototype.slice.call(arguments, 2));
+        var args = arguments;
+
+        if (args.length > 2) {
+
+            return timeOut(function () {
+
+                callback.apply(this, Array.prototype.slice.call(args, 2))
+
+            }, delay);
+        }
+
+        else {
+
+            return timeOut(callback, delay);
+        }
     };
+
+
+    //window.setInterval(functionToDelay, 2000, 'interval');
 
     window.setInterval = function (callback, delay) {
 
-        var intervalID = window.setInterval.poolID ? ++window.setInterval.poolID : window.setInterval.poolID = 1;
-
         var args = arguments;
 
+        var intervalID = window.setInterval.poolID ? ++window.setInterval.poolID : window.setInterval.poolID = 1;
+
         window.setInterval[intervalID] = function () {
+
+            if (args.length > 2) {
+
+                callback.apply(this, Array.prototype.slice.call(args, 2));
+            }
+
+            else {
+
+                callback();
+            }
 
             callback.apply(this, Array.prototype.slice.call(args, 2));
 
@@ -25,50 +54,65 @@
         return intervalID;
     };
 
-    //setTimeout(2000, console.log, 'ok');
-    //setInterval(console.log, 2000, 'ok');
+
+    // var frozenFunction = freeze(1000, functionToDelay);
+    // frozenFunction('1');
+    // frozenFunction('2');
+    // frozenFunction('3');
 
     function functionToDelay(arg) {
 
         console.log('Delayed run : ' + arg);
-
     }
 
     function freeze(delay, callback) {
 
-        var timeoutID, args = [];
+        var timeoutID;
 
         return function () {
 
-            args.push(arguments);
+            var args = arguments;
 
             if (timeoutID) {
 
-                clearTimeout(timeoutID);
+                return;
             }
 
             timeoutID = setTimeout(delay, function () {
 
-                callback.apply(this, args[0]);
+                callback.apply(this, args);
 
             });
-
         }
-
     }
 
-    var frozenFunction = freeze(1000, functionToDelay);
 
-    frozenFunction('1');
-    frozenFunction('2');
-    frozenFunction('3');
+    //var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
+    //pipe('on345l90y    565(())))***@#$%^&444464    te**x((((t    6#$%^&59**)(489     h$&er**()((@@@e');
+
+    function createPipe(originalFnc, arrayFunctions) {
+
+        return function (string) {
+
+            for (var i = 0; i < arrayFunctions.length; i++) {
+
+                string = arrayFunctions[i](string);
+            }
+
+            originalFnc(string);
+        }
+    }
 
     function originalFnc(string) {
 
-        console.log(string.replace(/\w\S*/g, function (txt) {
-                return txt.charAt(0).toUpperCase() + txt.substr(1);
-            })
-        )
+        console.log(string.replace(
+            
+            /\w\S*/g,
+
+            function (txt) {
+
+                return txt.charAt(0).toUpperCase() + txt.substr(1)
+            }));
     }
 
     function filterDigits(string) {
@@ -85,22 +129,4 @@
 
         return string.replace(/\s+/g, ' ');
     }
-    
-    function createPipe(originalFnc) {
-
-        var arg = Array.prototype.slice.call(arguments, 1);
-
-        return function () {
-
-            arg.forEach(function (element, index) {
-                element.apply(this, arg[index]);
-            });
-
-
-        }
-    }
-
-    var pipe = createPipe(originalFnc, [filterDigits, filterSpecial, filterWhiteSpaces]);
-
-
 })();
