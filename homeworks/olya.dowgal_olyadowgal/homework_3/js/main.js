@@ -22,7 +22,7 @@
 
     // Task 1 Test
 
-    window.setTimeout(1000,funcTimeout);
+    window.setTimeout(1000, funcTimeout);
 
     //Task 2
 
@@ -36,7 +36,7 @@
     };
     //Task 2 Test
 
-    window.setInterval(funcInterval,1000);
+    window.setInterval(funcInterval, 1000);
 
     // return Timeout and Interval to default
 
@@ -97,7 +97,7 @@
             }
         }
         var result = charArr.join("");
-        console.log('After originalFnc: ' +result);
+        console.log('After originalFnc: ' + result);
         return result;
     }
 
@@ -113,11 +113,11 @@
         return string.replace(/\s\s+/g, ' ');
     }
 
-    function createPipe(original, functions) {
+    function createPipeы(original, functions) {
         return function (result) {
             functions.forEach(function (func) {
                 result = func(result);
-                console.log('After ' + func.name +': '+ result);
+                console.log('After ' + func.name + ': ' + result);
             });
             return original(result);
         }
