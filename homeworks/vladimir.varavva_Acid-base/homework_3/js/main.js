@@ -2,14 +2,14 @@
     'use strict';
 
     //1
-    var nativeSetTimeOut = window.setTimeout;
+    var nativeSetTimeout = window.setTimeout;
     window.setTimeout = newSetTimeout();
     function newSetTimeout() {
         var i = 1;
         return function(delay, callback) {
             var args = Array.prototype.slice.call(arguments, 2);
             if (typeof callback === 'function') {
-                nativeSetTimeOut(function() {
+                nativeSetTimeout(function() {
                     callback.apply(this, args);
                 }, delay);
             }
@@ -36,14 +36,14 @@
         var timeout = true;
         return function() {
             var args = arguments;
-            timeout = nativeSetTimeOut(function() {
+            timeout = setTimeout(delay, function() {
                 if (timeout) {
                     fnc.apply(this, args);
                     timeout = false;
                 }
-            }, delay);
+            });
         };
-    }
+    } 
 
     //4
     function originalFnc(string) {
