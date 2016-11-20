@@ -21,7 +21,7 @@
      * __________________________________________
      */
 
-    var oldSetInterval = window.setInterval;
+    var oldSetInterval;
 
     function oldSetInterval (func, delay) {
 
@@ -31,8 +31,6 @@
             oldSetInterval = setTimeout(delay, recurs);
         }
     };
-
-    window.setInterval = oldSetInterval;
 
     /**__________________________________________
      *
