@@ -21,13 +21,18 @@
      * __________________________________________
      */
 
-    window.setInterval = function (func, delay) {
+    var oldSetInterval = window.setInterval;
 
-        return setTimeout(delay, function recurs() {
+    function oldSetInterval (func, delay) {
+
+        return function recurs() {
+
             func();
-            setTimeout(delay, recurs);
-        });
+            oldSetInterval = setTimeout(delay, recurs);
+        }
     };
+
+    window.setInterval = oldSetInterval;
 
     /**__________________________________________
      *
@@ -123,7 +128,7 @@
     function createPipe(originalFnc, functions) {
 
         return function () {
-            
+
             var args = arguments;
 
             args = functions[0].apply(this, args);
