@@ -1,24 +1,24 @@
 (function () {
 
-	// 1 task
-	var timeout = window.setTimeout; 
-	
-	window.setTimeout = function(delay, fn) {
-    	return timeout.call(this , fn, delay);
-	}
-	
-	// 2 task
+    // 1 task
+    var timeout = window.setTimeout; 
+    
+    window.setTimeout = function(delay, fn) {
+        return timeout.call(this , fn, delay);
+    }
+    
+    // 2 task
     window.setInterval = function(fn, delay) {
-    	return setTimeout(delay, function recursion(){
-    		fn();
-    		setTimeout(delay, recursion)
-    	});	
+        return setTimeout(delay, function recursion(){
+            fn();
+            setTimeout(delay, recursion)
+        });    
     }
 
     //setInterval(function(){console.log('123')}, 1000);
 
     //3 task
-	function fncToDelay (param) {
+    function fncToDelay (param) {
         console.log('Delayed run : ' + param);
     }
 
@@ -48,22 +48,22 @@
 
     // 4 task
     function createPipe(originalFnc, filterArray){
-    	return function (inputString){
-    		var temp;
-    		for (var i = 0; i < filterArray.length; i++) {
-    			if (i==0){
-    				temp = filterArray[i](inputString);
-    			}
-    			else {
-    				temp = filterArray[i](temp);
-    			}
-    		}
-    		originalFnc(temp);
-    	}
+        return function (inputString){
+            var temp;
+            for (var i = 0; i < filterArray.length; i++) {
+                if (i==0){
+                    temp = filterArray[i](inputString);
+                }
+                else {
+                    temp = filterArray[i](temp);
+                }
+            }
+            originalFnc(temp);
+        }
     }
     
     function filterDigits(inputString){
-    	result = inputString.replace(/\d/g, '');
+        result = inputString.replace(/\d/g, '');
         return result;
     }
 
