@@ -14,11 +14,11 @@
         window.setTimeout = newTimeout(setTimeout);
 
         // Проверка таймера
-        // window.setTimeout(5000, slowAlert);
+        //window.setTimeout(5000, slowAlert);
 
-        function slowAlert() {
-            alert("Замедлено на 5 сек.");
-        }
+        // function slowAlert() {
+        //     alert("Замедлено на 5 сек.");
+        // }
 
         // Задание №2
         // Переписать дефолтный метод window.setInterval(callback, delay)
