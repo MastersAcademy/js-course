@@ -1,20 +1,26 @@
 (function () {
 
+	// 1 task
 	var timeout = window.setTimeout; 
 	
 	window.setTimeout = function(delay, fn) {
     	return timeout.call(this , fn, delay);
 	}
 	
-	window.setInterval = function(fn, delay) {
-		setTimeout(delay, fn).call;	
-    	return setInterval(fn, delay);
+	// 2 task
+    window.setInterval = function(fn, delay) {
+    	return setTimeout(delay, function recursion(){
+    		fn();
+    		setTimeout(delay, recursion)
+    	});	
     }
 
+    //setInterval(function(){console.log('123')}, 1000);
+
+    //3 task
 	function fncToDelay (param) {
         console.log('Delayed run : ' + param);
     }
-
 
     function freeze (delay, fnc) {
         var timeout;
@@ -23,7 +29,7 @@
             if(!timeout){
                 timeout = setTimeout(delay, function () {
                     fnc.apply(this, args);
-                	});
+                });
             }
         }
     }
@@ -40,6 +46,7 @@
     // frozenFunc('8');
     // frozenFunc('9');
 
+    // 4 task
     function createPipe(originalFnc, filterArray){
     	return function (inputString){
     		var temp;
@@ -93,6 +100,4 @@
     var pipe = createPipe(originalFnc, [filterPointComma, filterDigits, filterSpecial, filterWhiteSpaces, filterLowerCase]);
     //pipe ('oN345l9,.0y !@#$%,^&*()  tE.**x((((t     h$&er@@@e');
 
-    //console.log(filterDigits(test));
-    //console.log(filterWhiteSpaces(test));
 })();
