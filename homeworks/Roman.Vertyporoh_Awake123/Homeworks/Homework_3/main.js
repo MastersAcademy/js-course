@@ -1,5 +1,41 @@
 (function () {
 
+    //1.
+
+    var timerId = window.setTimeout;
+
+    setTimeout = function(delay, callback) {
+
+        return timerId.apply(this, [callback, delay]);
+
+    }
+
+    //2.
+
+    setInterval = function(callback, delay) {
+
+        return setTimeout(delay, function self() {
+
+                callback();
+
+                setTimeout(delay, self);
+        });
+
+    }
+
+    //window.setTimeout(2000, function() {
+    //
+    //    console.log('This message was delayed');
+    //
+    //});
+    //
+    //
+    //window.setInterval(function () {
+    //
+    //    console.log('tick');
+    //
+    //}, 1000);
+
     //3.
 
     function fncToDelay (param) {
@@ -30,11 +66,11 @@
 
                 }
 
-                timeout = setTimeout(function () {
+                timeout = setTimeout(delay, function () {
 
                     fnc.apply(this, temp);
 
-                }, delay);
+                });
 
         }
 
@@ -42,15 +78,15 @@
 
     var frozenFunc = freeze(1000, fncToDelay);
 
-    frozenFunc('1');
-    frozenFunc('2');
-    frozenFunc('3');
-    frozenFunc('4');
-    frozenFunc('5');
-    frozenFunc('6');
-    frozenFunc('7');
-    frozenFunc('8');
-    frozenFunc('9');
+    //frozenFunc('1');
+    //frozenFunc('2');
+    //frozenFunc('3');
+    //frozenFunc('4');
+    //frozenFunc('5');
+    //frozenFunc('6');
+    //frozenFunc('7');
+    //frozenFunc('8');
+    //frozenFunc('9');
 
     //4.
 
