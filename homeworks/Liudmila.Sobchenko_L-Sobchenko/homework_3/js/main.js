@@ -35,13 +35,13 @@
 
     function freeze(delay, fnc) {
         var timeout;
-        function decorator(param) {
-            return fnc(param)
-        }
-        return function (param) {
-            if (!timeout) {
-                timeout = param;
-                setTimeout(delay, decorator(timeout));
+        return function () {
+            if(!timeout) {
+                var args = arguments;
+                setTimeout(delay, function () {
+                    fnc.apply(this, args);
+                });
+                timeout = args;
             }
         }
     }
