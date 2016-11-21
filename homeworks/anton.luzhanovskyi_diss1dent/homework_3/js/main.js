@@ -12,7 +12,7 @@
 
     })(window.setTimeout);
 
-   /* task 2 . Important clearInterval is not changed */
+    /* task 2 . notice clearInterval is not changed (its not asked) */
 
     window.setInterval = function(callback, delay) {
 
@@ -42,7 +42,7 @@
 
             if (firstargument == undefined) {
 
-                firstargument = arguments; //remember first argument
+                firstargument = arguments; // remember first argument
 
             }
 
@@ -103,14 +103,14 @@
 
     function filterWhiteSpaces (string) {
 
-        return string.replace(/\s\s+/g, ' ');  // search and replace 2 whitespace
+        return string.replace(/  +/g, ' ');  // search and replace 2 whitespace
     }
 
     function createPipe(originalFnc, filters) {
 
         return function (string) {
 
-            filters.forEach(function (filter, i) {
+            filters.forEach(function (filter) {
 
                 string = filter(string);
 
