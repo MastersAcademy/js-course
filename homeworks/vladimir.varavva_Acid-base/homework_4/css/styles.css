@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font: calc(1vw + .3rem)/1.5 Merriweather, serif;
+}
+
+.wrapper {
+  width: 50em;
+  margin: 0 auto;
+}
+
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10em;
+  padding: 2em;
+}
+
+.theme-change {
+  position: absolute;
+  top: 3em;
+  right: -5em;
+}
+
+.theme-dark,
+.theme-light {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.theme-dark {
+  background: #000;
+}
+
+.theme-light {
+  background: #ebebeb;
+}
+
+.main-nav a {
+  position: relative;
+  left: -50%;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.main-nav a::before {
+  position: absolute;
+  content: "";
+  top: 1.5em;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background: #195c89;
+}
+
+.container {
+  display: flex;
+  margin-bottom: 10em;
+  padding-left: 2em
+}
+
+.about {
+  max-width: 34em;
+  padding: 2em 4.5em;
+}
+
+.photo {
+  width: 17em;
+  padding-top: 2.7em;
+}
+
+img {
+  width: 100%;
+}
+
+.btn-contact {
+  width: 10.5em;
+  height: 3em;
+  border-radius: 3px;
+  background: #195c89;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  max-width: 50em;
+  height: 10em;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  margin-bottom: 3em;
+  list-style: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+.social a {
+  color: #195c89;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.copyright {
+  position: relative;
+  left: -1em;
+  text-align: center;
+  color: #bebebe;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font: 400 1.5em Inconsolata, serif;
+  color: #666;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 1rem;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0;
+
+  }
+  .page-header {
+    height: 7em;
+  }
+  .theme-change {
+    top: 1em;
+    right: .5em;
+  }
+  .theme-dark,
+  .theme-light {
+    display: block;
+    width: 2em;
+    height: 2em;
+    margin-bottom: .5em;
+  }
+  .container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .about {
+    padding: 1em;
+    text-align: justify;
+  }
+  .photo {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .social {
+    flex-direction: column;
+  }
+  .copyright {
+    position: static;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
