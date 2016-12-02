@@ -1,0 +1,36 @@
+.wrap {
+    /*width:900px;*/
+    margin:10px auto 0;
+    border:1px;
+    padding:10px;
+    overflow:hidden;
+}
+
+.geometry {
+	display: inline-table;
+	float: right;
+}
+.circle {
+	    width: 50px;
+        height: 50px;
+        border: 1px;
+		border-radius: 150px;
+		float: right;
+		margin: 10px;
+}
+
+#grey {
+	background: grey;
+}
+
+#black {
+	background: black;
+}
+
+.header h2 {
+	text-align: center;
+}
+
+.picture{
+	float: left;
+}
