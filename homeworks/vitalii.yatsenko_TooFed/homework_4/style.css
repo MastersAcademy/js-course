@@ -1,100 +1,112 @@
 .wrap {
-    /*width:900px;*/
-    margin:10px auto 0;
-    border:1px;
-    padding:10px;
-    overflow:hidden;
-	font-family: 'Merriweather', serif;
+  margin:10px 50px 0 50px;
+  border:1px;
+  padding:10px;
+  overflow:hidden;
+  font-family: 'Merriweather', serif;
 }
 
 .geometry {
-	display: inline-table;
-	float: right;
-	overflow: hidden;
+  display: inline-table;
+  float: right;
+  overflow: hidden;
 }
+
 .circle {
-	    width: 50px;
-        height: 50px;
-        border: 1px;
-		border-radius: 150px;
-		float: right;
-		margin: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px;
+  border-radius: 150px;
+  float: right;
+  margin: 10px;
 }
 
 #grey {
-	float: left;
-	background: #ebebeb;
+  float: left;
+  background: #ebebeb;
 }
 
 #black {
-	background: #222222;
+  background: #222222;
 }
 
 .header {
-	/*color: black;*/
-	font-size: 24px;
-	/*text-decoration: underline;*/
-	margin: 50px;
-	text-align: center;
+  font-size: 24px;
+  margin: 80px 0 0 0;
+  text-align: center;
 }
+
 .header a{
-	color: black;
-	text-decoration: none;
-	border-bottom: 1px solid blue;
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid #5282A2;
 }
 
 .cont-wrap {
-	margin: 50px 100px 0;
-	overflow: hidden;
+  margin: 70px 100px 150px 170px;
+  overflow: hidden;
 }
 
-.picture{
-	float: left;
-	margin-right: 50px;
+.picture img{
+  overflow: hidden;
+  width: 400px;
+  height: 296px;
+  float: left;
+  margin-right: 70px;
 }
 
 .content {
-	border: 1px;
-	/*margin: 0px 50px 50px 50px;*/
+  border: 1px;
+}
+
+.content p{
+  line-height: 2;
+  font-size: 18px;
 }
 
 .content button {
-	border-radius: 2px;
-    background-color: #195c89;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  border-radius: 2px;
+  background-color: #195c89;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
+
 .content h1{
-	margin-top: 0px;
-	margin-bottom: 0px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
+
 .content h3{
-	font-family: 'Inconsolata', monospace;
-	text-decoration: none;
-	margin-top: 0px;
-	margin-bottom: 10px;
-	color: grey;
+  font-family: 'Inconsolata', monospace;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 24px;
 }
+
 .contacts {
-	font-family: 'Inconsolata', monospace;
-	margin: 50px 100px 50px 100px;
-	text-align: center;
+  font-family: 'Inconsolata', monospace;
+  margin: 50px 100px 50px 100px;
+  text-align: center;
 }
 
 .contacts a {
-	margin-left: 50px;
-	margin-right: 50px;
-	text-decoration: none;
-	font-size: 24px;
-	color: #1b5c89;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #1b5c89;
 }
 
 .footer {
-	text-align: center;
-	color: #cfcfcf;
+  font-size: 18px;
+  text-align: center;
+  color: #C1C1C1;
 }
