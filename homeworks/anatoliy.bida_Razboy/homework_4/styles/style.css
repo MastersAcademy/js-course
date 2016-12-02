@@ -41,7 +41,7 @@
  	overflow: hidden;
 }
 .info {
-	width: 320px;
+	width: 300px;
 	margin: 0 0 0 60px;
 	float: left;
 	overflow: hidden;
@@ -87,10 +87,11 @@
 	color: #165077;
 }
 .social li:first-child {margin-left: 0;}
+.social li:last-child {float: none;}
 .copiright {
 	float: left;
-	margin: 50px 0 0 300px;
+	margin: 50px 0 20px 300px;
 	color: #CDCDCD;
-	font: bold 16px "Inconsolata", sans-serif;
+	font: bold 16px "Merriweather", serif;
 }
 
