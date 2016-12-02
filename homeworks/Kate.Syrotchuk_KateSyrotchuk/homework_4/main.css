@@ -1,0 +1,13 @@
+body {
+    width: 1300px;
+    margin: auto;
+}
+header {
+    height: 100px;
+    background-color: aliceblue;
+}
+.container > span:first-of-type {
+    display: block;
+    height: 100px;
+    background-color: antiquewhite;
+}
