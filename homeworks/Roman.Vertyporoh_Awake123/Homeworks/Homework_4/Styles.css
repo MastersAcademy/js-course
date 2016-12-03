@@ -7,7 +7,7 @@
 
   a {
     text-decoration: none;
-    color: #468284;
+    color: #4169E1;
   }
 
   .button1 {
@@ -23,7 +23,7 @@
     float: right;
     width: 50px;
     height: 50px;
-    background: #808080;
+    background: #C0C0C0;
     border-radius: 25px;
     margin: 20px auto;
   }
@@ -37,11 +37,11 @@
   .about {
     width: 200px;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Merriweather', serif;
     margin: auto;
     line-height: 0;
-    border-bottom: 2px solid #468284;
+    border-bottom: 2px solid #4169E1;
   }
 
   .image {
@@ -54,9 +54,20 @@
     width: 400px;
     text-align: left;
     line-height: 10px;
-    font-family: 'Merriweather', serif;
     margin-top: 50px;
     padding: auto;
+  }
+
+  #h1{
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    color: #000;
+  }
+
+  #h2 {
+    font-size: 25px;
+    font-family: 'Inconsolata', monospace;
+    color: #696969;
   }
 
   .text {
@@ -72,9 +83,10 @@
   .contact {
     float: left;
     width: 150px;
-    background-color: #468284;
+    background-color: #4169E1;
     text-align: center;
-    font-size: 20px;
+    font-size: large;
+    color: #FFFFFF;
     font-family: 'Inconsolata', monospace;
     margin: 10px auto;
     padding: 0 20px;
@@ -89,7 +101,7 @@
 
   .list li {
     display: inline-block;
-    font-size: 36px;
+    font-size: 30px;
     font-family: 'Inconsolata', monospace;
     margin: 50px;
   }
@@ -97,6 +109,7 @@
   .copyright {
     width: 200px;
     font-size: 15px;
+    color: #C0C0C0;
     font-family: 'Merriweather', serif;
     margin: 20px auto;
   }
