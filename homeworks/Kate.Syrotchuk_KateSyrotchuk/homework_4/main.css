@@ -66,6 +66,7 @@ header {
 }
 
 .about button {
+  margin-top: 35px;
   background-color: #195C89;
   color: #DFE8EE;
   height: 43px;
