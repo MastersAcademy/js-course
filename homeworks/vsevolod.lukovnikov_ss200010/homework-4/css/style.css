@@ -85,7 +85,7 @@ header h2 span {
   
   font-family: 'Inconsolata', monospace;
   font-size: 18px;
-  color: #ccc;
+  color: #787878;
 }
 
 .content-right-side p {
@@ -104,34 +104,37 @@ header h2 span {
   height: 45px;
   
   border-style:none;
-  background: #195c89;
+  background: #195C89;
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
 }
 
 .my-contacts {
-  margin-top:100px;
-  width: 100%;
-}
-.my-contacts ul {
-  margin: 0 90px 0 90px;
-  padding: 0;
-  
-  text-align: justify;
+  margin-top: 100px;
+  padding-left:70px;
+  padding-right: 70px;
 }
 
-.my-contacts ul:after {
-  content: "";
-  margin-left: 100%;
+.my-contacts ul {
+  display: table;  
+  position: relative;
+  
+  width: 100%;
 }
 
 .my-contacts ul li {
-  display: inline-block;
-  text-align: justify;
+  display: table-cell;
+  
+  width: 20%;
 }
 
 .my-contacts li a {
+  display: block;
+  margin: 0;
+  padding: 0;
+  
+  text-align: center;
   font-size: 24px;
   color:#195c89;
   text-decoration: none;
@@ -145,5 +148,5 @@ header h2 span {
   
   text-align: center;
   font-size: 14px;
-  color: #ccc;
+  color: #f1f1f1;
 }
