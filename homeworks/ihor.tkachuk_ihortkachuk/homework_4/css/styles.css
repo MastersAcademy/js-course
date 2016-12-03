@@ -1,0 +1,154 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: -.016em;
+  color: #0d0d0d;
+  background: #fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header,
+.themes,
+.article-main {
+  overflow: hidden;
+}
+
+.header {
+  padding: 40px 32px;
+}
+
+.themes {
+  float: right;
+}
+
+.themes li {
+  display: block;
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.themes li.gray {
+  background: #ebebeb;
+}
+
+.themes li.black {
+  background: #000;
+}
+
+.article {
+  padding: 0 145px;
+}
+
+.article-header,
+.footer {
+  text-align: center;
+}
+
+.article-header {
+  margin-bottom: 75px;
+}
+
+.headline {
+  font-size: 27px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0 5px;
+  border-bottom: 1px solid #00396d;
+}
+
+.article-main {
+  margin-bottom: 150px;
+}
+
+.article-img {
+  float: left;
+  width: 380px;
+  margin-right: 75px;
+}
+
+.article-content {
+  float: left;
+  width: 455px;
+}
+
+.article-content h2 {
+  font-size: 39px;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.article-content span {
+  font-family: 'Inconsolata', monospace;
+  font-size: 26px;
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #424242;
+}
+
+.article-content .btn {
+  margin-top: 22px;
+}
+
+.btn {
+  font-size: 17px;
+  padding: 15px 31px;
+  cursor: pointer;
+  letter-spacing: -.015em;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background: #1e5d87;
+}
+
+.contacts {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contacts li {
+  display: inline-block;
+}
+
+.contacts li:not(:last-child) {
+  margin-right: 85px;
+}
+
+.contacts li a {
+  font-family: 'Inconsolata', monospace;
+  font-size: 25px;
+  text-decoration: none;
+  letter-spacing: .02em;
+  color: #003469;
+}
+
+.footer {
+  padding: 47px 0 40px;
+}
+
+.footer p {
+  color: #b0b0b0;
+}
