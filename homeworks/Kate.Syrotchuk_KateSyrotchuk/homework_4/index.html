@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather" rel="stylesheet">
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="circle black"></div>
+        <div class="circle gray"></div>
+    </header>
     <div class="container">
-        <span>About me</span>
-        <img src="#" alt="my photo">
+        <div class="title"><span>About me</span></div>
+        <img src="iam.png" alt="my photo">
         <div class="about">
             <h2>Kate Syrotchuk</h2>
             <span>Front-end Developer</span>
-            <p>Some text</p>
-            <button><a href="#">Contact me</a></button>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi."</p>
+            <button>CONTACT ME</button>
         </div>
         <div class="social">
             <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Vkontakte</li>
-                <li>Gmail</li>
-                <li>Twitter</li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Vkontakte</a></li>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Twitter</a></li>
             </ul>
         </div>
     </div>
@@ -30,4 +37,8 @@
         <p>&copy; <span id="year"></span> Kate Syrotchuk</p>
     </footer>
 </body>
+<script>
+    var year = document.getElementById('year');
+    year.innerHTML = new Date().getFullYear();
+</script>
 </html>
