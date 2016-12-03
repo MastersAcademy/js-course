@@ -122,8 +122,8 @@ header h2 span {
 }
 
 .my-contacts ul:after {
-	content: "";
-	margin-left: 100%;
+  content: "";
+  margin-left: 100%;
 }
 
 .my-contacts ul li {
