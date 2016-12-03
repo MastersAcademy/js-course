@@ -1,0 +1,142 @@
+.container {
+    position: relative;
+    max-width: 1200px;
+    min-width: 640px;
+    margin: 10px auto 0;
+    padding: 30px;
+    overflow: hidden;
+    background: white;
+    color: #333;
+}
+.title-menu {
+    margin: 50px auto;
+}
+.title-menu h2{
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 25pt;
+    font-weight: 400;
+    margin: 10px auto;
+    color: #1a1a1a;
+}
+.box-content {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px 10px 0 10px;
+    overflow: hidden;
+}
+.content {
+    float: left;
+    text-align: left;
+}
+.foto {
+    width: 45%;
+    padding: 0 10px;
+    margin: 0 auto;
+    bottom: 0;
+    min-width: 500px;
+}
+.about-me {
+    width: 45%;
+    padding: 0 5px;
+    font-size: 14pt;
+    font-family: 'Merriweather', serif;
+    margin: 0 auto;
+    min-width: 490px;
+}
+.about-me h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 30pt;
+    font-weight: 400;
+    margin: 0;
+    color: #1a1a1a;
+}
+.about-me h3 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 20pt;
+    font-weight: 200;
+    margin-top: 0;
+    color: #666;
+}
+.about-me p {
+    font-family: 'Merriweather', serif;
+    font-size: 14pt;
+    font-weight: 400;
+    margin: 20px auto;
+    color: #1a1a1a;
+    line-height: 1.7;
+    padding: 15px 25px 15px 0;
+}
+.btn-contact {
+    background: #1e5d87;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    font-size: 16pt;
+    font-weight: 200;
+}
+.societ{
+    margin: 150px auto 0px auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+.cont-societ{
+    width: 17%;
+    padding: 5px 0;
+    text-align: center;
+    min-width: 122px;
+}
+.societ a{
+    font-family: 'Inconsolata', monospace;
+    color:#1e5d87;
+    font-size: 20pt;
+    text-decoration: none;
+    padding: 5px;
+}
+.copyright {
+    color: #b0b0b0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 16pt;
+    font-weight: 400;
+    margin: 20px auto 30px auto;
+}
+.clear{
+    clear: both;
+}
+.per {
+    margin: 20px 10px;
+}
+#circle2 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #ebebeb;
+}
+#circle1 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #222222;
+}
+.line {
+    text-align: center;
+    color: #1e5d87;
+    width: 250px;
+}
+hr {
+    width: 180px;
+    height: 2px;
+    background: #1e5d87;
+    border: 0;
+    margin: 5px auto;
+}
