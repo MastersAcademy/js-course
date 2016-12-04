@@ -39,6 +39,10 @@ body{
   float: left;
   width: 475px;
 }
+.images img{
+  width: 400px;
+  height: 300px;
+}
 .about{
   position: relative;
   height: 300px;
