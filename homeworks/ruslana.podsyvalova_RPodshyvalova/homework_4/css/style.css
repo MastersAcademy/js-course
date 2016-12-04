@@ -13,20 +13,20 @@ html, body {
 
 .header {
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
 
 .content {
   width: 100%;
-  height: 350px;
+  height: 300px;
 }
 
 .footer {
   position: relative;
   float: left;
-  top:100px;
+  top: 100px;
   width: 100%;
-  height: 140px;
+  height: 100px;
   font: 20px Inconsolata;
   text-align: center;
   color: #b0b0b0;
@@ -35,7 +35,7 @@ html, body {
 #ballGray {
   font-size: 350px;
   color: #ebebeb;
-  margin-right: -50px;
+  margin-right: -35px;
 }
 
 #ballBlack {
@@ -93,7 +93,7 @@ html, body {
 
 #button {
   font-family: Tahoma;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
@@ -119,11 +119,10 @@ html, body {
 }
 	
 .mainTxt {
-  padding-top: 4%;
+  padding-top: 20px;
   font-family: MerriweatherLight;
   color: #333333; 
   font-weight: bold;
-  line-height: 1.75;
 }
 
 h1, h2, h3 {
@@ -133,20 +132,19 @@ h1, h2, h3 {
 
 h1 {
   font-family: Merriweather;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 h2 {
   font-family: Merriweather;
-  font-size: 26px;
+  font-size: 20px;
   text-align: center;
 }
 
 h3 {
   font-family: Inconsolata;
-  font-size: 24px;
+  font-size: 18px;
   color: #666666;
-  line-height: 15px; 
 }
 
 hr {
