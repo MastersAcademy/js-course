@@ -1,16 +1,17 @@
 body {
     background: white;
     width: 900px;
-    margin: auto;
-    padding: 40px 0 0 35px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
     font-family: 'Inconsolata', monospace;
     font-family: 'Merriweather', serif;
-    text-align: center;
 }
 
 .themes-menu {
     float: right;
-    position: relative;
+    width: 100px;
+    height: 45px;
 }
 
 .themes-menu .dot {
@@ -22,18 +23,24 @@ body {
     opacity: 0.1;
     display: inline-block;
     width: 37px;
-}
-
-.themes-menu .dot.active {
-    opacity: 1;
+    position: relative;
 }
 
 .job, .button_text, ul {
     font-family: Inconsolata;
 }
 
+.themes-menu .dot.active {
+    opacity: 1;
+}
+
+.dot:hover {
+    width: 40px;
+    height: 40px;
+}
+
 .title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 125%;
     line-height: 1.5em;
     border-bottom: 2px solid #1e5d87;
@@ -42,48 +49,38 @@ body {
     display: inline-block;
 }
 
-.content, .footer {
-    position: relative;
+main {
     width: 810px;
+    height: 230px;
+    padding: 35px;
+    position: relative;
     margin: auto;
     text-align: center;
 }
 
-.footer {
-    margin-top: 77px;
-}
-
-.content {
-    height: 216px;
-    margin-top: 15px;
-}
-
-.photo img {
-    max-width: 100%;
+h1 {
+    line-height: 0;
+    padding: 0;
 }
 
 .photo {
-    width: 313px;
+    width: 350px;
+    max-width: 100%;
     float: left;
-    padding: 7px 0;
 }
 
 .information {
     float: right;
-    width: 440px;
+    width: 400px;
     text-align: left;
 }
 
-.name {
-    font-size: 200%;
-}
-
 .job {
-    opacity: 0.5;
+    color: #808080;
     font-size: 130%;
 }
 
-.inf-ed {
+.info {
     font-size: 90%;
     line-height: 1.5;
 }
@@ -94,6 +91,11 @@ body {
     height: 40px;
     border-radius: 0.2em;
     text-align: center;
+    margin-bottom: 0;
+}
+
+.button:hover {
+    background: #5196C3;
 }
 
 .button_text {
@@ -102,23 +104,27 @@ body {
     line-height: 2.6em;
 }
 
-.copyright {
-    opacity: 0.4;
-    font-size: 75%;
-    padding-top: 9px;
+footer {
+    width: 810px;
+    padding: 35px;
+    position: relative;
+    line-height: 35px;
+    margin: auto;
+    text-align: center;
 }
 
-ul li {
+li {
     display: inline-block;
     padding-right: 11%;
+    color: #1e5d87;
+}
+
+.copyright {
+    color: #808080;
+    font-size: 75%;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
-
-li a {
-    color: #1e5d87;
-}
-
-
