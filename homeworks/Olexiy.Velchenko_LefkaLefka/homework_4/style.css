@@ -1,0 +1,123 @@
+.wrap {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+}
+.menu {
+  height: 60px;
+  padding: 15px 0 0 0;
+  overflow: hidden;
+  float: right;
+}
+.circleMenu {
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  overflow: hidden;
+  float: left;
+  margin: 0 10px 0;
+  cursor: pointer;
+}
+#mainBackgroundColor {
+  background-color: #eaeaea;
+}
+#minorBackgroundColor {
+  background-color: #696969;
+}
+.header {
+  width: 126px;
+  text-decoration: none;
+  border-bottom: 2px solid #345687;
+  padding: 4px;
+  margin: 90px auto 50px;
+  text-align: center;
+  font-family: Merriweather Light;
+  font-size: 10pt;
+}
+.image {
+  width: 370px;
+  height: 255px;
+  background: bisque url(images/img1.jpg);
+  background-size: cover;
+  margin: 20px 0 0 0;
+  float: left;
+}
+.content {
+  width: 460px;
+  height: 255px;
+  float: right;
+  margin: 20px 0 0 0;
+  font-size: 13pt;
+  line-height: 1.6;
+  font-family: Merriweather;
+  font-weight: 500;
+}
+.content h1 {
+  font-family: Merriweather Light;
+  font-size: 28pt;
+  line-height: 1;
+}
+.content h2 {
+  color: #6c6c6c;
+  font-family: Inconsolata;
+  font-size: 20pt;
+  line-height: 1.7;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+.content p {
+  margin: 5px 0 15px 0;
+}
+.button {
+  width: 165px;
+  height: 45px;
+  background-color: #345687;
+  border: none;
+  color: #FFFAFA;
+  font-family: Inconsolata;
+  font-weight: 500;
+  font-size: 14pt;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button:active, .button:focus  {
+  outline: none;
+}
+.links {
+  width: 900px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 130px 0 0 0;
+  text-align: center;
+  overflow: hidden;
+  font-family: Inconsolata;
+  font-size: 18pt;
+}
+.links a {
+  text-decoration: none;
+  padding: 39px;
+  color: #3d659d;
+}
+.links a:active {
+  outline: none;
+  color: #3d659d;
+}
+.footer {
+  margin: 10px auto 0 auto;
+  text-align: center;
+  color: #aeaeae;
+  font-size: 13pt;
+  font-weight: 500;
+  font-family: Merriweather;
+}
+.footer a {
+  color: #aeaeae;
+  text-decoration: none;
+}
