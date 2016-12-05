@@ -34,11 +34,10 @@ body {
     opacity: 1;
 }
 
-.dot:hover{
+.dot:hover {
     width: 40px;
     height: 40px;
 }
-
 
 .title {
     font-weight: 700;
@@ -58,7 +57,6 @@ main {
     margin: auto;
     text-align: center;
 }
-
 
 h1 {
     line-height: 0;
@@ -96,7 +94,7 @@ h1 {
     margin-bottom: 0;
 }
 
-.button:hover{
+.button:hover {
     background: #5196C3;
 }
 
