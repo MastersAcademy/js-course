@@ -6,6 +6,6 @@
 3. Робота з атрибутами, класами.
 4. createElement vs cloneNode.
 5. Events. Event phases ([схема](https://www.w3.org/TR/2011/WD-DOM-Level-3-Events-20110531/images/eventflow.png))
-6. Підключення скріптив. DOMContentLoaded
+6. Підключення скриптів. DOMContentLoaded
 7. jQuery, порівняння з стандартними методами.
 
