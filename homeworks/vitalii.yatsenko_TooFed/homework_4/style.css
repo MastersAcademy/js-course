@@ -1,4 +1,6 @@
 .wrap {
+  width: 1000;
+  height: 800;
   margin:10px 50px 0 50px;
   border:1px;
   padding:10px;
@@ -30,19 +32,19 @@
   background: #222222;
 }
 
-.header {
+header {
   font-size: 24px;
   margin: 80px 0 0 0;
   text-align: center;
 }
 
-.header a{
+header a{
   color: black;
   text-decoration: none;
   border-bottom: 2px solid #5282A2;
 }
 
-.cont-wrap {
+main {
   margin: 70px 100px 150px 170px;
   overflow: hidden;
 }
@@ -91,21 +93,26 @@
   font-size: 24px;
 }
 
-.contacts {
+nav {
   font-family: 'Inconsolata', monospace;
   margin: 50px 100px 50px 100px;
   text-align: center;
 }
-
-.contacts a {
+nav ul{
+  list-style-type: none;
+}
+nav ul li{
+  display: inline;
   margin-left: 50px;
   margin-right: 50px;
+}
+nav a {
   text-decoration: none;
   font-size: 26px;
   color: #1b5c89;
 }
 
-.footer {
+footer {
   font-size: 18px;
   text-align: center;
   color: #C1C1C1;
