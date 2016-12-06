@@ -1,0 +1,128 @@
+.wrap {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#themetab {
+    width: 940px;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#dark {
+    background-color: lightgrey;
+    height: 40px;
+    width: 40px;
+    border: 1px solid lightgray;
+    border-radius: 40px;
+    float: right;
+    margin: 10px;
+}
+
+#light {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 40px;
+    float: right;
+    margin: 10px;
+}
+
+.wrap .header {
+    margin: 0 auto;
+}
+
+.wrap .header h1 {
+    font-family: 'Merriweather', sans-serif;
+    width: 150px;
+    margin: 0 auto;
+    font-size: 25px;
+    border-bottom: 2px solid #16548B;
+    line-height: 1.5;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.sidebar {
+    float: left;
+    width: 350px;
+    height: 250px;
+    margin: 35px 20px 0 0;
+    background: url("images/photo.png") no-repeat 50% 50%;
+
+}
+
+.content {
+    overflow: hidden;
+    padding: 10px 30px 10px 30px;
+}
+
+.content h1 {
+    font-family: 'Merriweather', sans-serif;
+    line-height: 0;
+    padding-top: 20px;
+    color: #1a1a1a;
+}
+
+.content h2 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #666666;
+}
+
+.content p {
+    font-family: 'Merriweather', sans-serif;
+    width: 90%;
+    line-height: 1.5;
+    text-align: left;
+    color: #333333;
+}
+
+#button {
+    background-color: #16548B;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#button a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+}
+
+.footer {
+    margin: 60px auto 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a {
+    text-decoration: none;
+    margin: auto;
+    font-family: 'Inconsolata', monospace;
+    font-size: 24px;
+    color: #16548B;
+    font-weight: 100;
+}
+
+.copyright {
+    text-align: center;
+    color: #b0b0b0;
+    padding-top: 10px;
+    font-size: 18px;
+}

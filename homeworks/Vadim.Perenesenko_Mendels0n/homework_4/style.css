@@ -1,0 +1,98 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  background: #fff;
+  font-family: 'Inconsolata', monospace;
+}
+.buttonBlack{
+  float: right;
+  margin: 35px 0 0 15px;
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius:50% ;
+  background:#222;
+}
+.buttonWhite{
+  float: right;
+  margin: 35px 0 0 0;
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50%;
+  background: #ebebeb;
+}
+.wrap{
+  width:950px;
+  margin:0 auto;
+  overflow: hidden;
+}
+.title{
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline #195c89;
+  margin: 90px 0 70px 0;
+}
+.images{
+  float: left;
+  width: 475px;
+}
+.images img{
+  width: 400px;
+  height: 300px;
+}
+.about{
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  font-family: 'Merriweather', serif;
+}
+.about h2{
+  margin: 5px 0 0 0;
+  color: #b2b2b2;
+}
+.about p{
+  margin: 15px 0 0 0;
+  color: #333;
+}
+.about a {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  border-radius: 4%;
+  background: #195c89;
+  color: white;
+}
+.about a:hover:visited{
+  background: #195c89;
+}
+.footer {
+  padding: 70px 0 30px 0;
+  text-align: center;
+
+}
+.footer ul{
+  list-style: none;
+}
+.footer li {
+  display: inline;
+  padding:0 65px 0 15px;
+}
+.footer a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #195c89;
+}
+.footer a:hover:active{
+  color:#195c89;
+}
+
+.footer p{
+  font-size: 20px;
+  margin:48px 0 0 0 ;
+  color: #b0b0b0;
+}
