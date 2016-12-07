@@ -1,0 +1,124 @@
+.wrap {
+  width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header {
+  overflow: hidden;
+}
+.header h1 {
+  margin: 100px auto 0;
+  width: 130px;
+  border-bottom: 3px solid #345687;
+  padding: 0 0 4px 0;
+  text-align: center;
+  font-family: Merriweather Light, Sans-serif;
+  font-size: 20pt;
+}
+.circle {
+  margin: 20px 20px 0 0;
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+
+  overflow: hidden;
+  float: right;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.light-theme {
+background-color: #ffffff;
+}
+.light-dark-theme {
+background-color: #EEE9BF;
+}
+.content {
+  margin: 70px auto;
+  overflow: hidden;
+  min-height: 255px;
+  /*for vertical aligning image*/
+  line-height: 270px;
+}
+.content img {
+  width: 380px;
+  height: 265px;
+  vertical-align: middle;
+}
+.information {
+  width: 460px;
+  float: right;
+  font-size: 13pt;
+  line-height: 1.6;
+  font-family: Merriweather, Sans-serif;
+  font-weight: 500;
+}
+.information h1 {
+  font-family: Merriweather Light, Sans-serif;
+  font-size: 28pt;
+  line-height: 1;
+}
+.information h2 {
+  color: #6c6c6c;
+  font-family: Inconsolata;
+  font-size: 20pt;
+  line-height: 1.7;
+}
+h1 {
+  margin: 0;
+}
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+.button {
+  width: 165px;
+  height: 45px;
+  background-color: #345687;
+  border: none;
+  color: #FFFAFA;
+  font-family: Inconsolata;
+  font-weight: 500;
+  font-size: 14pt;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.button:active, .button:focus  {
+  outline: none;
+}
+.footer {
+  margin: 50px auto 0;
+  text-align: center;
+}
+.links {
+  list-style-type: none;
+  font-family: Inconsolata;
+  font-size: 18pt;
+
+  color: #3d659d;
+}
+.links li {
+  display: inline;
+  padding: 35px;
+
+}
+.links li a {
+  text-decoration: none;
+  color: #3d659d;
+}
+.links li a:active {
+  outline: none;
+  color: #3d659d;
+}
+.copyrights{
+  margin: 50px auto 0;
+  text-align: center;
+  color: #aeaeae;
+  font-size: 13pt;
+  font-weight: 500;
+  font-family: Merriweather, Sans-serif;
+}
+.copyrights a {
+  color: #aeaeae;
+  text-decoration: none;
+}
