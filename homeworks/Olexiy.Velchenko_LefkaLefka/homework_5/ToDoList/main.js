@@ -163,7 +163,6 @@ function AddNewTaskToArray() {
             arrayTasks[index] = {statusTask: 0, textTask: str};
             // Update "input"
             document.getElementById("input-Form-New-Task").value = "";
-            // создаем и добавляем эелемент на форму
             // Create and add element to the form
             ModelingPasteStrLiElement(index);
             // Update the record of the amount of the remaining tasks
