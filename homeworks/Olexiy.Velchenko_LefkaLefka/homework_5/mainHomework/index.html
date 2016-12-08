@@ -9,8 +9,8 @@
     <body class="light-theme">
         <div class="wrap">
             <div class="header">
-                <div class="circle light-dark-theme" alt="Dark-theme" onclick="changeBackgroundColor('light-dark-theme')"></div>
-                <div class="circle light-theme" alt="Light-theme" onclick="changeBackgroundColor('light-theme')"></div>
+                <div class="circle dark-theme" alt="Dark-theme" onclick="changeTheme('dark-theme')"></div>
+                <div class="circle light-theme" alt="Light-theme" onclick="changeTheme('light-theme')"></div>
                 <h1>About me</h1>
             </div>
 
@@ -20,7 +20,7 @@
                     <h1>Olexiy Velchenko</h1>
                     <h2>Software Engineer</h2>
                     <p>I am 22 years old. I study system analysis. I am dealing with programming an development of different projects for "Adruino". I am also writing poetry and prose.</p>
-                    <input class="button" type="button" value="CONTACT ME">
+                    <input class="button" type="button" value="CONTACT ME" onclick="showPopup()">
                 </div>
             </div>
             <div class="footer">
@@ -34,8 +34,8 @@
                 <p class="copyrights">&copy 2016 <a href="https://github.com/LefkaLefka" target="_blank">Olexiy Velchenko</a></p>
             </div>
         </div>
-        <div class="popup" onclick="">
-
+        <div class="invisible-popup" id="popup">
+            <div class="popup-content"></div>
         </div>
         <script src="main.js"></script>
     </body>
