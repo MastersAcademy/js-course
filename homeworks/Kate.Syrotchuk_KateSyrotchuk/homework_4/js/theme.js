@@ -6,30 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
     blackTheme.addEventListener('click', blackThemeOn, false);
     lightTheme.addEventListener('click', lightThemeOn, false);
 
-    var links = document.querySelectorAll('head link');
-    var link;
-
-    for (var i = 0; i < links.length; i++) {
-        if (links[i].getAttribute('data-theme') == 'theme') {
-            link = links[i];
-        }
-    }
+    var link = document.querySelectorAll('[data-theme]')[0];
 
     function blackThemeOn(ev) {
-        if (ev.target.tagName != 'DIV') {
-            return;
-        }
-
         if (link) {
             link.setAttribute('href', 'css/themes/blackTheme.css');
         }
     }
 
     function lightThemeOn(ev) {
-        if(ev.target.tagName != 'DIV') {
-            return;
-        }
-
         if (link) {
             link.setAttribute('href', 'css/themes/lightTheme.css');
         }
