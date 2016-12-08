@@ -5,12 +5,20 @@
     <title>Homework 4</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata: 400,500|Merriweather: 400,500" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="wrap" id="wrap">
+    <div class="wrap">
         <div class="geometry">
-            <div class="circle" id="grey"></div>
-            <div class="circle" id="black"></div>
+            <div class="circle" id="grey">
+                <p hidden>white_theme</p>
+            </div>
+            <div class="circle" id="black">
+                <p hidden>dark_theme</p>
+            </div>
         </div>
         <header class="header">
             <a href="index.html">About me</a>
@@ -23,7 +31,17 @@
                 <h1>Vitalii Yatsenko</h1>
                 <h3>Full Stack Developer</h3>
                 <p>From teenage age I dream work in IT sphere. I studying in Cherkassy National University at Program Engineering faculty. I want to be a JS developer and progress to full stack developer. At free time I like play the guitar or play football.</p>
-                <button onclick="location.href='mailto:yatsik95@gmail.com'">CONTACT ME</button>
+                <button id="contact_button">CONTACT ME</button>
+            	<div id="myModal" class="modal">
+  					<div class="modal-content">
+    					<p>
+    						Tel.: +380631633370<br>
+    						Email: yatsik95@gmail.com<br>
+    						Address: Cherkassy, Khreshchatyk str. 64
+    					</p>
+    					<button id="close_contact_button">CLOSE</button>
+  					</div>
+				</div>
             </div>
         </main>
         <nav class="nav">
@@ -39,5 +57,7 @@
             <p>© 2016 Vitalii Yatsenko</p>
         </footer>
     </div>
+    <script src="js/style.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 </html>
