@@ -1,0 +1,312 @@
+body
+{
+	background-color: #FFFFE0;
+	font-family: SEGOE SCRIPT, MV BOLI;
+}
+
+.headerName
+{
+	margin-top: 23px;
+	font-weight: bolder;
+	font-size: 100px;
+	color: #EEE8AA;
+	text-shadow: 2px 2px 10px #CDAD00;
+	text-align: center;
+}
+
+.header
+{
+	width: 550px;
+	height: 50px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+	outline: none;
+}
+
+.newTask
+{
+	width: 550px;
+	height: 48px;
+	border: none;
+	font-family: inherit;
+	font-size: 26px;
+	text-indent: 50px;
+	background-color: rgb(255, 255, 214);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+	outline: none;
+}
+
+.checkboxExpandTurn
+{
+	width: 20px;
+	height: 10px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	outline: none;
+	cursor: pointer;
+/*	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);*/
+/*	border-radius: 50%;*/
+	
+	border-top: 0px;
+	border-bottom: 8px solid #E6E6FA;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;	
+}
+
+.checkboxExpandTurn:checked
+{
+	border-bottom: 0px;
+	border-top: 8px solid #BCEE68;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.data
+{
+	width: 550px;
+	height: auto;
+/*	min-height: 20px;*/
+	position: relative;
+	margin: 0;
+	padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+}
+
+.dataList
+{
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.task
+{
+	width: 548px;
+	height: auto;
+	position: relative;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+	width: 550px;
+	height: auto;
+	border: none;
+	font-family: inherit;
+	font-size: 26px;
+	background-color: rgb(255, 255, 214);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.checkboxDone
+{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	border: none;
+	vertical-align: middle;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+	-webkit-appearance: none;
+    -webkit-transition: box-shadow 200ms;
+	border-radius: 50%;
+	-webkit-border-radius: 500px;
+	outline: none;
+}
+
+.checkboxDone:checked
+{
+	background-color: #BCEE68;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
+
+.checkboxDone:checked+.text
+{
+	text-decoration: line-through;
+	color: #A7A7A7;
+}
+
+.text
+{
+	width: 460px;
+	height: auto;
+	min-height: 40.91px;
+	position: relative;
+	left: 50px;
+	background-color: rgb(255, 255, 214);
+}
+
+.taskEdit
+{
+	width: 460px;
+	height: 40px;
+	
+	font-family: inherit;
+	font-size: 26px;
+	background-color: rgb(255, 255, 200);
+	box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+	outline: none;
+	border: none;
+}
+
+.buttonDelete
+{
+	position: absolute;
+	top: 0;
+	right: 10px;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	margin: auto 0;
+	text-align: center;
+	vertical-align: middle;
+	padding-bottom: 11px;
+	background-color: rgb(255, 255, 214);
+	outline: none;
+	cursor: pointer;
+}
+
+.buttonDelete .buttonDeleteTask
+{
+	font-size: 30px;
+	color: #E6E6FA;
+}
+
+.buttonDelete:hover .buttonDeleteTask
+{
+	color: #FFE4B5;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.buttonDelete:active .buttonDeleteTask
+{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.footer
+{
+	width: 550px;
+	height: 25px;
+	position: relative;
+	margin: 16px -275px 0 -275px;
+	padding: 0;
+	right: 50%;
+	left: 50%;
+	background-color: rgb(255, 255, 214);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.toDoLeft
+{
+	float: left;
+	text-align: left;
+	margin-left: 2px;
+}
+
+.filters
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+ul.filters li
+{
+	display: inline;
+}
+
+ul.filters li input
+{
+	border: none;
+	color: inherit;
+	line-height: 20px;
+	margin: 2px;
+	cursor: pointer;
+	background: none;
+	font-family: inherit;
+	font-size: 100%;
+	text-decoration: none;
+	outline: none;
+}
+
+ul.filters li input:hover
+{
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+ul.filters li input:active
+{
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.clearComplete
+{
+	float: right;
+	position: relative;
+	border: none;
+	color: inherit;
+	line-height: 20px;
+	margin: 2px;
+	cursor: pointer;
+	background: none;
+	font-family: inherit;
+	font-size: 100%;
+	outline: none;
+}
+
+.clearComplete:hover
+{
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.clearComplete:active
+{
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.footerInfo
+{
+	margin: 3%;	
+	font-weight: bolder;
+	font-size: 15px;
+	color: #CDBE70;
+	text-shadow: 0 0 2px rgba(205, 173, 0, 0.2);
+	text-align: center;
+}
+
+h1.footerInfo a
+{
+	text-decoration: none;
+	color: #CDBE70;
+}
+
+h1.footerInfo a:hover
+{
+	text-decoration: underline;
+}
