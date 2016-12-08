@@ -24,27 +24,34 @@
             </div>
 
             <div class="footer">
-                <ul class="links">
-                    <li><a href="https://www.facebook.com/LeshkaLefka" target="_blank">Facebook</a></li>
-                    <li><a href="#" target="_blank">Instagram</a></li>
-                    <li><a href="https://vk.com/leshka_lefka" target="_blank">Vkontakte</a></li>
-                    <li><a href="mailto:lefka.velchenko@gmail.com" target="_blank">Email</a></li>
-                    <li><a href="#" target="_blank">Twitter</a></li>
-                </ul>
-                <p class="copyrights">&copy 2016 <a href="https://github.com/LefkaLefka" target="_blank">Olexiy Velchenko</a></p>
+                <!--Share content-->
+                <!--Facebbok-->
+                <a class="link" target="_blank" onclick="ShareLinks.facebook()">Facebook</a>
+                <!--Twitter-->
+                <a class="link" target="_blank" onclick="ShareLinks.twitter()">Twitter</a>
+                <!--Vkontakte-->
+                <a class="link" target="_blank" onclick="ShareLinks.vk()">Vkontakte</a>
+                <!--Google Plus-->
+                <a class="link" target="_blank" onclick="ShareLinks.googlePlus()">Google Plus</a>
+                <!--Copyrights-->
+                <p class="copyrights">&copy <span id="current-year"></span> <a href="https://github.com/LefkaLefka" target="_blank">Olexiy Velchenko</a>
+                </p>
             </div>
         </div>
 
         <div class="invisible-popup" id="popup">
             <div class="popup-content">
                 <h2>Contact me:</h2>
-                <p>Phone number: +380547895874</p>
-                <p>Skype: nick_skype</p>
-                <p>Email: my_email@gmail.com</p>
-                <p>Address: Chercasy, Chornovola 340/50</p>
+                <ul class="contact-list">
+                    <li>Phone number: +380547895874</li>
+                    <li>Skype: nick_skype</li>
+                    <li>Email: my_email@gmail.com</li>
+                    <li>Address: Chercasy, Chornovola 340/50</li>
+                    <li>Facebook: <a class="link" href="https://www.facebook.com/LeshkaLefka" target="_blank">LeshkaLefka</a></li>
+                    <li>Vkontakte: <a class="link" href="https://www.vk.com/leshka_lefka" target="_blank">leshka_lefka</a></li>
+                </ul>
             </div>
         </div>
         <script src="main.js"></script>
     </body>
 </html>
-
