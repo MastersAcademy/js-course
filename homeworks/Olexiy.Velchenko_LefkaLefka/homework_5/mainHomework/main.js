@@ -6,13 +6,14 @@ function changeTheme(theme) {
     document.body.className = theme;
 }
 /**
- *
+ * Shows popup.
  */
 function showPopup() {
     var element = document.getElementById("popup");
     element.className = "visible-popup";
+    // fade popup-element
     var op = 0.1;
-    var timer = setInterval(function () {
+    var timer = setInterval(function() {
         if(op > 1) {
             clearInterval(timer);
         }
@@ -21,7 +22,7 @@ function showPopup() {
     }, 25);
 }
 /**
- *
+ * Hides popup.
  */
 function hidePopup() {
     var element = document.getElementById("popup");
