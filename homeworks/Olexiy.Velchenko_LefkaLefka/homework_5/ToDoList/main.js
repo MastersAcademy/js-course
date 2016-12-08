@@ -1,370 +1,296 @@
-// создаем массив задач
-// состоит из объктов вида
+// Create an array of tasks
+// It consists of objects of the form:
 // task = {statusTask: false, textTask: ""}
 var arrayTasks = new Array();
-// логическая перемення отображает свернуты/развернуты задачи
+// Boolean variable displays hide or show tasks
 var areShowTasks = true;
-// что мы отображаем
-// по умолчанию "all", так же возможно: "active", "completed"
+// That we display:
+// default "all" or "active" or "completed"
 var whatShow = "all";
-// переменная для просмотра элемента
-// на который установлен фокус
+// Variable for viewing element with focus
 var focusId;
-// функция редактирования записи
-// false - выключена; true - включена
+// Edit task:
+// false - off; true - on
 var editMode = false;
-
-// назначаем функции обработчика событий
-window.onload = function()
-{	
-	// загрузка данных в массив и отображение его пользователю
-	LoadLocalStorageToArrayTasks();
-	
-	// нажатие на кнопку Enter - добаление новой записи
-	document.getElementById("inputFormNewTask").addEventListener("keypress", AddNewTaskToArray);
-	// клик на кнопку удаление всех заверншенных задач
-	document.getElementById("clearCompleted").addEventListener("click", ClearCompleted);
-	// клик на чекбокс свернуть/развернуть список
-	document.getElementById("checkboxExpandTurnTasks").addEventListener("click", ExpandturnTasks);
-	
-	// клик по фильтру
-	document.getElementById("showAll").addEventListener("click", ShowAll);
-	document.getElementById("showActive").addEventListener("click", ShowActive);
-	document.getElementById("showComleted").addEventListener("click", ShowCompleted);
-	
-	// выгрузка данных после закрытия старницы
-	window.addEventListener("beforeunload", LoadArrayTasksToLocalStorage);
+// Assign an event handler function
+window.onload = function () {
+    // Loading data into an array and display it to the user
+    LoadLocalStorageToArrayTasks();
+    // Pressing the Enter button - to add a new record
+    document.getElementById("input-Form-New-Task").addEventListener("keypress", AddNewTaskToArray);
+    // Click the button to delete all completed tasks
+    document.getElementById("clear-Completed").addEventListener("click", ClearCompleted);
+    // Click on the checkbox to show and hide list
+    document.getElementById("checkbox-Expand-TurnTasks").addEventListener("click", ExpandTurnTasks);
+    // Click on the filter
+    document.getElementById("show-All").addEventListener("click", ShowAll);
+    document.getElementById("show-Active").addEventListener("click", ShowActive);
+    document.getElementById("show-Comleted").addEventListener("click", ShowCompleted);
+    // Upload data after closing the page
+    window.addEventListener("beforeunload", LoadArrayTasksToLocalStorage);
+};
+// All click event
+document.onclick = function (e) {
+    e = e || event;
+    var target = e.target || e.srcElement;
+    // Click on the button to delete the record
+    if (target.className === "button-Delete-Task") {
+        // Id element which removes
+        var idStr = target.id.replace(/\.2\.0/, "");
+        var idInt = parseInt(idStr);
+        // Remove the item(task) from the list(ul)
+        DeleteTaskFromUl(idStr);
+        // Removes element from array of tasks
+        DeleteTaskFromArray(idInt);
+        // Update id in list(ul)
+        UpdateDataListId(idInt);
+        // Update the record of the amount of the remaining tasks
+        UpdateNumberUnfinishedTasks();
+    }
+    // Click on the checkbox - task status
+    if (target.className === "checkbox-Done") {
+        // Id element which changes status
+        var id = target.id.replace(/\.0/, "");
+        var idInt = parseInt(id);
+        // Change status task
+        arrayTasks[idInt].statusTask ^= true;
+        // Update the record of the amount of the remaining tasks
+        UpdateNumberUnfinishedTasks();
+    }
+    if (editMode) {
+        if (document.activeElement.id !== focusId) {
+            SaveEditTask();
+        }
+    }
 }
-
-// все события клика
-document.onclick = function(e)
-{
-	e = e || event;
-	var target = e.target || e.srcElement;
-	
-	// клик на кнопку удаления записи
-	if (target.className === "buttonDeleteTask")
-	{
-		// id элемента который удаляем
-		var idStr = target.id.replace(/\.2\.0/, "");
-		var idInt = parseInt(idStr);
-		// удаляем элемент из списка ul
-		DeleteTaskFromUl(idStr);
-		// удаляем элемент из массива записей
-		DeleteTaskFromArray(idInt);
-		// обновляем id в списке ul
-		UpdateDataListId(idInt);
-		// обновляем запись о количестве оставшихся задач
-		UpdateNumberUnfinishedTasks();
-	}
-	// клик на checkbox - статус задачи
-	if (target.className === "checkboxDone")
-	{
-		// id элемента которому меняем статус
-		var id = target.id.replace(/\.0/, "");
-		var idInt = parseInt(id);
-		// меняем статус
-		arrayTasks[idInt].statusTask ^= true;
-		// обновляем запись о количестве оставшихся задач
-		UpdateNumberUnfinishedTasks();
-	}
-	if (editMode)
-	{
-		if (document.activeElement.id !== focusId)
-		{
-			SaveEditTask();
-		}
-	}
+// Double-click on the item to edit task
+document.ondblclick = function (e) {
+    e = e || event;
+    var target = e.target || e.srcElement;
+    // If pressed on the task
+    if (target.className === "text") {
+        // Id element which press
+        var id = target.id.replace(/\.1/, "");
+        var idInt = parseInt(id);
+        // Input for editing
+        document.getElementById(id + ".1").innerHTML = "<input class=\"task-Edit\" type=\"text\" id=\"" + id + ".1.0\"" + "value=\"" + arrayTasks[idInt].textTask + "\">";
+        // Focus-editing:
+        focusId = id + ".1.0"
+        // Editing mode
+        editMode ^= true;
+    }
+};
+// Load data to localStorage
+// to work with them after reboot
+function LoadArrayTasksToLocalStorage() {
+    localStorage.clear();
+    for (var i = 0; i < arrayTasks.length; ++i) {
+        localStorage.setItem(i.toString(), JSON.stringify(arrayTasks[i]));
+    }
 }
-
-// двойной клик по элементу
-// для редактирования записи
-document.ondblclick = function(e)
-{
-	e = e || event;
-	var target = e.target || e.srcElement;
-	// елс инажали на запись
-	if (target.className === "text")
-	{
-		// id элемента на который нажали
-		var id = target.id.replace(/\.1/, "");
-		var idInt = parseInt(id);
-		// input для редактирования
-		document.getElementById(id + ".1").innerHTML = "<input class=\"taskEdit\" type=\"text\" id=\"" + id + ".1.0\"" + "value=\"" + arrayTasks[idInt].textTask + "\">";
-		// где фокус редактирования:
-		focusId = id + ".1.0"
-		// устанавливаем режим редактирования
-		editMode ^= true;
-	}
+// Load data from localStorage to array
+function LoadLocalStorageToArrayTasks() {
+    for (var i = 0; i < localStorage.length; ++i) {
+        arrayTasks[i] = JSON.parse(localStorage.getItem(i.toString()));
+        // Create and add to the form element
+        ModelingPasteStrLiElement(i);
+        // Update the record of the amount of the remaining tasks
+        UpdateNumberUnfinishedTasks();
+        if (arrayTasks[i].statusTask === 1) {
+            document.getElementById(i.toString() + ".0").checked = true;
+        }
+    }
 }
-
-// загружаем данные в localStorage
-// для работы с ними после перезагрузки
-function LoadArrayTasksToLocalStorage()
-{
-	localStorage.clear();
-	
-	for (var i = 0; i < arrayTasks.length; ++i)
-	{
-		localStorage.setItem(i.toString(), JSON.stringify(arrayTasks[i]));
-	}
+// Show all tasks
+function ShowAll() {
+    var element;
+    for (var i = 0; i < arrayTasks.length; ++i) {
+        element = document.getElementById(i.toString());
+        element.style.display = "block";
+    }
+    ExpandTaskFromFilters();
 }
-
-// загружаем данные из localStorage в массив
-function LoadLocalStorageToArrayTasks()
-{	
-	for (var i = 0; i < localStorage.length; ++i)
-	{
-		arrayTasks[i] = JSON.parse(localStorage.getItem(i.toString()));
-		// создаем и добавляем эелемент на форму
-		ModelingPasteStrLiElement(i);
-		// обновляем запись о количестве оставшихся задач
-		UpdateNumberUnfinishedTasks();
-		if (arrayTasks[i].statusTask === 1)
-		{
-			document.getElementById(i.toString() + ".0").checked = true;
-		}
-	}
+// Show active tasks
+function ShowActive() {
+    var element;
+    for (var i = 0; i < arrayTasks.length; ++i) {
+        element = document.getElementById(i.toString());
+        // If the task is not completed
+        if (!arrayTasks[i].statusTask) {
+            // Show
+            element.style.display = "block";
+        }
+        else {
+            // If the task is completed
+            element.style.display = "none";
+        }
+    }
+    ExpandTaskFromFilters();
 }
-
-// отображение всех задач
-function ShowAll()
-{
-	var element;
-	for (var i = 0; i < arrayTasks.length; ++i)
-	{
-		element = document.getElementById(i.toString());
-		element.style.display = "block";
-	}
-	ExpandTaskFromFilters();
+// Show completed tasks
+function ShowCompleted() {
+    var element;
+    for (var i = 0; i < arrayTasks.length; ++i) {
+        element = document.getElementById(i.toString());
+        // If the task is completed
+        if (arrayTasks[i].statusTask) {
+            // Show
+            element.style.display = "block";
+        }
+        else {
+            // If the task is not completed
+            element.style.display = "none";
+        }
+    }
+    ExpandTaskFromFilters();
 }
-
-// отображаение активных(незавершенных) задач
-function ShowActive()
-{
-	var element;
-	for (var i = 0; i < arrayTasks.length; ++i)
-	{
-		element = document.getElementById(i.toString());
-		// если задача незавершена
-		if (!arrayTasks[i].statusTask)
-		{
-			// отображаем ее
-			element.style.display = "block";
-		}
-		else
-		{
-			// если задача завершана
-			element.style.display = "none";
-		}
-	}
-	ExpandTaskFromFilters();
+function ExpandTaskFromFilters() {
+    // Show element ul
+    document.getElementById("listElement").style.display = "block";
+    document.getElementById("checkbox-Expand-TurnTasks").checked = false;
+    areShowTasks = true;
 }
-
-// отображение завершенных задач
-function ShowCompleted()
-{
-	var element;
-	for (var i = 0; i < arrayTasks.length; ++i)
-	{
-		element = document.getElementById(i.toString());
-		// если задача завершена
-		if (arrayTasks[i].statusTask)
-		{
-			// отображаем ее
-			element.style.display = "block";
-		}
-		else
-		{
-			// если задача завершана
-			element.style.display = "none";
-		}
-	}
-	ExpandTaskFromFilters();
+// Add new task to array
+function AddNewTaskToArray() {
+    var e = e || window.event;
+    // Add when pressed "Enter"
+    if (e.keyCode === 13) {
+        // Check input line
+        var str = document.getElementById("input-Form-New-Task").value;
+        if (str !== "") {
+            var index = arrayTasks.length;
+            // Create object and add him to array
+            arrayTasks[index] = {statusTask: 0, textTask: str};
+            // Update "input"
+            document.getElementById("input-Form-New-Task").value = "";
+            // создаем и добавляем эелемент на форму
+            // Create and add element to the form
+            ModelingPasteStrLiElement(index);
+            // Update the record of the amount of the remaining tasks
+            UpdateNumberUnfinishedTasks();
+        }
+    }
 }
-
-function ExpandTaskFromFilters()
-{
-	// отображаем элемент ul
-	document.getElementById("listElement").style.display = "block";
-	document.getElementById("checkboxExpandTurnTasks").checked = false;
-	areShowTasks = true;
+// Delete task from array
+function DeleteTaskFromArray(index) {
+    // We pass from the element which will delete to end of the list rebinding objects
+    for (var i = index; i < arrayTasks.length - 1; ++i) {
+        arrayTasks[i].statusTask = arrayTasks[i + 1].statusTask;
+        arrayTasks[i].textTask = arrayTasks[i + 1].textTask;
+    }
+    // Delete last element
+    arrayTasks.pop();
 }
-
-// добавляем новую задачу в массив задач
-function AddNewTaskToArray()
-{
-	var e = e || window.event;
-	// добавляем по событию нажатия кнопки "Enter"
-	if (e.keyCode === 13)
-	{
-		// проверяем входящу строку
-		var str = document.getElementById("inputFormNewTask").value;
-		if (str !== "")
-		{
-			var index = arrayTasks.length;
-			// создаем объект и добаляем его в массив
-			arrayTasks[index] = {statusTask: 0, textTask: str};
-			// обновляем входищий "input"
-			document.getElementById("inputFormNewTask").value = "";
-			// создаем и добавляем эелемент на форму
-			ModelingPasteStrLiElement(index);
-			// обновляем запись о количестве оставшихся задач
-			UpdateNumberUnfinishedTasks();
-		}
-	}
+// Delete task
+// Delete all elements in <li>
+function DeleteTaskFromUl(id) {
+    var element = document.getElementById(id);
+    element.remove();
 }
-
-// удаляем запись из массива
-function DeleteTaskFromArray(index)
-{
-	// проходим от элемента который надо удалить до конца списка переприсваивая объекты
-	for (var i = index; i < arrayTasks.length - 1; ++i)
-	{
-		arrayTasks[i].statusTask = arrayTasks[i + 1].statusTask;
-		arrayTasks[i].textTask = arrayTasks[i + 1].textTask;
-	}
-	// удаляем последний элемент
-	arrayTasks.pop();
+// After losing the focus on the edit control
+// Save the changes in the array
+function SaveEditTask() {
+    // Get changed value
+    var str = document.getElementById(focusId).value;
+    // Change the id to find div where write text
+    var newId = focusId.replace(/\.0/, "");
+    // Write the text and remove input
+    document.getElementById(newId).innerHTML = str;
+    // Change id and save changes in array
+    newId = newId.replace(/\.1/, "");
+    var idInt = parseInt(newId);
+    // Save changes in array
+    arrayTasks[idInt].textTask = str;
+    focusId = "";
+    editMode ^= true;
 }
-
-// удаление записи
-// удаление всех элементов внутри тега <li> включая его самого с заданым id
-function DeleteTaskFromUl(id)
-{
-	var element = document.getElementById(id);
-	element.remove();
+// Update list of all tasks
+function UpdateDataListId(id) {
+    for (var i = id + 1; i < arrayTasks.length + 1; ++i) {
+        // Update id:
+        // li
+        document.getElementById(i.toString()).id = (i - 1).toString();
+        // checkbox(task status)
+        document.getElementById(i.toString() + ".0").id = (i - 1).toString() + ".0";
+        // div(task text)
+        document.getElementById(i.toString() + ".1").id = (i - 1).toString() + ".1";
+        // div(delete button)
+        document.getElementById(i.toString() + ".2").id = (i - 1).toString() + ".2";
+        // span
+        document.getElementById(i.toString() + ".2.0").id = (i - 1).toString() + ".2.0";
+    }
 }
-
-// после протери фокуса на элементе редактирования
-// сохраняем изменения в общем массиве
-function SaveEditTask()
-{
-	// получаем измененное значение
-	var str = document.getElementById(focusId).value;
-	// изменяем id для того чтобы найти div куда записываем текст	
-	var newId = focusId.replace(/\.0/, "");
-	// записываем текст этим самым удаляя input
-	document.getElementById(newId).innerHTML = str;
-	// изменяем id чтобы сохранить изменения в массиве
-	newId = newId.replace(/\.1/, "");
-	var idInt = parseInt(newId);
-	// сохраняем изменения в массиве
-	arrayTasks[idInt].textTask = str;	
-	focusId = "";
-	editMode ^= true;
+// Update the record of the amount of the remaining tasks
+function UpdateNumberUnfinishedTasks() {
+    var number = 0;
+    // Calculate the remaining tasks
+    for (var i = 0; i < arrayTasks.length; ++i) {
+        if (!arrayTasks[i].statusTask)
+            ++number;
+    }
+    // Show them
+    if (number > 1)
+        document.getElementById("unfinishedTasks").innerHTML = number + " toDos left";
+    else
+        document.getElementById("unfinishedTasks").innerHTML = number + " toDo left";
 }
-
-// обновление списка всех задач на экране
-function UpdateDataListId(id)
-{
-	for (var i = id + 1; i < arrayTasks.length + 1; ++i)
-	{
-		// обновляем id элемента li
-		document.getElementById(i.toString()).id = (i - 1).toString();
-		// обновляем id элемента checkbox(статус задачи)
-		document.getElementById(i.toString() + ".0").id = (i - 1).toString() + ".0";
-		// обновляем id элемента div(текст задачи)
-		document.getElementById(i.toString() + ".1").id = (i - 1).toString() + ".1";
-		// обновляем id элемента div(кнопка удаления)
-		document.getElementById(i.toString() + ".2").id = (i - 1).toString() + ".2";
-		// обновляем id элемента span(кнопка удаления)
-		document.getElementById(i.toString() + ".2.0").id = (i - 1).toString() + ".2.0";
-	}
+// Remove completed tasks
+function ClearCompleted() {
+    for (var i = 0; i < arrayTasks.length; ++i) {
+        // Check task status
+        if (arrayTasks[i].statusTask) {
+            // Delete element from list(ul)
+            DeleteTaskFromUl(i.toString());
+            // Delete element from array
+            DeleteTaskFromArray(i);
+            // Update id in list(ul)
+            UpdateDataListId(i);
+            --i;
+        }
+    }
 }
+// Show or hide tasks
+function ExpandTurnTasks() {
+    // If there are tasks
+    if (arrayTasks.length > 0) {
+        // If shows elements
+        if (areShowTasks) {
+            // Hide elements in ul
+            document.getElementById("listElement").style.display = "none";
+            areShowTasks ^= true;
+        }
+        else {
+            // Show elements in ul
+            document.getElementById("listElement").style.display = "block";
+            areShowTasks ^= true;
+        }
+    }
+    else {
+        document.getElementById("checkbox-Expand-TurnTasks").checked = false;
+    }
 
-// обновление записи о количестве оставшихся задач
-function UpdateNumberUnfinishedTasks()
-{
-	var number = 0;
-	// подсчитываем оставшиеся задачи
-	for (var i = 0; i < arrayTasks.length; ++i)
-	{
-		if (!arrayTasks[i].statusTask)
-			++number;
-	}
-	// отображаем их пользователю
-	if (number > 1)
-		document.getElementById("unfinishedTasks").innerHTML = number + " toDos left";
-	else
-		document.getElementById("unfinishedTasks").innerHTML = number + " toDo left";
 }
-
-// удаление завершенных задач
-function ClearCompleted()
-{
-	for (var i = 0; i < arrayTasks.length; ++i)
-	{
-		// проверяем статус задачи
-		if (arrayTasks[i].statusTask)
-		{
-			// удаляем элемент из списка ul
-			DeleteTaskFromUl(i.toString());
-			// удаляем элемент из массива записей
-			DeleteTaskFromArray(i);
-			// обновляем id в списке ul
-			UpdateDataListId(i);
-			--i;
-		}
-	}
+// Form a string that will contain all of the internal elements <li>
+// Accepts serial task number in the array for id
+function ModelingPasteStrLiElement(num) {
+    var newList = document.createElement("li");
+    newList.className = "task";
+    newList.id = num;
+    listElement.appendChild(newList);
+    document.getElementById(num).innerHTML = ModelingStrCheckboxDone(num) + ModelingStrDivText(num) + ModelingStrButtonDeleteDivSpan(num);
 }
-
-// сворачивание/разворачивание задач
-function ExpandturnTasks()
-{
-	// если есть че сворачивать
-	if (arrayTasks.length > 0)
-	{
-		// если элементы отображены
-		if (areShowTasks)
-		{
-			// скрываем элементы ul
-			document.getElementById("listElement").style.display = "none";
-			areShowTasks ^= true;
-		}
-		else
-		{
-			// отображаем элементы ul
-			document.getElementById("listElement").style.display = "block";
-			areShowTasks ^= true;
-		}
-	}
-	else
-	{
-		document.getElementById("checkboxExpandTurnTasks").checked = false;
-	}
-		
+// Forming html for checkbox
+function ModelingStrCheckboxDone(num) {
+    var str = "<input class=\"checkbox-Done\"" + "id=" + num + ".0 " + "type=\"checkbox\">";
+    return str;
 }
-
-// формируем строку которая будет содеражть все внутренные элементы <li>
-// принимает порядковый номер задачи в массиве для id
-function ModelingPasteStrLiElement(num)
-{
-	var newList = document.createElement("li");
-	newList.className = "task";
-	newList.id = num;
-	listElement.appendChild(newList);
-	
-	document.getElementById(num).innerHTML = ModelingStrCheckboxDone(num) + ModelingStrDivText(num) + ModelingStrButtonDeleteDivSpan(num);
+// Forming html for div with task text
+function ModelingStrDivText(num) {
+    var str = "<div class=\"text\" " + "id=" + num + ".1>" + arrayTasks[num].textTask + "</div>";
+    return str;
 }
-
-// формируем html-теги для checkbox-а
-function ModelingStrCheckboxDone(num)
-{
-	var str = "<input class=\"checkboxDone\"" + "id=" + num + ".0 " + "type=\"checkbox\">";
-	return str;
-}
-
-// формируем html-теги для div-а с текстом записи
-function ModelingStrDivText(num)
-{
-	var str = "<div class=\"text\" " + "id=" + num + ".1>" + arrayTasks[num].textTask + "</div>";
-	return str;
-}
-
-// формируем html-теги для div-а с кнопкой удаления записи
-function ModelingStrButtonDeleteDivSpan(num)
-{
-	var str = "<div class=\"buttonDelete\" " + "id=" + num + ".2 " + "onselectstart=\"return false\" onmousedown=\"return false\"><span class=\"buttonDeleteTask\"" + "id=" + num + ".2.0"  + ">X</span></div>";
-	return str;
+// Forming html for div with delete button
+function ModelingStrButtonDeleteDivSpan(num) {
+    var str = "<div class=\"button-Delete\" " + "id=" + num + ".2 " + "onselectstart=\"return false\" onmousedown=\"return false\"><span class=\"button-Delete-Task\"" + "id=" + num + ".2.0" + ">X</span></div>";
+    return str;
 }
