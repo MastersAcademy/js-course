@@ -100,11 +100,11 @@ h2 {
   display: inline;
   padding: 35px;
 }
-.links li a {
+.links a {
   text-decoration: none;
   color: #3d659d;
 }
-.links li a:active {
+.links a:active {
   outline: none;
   color: #3d659d;
 }
@@ -136,7 +136,18 @@ h2 {
 }
 .popup-content {
   width: 400px;
-  height: 200px;
+  margin: 70px auto;
+  padding: 30px;
+  text-align: center;
+  font-family: Merriweather, Sans-serif;
+  border-radius: 3px;
+}
+.popup-content h2 {
+  padding-bottom: 30px;
+}
+.light-theme .popup-content {
   background-color: #aeaeae;
-  margin: 150px auto 0px auto;
+}
+.dark-theme .popup-content {
+  background-color: #464646;
 }
