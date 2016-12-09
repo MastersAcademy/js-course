@@ -1,0 +1,106 @@
+/**
+*         Media-queries
+*/
+
+@landscape:       ~"(max-width: 670px) and (orientation: landscape)";
+@mobile:          ~"(max-width: 670px)";
+@mobile-tablet:   ~"(max-width: 999px)";
+@tablet:          ~"(min-width: 671px) and (max-width: 999px)";
+@tablet-desktop:  ~"(min-width: 671px)";
+@desktop:         ~"(min-width: 1000px)";
+@desktop-sm:      ~"(min-width: 1000px) and (max-height: 768px)";
+@desktop-lg:      ~"(min-width: 2400px)";
+
+.media(@name, @rules) {
+  @media @name {
+    @rules();
+  }
+}
+
+/**
+*          Vertical align
+*/
+
+.v-align(@position) {
+  &::before {
+    display: block;
+    content: "";
+    height: @position;
+  }
+}
+
+/**
+*           Centering
+*/
+
+.x-center() {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.y-center() {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.xy-center() {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/**
+*           Triangles
+*/
+
+.triangle(@_, @width, @color, @style: solid) {
+  width: 0;
+  height: 0;
+  border: @width @style @color;
+}
+
+.triangle(top, @width, @color, @style: solid) {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top: none;
+}
+
+.triangle(bottom, @width, @color, @style: solid) {
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom: none;
+}
+
+.triangle(left, @width, @color, @style: solid) {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left: none;
+}
+
+.triangle(right, @width, @color, @style: solid) {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right: none;
+}
+
+/**
+*           Border radius
+*/
+
+.border-radius(tl, @value) {
+  border-top-left-radius: @value;
+}
+
+.border-radius(tr, @value) {
+  border-top-right-radius: @value;
+}
+
+.border-radius(bl, @value) {
+  border-bottom-left-radius: @value;
+}
+
+.border-radius(br, @value) {
+  border-bottom-right-radius: @value;
+}

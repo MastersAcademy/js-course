@@ -1,0 +1,46 @@
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10em;
+  padding: 2em;
+}
+
+.theme-change {
+  position: absolute;
+  top: 3em;
+  right: -5em;
+}
+
+.theme-btn {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  &[data-theme="dark"] {
+    background: #000;
+  }
+  &[data-theme="light"] {
+    background: #ebebeb;
+  }
+}
+
+.main-nav a {
+  position: relative;
+  left: -50%;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #000;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 1.5em;
+    left: -5%;
+    width: 110%;
+    height: 2px;
+    background: #195c89;
+  }
+}
