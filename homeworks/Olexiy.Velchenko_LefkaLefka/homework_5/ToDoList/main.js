@@ -13,7 +13,7 @@ var focusId;
 // false - off; true - on
 var editMode = false;
 // Assign an event handler function
-window.onload = function () {
+window.onload = function() {
     // Loading data into an array and display it to the user
     LoadLocalStorageToArrayTasks();
     // Pressing the Enter button - to add a new record
@@ -30,7 +30,7 @@ window.onload = function () {
     window.addEventListener("beforeunload", LoadArrayTasksToLocalStorage);
 };
 // All click event
-document.onclick = function (e) {
+document.onclick = function(e) {
     e = e || event;
     var target = e.target || e.srcElement;
     // Click on the button to delete the record
@@ -64,7 +64,7 @@ document.onclick = function (e) {
     }
 }
 // Double-click on the item to edit task
-document.ondblclick = function (e) {
+document.ondblclick = function(e) {
     e = e || event;
     var target = e.target || e.srcElement;
     // If pressed on the task
