@@ -31,14 +31,12 @@
 }
 .dark-theme {
   background-color: #2a2a2a;
-  color: #cbd547;
+  color: #99902b;
 }
 .content {
   margin: 70px auto;
   overflow: hidden;
-  min-height: 255px;
-  /*for vertical aligning image*/
-  line-height: 270px;
+  min-height: 265px;
 }
 .content img {
   width: 380px;
