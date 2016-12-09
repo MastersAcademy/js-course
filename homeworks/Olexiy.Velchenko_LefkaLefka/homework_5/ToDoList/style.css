@@ -77,7 +77,6 @@ body {
   list-style: none;
 }
 .task {
-  width: 548px;
   height: auto;
   position: relative;
   right: 50%;
