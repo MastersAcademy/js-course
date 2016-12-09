@@ -66,6 +66,58 @@ Content = {
     jsonData: ""
 };
 /**
+ * Function for click on an element.
+ * @param e An element which has been clicked.
+ */
+document.onclick = function(e) {
+    e = e || event;
+    var target = e.target || e.srcElement;
+    if (target.id === "popup") {
+        hidePopup();
+    }
+};
+/**
+ * Function for double click on an element.
+ * @param e An element which has been clicked.
+ */
+document.ondblclick = function(e) {
+    e = e || event;
+    var target = e.target || e.srcElement;
+    if(target.className === "can-edit") {
+        changeToInput(e.target.parentElement, e.toElement);
+    }
+};
+/**
+ * Self-invoking anonymous function to determine the year and load json-file.
+ */
+(function() {
+    var now = new Date();
+    document.getElementById("current-year").textContent = now.getFullYear().toString();
+    loadJSON();
+})();
+/**
+ * Replace the element on "input" and set unfocused function to him.
+ * @param parentElement Element of all parent block.
+ * @param element Element which must be replaced.
+ */
+function changeToInput(parentElement, element) {
+    // console.log(element);
+    var newElement = document.createElement("input");
+    newElement.className = "input-edit";
+    newElement.value = element.textContent;
+    parentElement.replaceChild(newElement, element);
+    newElement.focus();
+    verticalAlignPicture();
+    // Closure parameters:
+    newElement.onblur = function() {
+        // Save value from "input".
+        element.textContent = newElement.value;
+        // Replace the input to old element.
+        parentElement.replaceChild(element, newElement);
+        verticalAlignPicture();
+    }
+}
+/**
  * Changes the theme of the page.
  * @param theme CSS class with the theme of page.
  */
@@ -97,25 +149,6 @@ function hidePopup() {
     element.style.opacity = 0;
 }
 /**
- * Function for a click on an element.
- * @param e An element which has been clicked.
- */
-document.onclick = function(e) {
-    e = e || event;
-    var target = e.target || e.srcElement;
-    if (target.id === "popup") {
-        hidePopup();
-    }
-};
-/**
- * Self-invoking anonymous function to determine the year.
- */
-(function() {
-    var now = new Date();
-    document.getElementById("current-year").textContent = now.getFullYear().toString();
-    loadJSON();
-})();
-/**
  * Load local json-file.
  */
 function loadJSON() {
@@ -142,14 +175,13 @@ function showData() {
     beforeAddElement(element, "h1", Content.name());
     beforeAddElement(element, "h2", Content.post());
     beforeAddElement(element, "p", Content.info());
-    // Align image vertically with respect to the text.
-    document.querySelector(".content").style.lineHeight = document.querySelector(".information").offsetHeight.toString() + "px";
+    verticalAlignPicture();
     // Element after which inserted.
     element = document.querySelector(".contact-list");
-    appendElement(element, "li", "Phone number: " + Content.phone());
-    appendElement(element, "li", "Skype: " + Content.skype());
-    appendElement(element, "li", "Email: " + Content.email());
-    appendElement(element, "li", "Address: " + Content.address());
+    appendElement(element, "li", "Phone number: " + Content.phone(), "can-edit");
+    appendElement(element, "li", "Skype: " + Content.skype(), "can-edit");
+    appendElement(element, "li", "Email: " + Content.email(), "can-edit");
+    appendElement(element, "li", "Address: " + Content.address(), "can-edit");
     el = appendElement(element, "li", "Facebook: ");
     appendLink(el, Content.fb_url(), Content.fb_nickname());
     el = appendElement(element, "li", "Vkonakte: ");
@@ -164,6 +196,7 @@ function showData() {
 function beforeAddElement(elementWhere, elStr, content) {
     var element = document.createElement(elStr);
     element.textContent = content;
+    element.className = "can-edit";
     elementWhere.before(element);
 }
 /**
@@ -173,9 +206,10 @@ function beforeAddElement(elementWhere, elStr, content) {
  * @param content The data to be inserted into the created element.
  * @returns {Element} Created element.
  */
-function appendElement(elementWhere, elStr, content) {
+function appendElement(elementWhere, elStr, content, className) {
     var element = document.createElement(elStr);
     element.textContent = content;
+    element.className = className;
     elementWhere.appendChild(element);
     return element;
 }
@@ -192,4 +226,10 @@ function appendLink(elementWhere, href, content) {
     element.href = href;
     element.textContent = content;
     elementWhere.appendChild(element);
+}
+/**
+ * Align image vertically with respect to the text-block.
+ */
+function verticalAlignPicture() {
+    document.querySelector(".content").style.lineHeight = document.querySelector(".information").offsetHeight.toString() + "px";
 }
