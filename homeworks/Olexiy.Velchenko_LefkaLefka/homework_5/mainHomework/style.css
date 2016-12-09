@@ -33,6 +33,16 @@
   background-color: #2a2a2a;
   color: #99902b;
 }
+.dark-theme .input-edit {
+  background-color: #2a2a2a;
+  color: #99902b;
+}
+.light-theme .popup-content {
+  background-color: #6aa1ba;
+}
+.dark-theme .popup-content {
+  background-color: #464646;
+}
 .content {
   margin: 70px auto;
   overflow: hidden;
@@ -77,7 +87,7 @@ h2 {
   color: #FFFAFA;
   font-family: Inconsolata;
   font-weight: 500;
-  font-size: 14pt;
+  font-size: 18pt;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -126,13 +136,7 @@ h2 {
   padding: 30px;
   text-align: center;
   font-family: Merriweather, Sans-serif;
-  border-radius: 3px;
-}
-.light-theme .popup-content {
-  background-color: #aeaeae;
-}
-.dark-theme .popup-content {
-  background-color: #464646;
+  border-radius: 5px;
 }
 .contact-list {
   list-style-type: none;
@@ -151,4 +155,11 @@ h2 {
 .link:active {
   outline: none;
   color: #3d659d;
+}
+.input-edit {
+  width: 450px;
+  font-family: Merriweather, Sans-serif;
+  font-size: 18pt;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
 }
