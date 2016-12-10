@@ -56,10 +56,15 @@
     function editText(e) {
         var elem = e.target,
             area = doc.createElement('textarea');
-        area.value = elem.innerHTML;
-        elem.innerHTML = '';
-        elem.appendChild(area);
-        area.focus();
+        switch(elem) {
+            case element('p'):
+            case element('h1'):
+            case element('h2'):
+                area.value = elem.innerHTML;
+                elem.innerHTML = '';
+                elem.appendChild(area);
+                area.focus();
+        }
     }
 
     function notEditText(e) {
@@ -90,28 +95,28 @@
     // share social
     var url,
         share = {
-        vkontakte: function(purl, ptitle, pimg, text) {
+        vkontakte: function(purl, title, img, text) {
             url = 'http://vkontakte.ru/share.php?';
             url += 'url=' + encodeURIComponent(purl);
-            url += '&title=' + encodeURIComponent(ptitle);
+            url += '&title=' + encodeURIComponent(title);
             url += '&description=' + encodeURIComponent(text);
-            url += '&image=' + encodeURIComponent(pimg);
+            url += '&image=' + encodeURIComponent(img);
             url += '&noparse=true';
             share.popup(url);
         },
-        facebook: function (purl, ptitle, pimg, text) {
+        facebook: function (purl, title, img, text) {
             url = 'http://www.facebook.com/sharer.php?s=100';
-            url += '&p[title]=' + encodeURIComponent(ptitle);
+            url += '&p[title]=' + encodeURIComponent(title);
             url += '&p[summary]=' + encodeURIComponent(text);
             url += '&p[url]=' + encodeURIComponent(purl);
-            url += '&p[images][0]=' + encodeURIComponent(pimg);
+            url += '&p[images][0]=' + encodeURIComponent(img);
             share.popup(url);
         },
-        twitter: function(purl, ptitle) {
+        twitter: function(purl, title) {
             url = 'http://twitter.com/share?';
-            url += 'text=' + encodeURIComponent(ptitle);
+            url += 'text=' + encodeURIComponent(title);
             url += '&url=' + encodeURIComponent(purl);
-            url += '&counturl=' + encodeURIComponent(purl);
+            url += '&counturl=' + encodeURIComponent(url);
             share.popup(url);
         },
         popup: function (url) {
