@@ -1,0 +1,134 @@
+@import "compass/reset";
+
+*:focus {
+  outline: none;
+}
+
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+body {
+  position: relative;
+  background: url("../images/pattern8.jpg") repeat;
+  z-index: 2;
+  clear: both;
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background-color: white;
+    opacity: 0.5;
+  }
+}
+
+.wrapper {
+  width: 900px;
+  margin: 100px auto;
+  .main {
+    overflow: hidden;
+    width: 450px;
+    .main-title {
+      margin-bottom: 10px;
+      font-size: 30px;
+      text-align: center;
+    }
+    .input-text {
+      width: 80%;
+      height: 30px;
+      padding-left: 10px;
+      background-color: white;
+      &:focus {
+        outline: none;
+        border-color:#0F1722;
+      }
+    }
+    .add-task {
+      height: 35px;
+      background-color: #0F1722;
+      border: none;
+      cursor: pointer;
+      color: white;
+      outline: none;
+    }
+    .list {
+      margin-top: 20px;
+      padding: 0;
+      text-align: left;
+      li {
+        background-color: white;
+        position: relative;
+        width: 90%;
+        padding: 5px 10px 5px;
+        font-size: 20px;
+        border: 1px solid #0F1722;
+        .fa-times {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          cursor: pointer;
+          color: #9D0000;
+        }
+        .fa-check-circle-o{
+          margin-right: 5px;
+          cursor: pointer;
+          color: green;
+        }
+        .input-change {
+          width: 85%;
+          padding: 5px;
+        }
+      }
+      .checkLine {
+        text-decoration: line-through;
+        background-color: #ccc;
+      }
+    }
+  }
+  .results {
+    float: left;
+    margin-right: 50px;
+    font-family: 'Merriweather', serif;
+    font-size: 14px;
+    .results-title {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+    .results-list {
+      li {
+        margin-bottom: 10px;
+        button {
+          padding: 5px 10px;
+          background-color: #abd3ee;
+          color: #0F1722;
+          border: 1px solid #0F1722;
+          cursor: pointer;
+          font-weight: 700;
+          @include transition(all, 1s, ease);
+          &:hover {
+            background-color: white;
+          }
+        }
+        span {
+          font-size: 18px;
+          color: #0F1722;
+        }
+      }
+    }
+  }
+}
+
+
+.over {
+  border: 1px solid red;
+}
+

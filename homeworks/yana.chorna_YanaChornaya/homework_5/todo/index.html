@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="results">
+            <h2 class="results-title">Results</h2>
+            <ul class="results-list">
+                <li>Number of tasks that performed:<span class="done">0</span></li>
+                <li>Number of tasks that you need to do:<span class="need-todo">0</span></li>
+                <li>To check all tasks, enter: <button class="check-all">Check all</button></li>
+                <li>To delete all tasks, enter: <button class="clear">Clear all</button></li>
+                <li>To see tasks that you need to do, enter: <button class="filter-need">Need to do</button></li>
+                <li>To see tasks that performed, enter: <button class="filter-done">Done</button></li>
+                <li>To see all tasks, enter: <button class="filter-all">All</button></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <h1 class="main-title">ToDo List</h1>
+            <input type="text" class="input-text" placeholder="Write what you need to do">
+            <button class="add-task">Add</button>
+            <ul class="list"></ul>
+        </div>
+    </div>
+
+    <script src = "js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+/* line 5, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/style.scss */
+a:link, a:visited {
+  text-decoration: none;
+}
+
+/* line 7, ../sass/style.scss */
+*:focus {
+  outline: none;
+}
+
+/* line 19, ../sass/style.scss */
+body {
+  background-color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+}
+
+/* line 25, ../sass/style.scss */
+.body-dark {
+  background-color: #080C17;
+  color: white;
+}
+
+/* line 30, ../sass/style.scss */
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px 10px;
+  overflow: hidden;
+}
+
+/*-------------Header-------------*/
+/* line 39, ../sass/style.scss */
+header .theme-colors {
+  margin-top: 25px;
+  float: right;
+}
+/* line 42, ../sass/style.scss */
+header .theme-colors li {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  background-color: #ccc;
+  border-radius: 100%;
+  cursor: pointer;
+}
+/* line 51, ../sass/style.scss */
+header .theme-colors .dark {
+  background-color: #000;
+}
+
+/*----------------About-------------------*/
+/* line 58, ../sass/style.scss */
+.about {
+  position: relative;
+  padding: 20px 0;
+  clear: both;
+}
+/* line 62, ../sass/style.scss */
+.about .section-title {
+  margin-bottom: 60px;
+  font-size: 20px;
+  text-align: center;
+}
+/* line 66, ../sass/style.scss */
+.about .section-title:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 5px auto;
+  background-color: #195c89;
+}
+/* line 75, ../sass/style.scss */
+.about img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto 50px;
+}
+@media screen and (min-width: 768px) {
+  /* line 75, ../sass/style.scss */
+  .about img {
+    float: left;
+    margin-right: 35px;
+  }
+}
+/* line 85, ../sass/style.scss */
+.about .about-info {
+  text-align: center;
+  overflow: hidden;
+}
+/* line 88, ../sass/style.scss */
+.about .about-info .about-name {
+  display: block;
+  font-size: 30px;
+}
+/* line 92, ../sass/style.scss */
+.about .about-info .about-work {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #b0b0b0;
+}
+/* line 98, ../sass/style.scss */
+.about .about-info p {
+  text-align: justify;
+  line-height: 25px;
+}
+/* line 102, ../sass/style.scss */
+.about .about-info .contact-me {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 17px;
+  background-color: #195c89;
+  color: white;
+  border: 1px solid transparent;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/* line 113, ../sass/style.scss */
+.about .about-info .contact-me:hover {
+  border: 1px solid #195c89;
+  background-color: white;
+  color: #195c89;
+}
+@media screen and (min-width: 768px) {
+  /* line 85, ../sass/style.scss */
+  .about .about-info {
+    text-align: left;
+  }
+}
+
+/* line 125, ../sass/style.scss */
+.about .modal-contact {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: black;
+}
+/* line 136, ../sass/style.scss */
+.about .modal-contact .modal-content {
+  position: relative;
+  top: 30%;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+}
+/* line 143, ../sass/style.scss */
+.about .modal-contact .modal-content .contact-title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+/* line 148, ../sass/style.scss */
+.about .modal-contact .modal-content .fa-times {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/* line 155, ../sass/style.scss */
+.about .modal-contact .modal-content .fa-times:hover {
+  color: #9D0000;
+}
+/* line 160, ../sass/style.scss */
+.about .modal-contact .modal-content .contact-list li {
+  margin-bottom: 14px;
+}
+@media screen and (min-width: 768px) {
+  /* line 136, ../sass/style.scss */
+  .about .modal-contact .modal-content {
+    width: 30%;
+  }
+}
+
+/*----------------Footer------------------*/
+/* line 170, ../sass/style.scss */
+footer {
+  clear: both;
+  text-align: center;
+}
+/* line 173, ../sass/style.scss */
+footer .contacts {
+  margin: 25px 0;
+}
+/* line 175, ../sass/style.scss */
+footer .contacts li {
+  display: inline-block;
+  margin: 10px 25px;
+}
+/* line 178, ../sass/style.scss */
+footer .contacts li a {
+  font-size: 18px;
+  color: #195c89;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+/* line 182, ../sass/style.scss */
+footer .contacts li a:hover {
+  color: darkred;
+}
+/* line 188, ../sass/style.scss */
+footer .copyright {
+  color: #ccc;
+}
+
+/* line 194, ../sass/style.scss */
+.input-change {
+  display: block;
+  padding: 2px;
+}
+
+/* line 199, ../sass/style.scss */
+.textarea-change {
+  display: block;
+  width: 95%;
+  min-height: 150px;
+  padding: 5px;
+  resize: none;
+}
