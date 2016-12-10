@@ -368,73 +368,49 @@ textarea {
   font: inherit;
   /* 2 */
 }
-
+/**
+*         Media-queries
+*/
+/**
+*          Vertical align
+*/
+/**
+*           Centering
+*/
+/**
+*           Triangles
+*/
+/**
+*           Border radius
+*/
 @font-face {
-  font-family: 'Merriweather';
-  src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'), url('../fonts/merriweather-regular-webfont.woff') format('woff');
+  font-family: "Merriweather";
+  src: url("../fonts/merriweather-regular-webfont.woff2") format("woff2"), url("../fonts/merriweather-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Merriweather';
-  src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'), url('../fonts/merriweather-bold-webfont.woff') format('woff');
+  font-family: "Merriweather";
+  src: url("../fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../fonts/merriweather-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Inconsolata';
-  src: url('../fonts/inconsolata-bold-webfont.woff2') format('woff2'), url('../fonts/inconsolata-bold-webfont.woff') format('woff');
+  font-family: "Inconsolata";
+  src: url("../fonts/inconsolata-bold-webfont.woff2") format("woff2"), url("../fonts/inconsolata-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Inconsolata';
-  src: url('../fonts/inconsolata-regular-webfont.woff2') format('woff2'), url('../fonts/inconsolata-regular-webfont.woff') format('woff');
+  font-family: "Inconsolata";
+  src: url("../fonts/inconsolata-regular-webfont.woff2") format("woff2"), url("../fonts/inconsolata-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-.page-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 10em;
-  padding: 2em;
-}
-.theme-change {
-  position: absolute;
-  top: 3em;
-  right: -5em;
-}
-.theme-btn {
-  display: inline-block;
-  width: 3em;
-  height: 3em;
-  margin-right: 1em;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.theme-btn[data-theme="dark"] {
-  background: #000;
-}
-.theme-btn[data-theme="light"] {
-  background: #ebebeb;
-}
-.main-nav a {
-  position: relative;
-  left: -50%;
-  font-size: 1.5em;
-  text-decoration: none;
-  color: #000;
-}
-.main-nav a::before {
-  position: absolute;
-  content: "";
-  top: 1.5em;
-  left: -5%;
-  width: 110%;
-  height: 2px;
-  background: #195c89;
+@-moz-document url-prefix() {
+  body {
+    font: 1.3rem/1.5 Merriweather, serif;
+  }
 }
 * {
   box-sizing: border-box;
@@ -470,30 +446,6 @@ body {
   max-width: 34em;
   padding: 2em 4.5em;
 }
-textarea {
-  width: 23em;
-  max-width: 23em;
-  height: 5em;
-  max-height: 8.5em;
-  text-align: left;
-  border: none;
-}
-h2 textarea {
-  height: 1.5em;
-  max-width: 12em;
-  max-height: 1.5em;
-}
-h1 textarea {
-  height: 1.7em;
-  max-height: 1.7em;
-  max-width: 12em;
-}
-.copyright textarea {
-  height: 3.9em;
-  max-height: 3.0em;
-  width: 38em;
-  max-width: 38em;
-}
 .photo {
   width: 17em;
   padding-top: 2.7em;
@@ -512,27 +464,6 @@ img {
   font-family: incstolata, monospace;
   text-transform: uppercase;
   cursor: pointer;
-}
-h1,
-h2 {
-  margin: 0;
-}
-h1 {
-  font-size: 2em;
-}
-h2 {
-  font: 400 1.5em Inconsolata, serif;
-  color: #666;
-}
-button {
-  border: none;
-  outline: none;
-}
-a {
-  cursor: pointer;
-}
-a[data-theme="dark"] {
-  color: #999;
 }
 .contact-popup {
   position: absolute;
@@ -567,11 +498,50 @@ a[data-theme="dark"] {
   cursor: pointer;
   transform: rotate(45deg);
 }
+.contact-popup[data-theme="dark"] {
+  background: #747474;
+}
 .contact-popup .social {
   flex-direction: column;
 }
-.contact-popup[data-theme="dark"] {
-  background: #747474;
+h1,
+h2 {
+  margin: 0;
+}
+h1 {
+  font-size: 2em;
+}
+h1 textarea {
+  max-width: 12em;
+  height: 1.7em;
+  max-height: 1.7em;
+}
+h2 {
+  font: 400 1.5em Inconsolata, serif;
+  color: #666;
+}
+h2 textarea {
+  max-width: 12em;
+  height: 1.5em;
+  max-height: 1.5em;
+}
+textarea {
+  width: 23em;
+  max-width: 23em;
+  height: 5em;
+  max-height: 8.5em;
+  text-align: left;
+  border: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+a {
+  cursor: pointer;
+}
+a[data-theme="dark"] {
+  color: #999;
 }
 @media (max-width: 720px) {
   body {
@@ -625,6 +595,49 @@ a[data-theme="dark"] {
   h1 {
     font-size: 2em;
   }
+}
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 10em;
+  padding: 2em;
+}
+.theme-change {
+  position: absolute;
+  top: 3em;
+  right: -5em;
+}
+.theme-btn {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.theme-btn[data-theme="dark"] {
+  background: #000;
+}
+.theme-btn[data-theme="light"] {
+  background: #ebebeb;
+}
+.main-nav a {
+  position: relative;
+  left: -50%;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #000;
+}
+.main-nav a::before {
+  position: absolute;
+  content: "";
+  top: 1.5em;
+  left: -5%;
+  width: 110%;
+  height: 2px;
+  background: #195c89;
 }
 .page-footer {
   position: absolute;
