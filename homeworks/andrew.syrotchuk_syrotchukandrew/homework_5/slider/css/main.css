@@ -1,0 +1,73 @@
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  margin: auto;
+  width: 33%;
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 25px;
+  padding: 0 50px;
+  overflow: hidden;
+}
+
+ul li a {
+  display: block;
+  padding: 8px;
+  color: #5082A5;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.left {
+  position: absolute;
+  left: 20%;
+}
+
+.center {
+  position: absolute;
+  left: 40%;
+
+}
+
+.right {
+  position: absolute;
+  left: 60%;
+}
