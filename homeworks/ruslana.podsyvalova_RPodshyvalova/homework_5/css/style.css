@@ -1,0 +1,143 @@
+* {
+  padding: 0; margin: 0;
+}
+
+body {
+  background: white;
+}
+
+header, section, footer, main, article {
+  display: block;
+} 
+
+.main {
+  padding-top: 50px;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.theme {
+  width: 40px; 
+  height: 40px;   
+  position: relative;  
+  float: right; 
+}
+
+#lighttheme {
+  padding: 20px 0px;
+}
+
+#darktheme {
+  padding: 20px;
+}
+
+.titleofpage {
+  width: 140px;
+  position: relative; 
+  left: 40%; 
+  padding-top: 7%;
+}
+
+#articlesection {
+  width: 50%; 
+  float: left; 
+}
+
+#personalinfo {
+  width: 50%; float: left;
+}
+
+#portretsection {
+  width: 50%; float: left; 
+}
+
+#portret{
+  width: 200px; 
+  float: right;
+  margin-right: 50px;
+}
+
+.button {
+  font-family: tahoma, arial; 
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 10px 25px;
+  background: #1e5d87; 
+}
+
+.buttonposition {
+  position: relative; margin: 20px 0;    
+}
+
+.copyrightrecord {
+  width: 100%; text-align: center;
+}
+	
+.maintxt {
+  font-family: "Merriweather", serif; 
+  color: #333333; 
+  padding-top: 20px;
+}
+
+h1, h2, h3 {
+  font-weight: normal; color: #1a1a1a;
+}
+
+h1 {
+  font-family: "Merriweather", serif; 
+  font-size: 24px;
+}
+
+h2 {
+  font-family: "Merriweather", serif; 
+  font-size: 20px; 
+  text-align: center;
+}
+
+h3 {
+  font-family: "Inconsolata", monospace; 
+  font-size: 18px; 
+  color: #666666;
+}
+
+hr {
+  border: none;
+  color: #1e5d87;
+  background: #1e5d87;
+  height: 2px;
+}
+
+ul li a.linktopage {
+  font-family: "Inconsolata", monospace;  
+  font-size: 24px; 
+  text-decoration: none; 
+  color: #1e5d87;
+}
+
+ul.socialnetslinks {
+  width: 90%; 
+  list-style: none; 
+  text-align: center;
+}
+
+ul li.item {
+  width: 16%;
+  display: inline;
+  padding: 4%;
+}
+
+.navigation {
+  width: 100%;
+  float:left;
+  padding-top: 2%; 
+}
+
+.footer {
+  width: 100%;
+  float:left;
+  padding-top: 4%;   
+}
