@@ -19,10 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function editableTextBlurred(event) {
-        var textFromFieldForEditing = event.target.value;
-        element.textContent = '';
-        element.textContent = textFromFieldForEditing;
+        element.textContent = event.target.value;
         event.target.parentNode.replaceChild(element, event.target);
-        element.addEventListener('dblclick', textDblClicked, false);
     }
 }, false);
