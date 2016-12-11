@@ -145,3 +145,7 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
+
+textarea {
+  display: block;
+}
