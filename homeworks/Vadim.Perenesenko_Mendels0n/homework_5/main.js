@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Json
     var today = new Date(), footer = document.querySelector('.copy');
     footer.innerHTML = ('&copy ' + today.getFullYear() + ' Vadim Perenesenko');
 
@@ -20,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var body = document.body,
         modal = document.querySelector('.modal'),
         btn = document.querySelector('.button'),
-        btnWhite = document.querySelector('.buttonWhite'),
-        btnBlack = document.querySelector('.buttonBlack');
+        btnWhite = document.querySelector('.button-white'),
+        btnBlack = document.querySelector('.button-black');
     
     function openPopUp() {
         modal.classList.remove('hidden');

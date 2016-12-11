@@ -14,7 +14,7 @@ body{
 .blackTheme .about-me{
   color: #ebebeb ;
 }
-.buttonBlack{
+.button-black{
   float: right;
   margin: 35px 0 0 15px;
   padding: 20px;
@@ -23,7 +23,7 @@ body{
   border-radius:50% ;
   background:#222;
 }
-.buttonWhite{
+.button-white{
   float: right;
   margin: 35px 0 0 0;
   padding: 20px;
