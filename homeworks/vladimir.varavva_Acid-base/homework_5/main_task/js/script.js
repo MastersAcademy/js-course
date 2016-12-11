@@ -31,7 +31,7 @@
         if (theme) {
             body.dataset.theme = theme;
             popup.dataset.theme = theme;
-            element('a').dataset.theme = theme;
+            localStorage.setItem('theme', theme);
         }
     }
 
@@ -133,6 +133,10 @@
         } else if (elem.innerHTML === 'Twitter' && !elem.hasAttribute('href')) {
             share.twitter('https://acid-base.github.io//', 'JS Developer');
         }
+    }
+    
+    if (localStorage.getItem('theme')) {
+         body.dataset.theme = localStorage.getItem('theme');
     }
 
 })();
