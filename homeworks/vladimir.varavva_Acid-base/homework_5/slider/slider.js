@@ -9,9 +9,9 @@
     function slider(e) {
         var elem = e.target,
             direction = elem.dataset.direction;
-        if (direction === 'next') {
+        if (direction === 'next' && slides.length > 3) {
             nextSlide(slide + 1);
-        } else if (direction === 'prev') {
+        } else if (direction === 'prev' && slides.length > 3) {
             prevSlide(slide - 1);
         }
 
@@ -57,7 +57,6 @@
                 slides[0].className = 'slide showed-3';
                 slides[1].className = 'slide';
             }
-
         }
     }
 
