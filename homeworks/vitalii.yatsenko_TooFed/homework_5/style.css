@@ -51,8 +51,10 @@
 
 .picture img{
   overflow: hidden;
-  width: 400px;
-  height: 296px;
+ /* width: 400px;
+  height: 296px;*/
+  width: 45%;
+  height: 55%;
   float: left;
   margin-right: 70px;
 }
@@ -103,8 +105,8 @@
 }
 .nav ul li{
   display: inline;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 .nav a {
   text-decoration: none;
@@ -140,5 +142,3 @@
   width: 50%; /* Could be more or less, depending on screen size */
   text-align:center;
 }
-
-
