@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Homework 5</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="light-theme">
+        <div class="wrap">
+            <div class="header">
+                <div class="circle dark-theme" alt="Dark-theme" onclick="changeTheme('dark-theme')"></div>
+                <div class="circle light-theme" alt="Light-theme" onclick="changeTheme('light-theme')"></div>
+                <h1>About me</h1>
+            </div>
+
+            <div class="content">
+                <img src="images/img1.jpg">
+                <div class="information">
+                    <!--<h1>Olexiy Velchenko</h1>-->
+                    <!--<h2>Software Engineer</h2>-->
+                    <!--<p>I am 22 years old. I study system analysis. I am dealing with programming an development of different projects for "Adruino". I am also writing poetry and prose.</p>-->
+                    <input class="button" type="button" value="CONTACT ME" onclick="showPopup()">
+                </div>
+            </div>
+
+            <div class="footer">
+                <!--Share content-->
+                <!--Facebook-->
+                <a class="link" target="_blank" onclick="ShareLinks.facebook()">Facebook</a>
+                <!--Twitter-->
+                <a class="link" target="_blank" onclick="ShareLinks.twitter()">Twitter</a>
+                <!--Vkontakte-->
+                <a class="link" target="_blank" onclick="ShareLinks.vk()">Vkontakte</a>
+                <!--Google Plus-->
+                <a class="link" target="_blank" onclick="ShareLinks.googlePlus()">Google Plus</a>
+                <!--Copyrights-->
+                <p class="copyrights">&copy <span id="current-year"></span> <a href="https://github.com/LefkaLefka" target="_blank">Olexiy Velchenko</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="invisible-popup" id="popup">
+            <div class="popup-content">
+                <h2>Contact me:</h2>
+                <ul class="contact-list">
+                    <!--<li>Phone number: +380547895874</li>-->
+                    <!--<li>Skype: nick_skype</li>-->
+                    <!--<li>Email: my_email@gmail.com</li>-->
+                    <!--<li>Address: Chercasy, Chornovola 340/50</li>-->
+                    <!--<li>Facebook: <a class="link" href="https://www.facebook.com/LeshkaLefka" target="_blank">LeshkaLefka</a></li>-->
+                    <!--<li>Vkontakte: <a class="link" href="https://www.vk.com/leshka_lefka" target="_blank">leshka_lefka</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

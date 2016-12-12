@@ -1,0 +1,36 @@
+.data-slider {
+  width: 890px;
+  margin: 50px auto;
+  height: 210px;
+}
+.data-slider button {
+  width: 70px;
+  height: 20px;
+  margin: 95px auto;
+  display: block;
+}
+.right-align {
+  float: left;
+}
+.left-align {
+  float: right;
+}
+.list {
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+li img {
+  width: 240px;
+  height: 200px;
+  float: left;
+  margin: 5px;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
