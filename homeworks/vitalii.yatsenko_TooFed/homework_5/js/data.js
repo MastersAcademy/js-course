@@ -13,12 +13,12 @@
     var contentH3 = content.querySelector('h3');
     var contentP = content.querySelector('p');
     
-    // need start chrome with --allow-file-access-from-files
+    // need start chrome or chromium with --allow-file-access-from-files
     $.ajax({
         url: "js/data.json",
         type: 'GET',
         success: function(result) {
-            var contentObject = JSON.parse(result);
+            var contentObject = result;
             contentH1.innerHTML = contentObject.contentH1;
             contentH3.innerHTML = contentObject.contentH3;
             contentP.innerHTML = contentObject.contentP;
