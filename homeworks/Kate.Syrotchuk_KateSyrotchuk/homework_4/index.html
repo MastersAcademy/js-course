@@ -3,36 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" data-theme = 'theme' href="css/themes/lightTheme.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather" rel="stylesheet">
+
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+    <script src="js/theme.js" type="text/javascript"></script>
+    <script src="js/contact.js" type="text/javascript"></script>
+    <script src="js/contentManager.js" type="text/javascript"></script>
+    <script src="js/editContent.js" type="text/javascript"></script>
 </head>
 <body>
-    <header>
-        <div class="circle black"></div>
-        <div class="circle gray"></div>
-    </header>
-    <div class="container">
-        <div class="title"><span>About me</span></div>
-        <img src="iam.png" alt="my photo">
-        <div class="about">
-            <h2>Kate Syrotchuk</h2>
-            <span>Front-end Developer</span>
-            <p>My name is Kate. I have Master degree of Intelligent Decision. I spend all my free time with my family, friends or with my lovely laptop.</p>
-            <button>CONTACT ME</button>
-        </div>
-        <div class="social">
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Vkontakte</a></li>
-                <li><a href="#">Gmail</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
+<header>
+    <div class="circle black"></div>
+    <div class="circle gray"></div>
+</header>
+<div class="container">
+    <div class="title"><span class="editable">About me</span></div>
+    <img src="images/iam.png" alt="my photo">
+    <div class="about">
+        <h2 id="name" class="editable"></h2>
+        <span id="goal" class="editable"></span>
+        <p id="description" class="editable"></p>
+        <button id="contact-btn" >CONTACT ME</button>
+    </div>
+    <div class="social">
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#" id="vk">Vkontakte</a></li>
+            <li><a href="#">Gmail</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myContacts" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">x</span>
+            <p>Some text here..</p>
         </div>
     </div>
-    <footer>
-        <p>&copy; <span id="year"></span> Kate Syrotchuk</p>
-    </footer>
+
+</div>
+<footer>
+    <p>&copy; <span id="year"></span> Kate Syrotchuk</p>
+</footer>
 </body>
 <script>
     var year = document.getElementById('year');
