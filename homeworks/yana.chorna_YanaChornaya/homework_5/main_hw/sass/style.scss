@@ -1,0 +1,205 @@
+@import "compass/reset";
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+body {
+  background-color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+}
+
+.body-dark {
+  background-color: #080C17;
+  color: white;
+}
+
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px 10px;
+  overflow: hidden;
+}
+
+/*-------------Header-------------*/
+header {
+  .theme-colors {
+    margin-top: 25px;
+    float: right;
+    li {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      margin-left: 10px;
+      background-color: #ccc;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    .dark {
+      background-color: #000;
+    }
+  }
+}
+
+/*----------------About-------------------*/
+.about {
+  position: relative;
+  padding: 20px 0;
+  clear: both;
+  .section-title {
+    margin-bottom: 60px;
+    font-size: 20px;
+    text-align: center;
+    &:after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+      margin: 5px auto;
+      background-color: #195c89;
+    }
+  }
+  img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto 50px;
+    @media screen and (min-width: 768px) {
+      float: left;
+      margin-right: 35px;
+    }
+  }
+  .about-info {
+    text-align: center;
+    overflow: hidden;
+    .about-name {
+      display: block;
+      font-size: 30px;
+    }
+    .about-work {
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 18px;
+      color: #b0b0b0;
+    }
+    p {
+      text-align: justify;
+      line-height: 25px;
+    }
+    .contact-me {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 17px;
+      background-color: #195c89;
+      color: white;
+      border: 1px solid transparent;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include transition(all, 1s, ease);
+      &:hover {
+         border: 1px solid #195c89;
+         background-color: white;
+         color: #195c89;
+      }
+    }
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+  }
+}
+
+.about .modal-contact {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.9);
+  color: black;
+  .modal-content {
+    position: relative;
+    top: 30%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    .contact-title {
+      margin-bottom: 20px;
+      font-size: 25px;
+      text-align: center;
+    }
+    .fa-times {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 25px;
+      cursor: pointer;
+      @include transition(all, 1s, ease);
+      &:hover {
+        color: #9D0000;
+      }
+    }
+    .contact-list {
+      li {
+        margin-bottom: 14px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
+  }
+}
+/*----------------Footer------------------*/
+footer {
+  clear: both;
+  text-align: center;
+  .contacts {
+    margin: 25px 0;
+    li {
+      display: inline-block;
+      margin: 10px 25px;
+      a {
+        font-size: 18px;
+        color: #195c89;
+        @include transition(all, 1s, ease);
+        &:hover {
+          color: darkred;
+        }
+      }
+    }
+  }
+  .copyright {
+    color: #ccc;
+  }
+}
+
+
+.input-change {
+  display: block;
+  padding: 2px;
+}
+
+.textarea-change {
+  display: block;
+  width: 95%;
+  min-height: 150px;
+  padding: 5px;
+  resize: none;
+}
