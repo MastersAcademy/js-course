@@ -4,35 +4,63 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400|Merriweather:400" rel="stylesheet"> 
 </head>
 
-<body>
-    <div class="wrap" >
+<body id="body" onclick="targOn(event)">
+    <div id="p2" class="wrap" >
         <div class = "bgswitch">
-            <a href="#" class = "black"></a>
-            <a href="#" class = "gray"></a>
+            <div id="black" class="black"></div>
+            <div id="gray" class="gray"></div>
         </div> 
 
-            <div class="header">
-                <p class = "title">About me</p>
-            </div>
+            <header>
+                <p class="title">About me</p>
+            </header>
 
-            <div class = "general">
-                <img src="myphoto.jpg" width = "520" height = "380" alt="It's me))">
-                
-                <div class = "info">
-                    <h1>Max Musiienko</h1>
-                    <h2>Front-end Developer</h2>
-                    <p class = "text">Hi everybody! I'm beginner in front-end develelopment and here you can see my achievements.</p>
-                    <button>Contact me</button>            
+            <div class="general">
+                <div class="myimage">
+                    <img src="myphoto.jpg" width = "520" height = "380" alt="It's me))">
+                </div>
+                <div class="info">
+                    <h1 id="name" ></h1>
+                    <h2 id="spec" ></h2>
+                    <p class="text" id="text"></p>
+                    <textarea id="inarea" class="inarea" rows="4" cols="50"></textarea>
+                    
+                        <div class="b-popup" id="popup1">
+                            <div class="b-popup-content" >
+                                <p>Please, contact me</p>
+                                <ul><li>Phone:0636176568</li>
+                                    <li>Add me to <a href="https://www.facebook.com/max.musiienko" target="_blank" >Facebook</a> </li>
+                                    <li>Waiting for you at my <a href="https://www.google.com.ua/maps/place/@49.4390372,32.0762318,17z/data=!3m1!4b1!4m5!3m4!1s0x40d14b7105673c41:0x4d6a50986cbc69f7!8m2!3d49.4390372!4d32.0784205?hl=ru" target ="_blank">home</a></li>
+                                <ul><br><br>
+                            <a href="javascript:PopUpHide()">Hide me</a>
+                            </div>
+                        </div> 
+                    <button class="contact" onclick="PopUpShow()">Contact me</button>                             
                 </div>            
-            </div>
+            </div> 
             
-            <div class = "social"><p><a href="https://www.facebook.com/max.musienko" class = "fb">Facebook</a>      <a href="#" class = "ig">Instagram</a>      <a href="#" class = "vk">Vkontakte</a>      <a href="mailto:maksonoff@gmail.com" class = "mail">Email</a>      <a href="#" class = "tw">Twitter</a></p></div>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/max.musiienko" class = "fb">Facebook</a></li>
+                    <li><a href="#" class = "ig">Instagram</a></li>
+                    <li><a href="#" class = "vk">Vkontakte</a></li>
+                    <li><a href="mailto:maksonoff@gmail.com" class = "mail">Email</a></li>
+                    <li><a href="#" class = "tw">Twitter</a></li>
+                </ul>
+            </div>
+               
 
-        <p class = footer>&copy;2016 Max Musiienko</p>
+        <footer id="copyrigth"></footer>
     </div>
+
+    <script src="js/main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  
+    <script src="js/mainjq.js"></script>
+
 
 </body>
 </html>
