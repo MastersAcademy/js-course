@@ -6,9 +6,6 @@
     var closePopUp = document.querySelector(".close-pop-up");
     var currentYear = document.querySelector(".year");
     
-    //    task #5
-    
-   
     //    task #1
     switchTab.onclick = function(event) {
         
