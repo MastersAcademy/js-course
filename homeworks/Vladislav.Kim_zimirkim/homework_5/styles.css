@@ -99,6 +99,7 @@ header p {
   margin: 15% auto;
   padding: 20px;
   width: 400px;
+  text-align: center;
 }
 
 .popup_button{
@@ -115,19 +116,19 @@ header p {
   list-style-type: none;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 200px;
+  margin-left: 160px;
 }
 
 .navigation ul li{
   display: inline;
-  margin: 0px 40px 40px 0px 
+  margin: 0px 20px 20px 0px 
 }
 
 .navigation a {
   text-decoration: none;
   font-size: 20px;
   color: #195c89;
-  font-family: 'Inconsolata',monospace;
+  font-family: 'Inconsolata',monospace;`
 }
 
 footer {
