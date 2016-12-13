@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+</head>
+<body id="theme" class="body">
+<div class="wrapper">
+    <header>
+        <div class="elips">
+            <div id="white-theme" class="elips-left active"></div>
+            <div id="black-theme" class="elips-right n-active"></div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="about">
+            <h2 class="title-about" data-bind="about">About me</h2>
+            <input class="hidden title-about" type="text" data-input="about" value="">
+        </div>
+        <div class="avatar">
+            <img src="images/my_foto.png" alt="avatar" title="It's me!">
+        </div>
+        <div class="dev-data">
+            <h1 class="title-me" data-bind="title">Igor Skyba</h1>
+            <input class="hidden title-me" type="text" data-input="title" value="">
+            <span class="want" data-bind="want">I want to rule the world</span>
+            <input class="hidden want" type="text" data-input="want" value="">
+            <p class="text-content" data-bind="text">It is hard to speak about myself as only people surrounding me can see me objectively. But I’ll try.
+                I am very active person. Every day I play table tennis, it’s really my great pleasure.
+                In summer I like play volleyball, because I can spend a little bit of my free time with friends.
+            </p>
+            <textarea class="text-content" data-input="text" rows="4"></textarea>
+            <input class="always-visible" id="contact-me" onclick="popupObject.popupAction();" type="button" value="CONTACT ME">
+        </div>
+    </div>
+    <div class="popup-wrap" id="popup">
+        <div class="close-btn" id="close-popup">X</div>
+        <ul class="popup-content">
+            <li>
+                <strong>Телефон: </strong><span class="popup-info">0967023745</span>
+            </li>
+            <li>
+                <strong>Email: </strong><span class="popup-info">imskyba@gmail.com</span>
+            </li>
+            <li>
+                <strong>Адреса: </strong><span class="popup-info">м.Черкаси, вул.Благовісна 308/1,14</span>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="soc">
+            <ul>
+                <li><a href="https://www.facebook.com/imskyba" title="Go to Facebook">Facebook</a></li>
+                <li><a href="javascript:void(0);" class="empty-link" title="Go to Instagram">Instagram</a></li>
+                <li><a href="javascript:void(0);" class="empty-link" title="Go to Vkontakte">Vkontakte</a></li>
+                <li><a href="javascript:void(0);" id="email" title="imskyba@gmail.com">Email</a></li>
+                <li><a href="javascript:void(0);" class="empty-link" title="Go to Tviter">Twitter</a></li>
+            </ul>
+        </div>
+        <div class="avtor"><span>© <span id="current-date">2016</span> Igor Skyba</span></div>
+    </div>
+</div>
+<script type="text/javascript">
+    jsonObject.init();
+    popupObject.init();
+    content.init();
+    themeObject.init();
+</script>
+</body>
+</html>
