@@ -1,0 +1,90 @@
+.wrap {
+  width: 90%;
+  height: 50%;
+  margin:10px 50px 0 50px;
+  border:1px;
+  padding:10px;
+  overflow:hidden;
+  font-family: 'Merriweather', serif;
+}
+
+
+.header {
+  font-size: 24px;
+  margin: 3% 0 0 0;
+  text-align: center;
+}
+
+.header a{
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid #5282A2;
+}
+
+.main {
+  margin: 3% 10%;
+  overflow: hidden;
+  /*text-align: center;*/
+}
+
+.radiobuttons{
+  float: right;
+}
+/*.table{
+  border: 2px solid black;
+  /*text-align: center;
+}
+
+.table ul{
+  list-style-type: none;
+}
+
+.table ul li{
+  border: 1px solid black;
+}*/
+.table{
+  width: 100%; 
+  text-align: left;
+}
+
+.table #head-table{
+  text-align: center;
+}
+
+.selected {
+    background-color: brown;
+    color: #FFF;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+button {
+  border-radius: 2px;
+  background-color: #195c89;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ }
+
+.menu {
+  font-family: 'Inconsolata', monospace;
+  margin: 3%;
+  text-align: center;
+}
+.menu ul{
+  /*display: inline;*/
+  list-style-type: none;
+  text-align: center;
+}
+.menu ul li{
+  display: inline;
+  /*margin-left: 4%;*/
+  margin-right: 4%;
+}
+

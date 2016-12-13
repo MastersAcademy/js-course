@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Homework 5</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata: 400,500|Merriweather: 400,500" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="geometry">
+            <div class="circle" id="grey">
+                <p hidden>white_theme</p>
+            </div>
+            <div class="circle" id="black">
+                <p hidden>dark_theme</p>
+            </div>
+        </div>
+        <header class="header">
+            <a href="index.html">About me</a>
+        </header>
+        <main class="main">
+            <div class="picture">
+                <img src="me.png">
+            </div>
+            <div class="content">
+                <h1>Full Name</h1>
+                <h3>job</h3>
+                <p>if you see this text your JSON is not download, here need to be some text about yourself</p>
+                <button id="contact_button">CONTACT ME</button>
+                <div id="myModal" class="modal">
+                      <div class="modal-content">
+                        <p>
+                            Tel.: +380631633370<br>
+                            Email: yatsik95@gmail.com<br>
+                            Address: Cherkassy, Khreshchatyk str. 64
+                        </p>
+                        <button id="close_contact_button">CLOSE</button>
+                      </div>
+                </div>
+            </div>
+        </main>
+        <nav class="nav">
+            <ul>
+                <li><a id="fb" href="#">Facebook</a></li>
+                <li><a href="http://instagram.com/vitalii_yatsenko">Instagram</a></li>
+                <li><a href="#" onclick="Share.vkontakte('localhost://index.html','TITLE','IMG','DESC');">Vkontakte</a></li>
+                <li><a href="mailto:yatsik95@gmail.com">Email</a></li>
+                <li><a id="twitter" href="#">Twitter</a></li>
+            </ul>
+        </nav>
+        <footer class="footer">
+            <p></p>
+        </footer>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/textedit.js"></script>
+</body>
+</html>

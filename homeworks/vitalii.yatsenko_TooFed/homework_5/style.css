@@ -51,8 +51,10 @@
 
 .picture img{
   overflow: hidden;
-  width: 400px;
-  height: 296px;
+ /* width: 400px;
+  height: 296px;*/
+  width: 45%;
+  height: 55%;
   float: left;
   margin-right: 70px;
 }
@@ -103,8 +105,8 @@
 }
 .nav ul li{
   display: inline;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 .nav a {
   text-decoration: none;
@@ -116,4 +118,27 @@
   font-size: 18px;
   text-align: center;
   color: #C1C1C1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align:center;
 }
