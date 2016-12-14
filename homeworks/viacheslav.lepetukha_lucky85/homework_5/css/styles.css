@@ -1,0 +1,143 @@
+.wrap {
+  width:930px;
+  margin:0 auto;
+  padding:20px;
+  overflow:auto;
+  border:1px solid black;
+  font-family:'Merriweather', serif;
+  background-color:white;
+}
+
+.circle{
+  width:35px;
+  height:35px;
+  border-radius:50px;
+  background:#000;
+  float:right;
+  margin:15px 15px 0 0;
+}
+
+#circleActive{
+  background:#EBEBEB;
+}
+
+.header{
+  padding:65px 30px 30px 30px;
+  text-align:center;
+  font-size:11px;
+}
+
+.about{
+  border-bottom:2px solid #1E5D87;
+  padding:0 5px;
+}
+
+.header h2{
+  color:#000;
+  font-weight:400;
+}
+
+.foto {
+  float:left;
+  width:300px;
+  height:215px;
+  margin:0 60px 0px 100px;
+}
+
+.content {
+  overflow:hidden;
+}
+
+.content h1{
+  font-size:30px;
+  font-weight:500;
+  margin:0;
+}
+
+.content h4{
+  margin:0;
+  font-size:20px;
+  font-family:'Inconsolata', monospace;
+  font-weight:500;
+  color:#666666;
+}
+
+.content p{
+  margin:0 0 20px 0;
+  padding-right:100px;
+  font-weight:500;
+  font-size:15px;
+  color:#333333;
+}
+.button a{
+  text-decoration:none;
+  background-color:#1E5D87;
+  color:white;
+  float:left;
+  border-radius:2px;
+  font-family:'Inconsolata', monospace;
+  font-weight:900;
+  font-size:15px;
+  width:140px;
+  padding:11px 0;
+  text-align:center;
+}
+
+.sidebars {
+  margin-top:20px;
+  overflow:hidden;
+}
+
+.futter{
+  margin-top:120px;
+  text-align:center;
+}
+
+.futter li {
+  display:inline;
+  padding:0 50px 0 15px;
+  text-decoration:none;
+  font-family:'Inconsolata', monospace;
+  font-size:21px;
+}
+
+.futter p {
+  text-align:center; 
+  color:#666666;
+  font-size:13px;
+  margin-top:45px;
+
+}
+
+.futter a {
+  color:#1E5D87;
+  text-decoration:none;
+}
+
+body{
+  background-color:black;
+  margin:0;
+  overflow:hidden;
+}
+.popup{
+  text-align: center;
+  background-color: #E1EEF2;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid #000;
+  border-radius: 5px;
+  width: 30%;
+
+}
+
+.popup_background {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);

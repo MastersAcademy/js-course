@@ -1,0 +1,213 @@
+/* --- Font --- */
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&subset=cyrillic');
+
+/* --- General --- */
+html,
+body {
+  font-size: 1.1em;
+  height: 100%;
+  font-family: 'Merriweather';
+  background: #fff;
+}
+
+h3,
+a {
+  font-family: 'Inconsolata';
+}
+
+/* --- Wrapper --- */
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-content: center;
+}
+
+
+/* --- Tabs --- */
+
+.tabs {
+  width: 100%;
+  text-align: right;
+  margin: 1em 1.5em 0;
+}
+
+.tabs button {
+  display: inline-block;
+  margin:0 .2em;
+  padding: 1.5em;
+  border-radius: 1.5em;
+  border: none;
+}
+
+.light-button {
+  background: #ccc;
+}
+
+.dark-button {
+  background: black;
+}
+
+
+/* --- About --- */
+
+.about {
+  flex-grow: 1;
+  height: 100%;
+  padding: .5em;
+  margin: 0 1.8em;
+}
+
+.about  h1 {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: normal;
+  border-bottom: 2px solid rgba(27,87,136, .8);
+  margin-bottom: 2.5em;
+}
+
+.about img {
+  display: block;
+  max-width: 25em;
+  float: left;
+  padding: 0 5em .2em;
+  height: 14em;
+}
+
+.profile h2 {
+  margin: 0;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.profile h3 {
+  color: rgb(123,123,123);
+  font-weight: 400;
+  margin: .2em;
+  font-family: 'Inconsolata';
+}
+
+.profile button {
+  background: rgb(27,87,136);
+  border:none;
+  width: 10em;
+  padding: .8em;
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+/* --- Footer --- */
+
+.social {
+  margin-top: 7.75em;
+  text-align: center;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  display: inline-block;
+  text-align: center;
+}
+.social ul li a {
+  text-decoration: none;
+  font-size: 1.5em;
+  margin:1em;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright p {
+  margin: 2.5em 0 1.5em;
+  color: #cac;
+}
+
+/* --- Popup --- */
+
+.popup {
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid black;
+  background: #E9E8E8;
+  box-shadow: 1px 1px 5px rgba(0,0,0, .2);
+  z-index: 99999999;
+} 
+
+.popup .close {
+  position: absolute;
+  top:0px;
+  right: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #434343;
+  padding: 20px;
+}
+
+.popup .close:hover {
+  color: black;
+}
+
+.popup-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.popup-content {
+  background: #D4D0D0;
+  border-top: 1px solid #e5e5e5;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#blackout {
+  background: rgba(0,0,0,.8);
+  position: absolute;
+  top:0;
+  overflow: hidden;
+  z-index: 99999;
+  left:0;
+  display: none;
+}
+
+/* --- Media query --- */
+@media (min-width: 1025px) {
+  .about {
+    margin: 0 2.5em;
+  }
+}
+
+@media (min-width: 426px) {
+  .about img {
+    max-width: 15em;
+    width: 15em;
+  }
+}
+
+@media (max-width: 426px) {
+
+  .about {
+    text-align: center;
+  }
+
+  .about img {
+    max-width: 20em;
+    width: 15em;
+    float: left;
+    padding: 0 0 .2em; 
+  }
+}
