@@ -25,9 +25,14 @@ Masters Academy JavaScript courses project for season 2016/2017
 
 2. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
 
-3. Обмен данными с сервером, формат JSON. XMLHTTPRequest vs jQuery.ajax(). 
+3. Шаблоны проектирования
+   Вспомогательные материалы : [Javascript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+   
+4. Обмен данными с сервером, формат JSON. `XMLHTTPRequest` vs `jQuery.ajax()`. 
 
 ## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
+
+1. Обзор TypeScript + ES6
 
 Terms and conditions
 --------------------
