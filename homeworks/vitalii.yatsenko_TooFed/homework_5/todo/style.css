@@ -30,18 +30,7 @@
 .radiobuttons{
   float: right;
 }
-/*.table{
-  border: 2px solid black;
-  /*text-align: center;
-}
 
-.table ul{
-  list-style-type: none;
-}
-
-.table ul li{
-  border: 1px solid black;
-}*/
 .table{
   width: 100%; 
   text-align: left;
@@ -87,4 +76,5 @@ button {
   /*margin-left: 4%;*/
   margin-right: 4%;
 }
+
 

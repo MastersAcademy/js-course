@@ -36,6 +36,7 @@
             checked[i].parentNode.removeAttribute('style');
         }
     });
+    
     $("#mark-all").click(function(){
         var table = document.querySelector('tbody');
         //var checked = table.querySelectorAll(':checked');
@@ -43,13 +44,15 @@
         var i=0;
         if(this.checked === true){
             for (i ; i < input.length; i++){
-                input[i].setAttribute('checked','true');
+                // input[i].setAttribute('checked');
+                $(input[i]).prop("checked", true);
             }
         }
         if(this.checked === false){
             console.log('false');
             for (i ; i < input.length; i++){
-                input[i].removeAttribute('checked');
+                // input[i].removeAttribute('checked');
+                $(input[i]).prop("checked", false);
             }
         }
     })
