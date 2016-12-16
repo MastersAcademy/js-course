@@ -9,16 +9,18 @@
 }
 
 
-.header {
+.header p{
   font-size: 24px;
   margin: 3% 0 0 0;
   text-align: center;
 }
 
-.header a{
+.counter{
+  margin: 1%;
+  float: right;
   color: black;
   text-decoration: none;
-  border-bottom: 2px solid #5282A2;
+  border: 2px solid #5282A2;
 }
 
 .main {
@@ -50,6 +52,7 @@
 }
 
 button {
+  margin-top: 1%;
   border-radius: 2px;
   background-color: #195c89;
   border: none;
