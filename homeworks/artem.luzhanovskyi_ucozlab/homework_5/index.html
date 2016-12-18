@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO (c) Artem L.</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic-ext,latin-ext" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="wrapper centertext">
+            <h1>Reminder homework</h1>
+        </div>
+    </header>
+    <div id="main">
+        <div class="wrapper">
+            <div class="add">
+                <span>add new task</span>
+                <form action="" onsubmit="taskApp.addNew(event, this)">
+                    <input type="text" name="title" class="send">
+                    <input type="submit" class="button" value="submit">
+                </form>
+            </div>
+            <div class="sheduler" data-task-manager>
+                <div class="table">
+                    <div class="empty">empty</div>
+                    <div class="table-row" data-task>
+                        <div class="table-cell" data-id></div>
+                        <div class="table-cell" data-title></div>
+                        <div class="table-cell cell ready" data-complete></div>
+                        <div class="table-cell delete" data-delete></div>
+                    </div>
+                </div>
+            </div>
+            <div class="total" data-count>
+                <p>Total tasks: <span data-total>0</span></p>
+                <p>Completed tasks: <span data-completed>0</span></p>
+                <p>Tasks left: <span data-left>0</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-buffer"></div>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="copyright">&copy; <a href="https://github.com/ucozlab/" target="_blank">Artem L.</a> 4 MastersAcademy | 2016</div>
+    </div>
+</footer>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/task.js"></script>
+<script src="./js/task-manager.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
