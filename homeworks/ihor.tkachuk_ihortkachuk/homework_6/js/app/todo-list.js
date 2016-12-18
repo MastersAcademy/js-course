@@ -20,7 +20,6 @@ TodoList.prototype = {
 
     buildList: function (data) {
         this.list.empty();
-        window.todoApp.stats.count(data);
         data.forEach(this.createTodo.bind(this));
     },
 
@@ -36,6 +35,9 @@ TodoList.prototype = {
         } else {
             this.list.prepend(newTodo.item);
         }
+
+        var model = window.todoApp.storage.get();
+        window.todoApp.stats.count(model);
     },
 
     addTodo: function () {

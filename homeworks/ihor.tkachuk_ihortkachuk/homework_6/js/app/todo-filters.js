@@ -1,12 +1,12 @@
 function TodoFilters() {
-    this.filters = $('[data-todo-filter]');
+    this.filtersList = $('[data-todo-filter]');
 
     this.listenEvents();
 }
 
 TodoFilters.prototype = {
     listenEvents: function () {
-        this.filters.on('click', this.filter.bind(this));
+        this.filtersList.on('click', this.filter.bind(this));
     },
 
     filter: function (e) {

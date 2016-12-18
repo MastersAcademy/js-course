@@ -16,16 +16,6 @@
             });
         },
 
-        update: function (data, action) {
-            if (action === 'ACTIVE') {
-                if (this.completed) {
-                    this.activeCount.text(+this.activeCount.text() - 1);
-                } else {
-                    this.completedCount.text(+this.completedCount.text() + 1);
-                }
-            }
-        },
-
         clear: function () {
             this.completedCount.text(0);
             this.activeCount.text(0);
