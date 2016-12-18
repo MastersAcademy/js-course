@@ -8,6 +8,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   line-height: 1.2;
+  color: #000;
 }
 
 .wrap {
@@ -46,7 +47,27 @@ body {
   padding-right: 2em;
 }
 
-.todo-list {
+.top-panel {
+  overflow: hidden;
+  padding: 10px 15px;
+}
+
+.top-panel p {
+  margin: 0;
+}
+
+.stats {
+  float: left;
+}
+.stats span {
+  font-weight: 500;
+}
+
+.actions {
+  float: right;
+}
+
+.todo-list:not(:empty) {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -73,8 +94,37 @@ body {
   color: #888;
 }
 
-.todo-item-action {
-  float: right;
+.todo-item .field {
+  display: inline-block;
+  width: 75%;
+  padding: 4px 10px;
+}
+
+.bottom-panel {
+  overflow: hidden;
+  padding: 10px 15px;
+}
+
+.bottom-panel > span {
+  font-weight: 500;
+}
+
+.bottom-panel ul {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  padding: 0;
+}
+
+.bottom-panel ul li {
+  display: inline-block;
+  margin-right: 5px;
+  color: #9E9E9E;
+  cursor: pointer;
+}
+
+.bottom-panel ul li.active {
+  color: #000;
+  border-bottom: 1px dashed;
 }
 
 .footer {
@@ -104,10 +154,6 @@ body {
   cursor: pointer;
 }
 
-.btn-edit {
-  cursor: pointer;
-}
-
 .btn-primary {
   border-color: #1976D2;
   background: #42A5F5;
@@ -118,11 +164,27 @@ body {
   background: #1976D2;
 }
 
-input[type="text"] {
+.field {
   display: block;
   font-family: 'Raleway', sans-serif;
   background: #fff;
   padding: 0.5em 0.75em;
   width: 100%;
   border: 1px solid #E0E0E0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  outline: none;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #4FC3F7;
+  border: 1px solid #4FC3F7;
 }

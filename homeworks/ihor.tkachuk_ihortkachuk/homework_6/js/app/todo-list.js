@@ -1,42 +1,59 @@
-function TodoList(todos) {
-    this.todos = todos;
-    this.list = document.querySelector('[data-todo-list]');
-    this.todoTpl = this.list.querySelector('[data-todo-item]');
-    this.addBtn = document.querySelector('[data-todo-add]');
-    this.input = document.querySelector('[data-todo-input]');
+function TodoList(initialData) {
+    this.todos = initialData || [];
+    this.todoIndex = this.todos.length || 1;
+    this.list = $('[data-todo-list]');
+    this.todoTpl = this.list.find('[data-todo-item]').get(0).outerHTML;
+    this.addBtn = $('[data-todo-add]');
+    this.input = $('[data-todo-input]');
 
-    this.list.children[0].remove();
-
-    this.buildList();
+    this.storageInit();
     this.listenEvents();
 }
 
 TodoList.prototype = {
-    buildList: function () {
-        this.todos.forEach(this.createTodo.bind(this));
+
+    storageInit: function () {
+        window.todoApp.storage.init('todos', this.todos);
+        var model = window.todoApp.storage.get();
+        this.buildList(model);
     },
 
-    listenEvents : function () {
-        this.addBtn.addEventListener('click', this.addTodo.bind(this));
+    buildList: function (data) {
+        this.list.empty();
+        window.todoApp.stats.count(data);
+        data.forEach(this.createTodo.bind(this));
     },
-    
+
+    listenEvents: function () {
+        this.addBtn.on('click', this.addTodo.bind(this));
+    },
+
     createTodo: function (todo) {
         var newTodo = new TodoItem(this.todoTpl, todo);
-        this.list.appendChild(newTodo.item.cloneNode(true));
+        if (newTodo.data.completed) {
+            newTodo.tpl.checkbox.prop('checked', true);
+            this.list.append(newTodo.item);
+        } else {
+            this.list.prepend(newTodo.item);
+        }
     },
 
     addTodo: function () {
-        if (this.input.value) {
-            var me = this;
-            var newTodo = new TodoItem(this.todoTpl, {
-                id: me.todos.length++,
-                text: me.input.value,
+        if (this.input.val()) {
+            this.todoIndex = this.todoIndex + 1;
+            var todo = {
+                id: this.todoIndex,
+                text: this.input.val(),
                 completed: false
-            });
-            this.list.insertBefore(newTodo.item.cloneNode(true), this.list.children[0]);
-            this.input.value = '';
-            console.log(newTodo);
+            };
+            window.todoApp.storage.add(todo);
+            var newTodo = new TodoItem(this.todoTpl, todo);
+            this.list.prepend(newTodo.item);
+            this.input.val('');
+
+            var model = window.todoApp.storage.get();
+            window.todoApp.stats.count(model);
         }
     }
-        
+
 };
