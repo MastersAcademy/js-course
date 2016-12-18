@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Todo list, <span>using Prototype pattern</span></h1>
+
+    <div data-input>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6 offset-s2">
+                        <input type="text" data-input-value>
+                    </div>
+                    <button class="waves-effect waves-light btn" type="button" data-input-button>Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <ul class="collection" data-list-items>
+        <li class="collection-item" data-item data-date>
+            <span class="" data-item-content></span>
+            <div class="right">
+                <button class="waves-effect waves-light btn" type="button" data-item-delete>Remove</button>
+                <button class="waves-effect waves-light btn" type="button" data-item-edit>Edit</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal hidden" data-modal-edit>
+
+    <!-- Modal content -->
+    <div class="modal-content" >
+        <span class="close-modal" data-close-modal></span>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input  type="text" name="editItem" data-edit-input>
+                        <button class="waves-effect waves-light btn" type="button" data-cancel-edit>Cancel</button>
+                        <button class="waves-effect waves-light btn" type="button" data-save-edit>Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script src="js/app/todo-list.js"></script>
+<script src="js/app/local-storage.js"></script>
+<script src="js/app/todo-item.js"></script>
+<script src="js/app/input-elem.js"></script>
+<script src="js/app/modal-edit-elem.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
