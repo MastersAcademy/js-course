@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>TODO list</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="wrapper"> 
+            <header>
+                <h1>todo list</h1>
+            </header>
+            <main class="main">
+                <div class="content">
+                    <div class="statistics">
+                        <h3>Statistics:</h3>
+                        <p>
+                            <span>done</span> <span id="done_tasks" data-done-task>0</span>  
+                            <span>needs</span> <span id="will_do_tasks" data-need-done-task>0</span>
+                        </p>
+                    </div>
+                    <div class="mark">
+                        <h3>Action with tasks:</h3>
+                        <p>
+                            <button id="delete_tasks">delete all tasks</button>  
+                            <button id="mark_tasks">mark all tasks</button>
+                        </p>
+                    </div>
+                    <div class="filters">
+                        <h3>Filters:</h3>
+                        <div>
+                            <input type="radio" name="group" value="show_all_tasks" id="show_all_tasks" checked/>
+                            <label for="show_all_tasks">select all tasks</label>
+                            <input type="radio" name="group" value="show_done_tasks" id="show_done_tasks"/>
+                            <label for="show_done_tasks">select done tasks</label>
+                            <input type="radio" name="group" value="show_will_do_tasks" id="show_will_do_tasks"/>
+                            <label for="show_will_do_tasks">select will do tasks</label>
+                        </div>
+                    </div>
+                    <table class="todo_list" data-todo-list>
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th>Content</th>
+                                <th>Done</th> 
+                                <th>Add record</th> 
+                                <th>Remove record</th> 
+                            </tr>
+                        </thead>
+                        <tbody class="tbl_body" data-table-body>
+                            <tr class="bussiness" data-table-row>
+                                <td class="data" data-task></td>
+                                <td class="action"><input type="checkbox" class="checkbox" data-status-task/></td>
+                                <td class="action"><button class="plus" data-add-row>+</button></td>
+                                <td class="action"><button class="minus" data-remove-row>-</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>    
+            <footer class="footer">
+                <p class="copyrightrecord">&copy;&nbsp;<span id="year">2016</span>&nbsp;Ruslana&nbsp;Podshyvalova</p>
+            </footer>   
+        </div>  
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/components/table.js"></script>
+    </body>
+</html>

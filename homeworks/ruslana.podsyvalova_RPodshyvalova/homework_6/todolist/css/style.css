@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;  
+}
+
+header, section, footer, main, article {
+  display: block;
+} 
+
+header {
+  text-align: center; 
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  padding-top: 50px;
+  background: #ffffcc;
+}
+
+.footer {
+  width: 100%;
+  float:left;
+  padding-top: 4%;   
+  background: #e6f9ff;
+  margin-top: 100px;
+}
+
+table {
+  width: 60%;
+  color: #3d3d3d;
+  float: left;
+  margin-left: 20%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table thead tr th {
+  background: #ffffb3;
+  padding: 15px;
+}
+
+table tr td{
+  border: 2px dashed yellow; 
+  padding: 4px;
+}
+
+table td.number {
+  text-align: center;
+}
+
+table td.data {
+  width: 60%;
+}
+
+table td.action {
+  width: 100px;
+  text-align: center;
+}
+
+.set_background {
+  background: #ddffcc;
+}
+
+.statistics, .mark, .filters {
+  width: 100%;  
+  float: left;
+  margin-top: 10px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(200, 100, 50, 0.2));
+}
+
+input[type=radio] {
+  margin-left: 100px;
+}
+
+h1 {
+  font-family: "Merriweather", serif; 
+  font-size: 24px;
+}
+
+.copyrightrecord {
+  width: 100%; text-align: center;
+}
