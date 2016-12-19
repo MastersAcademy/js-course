@@ -1,1 +1,1 @@
-An application that allows you to create a list of tasks and mark their status.
+Homework 6. ToDo list which use module pattern.
