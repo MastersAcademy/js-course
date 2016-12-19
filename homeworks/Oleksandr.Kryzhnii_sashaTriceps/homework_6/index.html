@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>homework_5</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Merriweather" rel="stylesheet">
+</head>
+<body>
+    <div class = "wrapper">
+
+        <div class = "design">
+          <div class = "circle dark" data-theme-dark></div>
+          <div class = "circle light" data-theme-light></div>
+        </div>
+        
+        <div class = "head">
+            <p class = "Title">About me</p>
+        </div>
+
+        <img src="photo.jpg" width = "310" height = "220" alt="It's me))">
+
+        <div class = "text">
+            <h1 class = "name edit">Oleksandr Kryzhnii</h1>
+            <h2 class = "post edit">JavaScript Developer</h2>
+            <p class = "info edit" id="about_me">My name is Oleksandr and i'm 20 years old. Now i live in Cherkasy and study in Cherkasy State Technological University.</p>
+            <button class="button" data-show-popup>Contact me</button>
+        </div>
+
+        <div class="transparency" style="display: none;" data-hide-popup>
+        		<div class="popup" style="display: none;">
+							<h2>Contact me:</h2>
+                <ul class="contact_list">
+                  <li>Phone number: +380939170524</li>
+                  <li>Skype: viasad</li>
+                  <li>Email: cryzhny@gmail.com</li>
+                  <li>Address: Chercasy, Geroiv Dnipra 71</li>
+                  <li>Vkontakte: <a class="link" href="https://vk.com/oduwan4ik" target="_blank">sashaTriceps</a></li>
+                </ul>
+        		</div>
+        </div>
+        
+
+        <div class = "social_block">
+            <a href="#" class = "fb">Facebook</a>
+            <a href="#" class = "ig">Instagram</a>
+            <a href="https://vk.com/oduwan4ik" class = "vk">Vkontakte</a>
+            <a href="mailto:cryzhny@gmail.com" class = "mail">Email</a>
+            <a href="#" class = "tw">Twitter</a>
+        </div>
+
+        <p class = footer>&copy;<span id="year" data-current-year></span> Oleksandr Kryzhnii</p>
+    </div>
+
+    <script src ="js/app.js"></script>
+    <script src ="js/main.js"></script>
+    <script src ="js/popup.js"></script>
+    <script src ="js/content.js"></script>
+</body>
+</html>
