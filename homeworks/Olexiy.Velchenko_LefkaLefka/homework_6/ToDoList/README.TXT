@@ -1,1 +1,1 @@
-An application that allows you to create a list of tasks and mark their status.
+Homewrok 6/ ToDi list which use module pattern.
