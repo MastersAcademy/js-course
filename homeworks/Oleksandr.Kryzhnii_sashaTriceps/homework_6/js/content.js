@@ -5,7 +5,7 @@ function Content() {
 Content.prototype = {
 
 	listenEvents: function() {
-		document.onclick('dblclick', this.changeText.bind(this));
+		document.ondblclick('dblclick', this.changeText.bind(this));
 	},
 
 	changeText: function(event) {
