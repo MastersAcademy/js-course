@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ToDo list (Tasks: 1-6)</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="myDIV" class="header">
+                <input type="text" id="new_task" placeholder="New task...">
+                <span class="addBtn">Add</span>
+            </div>
+            <div class="info"></div>
+            <div class="operations">
+                <button class="done_all">Check all tasks</button>
+                <button class="remove_all">Remove all tasks</button>
+            </div>
+            <div class="filters">
+                <button class="print_all">Filter: all tasks</button>
+                <button class="print_done">Filter: done tasks</button>
+                <button class="print_need">Filter: need to do</button>
+            </div>
+            <ul id="myUL">
+                <li class="checked"><p>task1</p></li>
+                <li><p>task2</p></li>
+            </ul>
+        </div>
+        <div class="popup" id="window_popup">
+            <div class="popup_content"> 
+                <input type="text" id="input_popup"/>
+                <button type="button" id="submit">Replace item</button> 
+            </div> 
+        </div>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/list.js"></script>
+    </body>
+</html>
