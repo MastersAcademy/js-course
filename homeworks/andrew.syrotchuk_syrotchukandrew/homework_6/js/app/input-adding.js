@@ -2,7 +2,6 @@
 
     window.InputAdding = {
 
-
         input: $('[data-input-text]'),
 
         addButton: $('[data-add-button]'),
@@ -24,6 +23,10 @@
             }
 
             this.input.val('');
+
+            new TodoList();
         }
-    }
+    };
+
+    InputAdding.listenEvents();
 })();

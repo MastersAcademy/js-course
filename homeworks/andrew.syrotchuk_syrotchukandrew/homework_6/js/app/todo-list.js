@@ -8,8 +8,6 @@ function TodoList() {
 
     this.model = JSON.parse(localStorage.getItem('todo')) || [];
 
-    window.InputAdding.listenEvents();
-
     this.buildList();
 
     this.count();

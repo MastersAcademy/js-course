@@ -4,7 +4,6 @@
 
         todos: JSON.parse(localStorage.getItem('todo')) || [],
 
-
         removeFromLocaleStorage: function (index) {
 
             this.todos.splice(index, 1);
@@ -28,8 +27,6 @@
             this.todos.push({'todoItem': todoItem, 'checked': false});
 
             this.writeToLocalStorage(this.todos);
-
-            new TodoList();
         },
 
         writeToLocalStorage: function (todos) {

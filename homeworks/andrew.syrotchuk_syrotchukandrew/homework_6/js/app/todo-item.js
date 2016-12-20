@@ -42,12 +42,12 @@ TodoItem.prototype = {
 
         this.offEvents();
 
-        window.LocalStorageManager.removeFromLocaleStorage(this.index);
+        window.todoApp.LocalStorageManager.removeFromLocaleStorage(this.index);
     },
 
     check : function () {
 
-        window.LocalStorageManager.editLocalStorage(this.index);
+        window.todoApp.LocalStorageManager.editLocalStorage(this.index);
     },
 
     offEvents : function () {
