@@ -9,6 +9,16 @@
         listenEvents: function () {
 
             this.addButton.on('click', this.addElement.bind(this));
+
+            this.input.on('keydown', this.addElementOnEnter.bind(this));
+        },
+
+        addElementOnEnter : function (event) {
+
+            if (event.keyCode === 13) {
+
+                this.addElement();
+            }
         },
 
         addElement: function () {
