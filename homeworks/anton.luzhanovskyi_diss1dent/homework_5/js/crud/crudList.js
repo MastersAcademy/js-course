@@ -62,6 +62,7 @@ CrudList.prototype = {
             elem = $(item).find('[data-select]');
             if (!elem.prop('checked')) {
                 elem.prop("checked" , true);
+                $(item).addClass('table-success');
                 self.counters.selected++;
             }
         });
