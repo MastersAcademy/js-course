@@ -47,7 +47,7 @@ TodoItem.prototype = {
 
     check : function () {
 
-        window.todoApp.LocalStorageManager.editLocalStorage(this.index);
+        window.LocalStorageManager.editLocalStorage(this.index);
     },
 
     offEvents : function () {
