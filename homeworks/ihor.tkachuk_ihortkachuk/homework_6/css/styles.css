@@ -1,0 +1,190 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.wrap {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 51px;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.todo-wrap {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto 0;
+  padding: 0 15px;
+}
+
+.todo-header {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.todo-header .btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.top-panel {
+  overflow: hidden;
+  padding: 10px 15px;
+}
+
+.top-panel p {
+  margin: 0;
+}
+
+.stats {
+  float: left;
+}
+.stats span {
+  font-weight: 500;
+}
+
+.actions {
+  float: right;
+}
+
+.todo-list:not(:empty) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #E0E0E0;
+  overflow: hidden;
+}
+
+.todo-item {
+  display: block;
+  border-top: 1px solid #E0E0E0;
+  margin-top: -1px;
+  padding: 10px 15px;
+  overflow: hidden;
+}
+
+.todo-text {
+  font-weight: 500;
+  line-height: 1.8;
+  margin-left: 10px;
+}
+
+.todo-item > input:checked + .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item .field {
+  display: inline-block;
+  width: 75%;
+  padding: 4px 10px;
+}
+
+.bottom-panel {
+  overflow: hidden;
+  padding: 10px 15px;
+}
+
+.bottom-panel > span {
+  font-weight: 500;
+}
+
+.bottom-panel ul {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  padding: 0;
+}
+
+.bottom-panel ul li {
+  display: inline-block;
+  margin-right: 5px;
+  color: #9E9E9E;
+  cursor: pointer;
+}
+
+.bottom-panel ul li.active {
+  color: #000;
+  border-bottom: 1px dashed;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+
+.btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #d7d7d7;
+  background: #f5f5f5;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  transition: all .25s ease;
+  font-size: 1em;
+  padding: 0.3em 0.6em;
+}
+
+.btn-remove {
+  color: #ef5350;
+  float: right;
+  cursor: pointer;
+}
+
+.btn-primary {
+  border-color: #1976D2;
+  background: #42A5F5;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1976D2;
+}
+
+.field {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  background: #fff;
+  padding: 0.5em 0.75em;
+  width: 100%;
+  border: 1px solid #E0E0E0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  outline: none;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #4FC3F7;
+  border: 1px solid #4FC3F7;
+}

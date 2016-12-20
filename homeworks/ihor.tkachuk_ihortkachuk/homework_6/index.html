@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo App. Javascript patterns.</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+    <header class="header text-center">
+        <h1>Todo App</h1>
+    </header>
+    <section class="todo-wrap">
+        <header class="todo-header">
+            <input class="field" type="text" id="add-todo" name="todo" placeholder="Add todo" data-todo-input>
+            <button class="btn btn-primary" data-todo-add>Add</button>
+        </header>
+
+        <div class="top-panel">
+            <div class="stats">
+                <p>Active: <span data-active-count>0</span> Completed: <span data-completed-count>0</span></p>
+            </div>
+        </div>
+        <ul class="todo-list" data-todo-list>
+            <li class="todo-item" data-todo-item>
+                <input type="checkbox">
+                <label class="todo-text" data-todo-text></label>
+                <input class="field hidden" type="text" data-todo-edit>
+                <i class="material-icons btn-remove" data-todo-delete>delete</i>
+            </li>
+        </ul>
+        <div class="bottom-panel">
+            <span>Show:</span>
+            <ul data-todo-filter>
+                <li class="active">All</li>
+                <li>Active</li>
+                <li>Completed</li>
+            </ul>
+        </div>
+    </section>
+    <footer class="footer text-center">
+        <p>&copy; 2016 Developed by Ihor Tkachuk.</p>
+    </footer>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app/todo-stats.js"></script>
+<script src="js/app/todo-storage.js"></script>
+<script src="js/app/todo-item.js"></script>
+<script src="js/app/todo-list.js"></script>
+<script src="js/app/todo-filters.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
