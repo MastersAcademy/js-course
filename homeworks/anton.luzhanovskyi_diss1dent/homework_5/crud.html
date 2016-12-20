@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styletodo.css">
+    <title>Anton Luzhanovskyi | To do list</title>
+</head>
+<body>
+<main class="container">
+    <h1>To do list</h1>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped" data-items>
+            <thead class="thead-inverse">
+                <tr>
+                    <th>#</th>
+                    <th class="align-middle text-xs-center w80">Task</th>
+                    <th class="align-middle text-xs-center">Status</th>
+                    <th class="align-middle text-xs-center">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-item>
+                    <th data-row></th>
+                    <td class="align-middle text-xs-center w80" data-content>Place your task here</td>
+                    <td class="align-middle text-xs-center"><input type="checkbox" data-select class="form-check-input" ></td>
+                    <td class="align-middle text-xs-center"><button type="button" data-delete class="btn btn-outline-danger " ><i class="material-icons">delete_forever</i></button></td>
+                </tr>
+            <tfoot class="table-inverse">
+                <tr>
+                    <th></th>
+                    <td colspan="3" class="align-middle text-xs-center">
+                        <div class="col-xs-6 text-xs-center" data-total-selected>Total selected: <span></span></div>
+                        <div class="col-xs-6 text-xs-center" data-total-unselected>Total left: <span></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th class="align-middle text-xs-center"><button type="button" data-item-add class="btn btn-success btn-outline-success">Add new</button></th>
+                    <th class="align-middle text-xs-center"><button type="button" data-select-all class="btn btn-outline-info" >Select all</button></th>
+                    <th class="align-middle text-xs-center"><button type="button" data-delete-all class="btn btn-outline-danger " >Remove selected</button></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</main>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/crud/crudlist.js"></script>
+<script src="js/crud/crusListItem.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
