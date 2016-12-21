@@ -44,7 +44,7 @@ ImagesList.prototype = {
             j=j+150;
             li[i].style.left = j+"px";      
         }
-
+        sendLength(li);
 
     }
 

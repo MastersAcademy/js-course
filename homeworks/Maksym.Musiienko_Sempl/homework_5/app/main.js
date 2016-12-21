@@ -17,6 +17,8 @@ document.getElementById('query').onfocus = function(){this.value = ""};
 
 function myFunction(){
 
+	document.getElementById('item').style.left = "0px";
+
 	var query = document.getElementById('query').value;
 
 	console.log(query);

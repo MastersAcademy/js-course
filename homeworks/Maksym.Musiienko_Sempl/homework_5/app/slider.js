@@ -1,5 +1,9 @@
   
-  var c = document.getElementById("list").children;
+  var c = [];
+
+  function sendLength(li){
+    c = li;
+  }
 
   var el = document.getElementsByTagName("button");
   el[1].onclick = function(){myMoveLeft()};
