@@ -30,7 +30,7 @@ Masters Academy JavaScript courses project for season 2016/2017
    [Пример](https://github.com/MastersAcademy/js-course/tree/master/lectures/lecture5/theory)
    [Еще один](https://github.com/powerbot15/demo-modules)
    
-4. Обмен данными с сервером, формат JSON. `XMLHTTPRequest` vs `jQuery.ajax()`. 
+4. Обмен данными с сервером, `AJAX`. 
 
 ## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
 
