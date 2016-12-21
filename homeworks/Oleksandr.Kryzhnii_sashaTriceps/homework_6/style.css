@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  font-family: 'Merriweather', serif;
+}
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+.circle {
+  margin: 20px 20px 0 0;
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  overflow: hidden;
+  float: right;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(130, 140, 57,0.9);
+}
+.light {
+  background-color: #ffffff;
+}
+.dark {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.head {
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+.Title {
+  font-size: 23px;
+  text-align: center;
+  width: 120px;
+  height: 33px;
+  border-bottom: 2px solid #8181F7;
+  margin: 0 auto;
+}
+img {
+  float: left;
+}
+.text {
+  padding-left: 370px;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-family: 'Inconsolata', monospace;
+  margin-top: -3px;
+  color: gray;
+}
+#about_me {
+  margin-top: 15px;
+  width: 450px;
+}
+button {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  background-color: #045FB4;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  border: 1px solid #045FB4;
+  border-radius: 2px;
+}
+.social_block {
+  margin-top: 145px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 23px;
+
+}
+a {
+  color: #045FB4;
+  padding: 0 40px;
+  text-decoration: none;
+}
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  color: gray;
+  opacity: .5;
+}
+
+
+/*=======================
+         Popup
+=======================*/
+
+.transparency {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 16px;
+  background-color: rgba(1, 1, 1, 0.725);
+  z-index: 100;
+  overflow: auto;
+}
+.popup {
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  display: none;
+  color: black;
+  background: #D7E1DC;
+  z-index: 200;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  font-family: Merriweather, Sans-serif;
+  border-radius: 3px;
+}
+.contact_list {
+  list-style-type: none;
+  font-size: 14pt;
+  margin-left: 0;
+  padding-left: 0;
+}
+.contact_list li {
+  padding-top: 10px;
+}
