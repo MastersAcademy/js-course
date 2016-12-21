@@ -1,0 +1,112 @@
+*{
+  margin:0;
+  padding:0;
+}
+.wrap{
+  width:950px;
+  margin:0 auto;
+  overflow: hidden;
+  font-family: 'Inconsolata', monospace;
+}
+/*.todos-list{*/
+  /*width: 500px;*/
+  /*margin: 0 auto;*/
+
+/*}*/
+.done {
+  border-color: red;
+}
+.todos-list{
+  text-align: center;
+  width: 500px;
+  margin: 10px auto;
+}
+.todos-list li{
+  margin: 0 0 5px;
+  font-size: 25px;
+  width: 500px;
+
+  border-radius: 5px;
+  overflow: auto;
+  padding: 8px;
+}
+.todos-list p {
+  font-family: 'Merriweather', serif;
+  text-align: left;
+}
+.todos-list li input{
+  font-size: 25px;
+}
+.todos-list button{
+  text-align: center;
+}
+header h1{
+  text-align: center;
+  margin: 10px 0 25px 0;
+}
+header div{
+  text-align: center;
+  display: block;
+}
+.create-textarea {
+  outline: none;
+  resize: none;
+  width: 900px;
+  height: 60px;
+  font-size: 25px;
+  overflow: hidden;
+}
+.pipe {
+  text-align: center;
+}
+.pipe button{
+  margin: 10px 0 10px 0;
+  display: inline-block;
+  width: 200px;
+  height: 45px;
+  background-color: #195c89;
+  border: none;
+  color: white;
+  font-size: 14pt;
+  border-radius: 3px;
+}
+.pipe .active{
+  color: #31ca01;
+}
+.pipe .complete{
+  color: #ff2e2e;
+}
+.pipe .all {
+  color: black;
+}
+.content{
+padding: 0 0 0 30px;
+}
+.add-todo {
+  margin: 10px 0 10px 0;
+  display: inline-block;
+  width: 300px;
+  height: 45px;
+  background-color: #195c89;
+  border: none;
+  color: white;
+  font-size: 14pt;
+  border-radius: 3px;
+}
+.todo-button{
+  float: right;
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  background-color: #195c89;
+  border: none;
+  color: white;
+  font-size: 14pt;
+  border-radius: 3px;
+}
+li {
+  border: 2px groove black;
+}
+.done{
+  border: groove 3px red;
+}

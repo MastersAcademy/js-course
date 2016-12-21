@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400|Merriweather:400" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+    <header >
+        <h1>TODO List</h1>
+        <div data-create>
+            <textarea class="create-textarea" data-text-area></textarea>
+            <button type="button" class="add-todo" data-add>ADD TODO</button>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="pipe">
+                <button type="button"  data-pipe-complete>COMPLETE TODO <span class="complete" data-count-com></span></button>
+                <button type="button"  data-pipe-active>ACTIVE TODO <span class="active"  data-count-act></span></button>
+                <button type="button" data-pipe-all>ALL TODO <span class="all"  data-count-all></span></button>
+            </div>
+            <ul class="todos-list" data-todos>
+                <li data-todo-item>
+                    <p data-todo></p>
+                    <button type="button" data-done>DONE</button>
+                    <button type="button" data-delete="">DELETE</button>
+                </li>
+            </ul>
+        </div>
+    </main>
+</div>
+
+<script type="application/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+<script type="application/javascript" src="app/todo-list.js"></script>
+<script type="application/javascript" src="app/todos-pipe.js"></script>
+<script type="application/javascript" src="app/data.js"></script>
+<script type="application/javascript" src="app/count-todos.js"></script>
+<script type="application/javascript" src="app/create-todo.js"></script>
+<script type="application/javascript" src="app/edit-todo.js"></script>
+<script type="application/javascript" src="app/todo-list-item.js"></script>
+<script type="application/javascript" src="app.js"></script>
+</body>
+</html>
