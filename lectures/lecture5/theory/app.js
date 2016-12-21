@@ -38,8 +38,18 @@ app.put('/images/:id', (req, res) => {
         }
 
     }
+    if(i < data.length){
 
-    res.send(data[i]);
+        res.send(data[i]);
+
+    }
+
+    else{
+
+        res.send({message : 'image not found'});
+
+    }
+
 
 });
 
@@ -51,9 +61,17 @@ app.delete('/images/:id', (req, res) => {
 
         data.splice(foundIndex, 1);
 
+        res.send({message : 'ok'});
+
     }
 
-    res.send({message : 'ok'});
+    else{
+
+        res.send({message : 'image not found'});
+
+    }
+
+
 
 });
 
