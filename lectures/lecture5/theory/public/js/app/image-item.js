@@ -77,35 +77,6 @@ ImageItem.prototype = {
 
         });
 
-        //sample put request to change image data
-        //$.ajax({
-        //
-        //        type : 'PUT',
-        //
-        //        url : '/images/' + imageId,
-        //
-        //        contentType : 'application/json',
-        //
-        //        dataType : 'json',
-        //
-        //        data : JSON.stringify({
-        //
-        //            image : imageModel
-        //
-        //        })
-        //
-        //    })
-        //    .done(function (response) {
-        //
-        //        console.dir(response);
-        //
-        //    }.bind(this))
-        //
-        //    .fail(function (error) {
-        //
-        //        alert(error.statusText);
-        //
-        //    });
 
     }
 

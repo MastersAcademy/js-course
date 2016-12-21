@@ -10,7 +10,7 @@ let app = express();
 
 app.use(express.static('public'));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
