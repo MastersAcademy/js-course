@@ -34,21 +34,15 @@ app.put('/images/:id', (req, res) => {
 
             data[i] = changedModel;
 
-            break;
+            res.send(data[i]);
+
+            return;
+
         }
 
     }
-    if(i < data.length){
 
-        res.send(data[i]);
-
-    }
-
-    else{
-
-        res.send({message : 'image not found'});
-
-    }
+    res.send({message : 'image not found'});
 
 
 });
