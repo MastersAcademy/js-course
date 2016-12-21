@@ -13,7 +13,7 @@
     c = li;
     console.log(c.length);
 
-    if(c.length>1){
+    if(c.length>8){
 
       el[2].removeAttribute("onclick");
       el[2].setAttribute("class","disabled");
@@ -29,7 +29,7 @@
       el[1].removeAttribute("onclick");
       el[2].setAttribute("class","disabled");
       el[1].setAttribute("class","disabled");
-      
+
       
     }
     l=0;
@@ -40,11 +40,7 @@
 
   
   
-  var l=0;
-  var k=0;
-  var w = "";
-
- 
+  
 
   function myMoveLeft() {
     
