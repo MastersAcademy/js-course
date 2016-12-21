@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework_6</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <p>Please input tag</p>
+   <input id="query" type="text" onekeypress ="return myFunction()" >
+  <button onclick="myFunction()" >Search</button>
+  <p>
+  <button>LeftMove</button> 
+  <button>RightMove</button>
+  </p> 
+  
+  <div id ="container">
+    <ul id="list">
+            <li id="item"><img id="image" src=""></li>
+    </ul>   
+  </div>
+  <div id="largeimg" class="largeimg hidden">
+    <img id="large" src="#" alt="Large Image">
+  </div>
+
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src ="app/slider.js"></script>
+  <script src ="app/image-item.js"></script>
+  <script src ="app/images-list.js"></script>
+  <script src ="app/showlarge.js"></script>
+  <script src ="app/main.js"></script>
+
+</body>
+</html>
