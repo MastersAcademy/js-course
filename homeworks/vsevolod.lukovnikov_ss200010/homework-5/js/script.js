@@ -32,10 +32,7 @@
   
     //    task #4
     var infoAboutUser = document.querySelector(".content-right-side");
-    var userName = document.querySelector(".user-name");
-    var userTarget = document.querySelector(".user-target");
-    var userInfo = document.querySelector(".user-info");
-    
+
     infoAboutUser.ondblclick = function(event){
         var target =  event.target;
         var formElem = target.nextElementSibling;
@@ -43,11 +40,11 @@
         formElem.value = target.textContent;
         formElem.focus();
 
-        formElem.onblur = function(e){
+        formElem.onblur = function(){
             formElem.previousElementSibling.textContent = formElem.value;
             formElem.parentNode.classList.remove("user-name-show");
         }
-    }
+    };
 
     // task #5
 
@@ -67,5 +64,24 @@
         document.querySelector('.user-info p')
             .textContent = data.info;
     }
+
+    // task#6
+
+    document.querySelector(".fb-btn a").onclick = function(){
+        event.preventDefault();
+        open("http://www.facebook.com/sharer.php?u=http://localhost:63342/homework-5/index.html",
+            "displayWindow","width=520,height=300,left=350,top=170,status=no,toolbar=no,menubar=no");
+
+    };
+
+    document.querySelector(".vk-btn a").innerHTML = VK.Share.button('https://vk.com/macademy_ck', {type: 'custom', text: "VKontakte"});
+
+    document.querySelector(".twitter-share-btn").onclick = function (d,s,id){
+        var js,fjs = d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id))
+            {js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js,fjs);}
+    }(document,"script","twitter-wjs");
+
 
 })();
