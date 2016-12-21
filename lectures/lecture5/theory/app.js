@@ -71,7 +71,7 @@ app.delete('/images/:id', (req, res) => {
 
 app.listen(8000, () => {
 
-    console.log('started');
+    console.log('Server started at http://localhost:8000');
 
 });
 
