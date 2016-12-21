@@ -9,6 +9,8 @@
     c = li;
     el[2].removeAttribute("onclick");
     el[2].setAttribute("class","disabled")
+    el[1].setAttribute("onclick","myMoveLeft()");
+    el[1].removeAttribute("class","disabled")
     l=0;
     k=0;
     w = "";
