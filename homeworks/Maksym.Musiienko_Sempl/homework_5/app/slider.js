@@ -1,19 +1,27 @@
   
   var c = [];
+  var el = document.getElementsByTagName("button");
+  var l;
+  var k;
+  var w;
 
   function sendLength(li){
     c = li;
+    el[2].removeAttribute("onclick");
+    el[2].setAttribute("class","disabled")
+    l=0;
+    k=0;
+    w = "";
   }
 
-  var el = document.getElementsByTagName("button");
+  
   el[1].onclick = function(){myMoveLeft()};
   el[2].onclick = function (){myMoveRight()};
   var l=0;
   var k=0;
   var w = "";
 
-  el[2].removeAttribute("onclick");
-  el[2].setAttribute("class","disabled");
+ 
 
   function myMoveLeft() {
     
