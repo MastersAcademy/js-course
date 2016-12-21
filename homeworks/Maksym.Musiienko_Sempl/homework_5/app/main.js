@@ -21,6 +21,11 @@ function myFunction(){
 
 	var query = document.getElementById('query').value;
 
+	if (query == ""){
+		document.getElementById('query').value = "Type something!";
+		return;
+	}
+
 	console.log(query);
 
 	window.appData=[];
