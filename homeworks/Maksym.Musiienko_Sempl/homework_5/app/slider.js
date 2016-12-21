@@ -4,6 +4,10 @@
   var l;
   var k;
   var w;
+  el[2].removeAttribute("onclick");
+  el[1].removeAttribute("onclick");
+  el[2].setAttribute("class","disabled");
+  el[1].setAttribute("class","disabled");
 
   function sendLength(li){
     c = li;
@@ -15,6 +19,8 @@
       el[2].setAttribute("class","disabled");
       el[1].setAttribute("onclick","myMoveLeft()");
       el[1].removeAttribute("class","disabled");
+      el[1].onclick = function(){myMoveLeft()};
+      el[2].onclick = function(){myMoveRight()};
 
     }
     else
@@ -23,15 +29,17 @@
       el[1].removeAttribute("onclick");
       el[2].setAttribute("class","disabled");
       el[1].setAttribute("class","disabled");
+      
+      
     }
     l=0;
     k=0;
     w = "";
+    
   }
 
   
-  el[1].onclick = function(){myMoveLeft()};
-  el[2].onclick = function(){myMoveRight()};
+  
   var l=0;
   var k=0;
   var w = "";
