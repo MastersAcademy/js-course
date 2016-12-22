@@ -7,27 +7,47 @@
     </head>
 
     <body>
-        <h1 class="header-Name">ToDoList</h1>
+        <div class="wrap">
+            <h1 class="header">ToDoList</h1>
 
-        <div class="header">
-            <input class="new-Task" id="input-Form-New-Task" placeholder="What needs to be done?">
-            <input class="checkbox-Expand-Turn" type="checkbox" id="checkbox-Expand-TurnTasks">
-        </div>
+            <div class="content">
+                <div class="content-header">
+                    <input class="drop-down-checkbox" type="checkbox">
+                    <input class="new-task" placeholder="What needs to be done?">
+                </div>
 
-        <div class="data">
-            <ul class="data-List" id="listElement"></ul>
-        </div>
-        <div class="footer">
-            <span class="todo-Left" id="unfinishedTasks">0 toDo left</span>
-            <ul class="filters">
-                <li><input type="button" value="All" id="show-All"></li>
-                <li><input type="button" value="Active" id="show-Active"></li>
-                <li><input type="button" value="Completed" id="show-Comleted"></li>
-            </ul>
-            <input class="clear-Complete" type="button" value="Clear complete" id="clear-Completed">
-        </div>
+                <div class="content-data">
+                    <ul class="content-data-list">
+                        <li class="list-element">
+                            <input class="checkbox-done" type="checkbox">
+                            <div class="text">прло</div>
+                            <!--<input class="text-edit" type="text" value="kljbj">-->
+                            <div class="button-delete-task">X</div>
+                        </li>
 
-        <h1 class="footer-Info">Created by <a target="_blank" href="https://github.com/LefkaLefka">Lefka</a></h1>
+                        <li class="list-element">
+                            <input class="checkbox-done" type="checkbox">
+                            <div class="text">ва пывап sdkjf shdfg sdfgsdfasdgsd fghsdfg  gh dgh d dfkgh sdfgh dfgh fghfj ghnskfdg uyhsdfy iugsdfyg fysgudfygyfy hsdfk gjhsdfg hsdfgh sdfghs dfgh sdfgh</div>
+                            <!--<input class="text-edit" type="text" value="klsdfg sdfg sfg dfg sdgsdfgsdf gfg sdfgsdfgd gsdfg sdfg sdfg sdfg sdfg sdfg sdfgjbj">-->
+                            <div class="button-delete-task">X</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-footer">
+                    <span class="todo-left" id="unfinishedTasks">0 toDo left</span>
+                    <ul class="filters">
+                        <li><input class="footer-button" type="button" value="All"></li>
+                        <li><input class="footer-button" type="button" value="Active"></li>
+                        <li><input class="footer-button" type="button" value="Completed"></li>
+                    </ul>
+                    <input class="footer-button right" type="button" value="Clear complete">
+                </div>
+            </div>
+
+            <h1 class="footer">Created by <a target="_blank" href="https://github.com/LefkaLefka">Lefka</a></h1>
+        </div>
         <script src="js/main.js"></script>
+
     </body>
 </html>
