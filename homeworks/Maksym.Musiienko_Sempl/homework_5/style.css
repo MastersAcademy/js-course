@@ -1,19 +1,21 @@
 #container {
-  width: 300px;
-  height: 100px;
+  width: 1200px;
+  height: 120px;
   position: relative;
-  background: yellow;
-  overflow: hidden; 
+  /*background: yellow;*/
+  overflow: hidden;
+  left: 20px 
 }
  
  ul>li{
-  background-color: red;
+  /*background-color: red;*/
   list-style-type: none;
-  width :100px;
-  height :50px;
+  width :150px;
+  height :120px;
   display :inline-flex;
   left: 0px;
   position: absolute;
+  border: 5px;
 }
 
 .disabled{
@@ -24,5 +26,16 @@
 button{
   margin-left: 25px;
   display: inline-block;
+}
+
+.hidden{
+  display: none;
+}
+
+.largeimg{
+  
+  padding-top: 30px;
+  margin-top: 30px;
+  text-align: center;
 }
   
