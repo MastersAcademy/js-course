@@ -12,41 +12,46 @@
 
             <div class="content">
                 <div class="content-header">
-                    <input class="drop-down-checkbox" type="checkbox">
-                    <input class="new-task" placeholder="What needs to be done?">
+                    <input class="drop-down-checkbox" type="checkbox" data-drop-down>
+                    <input class="new-task" placeholder="What needs to be done?" data-new-task>
                 </div>
 
                 <div class="content-data">
-                    <ul class="content-data-list">
+                    <ul class="content-data-list" data-content-list>
                         <li class="list-element">
                             <input class="checkbox-done" type="checkbox">
                             <div class="text">прло</div>
                             <!--<input class="text-edit" type="text" value="kljbj">-->
-                            <div class="button-delete-task">X</div>
+                            <div class="button-delete-task" data-delete-button>X</div>
                         </li>
 
                         <li class="list-element">
                             <input class="checkbox-done" type="checkbox">
                             <div class="text">ва пывап sdkjf shdfg sdfgsdfasdgsd fghsdfg  gh dgh d dfkgh sdfgh dfgh fghfj ghnskfdg uyhsdfy iugsdfyg fysgudfygyfy hsdfk gjhsdfg hsdfgh sdfghs dfgh sdfgh</div>
                             <!--<input class="text-edit" type="text" value="klsdfg sdfg sfg dfg sdgsdfgsdf gfg sdfgsdfgd gsdfg sdfg sdfg sdfg sdfg sdfg sdfgjbj">-->
-                            <div class="button-delete-task">X</div>
+                            <div class="button-delete-task" data-delete-button>X</div>
                         </li>
                     </ul>
                 </div>
 
                 <div class="content-footer">
-                    <span class="todo-left" id="unfinishedTasks">0 toDo left</span>
+                    <span class="todo-left" data-todo-left>0 toDo left</span>
                     <ul class="filters">
-                        <li><input class="footer-button" type="button" value="All"></li>
-                        <li><input class="footer-button" type="button" value="Active"></li>
-                        <li><input class="footer-button" type="button" value="Completed"></li>
+                        <li><input class="footer-button" type="button" value="All" data-filter-all></li>
+                        <li><input class="footer-button" type="button" value="Active" data-filter-active></li>
+                        <li><input class="footer-button" type="button" value="Completed" data-filter-completed></li>
                     </ul>
-                    <input class="footer-button right" type="button" value="Clear complete">
+                    <input class="footer-button right" type="button" value="Clear complete" data-remove-completed>
                 </div>
             </div>
 
             <h1 class="footer">Created by <a target="_blank" href="https://github.com/LefkaLefka">Lefka</a></h1>
         </div>
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="js/app/GlobalFunctional.js"></script>
+        <script src="js/app/GlobalEventListener.js"></script>
+
         <script src="js/main.js"></script>
 
     </body>
