@@ -8,7 +8,6 @@ Filters.prototype = {
         this.$list.children().each(function(i, elem) {
             $(elem).show();
         });
-
     },
     // Show unfinished tasks.
     showActive: function () {
