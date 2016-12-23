@@ -1,38 +1,48 @@
-function ListItem(text) {
+function ListItem(text, status) {
     this.$ul = $("[data-content-list]");
     this.text = text;
-    // Creates all new elements.
-    this.liElem();
-    this.inputElem();
-    this.textElem();
-    this.delBtnElem();
-    // Show it.
-    this.render();
+    this.status = status;
+
+    this.listener = GlobalEventListener.prototype;
+    this.functional = GlobalFunctional.prototype;
+
+    this.buildItem();
 }
 ListItem.prototype = {
-
+    buildItem : function() {
+        // Creates all new elements.
+        this.liElem();
+        this.inputElem();
+        this.textElem();
+        this.delBtnElem();
+        // Show it.
+        this.render();
+    },
     liElem : function() {
         this.$el = $("<li class=\"list-element\">");
     },
     inputElem : function() {
         var $elem = $("<input class=\"checkbox-done\" type=\"checkbox\" data-checkbox-done>");
+        this.status === true ? $elem.prop("checked", true) : $elem.prop("checked", false);
 
-        GlobalEventListener.prototype.listenClickEvent($elem, function() {
-            ////////////////
-        });
+        this.listener.listenClickEvent($elem, this.functional.countToDoLeft.bind(this.functional));
 
         this.$el.append($elem);
     },
     textElem : function() {
-        var $elem = $("<div class=\"text\">");
+        var $elem = $("<div class=\"text\" data-task-text>");
         $elem.text(this.text);
+
+        var modifyTask = new ModifyTask($elem);
+        this.listener.listenDblClickEvent($elem, modifyTask.replace.bind(modifyTask));
+
         this.$el.append($elem);
     },
     delBtnElem : function() {
         var $elem = $("<div class=\"button-delete-task\" data-delete-button>");
         $elem.text("X");
 
-        GlobalEventListener.prototype.listenClickEvent($elem, GlobalFunctional.prototype.deleteTask);
+        this.listener.listenClickEvent($elem, this.functional.deleteTask.bind(this.functional));
 
         this.$el.append($elem);
     },
