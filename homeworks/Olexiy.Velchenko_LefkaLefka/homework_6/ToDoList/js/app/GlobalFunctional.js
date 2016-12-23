@@ -1,6 +1,4 @@
-function GlobalFunctional() {
-
-}
+function GlobalFunctional() {}
 
 GlobalFunctional.prototype = {
     dropDown : function(event) {
@@ -16,35 +14,47 @@ GlobalFunctional.prototype = {
     },
     addNewTask : function(event) {
         // Uf pressed "Enter" - add new task.
-        if(event.target.keyCode === 13) {
-            /////////////////////////////////////////////////////
-            // add new task
-            console.log("add");
+        if(event.keyCode === 13) {
+            // Add new task to list.
+            var text = $("[data-new-task]").val();
+            // console.log(this.item);
+            // this.item.__proto__.buildItem.bind(this.item, text);
+            new ListItem(text);
+            // Deleted all which printed.
+            $("[data-new-task]").val("");
+            this.countToDoLeft();
         }
         else
             // If pressed "Esc" - exit from printing.
-            if(event.target.keyCode === 27) {
+            if(event.keyCode === 27) {
                 // Deleted all which printed.
-                $(event.target).val("");
+                $("[data-new-task]").val("");
                 // Removed focus.
-                $(event.target).blur();
+                $("[data-new-task]").blur();
             }
     },
-    showAll : function() {
-        /////////////////////////////////////////////////////
-        console.log("all");
+    deleteTask : function(event) {
+        $(event.target).parent().remove();
+        this.countToDoLeft();
     },
-    showActive : function() {
-        /////////////////////////////////////////////////////
-        console.log("active");
+    deleteCompleted: function () {
+        $("[data-checkbox-done]").each(function(i, elem) {
+            // If task finished - show
+            if($(elem).is(":checked")) {
+                $(elem).parent().remove();
+            }
+        });
+        this.countToDoLeft();
     },
-    showCompleted : function() {
-        /////////////////////////////////////////////////////
-        console.log("completed");
-    },
-    deleteCompleted : function() {
-        /////////////////////////////////////////////////////
-        // this.listenClickEvent($("[data-delete-button]"));
-        console.log("delete completed");
+    countToDoLeft : function() {
+        var $all = $("[data-checkbox-done]"),
+            count = 0;
+
+        $all.each(function(i, elem) {
+            if(!$(elem).is(":checked")) {
+                ++count;
+            }
+        });
+        $("[data-todo-left]").text(count.toString() + " toDo" + (count > 1 ? "s" : "") + " left");
     }
 };
