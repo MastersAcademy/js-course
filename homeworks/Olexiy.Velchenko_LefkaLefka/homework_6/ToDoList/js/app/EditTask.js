@@ -1,7 +1,7 @@
-function ModifyTask(elem) {
+function EditTask(elem) {
     this.$el = $(elem);
 }
-ModifyTask.prototype = {
+EditTask.prototype = {
     replace : function() {
         var $newElem = $("<input class=\"text-edit\" type=\"text\">"),
             $oldElem = this.$el;

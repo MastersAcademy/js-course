@@ -33,7 +33,7 @@ ListItem.prototype = {
         var $elem = $("<div class=\"text\" data-task-text>");
         $elem.text(this.text);
 
-        var modifyTask = new ModifyTask($elem);
+        var modifyTask = new EditTask($elem);
         this.listener.listenDblClickEvent($elem, modifyTask.replace.bind(modifyTask));
 
         this.$el.append($elem);
