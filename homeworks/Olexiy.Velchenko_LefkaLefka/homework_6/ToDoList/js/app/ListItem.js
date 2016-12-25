@@ -3,9 +3,6 @@ function ListItem(text, status) {
     this.text = text;
     this.status = status;
 
-    this.listener = GlobalEventListener.prototype;
-    this.functional = GlobalFunctional.prototype;
-
     this.buildItem();
 }
 ListItem.prototype = {
@@ -25,7 +22,8 @@ ListItem.prototype = {
         var $elem = $("<input class=\"checkbox-done\" type=\"checkbox\" data-checkbox-done>");
         this.status === true ? $elem.prop("checked", true) : $elem.prop("checked", false);
 
-        this.listener.listenClickEvent($elem, this.functional.countToDoLeft.bind(this.functional));
+        window.toDoList.globalEventListener.listenClickEvent($elem,
+            window.toDoList.globalFunctional.countToDoLeft.bind(window.toDoList.globalFunctional));
 
         this.$el.append($elem);
     },
@@ -34,7 +32,8 @@ ListItem.prototype = {
         $elem.text(this.text);
 
         var modifyTask = new EditTask($elem);
-        this.listener.listenDblClickEvent($elem, modifyTask.replace.bind(modifyTask));
+        window.toDoList.globalEventListener.listenDblClickEvent($elem,
+            modifyTask.replace.bind(modifyTask));
 
         this.$el.append($elem);
     },
@@ -42,7 +41,8 @@ ListItem.prototype = {
         var $elem = $("<div class=\"button-delete-task\" data-delete-button>");
         $elem.text("X");
 
-        this.listener.listenClickEvent($elem, this.functional.deleteTask.bind(this.functional));
+        window.toDoList.globalEventListener.listenClickEvent($elem,
+            window.toDoList.globalFunctional.deleteTask.bind(window.toDoList.globalFunctional));
 
         this.$el.append($elem);
     },
