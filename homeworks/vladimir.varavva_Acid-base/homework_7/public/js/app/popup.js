@@ -10,7 +10,7 @@
         listenEvents: function () {
 
             this.saveBtn.on('click', this.hide.bind(this));
-            
+
             this.saveBtn.on('click', this.saveUser.bind(this));
 
         },
@@ -27,15 +27,15 @@
         render: function () {
 
             this.$el.find('[data-large]').prop('src', this.model.webformatURL);
-            
+
             this.$el.find('[data-user-change]').prop('value', this.model.user);
 
         },
 
         hide: function () {
-            
+
             this.$el.addClass('hidden');
-            
+
         },
 
         saveUser: function () {
