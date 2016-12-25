@@ -12,8 +12,6 @@ LocalStorage.prototype = {
             };
             allTaskObj[i] = taskObj;
         });
-        // allTaskObj = allTaskObj.slice(0, allTaskObj.length - 1);
-        // console.log(JSON.stringify(allTaskObj));
         localStorage.setItem("toDoList", JSON.stringify(allTaskObj));
     },
     loadData : function() {
