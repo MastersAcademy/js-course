@@ -52,7 +52,7 @@ ImageItem.prototype = {
 
     showLarge : function () {
 
-        window.imagesApp.popup.show(this.model);
+        window.imagesApp.popup.show(this.model, this.tpl.userName);
 
     },
 

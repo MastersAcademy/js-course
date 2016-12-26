@@ -27,8 +27,8 @@
                 method: 'put',
                 data: newData,
                 dataType: 'json',
-                success : function () {
-                    window.imagesApp.imagesList = new ImagesList();
+                success : function (response) {
+                    this.userNameTpl.html('Username: ' + response.user);
                     this.$el.hide();
                 }.bind(this),
                 error: function (error) {
@@ -37,7 +37,9 @@
             });
         },
 
-        show : function (data) {
+        show : function (data, userNameTpl) {
+
+            this.userNameTpl = userNameTpl;
 
             this.model = data;
 
