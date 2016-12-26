@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Design patterns</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrap">
+        <ul class="images-list" data-items>
+            <li data-image-item>
+                <img src="#" class="large-image" alt="Preview image" data-preview>
+                <div class="info">
+                    <p class="user" data-user></p>
+                    <p class="downloads" data-downloads></p>
+                </div>
+                <button class="remove-btn" type="button" data-delete>Remove</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="popup-overlay hidden" data-image-popup>
+        <div class="popup">
+            <img src="#" alt="Large Image" class="popup-img" data-large>
+            <input type="text" data-user-login/>
+            <button class="save-btn" type="button" data-save>Save</button>
+        </div>
+    </div>
+    
+    <script src="js/lib/jquery.min.js"></script>
+    <!-- <script src="js/data.js"></script>  -->
+    <script src="js/app/images-list.js"></script>
+    <script src="js/app/image-item.js"></script>
+    <script src="js/app/popup.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
