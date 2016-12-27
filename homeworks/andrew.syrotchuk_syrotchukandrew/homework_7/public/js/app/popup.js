@@ -9,9 +9,11 @@
             this.$el.find('[data-save]').on('click', this.save.bind(this));
         },
 
-        show: function (data) {
+        show: function (data, user) {
 
             this.model = data;
+
+            this.user = user;
 
             this.render();
 
@@ -41,7 +43,7 @@
 
                 success: function () {
 
-                    window.imagesApp.imagesList = new ImagesList();
+                    this.user.html("User: " + this.$el.find('[data-input-user]').val());
 
                     this.$el.addClass('hidden');
 
