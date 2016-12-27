@@ -1,0 +1,60 @@
+.images-list{
+    list-style: none;
+    margin:20px 0 0;
+}
+
+.info{
+    position: absolute;
+    bottom: 15%;
+    right: 0%;
+}
+
+.images-list > li{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: 250px;
+    padding:5px;
+    margin:5px;
+    background: #dddddd;
+}
+
+.images-list > li > img{
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.remove-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.popup-overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: rgba(200, 200, 200, 0.7);
+    z-index: 100;
+}
+
+.popup{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.popup .large-image{
+    max-height:600px;
+    max-width:600px;
+}
+
