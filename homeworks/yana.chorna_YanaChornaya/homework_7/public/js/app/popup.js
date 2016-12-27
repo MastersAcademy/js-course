@@ -61,6 +61,8 @@
                 })
                 .done(function (response) {
 
+                    this.$el.addClass('hidden');
+
                     this.user.text('User: ' + newUser);
 
                 }.bind(this))
