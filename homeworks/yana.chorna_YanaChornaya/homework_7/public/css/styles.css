@@ -1,0 +1,85 @@
+.images-list{
+    list-style: none;
+    margin:20px 0 0;
+}
+
+.images-list > li{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    height: 185px;
+    padding:5px;
+    margin:5px;
+    background: #dddddd;
+}
+
+.images-list > li > img{
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
+.remove-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.popup-overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: rgba(200, 200, 200, 0.7);
+    z-index: 100;
+}
+
+.popup{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.popup .large-image{
+    max-height:600px;
+    max-width:600px;
+}
+
+.popup input {
+    display: block;
+    padding: 5px;
+    outline: none;
+}
+
+.popup button {
+    padding: 2px 5px;
+    margin-top: 10px;
+    float: right;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.download, .user {
+    font-size: 13px;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 25px;
+    color: #9D0000;
+    cursor: pointer;
+}
