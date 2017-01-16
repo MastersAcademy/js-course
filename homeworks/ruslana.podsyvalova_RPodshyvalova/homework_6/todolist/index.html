@@ -11,60 +11,43 @@
                 <h1>todo list</h1>
             </header>
             <main class="main">
-                <div class="content">
-                    <div class="statistics">
-                        <h3>Statistics:</h3>
-                        <p>
-                            <span>done</span> <span id="done_tasks" data-done-task>0</span>  
-                            <span>needs</span> <span id="will_do_tasks" data-need-done-task>0</span>
-                        </p>
+                <div class="list_wrap">
+                    <ul class="list" data-list>
+                        <li data-item>
+                            <div class="view"></div>
+                            <input type="text" class="content_of_task" data-content readonly> 
+                            <button class="action_button" data-add-task>+</button>
+                            <button class="action_button" data-remove-task>-</button>
+                            <input type="checkbox" class="state_of_task" data-state-task/>    
+                            <button class="action_button" data-move-down-btn>&#8595;</button>
+                            <button class="action_button" data-move-up-btn>&#8593;</button>
+                        </li>
+                    </ul>
+                </div>    
+                <div class="statistics">
+                    <div class="statistics_counters">
+                        <p>Executed tasks - <span data-executed-tasks-statistics></span></p>
+                        <p>Need to execute - <span data-not-executed-tasks-statistics></span></p>
+                    </div>    
+                    <div class="statistics_action">
+                        <button class="functional_button" data-delete-tasks-btn>Delete all tasks</button>
+                        <button class="functional_button" data-mark-tasks-executed>Mark all tasks like executed</button>
                     </div>
-                    <div class="mark">
-                        <h3>Action with tasks:</h3>
-                        <p>
-                            <button id="delete_tasks">delete all tasks</button>  
-                            <button id="mark_tasks">mark all tasks</button>
-                        </p>
+                    <div class="statistics_view">
+                        <input type="radio" name="group" data-all-tasks checked/> all tasks <br>
+                        <input type="radio" name="group" data-executed-tasks/> executed tasks <br>
+                        <input type="radio" name="group" data-not-executed-tasks/> not executed tasks <br>
                     </div>
-                    <div class="filters">
-                        <h3>Filters:</h3>
-                        <div>
-                            <input type="radio" name="group" value="show_all_tasks" id="show_all_tasks" checked/>
-                            <label for="show_all_tasks">select all tasks</label>
-                            <input type="radio" name="group" value="show_done_tasks" id="show_done_tasks"/>
-                            <label for="show_done_tasks">select done tasks</label>
-                            <input type="radio" name="group" value="show_will_do_tasks" id="show_will_do_tasks"/>
-                            <label for="show_will_do_tasks">select will do tasks</label>
-                        </div>
-                    </div>
-                    <table class="todo_list" data-todo-list>
-                        <caption></caption>
-                        <thead>
-                            <tr>
-                                <th>Content</th>
-                                <th>Done</th> 
-                                <th>Add record</th> 
-                                <th>Remove record</th> 
-                            </tr>
-                        </thead>
-                        <tbody class="tbl_body" data-table-body>
-                            <tr class="bussiness" data-table-row>
-                                <td class="data" data-task></td>
-                                <td class="action"><input type="checkbox" class="checkbox" data-status-task/></td>
-                                <td class="action"><button class="plus" data-add-row>+</button></td>
-                                <td class="action"><button class="minus" data-remove-row>-</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </main>    
             <footer class="footer">
-                <p class="copyrightrecord">&copy;&nbsp;<span id="year">2016</span>&nbsp;Ruslana&nbsp;Podshyvalova</p>
+                <p class="copyrightrecord">&copy;&nbsp;<span id="year">2017</span>&nbsp;Ruslana&nbsp;Podshyvalova</p>
             </footer>   
         </div>  
-
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="js/controller.js"></script>
-        <script src="js/components/table.js"></script>
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="js/todolist.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
