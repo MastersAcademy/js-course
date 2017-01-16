@@ -5,8 +5,8 @@
         listenEvents : function() {
             this.$el.find('[data-save]').on('click', function() {
                 this.model.user = this.$el.find('[data-user-login]').val();
-                this.updateItemFromServer.bind(this)(); 
-                this.hide.bind(this)();   
+                this.updateItemFromServer(); 
+                this.hide();   
             }.bind(this));
            
         },
