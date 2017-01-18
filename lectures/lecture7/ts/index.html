@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>TS</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6OJ2UWvgxlIS4XW3jrR4Y7ErBKF3TOFM" type="text/javascript"></script>
+</head>
+<body data-forecast-area>
+
+    <h1>Weather forecast</h1>
+
+    <div class="panel search">
+        <div class="search-wrap">
+            <label>City name : </label><input type="text" data-input-city>
+            <a href="#" data-search>Search</a>
+        </div>
+        <div class="map" data-map></div>
+    </div>
+
+    <div class="panel forecast">
+        <header>
+            <strong data-city-name></strong>&nbsp;<strong data-city-country></strong>
+        </header>
+
+        <ul class="weather" data-forecasts>
+            <li class="weather-card">
+                <h3 data-date></h3>
+                <img src="#" alt="weather icon" data-icon>
+                <p data-description></p>
+                <p data-temperature></p>
+                <p data-wind-speed></p>
+            </li>
+        </ul>
+
+    </div>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/build/build.js"></script>
+</body>
+</html>
