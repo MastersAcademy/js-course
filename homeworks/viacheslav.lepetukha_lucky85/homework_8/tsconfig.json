@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "removeComments": true
-  },
-  "awesomeTypescriptLoaderOptions": {
-    /* ... */
-  }
-}
