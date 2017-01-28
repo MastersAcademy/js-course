@@ -1,0 +1,23 @@
+{
+  "name": "criss-cross",
+  "version": "1.0.0",
+  "description": "criss-cross",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "webpack": "^1.14.0",
+    "webpack-typescript": "^0.5.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "lucky",
+  "license": "ISC"
+}

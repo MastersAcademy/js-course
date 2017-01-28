@@ -1,0 +1,35 @@
+﻿td{
+	border:2px solid black;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+}
+table{
+	margin: 100px auto;
+	border:2px solid black;
+}
+#player1, #player2{
+	margin: 5px 100px;
+	text-align: center;
+
+}
+#player1{
+	float: left;
+}
+#player2{
+	float: right;
+}
+#game{
+	text-align: center;
+	margin: 30px;
+}
+#active{
+	background-color: #CCC;
+}
+section{
+	margin-top: 120px;
+	border-top: 3px solid black;
+}
+header{
+	font-size: 20px;
+}
