@@ -1,0 +1,41 @@
+{
+  "name": "homework_9",
+  "version": "1.0.0",
+  "description": "Tour of heroes",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "webpack-dev-server --inline --progress --port 8080"
+  },
+  "keywords": ["Angular 2", "Webpack", "TypeScript"],
+  "author": "Ihor Tkachuk",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.4",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.1",
+    "file-loader": "^0.10.0",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.26.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^2.6.0"
+  }
+}
