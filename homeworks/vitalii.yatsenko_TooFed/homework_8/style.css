@@ -1,0 +1,35 @@
+.player1,
+.gamenumb,
+.player2
+{
+   display: inline-block;
+}
+
+header {
+  width: 90%;
+  height: 90%;
+  margin:10px 50px 0 50px;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+.player1 {
+	text-align: left;
+}
+
+.gamenumb {
+  text-align: center;
+}
+.player2 {
+	text-align: right;
+}
+
+.table {
+	margin-top: 10%;
+	width: 10%;
+	height: 130px;
+}
+
+.chosen {
+	background-color: #f2f2f2;
+}
