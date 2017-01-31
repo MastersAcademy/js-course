@@ -4,16 +4,15 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "es2015",
+    "moduleResolution": "node",
     "inlineSourceMap": true,
     "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": true,
-    "types": ["node", "jasmine"]
+    "noImplicitAny": true
   },
   "exclude": [
-    "node_modules",
-    "typings"
+    "node_modules"
   ]
 }
