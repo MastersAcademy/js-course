@@ -2,7 +2,7 @@ var webpack = require('webpack');
 module.exports = {  
   entry: './app.ts',
   output: {
-    filename: 'assets/bundle.js'
+    filename: 'dist/script.js'
   },
   // Turn on sourcemaps
   devtool: 'source-map',

@@ -1,35 +1,35 @@
-.player1,
-.gamenumb,
-.player2
-{
-   display: inline-block;
-}
-
 header {
-  width: 90%;
-  height: 90%;
-  margin:10px 50px 0 50px;
-  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  margin:2% 4% 2% 4%;
+  align-items: center;
   border-bottom: 1px solid;
 }
 
 .player1 {
-	text-align: left;
-}
-
-.gamenumb {
   text-align: center;
 }
+
 .player2 {
-	text-align: right;
+  text-align: center;
 }
 
 .table {
-	margin-top: 10%;
-	width: 10%;
-	height: 130px;
+  table-layout: fixed;
+  margin-top: 10%;
+  width: 130px;
+  height: 130px;
+}
+
+.table th {
+  height: 30%;
+  width: 15%;
 }
 
 .chosen {
-	background-color: #f2f2f2;
+  background-color: #f2f2f2;
+}
+
+.combination {
+  color: red;
 }
