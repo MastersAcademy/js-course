@@ -1,11 +1,12 @@
 'use strict';
 
 const
-    HtmlWebpack  = require('html-webpack-plugin'),
-    path         = require('path'),
-    webpack      = require('webpack'),
-    ChunkWebpack = webpack.optimize.CommonsChunkPlugin,
-    rootDir      = path.resolve(__dirname, '..');
+    HtmlWebpack   = require('html-webpack-plugin'),
+    path          = require('path'),
+    webpack       = require('webpack'),
+    CheckerPlugin = require('awesome-typescript-loader'),
+    ChunkWebpack  = webpack.optimize.CommonsChunkPlugin,
+    rootDir       = path.resolve(__dirname, '..');
 
 module.exports = {
     // debug: true,
@@ -20,8 +21,12 @@ module.exports = {
     },
     module: {
         loaders: [
-            { loader: 'raw-loader', test: /\.(css|html)$/ },
-            { exclude: /node_modules/, loader: 'ts-loader', test: /\.ts$/ }
+            { test: /\.(css|html)$/, loader: 'raw-loader' },
+            { test: /\.ts$/, loaders: [{
+                loader: 'awesome-typescript-loader',
+                options: { configFileName: path.resolve(rootDir, 'tsconfig.json') }
+            } , 'angular2-template-loader'] },
+            { test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]}
         ]
     },
     output: {
