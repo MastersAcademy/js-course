@@ -1,0 +1,9 @@
+{
+  "name": "homework_9",
+  "dependencies": {},
+  "globalDependencies": {
+    "jasmine": "registry:dt/jasmine#2.5.0+20170117213604",
+    "node": "registry:env/node#6.0.0+20170119204930",
+    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd"
+  }
+}
