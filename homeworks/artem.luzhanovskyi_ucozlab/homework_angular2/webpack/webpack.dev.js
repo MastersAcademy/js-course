@@ -1,11 +1,11 @@
 'use strict';
 
-const HtmlWebpack = require('html-webpack-plugin');
-const path = require('path');
-const webpack = require('webpack');
-const ChunkWebpack = webpack.optimize.CommonsChunkPlugin;
-
-const rootDir = path.resolve(__dirname, '..');
+const
+    HtmlWebpack  = require('html-webpack-plugin'),
+    path         = require('path'),
+    webpack      = require('webpack'),
+    ChunkWebpack = webpack.optimize.CommonsChunkPlugin,
+    rootDir      = path.resolve(__dirname, '..');
 
 module.exports = {
     // debug: true,
