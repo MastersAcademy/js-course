@@ -1,0 +1,12 @@
+<div *ngIf="hero">
+  <h2>{{hero.name}} edit!</h2>
+
+  <div><label>id: </label>
+    <input [(ngModel)]="hero.id" placeholder="id"/>
+  </div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </div>
+  <img class="images" src="{{hero.img}}" alt="Image">
+</div>
