@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Hero {
-  id: number;
-  name: string;
-  image: string;
-}
+import {Hero} from "./hero";
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
@@ -34,15 +29,7 @@ const HEROES: Hero[] = [
     <img src="{{hero.image}}" alt="hero face" class="img-hero">
     </li>
   </ul>
-  <div *ngIf="selectedHero">
-    <h2>{{selectedHero.name}} details!</h2>
-    <div><label>id: </label>{{selectedHero.id}}</div>
-    <div>
-      <label>name: </label>
-      <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-    </div>
-    <div><label>image url: </label>{{selectedHero.image}}</div>
-  </div>
+  <my-hero-detail [hero]="selectedHero"></my-hero-detail>
   `,
   styles: [`
   .selected {
