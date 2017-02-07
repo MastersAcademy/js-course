@@ -1,24 +1,14 @@
 import { Component } from '@angular/core';
-import {Hero} from "./hero";
+import { OnInit } from '@angular/core';
 
-const HEROES: Hero[] = [
-  { id: 11, name: 'Mr. Nice', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 12, name: 'Narco', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 13, name: 'Bombasto', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 14, name: 'Celeritas', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 15, name: 'Magneta', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 16, name: 'RubberMan', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 17, name: 'Dynama', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 18, name: 'Dr IQ', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 19, name: 'Magma', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 20, name: 'Tornado', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" },
-  { id: 20, name: 'Tornado2', image: "https://cdn.pixabay.com/photo/2016/07/13/18/48/face-1515193_150.jpg" }
-];
+import {Hero} from "./hero";
+import { HeroService } from './hero.service';
 
 // var heroes = HEROES;
 
 @Component({
   selector: 'my-app',
+  providers: [HeroService],
   template: `
   <h2>My Heroes</h2>
   <ul class="heroes">
@@ -89,10 +79,22 @@ const HEROES: Hero[] = [
 `]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
-  heroes = HEROES;
+  heroes: Hero[];
   selectedHero: Hero;
+
+  constructor(private heroService: HeroService) {
+
+  }
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+  }
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
