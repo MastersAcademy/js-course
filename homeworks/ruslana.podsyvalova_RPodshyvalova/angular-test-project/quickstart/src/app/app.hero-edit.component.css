@@ -1,0 +1,12 @@
+.hero_edit_section {
+  float: left;
+  width: 40%;
+  background-color: lightblue; 
+  padding-left: 50px;
+}
+
+img {
+  border: 1px solid brown; 
+  margin: 20px;
+  width: 100px;
+}

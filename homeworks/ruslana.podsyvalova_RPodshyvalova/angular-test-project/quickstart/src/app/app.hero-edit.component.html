@@ -1,0 +1,24 @@
+<section class="hero_edit_section">    
+    <div *ngIf="hero">
+        <h2>{{hero.name}} edit section!</h2>
+        <div><label>id: </label><input [(ngModel)]="hero.id"/></div>
+        <div>
+            <label>name: </label>
+            <input [(ngModel)]="hero.name"/>
+            <div>
+                <label>photo: </label>
+                <img src="{{hero.photo}}" style="width:100px"><br>
+                <a href="#" (click)="clearPhoto($event)">Remove photo</a>
+            </div>
+            <div>
+                <label>anti-hero: </label>
+                <select [(ngModel)]="hero.antihero">
+                    <option *ngFor="let antihero of antiheroesList" [ngValue]="antihero">
+                        <span>{{antihero}}</span>
+                    </option>
+                </select>
+            </div>    
+        </div>
+    </div>
+</section> 
+

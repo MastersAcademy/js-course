@@ -7,7 +7,7 @@
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
-  "keywords": ["angular2 with webpack test project"],
+  "keywords": ["angular2", "webpack", "typescript"],
   "author": "RPodshyvalova",
   "license": "MIT",
   "dependencies": {
