@@ -5,11 +5,15 @@
         <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onShowDetails(hero)">
             <span class="badge">{{hero.id}}</span> 
             <span>{{hero.name}}</span>
-            <button class="edit_icon" (click)="onEdit(hero, $event)">&#9998;</button>
         </li>
     </ul>
     <div class="hero_information">
-        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-        <my-hero-edit [hero]="editedHero" [antiheroesList]="antiheroes"></my-hero-edit>
+        <div *ngIf="selectedHero">
+            <h2>
+                {{selectedHero.name | uppercase}} is my hero
+            </h2>
+            <button (click)="gotoDetail()">View Details</button>
+            <button (click)="gotoEditDetail()">Edit Details</button>
+        </div>
     </div>
 </section>    

@@ -13,12 +13,15 @@
             <div>
                 <label>anti-hero: </label>
                 <select [(ngModel)]="hero.antihero">
-                    <option *ngFor="let antihero of antiheroesList" [ngValue]="antihero">
+                    <option *ngFor="let antihero of antiheroes" [ngValue]="antihero">
                         <span>{{antihero}}</span>
                     </option>
                 </select>
             </div>    
         </div>
     </div>
+    <hr/>
+    <button (click)="goBack()">Back</button>
 </section> 
+
 
