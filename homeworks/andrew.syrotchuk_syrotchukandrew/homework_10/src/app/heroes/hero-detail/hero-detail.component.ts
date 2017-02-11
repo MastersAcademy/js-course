@@ -1,7 +1,8 @@
 import 'rxjs/add/operator/switchMap';
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnChanges} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {Location} from '@angular/common';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import {HeroService} from '../hero.service';
 import {Hero} from '../hero';
@@ -10,13 +11,18 @@ import {Hero} from '../hero';
     moduleId: module.id,
     selector: 'app-hero-detail',
     templateUrl: './hero-detail.component.html',
-    styleUrls: [ './hero-detail.component.css' ]
+    styleUrls: ['./hero-detail.component.css']
 })
-export class HeroDetailComponent implements OnInit {
+export class HeroDetailComponent implements OnInit, OnChanges {
     hero: Hero;
+    heroForm: FormGroup;
+
     constructor(private heroService: HeroService,
                 private route: ActivatedRoute,
-                private location: Location) { }
+                private location: Location,
+                private fb: FormBuilder) {
+        this.createForm();
+    }
 
     ngOnInit(): void {
         this.route.params
@@ -24,9 +30,34 @@ export class HeroDetailComponent implements OnInit {
             .subscribe(hero => this.hero = hero);
     }
 
-    save(): void {
+    ngOnChanges() {
+        this.heroForm.reset({
+            name: this.hero.name,
+        });
+    }
+
+    createForm() {
+        this.heroForm = this.fb.group({
+            name: ''
+        });
+    }
+
+    onSubmit() {
+        this.hero = this.prepareSaveHero();
         this.heroService.update(this.hero)
             .then(() => this.goBack());
+    }
+
+    revert() { this.ngOnChanges(); }
+
+    prepareSaveHero(): Hero {
+        const formModel = this.heroForm.value;
+
+        const savedHero: Hero = {
+            id: this.hero.id,
+            name: formModel.name as string,
+        };
+        return savedHero;
     }
 
     goBack(): void {
