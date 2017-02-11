@@ -2,7 +2,7 @@ import 'rxjs/add/operator/switchMap';
 import {Component, OnInit, OnChanges} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {Location} from '@angular/common';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 import {HeroService} from '../hero.service';
 import {Hero} from '../hero';
