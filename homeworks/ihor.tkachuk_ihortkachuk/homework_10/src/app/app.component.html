@@ -1,12 +1,6 @@
-<h2>My Heroes</h2>
-
-<ul class="heroes">
-    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero">
-        <span class="badge">{{hero.id}}</span>
-        <span (click)="onSelect(hero)">{{hero.name}}</span>
-        <i class="material-icons" (click)="onEdit(hero)">mode_edit</i>
-    </li>
-</ul>
-
-<hero-detail [hero]="selectedHero"></hero-detail>
-<hero-edit [hero]="editHero" (save)="clear()"></hero-edit>
+<h1>{{title}}</h1>
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
