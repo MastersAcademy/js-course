@@ -1,4 +1,4 @@
-import {Component,Input, OnInit} from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 import { Hero } from './hero';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -39,5 +39,11 @@ export class HeroEditComponent {
     
     goBack(): void {
         this.location.back();
+    }
+    
+    save(): void {
+        this.heroService
+            .update(this.hero)
+            .then(() => this.goBack());
     }
 }
