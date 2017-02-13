@@ -1,3 +1,17 @@
 input.ng-invalid {
-  border: 1px solid red;
+  border: 1px solid #F44336;
+  box-shadow: 0 0 5px #F44336;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 6px 12px;
+  background: none;
+  border: 1px solid #eee;
+}
+
+.field {
+  margin-bottom: 10px;
 }
