@@ -1,0 +1,25 @@
+<form [formGroup]="heroForm" novalidate (ngSubmit)="save()" [class.hidden]="hidden" class="hero-form" >
+
+    <label for="name">Name</label>
+    <input formControlName="name" placeholder="Hero name" id="name" required>
+
+    <label for="img">Image</label>
+    <input #img formControlName="img" (change)="showPreview(img)" placeholder="http://" id="img" >
+    <div class="img">{{ hero.img || imgPreview ? '' : 'No image' }}
+        <img *ngIf="imgPreview || hero.img" [src]="imgPreview || hero.img" [alt]="hero.name || missing">
+    </div>
+
+    <fieldset formArrayName="skills" class="skills">
+        <legend>Skills</legend>
+        <button type="button" (click)="addSkill()" class="add-skill"></button>
+        <div [formGroupName]="i"
+            [@skill]="skill.state"
+            *ngFor="let skill of skills.controls; let i=index" class="skills-group">
+            <button type="button" (click)="removeSkill(i)" class="remove-skill" ></button>
+            <input formControlName="skill" placeholder="new Skill()" class="skill" required>
+        </div>
+    </fieldset>
+
+    <button class="submit" type="submit" [disabled]="heroForm.invalid"></button>
+    <button class="cancel" type="button" (click)="reset()"></button>
+</form>

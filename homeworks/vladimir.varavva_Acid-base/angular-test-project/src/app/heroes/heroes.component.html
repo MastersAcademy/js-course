@@ -1,0 +1,22 @@
+<h2>My Heroes</h2>
+
+<button class="create" type="button" (click)="value.togglePopup()">Create</button>
+<hero-value #value (heroUpdated)="heroesUpdate($event)"></hero-value>
+
+<div class="value" [class.on-edit]="!value.hidden">
+    <ul class="heroes">
+        <li [@hero]="hero.state" *ngFor="let hero of heroes"
+            [class.selected]="hero === selectedHero"
+            (click)="onSelect(hero)">
+            <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+            <button type="button" class="delete"
+            (click)="delete(hero); $event.stopPropagation()"></button>
+        </li>
+    </ul>
+
+    <div [@hero]="selectedHero.state" *ngIf="selectedHero">
+        <button class="view" type="button" (click)="gotoDetail()">
+            View Details {{ selectedHero.name | uppercase }}
+        </button>
+    </div>
+</div>
