@@ -1,13 +1,5 @@
-<h1>{{title}}</h1>
-<div *ngIf="selectedHero">
-    <h2 >{{selectedHero.name}} details!</h2>
-    <div><label>id: </label>{{selectedHero.id}}</div>
-    <div><label>name: </label><input [(ngModel)]="selectedHero.name" placeholder="name"></div>
-    <div class="heroe-image"><img src="{{selectedHero.img}}" alt=""></div>
-</div>
-
-<div class="col-xs-6">
-    <h2>My Heroes</h2>
+<div class="col-xs-4">
+    <h2>Good Heroes</h2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes"
             [class.selected]="hero === selectedHero"
@@ -16,8 +8,16 @@
         </li>
     </ul>
 </div>
-<div class="col-xs-6">
-    <h2>My Bad Heroes</h2>
+<div class="col-xs-4">
+    <p>
+        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+    </p>
+    <p>
+        <my-hero-update [hero]="selectedHero" (onupdate)="selectedHero($event)"></my-hero-update>
+    </p>
+</div>
+<div class="col-xs-4">
+    <h2>Evil Heroes</h2>
     <ul class="heroes">
         <li *ngFor="let hero of badheroes"
             [class.selected]="hero === selectedHero"

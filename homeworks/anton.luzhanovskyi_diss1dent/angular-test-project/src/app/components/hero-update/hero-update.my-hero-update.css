@@ -1,0 +1,9 @@
+.heroe-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.heroe-image img {
+    max-width: 100%;
+}

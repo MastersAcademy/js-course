@@ -46,17 +46,7 @@
     border-radius: 4px 0 0 4px;
 }
 
-.col-xs-6 {
-    width: 50%;
+.col-xs-4 {
+    width: 33.3%;
     float: left;
-}
-
-.heroe-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.heroe-image img {
-    max-width: 100%;
 }

@@ -1,0 +1,8 @@
+<div *ngIf="hero">
+    <h2 >{{hero.name}} update!</h2>
+    <div><label>id: </label><input [(ngModel)]="hero.id" placeholder="id"></div>
+    <div><label>name: </label><input [(ngModel)]="hero.name" placeholder="name"></div>
+    <div><label>image: </label><input [(ngModel)]="hero.img" placeholder="img"></div>
+    <button (click)="onSave()">Save</button>
+</div>
+
