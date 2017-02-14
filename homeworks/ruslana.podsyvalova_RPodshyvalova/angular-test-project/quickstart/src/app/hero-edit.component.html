@@ -1,28 +1,35 @@
-<section class="hero_edit_section">    
-    <div *ngIf="hero">
-        <h2>{{hero.name}} edit section!</h2>
-        <div><label>id: </label><input [(ngModel)]="hero.id"/></div>
-        <div>
-            <label>name: </label>
-            <input [(ngModel)]="hero.name"/>
-            <div>
-                <label>photo: </label>
-                <img src="{{hero.photo}}" style="width:100px"><br>
-                <a href="#" (click)="clearPhoto($event)">Remove photo</a>
-            </div>
-            <div>
-                <label>anti-hero: </label>
-                <select [(ngModel)]="hero.antihero">
-                    <option *ngFor="let antihero of antiheroes" [ngValue]="antihero">
-                        <span>{{antihero}}</span>
-                    </option>
-                </select>
-            </div>    
-        </div>
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()"  novalidate>
+    <div class="form-group">
+        <label>Id:
+            <input class="form-control" formControlName="id" disabled>
+        </label>
     </div>
-    <hr/>
-    <button (click)="goBack()">Back</button>
-    <button (click)="save()">Save</button>
-</section> 
-
-
+    <div class="form-group">
+        <label>Name:
+            <input class="form-control" formControlName="name">
+            <div *ngIf="heroForm.controls['name'].invalid && heroForm.controls['name'].touched">
+                <span class="error-message">Name is required</span>
+            </div>
+        </label>
+    </div>
+    <div>
+        <label>Photo:
+            <img name="photo" src="{{hero.photo}}" ><br>
+            <a href="#" (click)="clearPhoto($event)">Remove photo</a>
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Antihero:
+            <select class="form-control" formControlName="antihero">
+                <option *ngFor="let antihero of antiheroes" [value]="antihero">{{antihero}}</option>
+            </select>
+        </label>
+    </div>
+    <div style="margin-bottom: 1em">
+        <button type="submit"
+            [disabled]="heroForm.pristine" class="btn btn-success">Save</button> &nbsp;
+        <button type="reset" (click)="revert()"
+            [disabled]="heroForm.pristine" class="btn btn-danger">Revert</button>
+    </div>
+</form>
+<p>heroForm value: {{ heroForm.value | json}}</p>

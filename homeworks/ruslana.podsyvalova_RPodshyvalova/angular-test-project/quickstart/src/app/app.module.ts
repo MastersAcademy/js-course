@@ -16,13 +16,16 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { HeroSearchComponent }  from './hero-search.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         AppRoutingModule,
         HttpModule,
-        InMemoryWebApiModule.forRoot(InMemoryDataService)
+        InMemoryWebApiModule.forRoot(InMemoryDataService),
+        ReactiveFormsModule
     ],
     declarations: [
         AppComponent,
