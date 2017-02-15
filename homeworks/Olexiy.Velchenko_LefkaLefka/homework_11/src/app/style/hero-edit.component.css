@@ -1,0 +1,37 @@
+label {
+  width: 3em;
+  color: #607D8B;
+  font-weight: bold;
+}
+input {
+  height: 1.5em;
+  font-size: 1em;
+  padding-left: .4em;
+  margin: 5px auto;
+  border-radius: 4px;
+}
+select {
+  height: 1.5em;
+  font-size: 1em;
+  padding-left: .4em;
+  margin: 5px auto;
+  border-radius: 4px;
+}
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

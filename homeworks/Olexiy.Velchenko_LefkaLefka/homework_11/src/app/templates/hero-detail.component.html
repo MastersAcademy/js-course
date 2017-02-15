@@ -1,0 +1,22 @@
+<div *ngIf="hero">
+    <h2>{{hero.name}}'s details!</h2>
+    <span>id: </span>{{hero.id}}
+    <br>
+    <span>Name: </span>{{hero.name}}
+    <br>
+    <span>State: </span>{{hero.address.state}}
+    <br>
+    <span>City: </span>{{hero.address.city}}
+    <br>
+    <span>Street: </span>{{hero.address.street}}
+    <br>
+    <span>Zip Code: </span>{{hero.address.zip}}
+    <br>
+    <span>{{hero.name}}'s photo:</span>
+    <br>
+    <br>
+    <img src="{{hero.image}}" alt="{{hero.name}}">
+    <br>
+    <button (click)="goEdit()">Edit</button>
+    <button (click)="goBack()">Back</button>
+</div>
