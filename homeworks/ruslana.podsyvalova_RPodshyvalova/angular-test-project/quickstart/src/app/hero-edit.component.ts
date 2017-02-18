@@ -1,4 +1,4 @@
-import { Component,Input, OnInit, OnChanges  } from '@angular/core';
+import { Component,Input, OnInit, OnChanges, ElementRef, ViewChild  } from '@angular/core';
 import { Hero } from './hero';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -16,34 +16,44 @@ export class HeroEditComponent implements OnInit, OnChanges {
     @Input() hero: Hero;
     antiheroes: string[];
     heroForm: FormGroup;
-    
+    filesToUpload: Array<File>;
+    @ViewChild('photo') image: ElementRef;
+   
     constructor(
         private heroService: HeroService,
         private route: ActivatedRoute,
         private location: Location,
         private fb: FormBuilder) {
+            this.filesToUpload = [];
     }  
     
     ngOnInit(): void {
+        this.createForm();
+        this.getAntiheroes();
         this.route.params
             .switchMap((params: Params) => this.heroService.getHero(+params['id']))
-            .subscribe(hero => this.hero = hero);
-     
-        this.hero = {id: 20, name: 'Tornado', photo: "src/images/Tornado.jpg", antihero: "John Constantine" };
-        this.getAntiheroes();
-        this.createForm();
+            .subscribe((hero: any) => {
+                this.hero = hero;
+                this.heroForm = this.fb.group({
+                    id: this.hero.id,
+                    name: this.hero.name,
+                    photo: this.hero.photo,
+                    antihero: this.hero.antihero
+                });
+        
+            });
     }
     
     createForm() {
         this.heroForm = this.fb.group({
-            id: this.hero.id,
-            name: [this.hero.name, Validators.required],
-            photo: [this.hero.photo, Validators.required],
-            antihero: this.hero.antihero
-        });
-    }
+            id: 0,
+            name: ['', Validators.required],
+            photo: ['', Validators.required],
+            antihero: ''
+        }        
+    )};
     
-    ngOnChanges() {
+    ngOnChanges(){
         this.heroForm.reset({
             id: this.hero.id,
             name: this.hero.name,
@@ -51,7 +61,7 @@ export class HeroEditComponent implements OnInit, OnChanges {
             antihero: this.hero.antihero
         });
     }
-    
+   
     onSubmit() {
         this.hero = this.prepareSaveHero();
         this.save();
@@ -63,7 +73,7 @@ export class HeroEditComponent implements OnInit, OnChanges {
         const saveHero: Hero = {
             id: this.hero.id,
             name: formModel.name as string,
-            photo: formModel.photo as string,
+            photo: formModel.photo as string, 
             antihero: formModel.antihero as string
         };
         return saveHero;
@@ -81,6 +91,7 @@ export class HeroEditComponent implements OnInit, OnChanges {
     clearPhoto(event: any) {
         event.preventDefault();
         this.hero.photo = '';
+        this.heroForm.value.photo = '';
     }
     
     goBack(): void {
@@ -91,5 +102,53 @@ export class HeroEditComponent implements OnInit, OnChanges {
         this.heroService
             .update(this.hero)
             .then(() => this.goBack());
+//        this.upload();
+
     }
+    
+//    upload() {
+//        this.makeFileRequest("http://server/api/upload", [], this.filesToUpload).then((result) => {
+//            console.log(result);
+//        }, (error) => {
+//            console.error(error);
+//        });
+//    }
+ 
+    fileChangeEvent(fileInput: any){
+        this.filesToUpload = <Array<File>> fileInput.target.files;
+        let fileReader = new FileReader();
+        let dataUrl: any;
+        let domImage = this.image;
+        fileReader.onload = function(e) {
+            dataUrl = this.result;
+            console.log( dataUrl);
+            domImage.nativeElement.src = dataUrl;
+                 
+        }
+        fileReader.readAsDataURL(this.filesToUpload[0]);
+        
+        this.hero.photo = this.filesToUpload[0].name;
+        this.heroForm.value.photo = this.filesToUpload[0].name;
+    }
+ 
+//    makeFileRequest(url: string, params: Array<string>, files: Array<File>) {
+//        return new Promise((resolve, reject) => {
+//            var formData: any = new FormData();
+//            var xhr = new XMLHttpRequest();
+//            for(var i = 0; i < files.length; i++) {
+//                formData.append("uploads[]", files[i], files[i].name);
+//            }
+//            xhr.onreadystatechange = function () {
+//                if (xhr.readyState == 4) {
+//                    if (xhr.status == 200) {
+//                        resolve(JSON.parse(xhr.response));
+//                    } else {
+//                        reject(xhr.response);
+//                    }
+//                }
+//            }
+//            xhr.open("POST", url, true);
+//            xhr.send(formData);
+//        });
+//    }
 }

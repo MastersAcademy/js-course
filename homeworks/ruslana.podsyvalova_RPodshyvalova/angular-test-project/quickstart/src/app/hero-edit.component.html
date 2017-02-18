@@ -14,8 +14,9 @@
     </div>
     <div>
         <label>Photo:
-            <img name="photo" src="{{hero.photo}}" ><br>
-            <a href="#" (click)="clearPhoto($event)">Remove photo</a>
+            <img #photo src="{{hero?.photo}}"><br>
+            <a href="#" (click)="clearPhoto($event)">Remove photo</a> 
+            <input type="file" class="btn btn-success" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
         </label>
     </div>
     <div class="form-group">
