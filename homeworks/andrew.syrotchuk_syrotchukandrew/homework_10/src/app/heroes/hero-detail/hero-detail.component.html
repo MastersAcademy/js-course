@@ -1,10 +1,16 @@
 <div *ngIf="hero">
     <h2>{{hero.name}} details!</h2>
-    <div>
-        <label>id: </label>{{hero.id}}
-    </div>
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name"/>
-    </div>
+    <form [formGroup]="heroForm" (ngSubmit)="onSubmit()" novalidate>
+        <button type="submit" [disabled]="heroForm.pristine">Save</button>&nbsp;
+        <button type="reset" (click)="revert()" [disabled]="heroForm.pristine">Revert</button>
+        <div>
+            <label>id: </label>{{hero.id}}
+        </div>
+        <div>
+            <label>name: </label>
+            <input formControlName="name" ngModel={{hero.name}}/>
+        </div>
+    </form>
+    <button (click)="goBack()">Back</button>
 </div>
+
