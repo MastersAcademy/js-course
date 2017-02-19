@@ -12,7 +12,7 @@ import "@angular/router";
 import "rxjs";
 import "zone.js";
 
-import "../styles/style.scss";
+import "../app/styles/style.scss";
 
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...

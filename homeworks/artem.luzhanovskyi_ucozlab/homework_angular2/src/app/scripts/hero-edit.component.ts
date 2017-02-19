@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { Hero } from "./hero";
+import { HeroService } from './hero.service';
 
 @Component({
     selector: "my-hero-edit",
@@ -29,6 +30,9 @@ import { Hero } from "./hero";
             <div>
                 <button type="button" (click)="saveHero()" class="btn btn-success">Save</button>
             </div>
+            <!--<div>-->
+                <!--<button class="btn btn-danger" (click)="delete(hero); $event.stopPropagation()">Delete</button>-->
+            <!--</div>-->
         </div>
         `
 })
@@ -40,8 +44,17 @@ export class HeroEditComponent {
     canEdit: boolean;
 
     @Output() allowEdit = new EventEmitter<boolean>();
+    @Output() goBack    = new EventEmitter<boolean>();
+
+    constructor(
+        private heroService: HeroService
+    ) {}
 
     saveHero() {
         this.allowEdit.emit(false);
+    }
+    save(): void {
+        this.heroService.update(this.hero)
+            .then(() => this.goBack.emit());
     }
 }

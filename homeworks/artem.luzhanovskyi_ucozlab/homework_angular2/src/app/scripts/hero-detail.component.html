@@ -1,5 +1,5 @@
 <div *ngIf="hero" class="row">
-    <div class="col-6">
+    <div class="col-4">
         <h2>Hero details</h2>
         <p>
             <img [src]="hero.image" alt="{{hero.name}}">
@@ -11,9 +11,13 @@
         <div>
             <button type="button" (click)="allowEdit(true)" class="btn btn-info">Edit</button>
         </div>
+        <div>
+            <button type="button" (click)="delete(hero); $event.stopPropagation()" class="btn btn-danger">X</button>
+        </div>
+
     </div>
-    <div class="col-6">
-        <my-hero-edit [hero]="hero" [canEdit]="canEdit" (allowEdit)="allowEdit($event)"></my-hero-edit>
+    <div class="col-4">
+        <my-hero-edit [hero]="hero" [canEdit]="canEdit" (goBack)="goBack()" (allowEdit)="allowEdit($event)"></my-hero-edit>
     </div>
 </div>
 <br/>
