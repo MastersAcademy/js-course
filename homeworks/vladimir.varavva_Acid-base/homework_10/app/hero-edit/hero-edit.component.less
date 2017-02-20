@@ -1,0 +1,54 @@
+button {
+  position: absolute;
+  width: 3em;
+  height: 2em;
+  left: 19em;
+  opacity: 0.7;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.popup {
+  position: absolute;
+  top: 40%;
+  width: 25em;
+  padding: 1em;
+  border-radius: 3px;
+  background-color: #666;
+  color: #fff;
+  transition: transform 0.3s ease;
+  z-index: 100;
+
+  div {
+    margin: 1em;
+  }
+
+  button {
+    bottom: 0.5em;
+    left: 90%;
+    background-color: #eee;
+    opacity: 1;
+  }
+}
+
+.hidden {
+  transform: translate(-25em) scale(0);
+  transition: transform 0.3s ease;
+}
+
+input {
+  float: right;
+  width: 85%;
+  height: 2em;
+  padding: 0.5em;
+  border-radius: 2px;
+  border: none;
+}
+
+img {
+  position: relative;
+  left: 4em;
+  width: 40%;
+}

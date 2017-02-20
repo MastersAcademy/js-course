@@ -2,7 +2,6 @@
     var switchTab = document.querySelector(".switch-tab");
     var wrap = document.querySelector(".wrapper");
     var btnContact = document.querySelector(".btn-contact");
-    var popUp = document.querySelector(".pop-up");
     var closePopUp = document.querySelector(".close-pop-up");
     var currentYear = document.querySelector(".year");
     
@@ -19,11 +18,11 @@
     
     //    task #2
     btnContact.onclick = function() {
-        popUp.classList.add("pop-up-show");
+        window.popup.show(this);
     };
 
     closePopUp.onclick = function() {
-        popUp.classList.remove("pop-up-show");
+        window.popup.hide(this);
     };
   
     //    task #3

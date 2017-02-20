@@ -1,0 +1,18 @@
+<div [@detail]="hero.state" *ngIf="hero">
+
+    <button class="edit" type="button" (click)="value.togglePopup()">Edit</button>
+    <h2>{{ hero.name }}</h2>
+
+    <div class="value" [class.on-edit]="!value.hidden">
+
+        <img *ngIf="hero.img" [src]="hero.img" [alt]="hero.name">
+
+        <div *ngIf="hero.skills.length" >Skills:</div>
+        <ul>
+            <li *ngFor="let skill of hero.skills">{{ skill }}</li>
+        </ul>
+        <button class="go-back" type="button" (click)="goBack()">Back</button>
+    </div>
+
+    <hero-value #value [hero]="hero" (heroUpdated)="heroUpdated($event)"></hero-value>
+</div>

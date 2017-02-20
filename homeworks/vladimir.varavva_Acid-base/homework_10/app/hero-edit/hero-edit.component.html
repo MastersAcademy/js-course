@@ -1,0 +1,18 @@
+<button *ngIf="hero" (click)="togglePopup()">{{ hidden ? 'edit' : 'done' }}</button>
+
+<div class="popup" [class.hidden]="hidden" *ngIf="hero">
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name">
+    </div>
+    <div>
+        <label>skills: </label>
+        <input [(ngModel)]="hero.skills" placeholder="skills">
+    </div>
+    <div>
+        <label>img: </label>
+        <input [(ngModel)]="hero.img" placeholder="img url">
+    </div>
+    <img *ngIf="hero.img" [src]="hero.img" alt="Hero image">
+    <button (click)="togglePopup()">done</button>
+</div>
