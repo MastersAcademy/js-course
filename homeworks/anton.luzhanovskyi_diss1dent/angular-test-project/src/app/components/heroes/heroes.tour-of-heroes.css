@@ -45,7 +45,15 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
 }
-
+.heroe-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.heroe-image img {
+    max-width: 100%;
+}
 .col-xs-4 {
     width: 33.3%;
     float: left;

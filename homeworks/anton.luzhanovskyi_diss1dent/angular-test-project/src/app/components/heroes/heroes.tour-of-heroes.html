@@ -9,12 +9,16 @@
     </ul>
 </div>
 <div class="col-xs-4">
-    <p>
-        <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-    </p>
-    <p>
-        <my-hero-update [hero]="selectedHero" (onupdate)="selectedHero($event)"></my-hero-update>
-    </p>
+    <div *ngIf="selectedHero">
+        <h2>
+            {{selectedHero.name | uppercase}} is my hero
+        </h2>
+        <div><label>id: </label>{{selectedHero.id}}</div>
+        <div><label>name: </label>{{selectedHero.name}}</div>
+        <div class="heroe-image"><img src="{{selectedHero.img}}" alt=""></div>
+        <button (click)="gotoDetail()">View Details</button>
+    </div>
+    <p></p>
 </div>
 <div class="col-xs-4">
     <h2>Evil Heroes</h2>

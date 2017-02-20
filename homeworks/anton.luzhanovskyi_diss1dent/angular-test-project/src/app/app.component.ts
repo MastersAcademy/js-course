@@ -5,13 +5,14 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @Component({
+    //moduleId: module.id,
     selector: 'my-app',
     template: `
         <h1>{{title}}</h1>
         <div class="col-xs-12">
           <nav>
-            <a routerLink="/dashboard">Dashboard</a>
-            <a routerLink="/heroes">Heroes</a>
+            <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
            </nav>
         </div>
         <router-outlet></router-outlet>
