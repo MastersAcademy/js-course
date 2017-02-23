@@ -8,11 +8,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     //moduleId: module.id,
     selector: 'my-app',
     template: `
-        <h1>{{title}}</h1>
+        <h1 class="my-3">{{title}}</h1>
         <div class="col-xs-12">
           <nav>
-            <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-            <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+            <a routerLink="/dashboard" routerLinkActive="active" class="btn btn-primary">Dashboard</a>
+            <a routerLink="/heroes" routerLinkActive="active" class="btn btn-primary">Heroes</a>
            </nav>
         </div>
         <router-outlet></router-outlet>

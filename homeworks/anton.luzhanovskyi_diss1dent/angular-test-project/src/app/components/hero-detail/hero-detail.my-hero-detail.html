@@ -1,7 +1,7 @@
 <div *ngIf="hero">
     <h2 >{{hero.name}} details!</h2>
-    <div><label>id: </label><input [(ngModel)]="hero.id" placeholder="id"></div>
-    <div><label>name: </label><input [(ngModel)]="hero.name" placeholder="name"></div>
-    <div><label>image: </label><input [(ngModel)]="hero.img" placeholder="img"></div>
-    <button (click)="goBack()">Back</button>
+    <div><label>id: </label><input [(ngModel)]="hero.id" placeholder="id" class="form-control"></div>
+    <div><label>name: </label><input [(ngModel)]="hero.name" placeholder="name" class="form-control"></div>
+    <div><label>image: </label><input [(ngModel)]="hero.img" placeholder="img" class="form-control"></div>
+    <button (click)="goBack()" class="btn btn-primary mt-2">Back</button>
 </div>

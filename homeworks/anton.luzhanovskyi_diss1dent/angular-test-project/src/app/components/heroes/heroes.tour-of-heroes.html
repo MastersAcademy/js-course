@@ -1,32 +1,34 @@
-<div class="col-xs-4">
-    <h2>Good Heroes</h2>
-    <ul class="heroes">
-        <li *ngFor="let hero of heroes"
-            [class.selected]="hero === selectedHero"
-            (click)="onSelect(hero)">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </li>
-    </ul>
-</div>
-<div class="col-xs-4">
-    <div *ngIf="selectedHero">
-        <h2>
-            {{selectedHero.name | uppercase}} is my hero
-        </h2>
-        <div><label>id: </label>{{selectedHero.id}}</div>
-        <div><label>name: </label>{{selectedHero.name}}</div>
-        <div class="heroe-image"><img src="{{selectedHero.img}}" alt=""></div>
-        <button (click)="gotoDetail()">View Details</button>
+<div class="mt-4">
+    <div class="col-xs-4">
+        <h2>Good Heroes</h2>
+        <ul class="heroes">
+            <li *ngFor="let hero of heroes"
+                [class.selected]="hero === selectedHero"
+                (click)="onSelect(hero)">
+                <span class="badge">{{hero.id}}</span> {{hero.name}}
+            </li>
+        </ul>
     </div>
-    <p></p>
-</div>
-<div class="col-xs-4">
-    <h2>Evil Heroes</h2>
-    <ul class="heroes">
-        <li *ngFor="let hero of badheroes"
-            [class.selected]="hero === selectedHero"
-            (click)="onSelect(hero)">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-        </li>
-    </ul>
+    <div class="col-xs-4">
+        <div *ngIf="selectedHero">
+            <h2>
+                {{selectedHero.name | uppercase}} is my hero
+            </h2>
+            <div><label>id: </label>{{selectedHero.id}}</div>
+            <div><label>name: </label>{{selectedHero.name}}</div>
+            <div class="heroe-image"><img src="{{selectedHero.img}}" alt=""></div>
+            <button (click)="gotoDetail()" class="btn btn-primary mt-2">View Details</button>
+        </div>
+        <p></p>
+    </div>
+    <div class="col-xs-4">
+        <h2>Evil Heroes</h2>
+        <ul class="heroes">
+            <li *ngFor="let hero of badheroes"
+                [class.selected]="hero === selectedHero"
+                (click)="onSelect(hero)">
+                <span class="badge">{{hero.id}}</span> {{hero.name}}
+            </li>
+        </ul>
+    </div>
 </div>
