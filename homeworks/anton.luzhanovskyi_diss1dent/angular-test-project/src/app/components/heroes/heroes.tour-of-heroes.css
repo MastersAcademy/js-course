@@ -6,7 +6,7 @@
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
+    width: 20em;
 }
 .heroes li {
     cursor: pointer;
@@ -36,7 +36,7 @@
     background-color: #0275d8;
     position: relative;
     margin-right: .8em;
-    border-radius: 4px 0 0 4px;
+    border-radius: 50% ;
 }
 .heroe-image {
     width: 150px;

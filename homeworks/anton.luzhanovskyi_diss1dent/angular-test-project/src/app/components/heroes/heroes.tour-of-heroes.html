@@ -1,11 +1,21 @@
 <div class="mt-4">
+    <form class="form-inline">
+        <label class="mr-2">Hero name:</label> <input class="form-control mr-2" #heroName />
+        <button class="btn btn-primary" (click)="add(heroName.value); heroName.value=''">
+            Add
+        </button>
+    </form>
     <div class="col-xs-4">
         <h2>Good Heroes</h2>
-        <ul class="heroes">
+        <ul class="heroes list-group">
             <li *ngFor="let hero of heroes"
+                class="list-group-item justify-content-start"
                 [class.selected]="hero === selectedHero"
                 (click)="onSelect(hero)">
-                <span class="badge">{{hero.id}}</span> {{hero.name}}
+                <span class="badge badge-primary">{{hero.id}}</span>
+                <span class="">{{hero.name}}</span>
+                <button class="delete btn btn-danger p-1 ml-auto"
+                        (click)="delete(hero); $event.stopPropagation()">x</button>
             </li>
         </ul>
     </div>
@@ -21,7 +31,7 @@
         </div>
         <p></p>
     </div>
-    <div class="col-xs-4">
+    <!--<div class="col-xs-4">
         <h2>Evil Heroes</h2>
         <ul class="heroes">
             <li *ngFor="let hero of badheroes"
@@ -30,5 +40,5 @@
                 <span class="badge">{{hero.id}}</span> {{hero.name}}
             </li>
         </ul>
-    </div>
+    </div>-->
 </div>
