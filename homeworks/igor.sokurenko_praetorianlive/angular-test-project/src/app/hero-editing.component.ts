@@ -1,27 +1,62 @@
-import { Component, Input } from '@angular/core';
-import { Hero } from './hero';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params }   from '@angular/router';
+import { Location }                 from '@angular/common';
+import { HeroService }  from './hero.service';
+import { Hero }         from './hero';
+import 'rxjs/add/operator/switchMap';
+import { FormGroup,  Validators, FormBuilder} from '@angular/forms';
+
 @Component({
     selector: 'my-hero-editing',
-    template: `
-        <div *ngIf="hero">
-            <h2>{{hero.name}} details!</h2>
-            <div>
-                <label>id: </label>
-                <input [(ngModel)]="hero.id" placeholder="id"/>
-            </div>
-            <div>
-                <label>name: </label>
-                <input [(ngModel)]="hero.name" placeholder="name"/>
-            </div>
-            <div>
-                <label>skill: </label>
-                <input [(ngModel)]="hero.skill" placeholder="skill"/>
-            </div>
-            <img name = 'img' src = '{{hero.avatar}}' alt = 'Heroes Avatar'/>
-        </div>
-    `
+    templateUrl: './hero-editing.component.html'
+
 })
 export class HeroEditingComponent {
-    @Input()
-    hero: Hero;
+    heroForm: FormGroup; 
+    @Input() hero: Hero;
+    constructor(
+        private heroService: HeroService,
+        private route: ActivatedRoute,
+        private location: Location,
+        private fb: FormBuilder
+    ) {}
+    ngOnInit(): void {
+        this.createForm();
+        this.route.params
+            .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+            .subscribe(hero => {
+                this.hero = hero;
+                this.heroForm = this.fb.group({
+                    id: this.hero.id,
+                    name: this.hero.name,
+                    skill: this.hero.skill,
+                    avatar: this.hero.avatar
+                });
+        
+            });
+    }
+    
+    createForm() {
+        this.heroForm = this.fb.group({
+            id: '',
+            name: ['', Validators.required],
+            skill: '',
+            avatar: ''
+        });
+    }
+    goBack(): void {
+        this.location.back();
+    }
+    save(): void {
+        let formModel = this.heroForm.value;
+        let saveHero: Hero = {
+            id: this.hero.id,
+            name: formModel.name as string,
+            skill: formModel.skill as string, 
+            avatar: this.hero.avatar
+        };
+        this.heroService
+            .update(saveHero)
+            .then(() => this.goBack());
+    }
 }

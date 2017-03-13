@@ -1,0 +1,34 @@
+<div *ngIf="hero">
+    <h2>{{hero.name}} details!</h2>
+    <h3><i>FormControl in a FormGroup</i></h3>
+    <form [formGroup]="heroForm" novalidate>
+        <div class="form-group">
+            <label class="center-block">Id:
+                <input class="form-control" formControlName="id">
+            </label>
+        </div>   
+        <div class="form-group">
+            <label class="center-block">Name:
+                <input class="form-control" formControlName="name">
+                    <div *ngIf="heroForm.controls['name'].invalid && heroForm.controls['name'].touched">
+                        <span class="error-message">Name is required</span>
+                    </div>
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="center-block">Skill:
+                <input class="form-control" formControlName="skill">
+            </label>
+        </div>  
+        <div class="form-group">
+            <label class="center-block">Avatar:
+                <img src="{{hero?.avatar}}">
+            </label>
+        </div>
+        <button (click)="goBack()">Back</button>
+        <button (click)="save()">Save</button>
+    </form>
+</div>
+
+<p>Form value: {{ heroForm.value | json }}</p>
+<p>Form status: {{ heroForm.status | json }}</p>
