@@ -1,0 +1,24 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "MOC_homework_1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitaliy0504/js-course.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "npm",
+    "First_homework"
+  ],
+  "author": "vitaliy.shapoval_vitaliy0504",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitaliy0504/js-course/issues"
+  },
+  "homepage": "https://github.com/vitaliy0504/js-course#readme"
+}
