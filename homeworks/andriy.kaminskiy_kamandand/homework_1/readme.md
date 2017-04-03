@@ -1,0 +1,1 @@
+Поточна версія nodeJS: v6.9.1 (includes npm 3.10.8)
