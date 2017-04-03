@@ -1,0 +1,11 @@
+{
+  "name": "elmarfdk",
+  "version": "3.10.8",
+  "description": "npm init",
+  "main": "c:\\",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "elmarfdk",
+  "license": "ISC"
+}
