@@ -1,0 +1,22 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Nikonbbg/js-course.git).git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "NikonBBG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikonbbg/js-course.git)/issues"
+  },
+  "homepage": "https://github.com/Nikonbbg/js-course.git)#readme"
+}
