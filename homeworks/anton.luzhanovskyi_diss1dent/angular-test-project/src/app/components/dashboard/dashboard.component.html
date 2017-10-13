@@ -1,0 +1,18 @@
+<div class="mt-4">
+    <h2>Top Heroes</h2>
+    <div class="card">
+        <div class="card-block">
+            <div class="row ">
+                <div class="col" *ngFor="let hero of heroes" [routerLink]="['/detail', hero.id]">
+                    <div class="module hero">
+                        <h4 class="card-link">{{hero.name}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <hero-search></hero-search>
+    </div>
+</div>
+
