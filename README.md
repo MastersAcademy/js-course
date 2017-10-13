@@ -1,4 +1,4 @@
-# **JS Course**
+# **JS Course 2016**
 
 Masters Academy JavaScript courses project for season 2016/2017
 -----------------------------------------------------------------------
