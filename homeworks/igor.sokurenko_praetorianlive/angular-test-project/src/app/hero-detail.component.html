@@ -1,0 +1,17 @@
+<section>    
+    <div *ngIf="hero">
+        <h2>{{hero.name}} details!</h2>
+        <div>
+            <label>id:</label>{{hero.id}}
+        </div>
+        <div>
+            <label>name:</label>{{hero.name}}
+        </div>
+        <div>
+            <label>skill:</label>{{hero.skill}}
+        </div>    
+        <div>
+            <img src="{{hero.avatar}}">
+        </div>  
+    </div>
+</section>    
