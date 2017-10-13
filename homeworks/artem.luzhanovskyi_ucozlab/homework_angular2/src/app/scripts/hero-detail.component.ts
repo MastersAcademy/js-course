@@ -1,31 +1,30 @@
-import { Component, Input, OnChanges } from "@angular/core";
+import { Component, Input, OnInit, OnChanges } from "@angular/core";
 import { Hero } from "./hero";
+import { ActivatedRoute, Params }   from '@angular/router';
+import { Location }                 from '@angular/common';
+import { HeroService } from './hero.service';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
+    // moduleId: module.id,
     selector: "my-hero-detail",
-    template: `
-        <div *ngIf="hero" class="row">
-            <div class="col-6">
-                <h2>Hero details</h2>
-                <p>
-                    <img [src]="hero.image" alt="{{hero.name}}">
-                </p>
-                <div><label>id: </label> {{hero.id}}</div>
-                <div><label>name: </label> {{hero.name}}</div>
-                <div><label>age: </label> {{hero.age}}</div>
-                <div><label>skill: </label> {{hero.skill}}</div>
-                <div>
-                    <button type="button" (click)="allowEdit(true)" class="btn btn-info">Edit</button>
-                </div>
-            </div>
-            <div class="col-6">
-                <my-hero-edit [hero]="hero" [canEdit]="canEdit" (allowEdit)="allowEdit($event)"></my-hero-edit>
-            </div>
-        </div>
-        `
+    templateUrl: "./hero-detail.component.html"
 })
 
-export class HeroDetailComponent {
+export class HeroDetailComponent implements OnInit {
+
+    constructor(
+        private heroService: HeroService,
+        private route: ActivatedRoute,
+        private location: Location
+    ) {}
+
+    ngOnInit(): void {
+        this.route.params
+            .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+            .subscribe(hero => this.hero = hero);
+    }
+
     @Input()
     hero: Hero;
     canEdit: boolean = false;
@@ -36,6 +35,10 @@ export class HeroDetailComponent {
 
     allowEdit(condition:boolean) {
         this.canEdit = condition;
+    }
+
+    goBack(): void {
+        this.location.back();
     }
 
 }

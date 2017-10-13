@@ -1,0 +1,20 @@
+<div *ngIf="hero" class="row">
+    <div class="col-4">
+        <h2>Hero details</h2>
+        <p>
+            <img [src]="hero.image" alt="{{hero.name}}">
+        </p>
+        <div><label>id: </label> {{hero.id}}</div>
+        <div><label>name: </label> {{hero.name}}</div>
+        <div><label>age: </label> {{hero.age}}</div>
+        <div><label>skill: </label> {{hero.skill}}</div>
+        <div>
+            <button type="button" (click)="allowEdit(true)" class="btn btn-info">Edit</button> <button type="button" (click)="delete(hero); $event.stopPropagation()" class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+    <div class="col-4">
+        <my-hero-edit [hero]="hero" [canEdit]="canEdit" (goBack)="goBack()" (allowEdit)="allowEdit($event)"></my-hero-edit>
+    </div>
+</div>
+<br/>
+<button class="btn btn-secondary" (click)="goBack()">Back</button>

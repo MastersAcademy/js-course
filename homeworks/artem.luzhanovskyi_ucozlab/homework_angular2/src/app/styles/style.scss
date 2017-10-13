@@ -1,0 +1,24 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import "app.component";
+@import "dashboard.component";
+@import "heroes.component";
+@import "hero-search.component";
+
+button {
+  cursor: pointer;
+}
+label {
+  min-width: 50px;
+}
+/* Master Styles */
+h1 {
+  color: #369;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}

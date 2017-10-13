@@ -1,0 +1,29 @@
+<div *ngIf="canEdit">
+    <h2>Hero edit</h2>
+    <form [formGroup]="heroForm" novalidate>
+        <div class="form-group">
+            <label class="center-block">Image:
+                <input class="form-control" formControlName="image" [(ngModel)]="hero.image">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="center-block">Name:
+                <input class="form-control" formControlName="name" [(ngModel)]="hero.name">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="center-block">Age:
+                <input class="form-control" formControlName="age" [(ngModel)]="hero.age">
+            </label>
+        </div>
+        <div class="form-group">
+            <label class="center-block">Skill:
+                <input class="form-control" formControlName="skill" [(ngModel)]="hero.skill">
+            </label>
+        </div>
+    </form>
+    <p>Form value: {{ heroForm.value | json }}</p>
+    <div>
+        <button type="button" (click)="save()" class="btn btn-success">Save</button>
+    </div>
+</div>
