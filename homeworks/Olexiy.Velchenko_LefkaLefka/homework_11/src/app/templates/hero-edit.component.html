@@ -1,0 +1,45 @@
+<form [formGroup]="heroForm" *ngIf="hero" (ngSubmit)="save()" novalidate>
+    <h2>{{hero.name}} details!</h2>
+    <!--id-->
+    <label>Id:
+        {{hero.id}}
+    </label>
+    <br>
+    <!--name of hero-->
+    <label>Name:
+        <input class="form-control" formControlName="name">
+    </label>
+    <!--photo-->
+    <br>
+    <label>Photo:
+        <input class="form-control" formControlName="image">
+    </label>
+    <!--address-->
+    <div class="form-group" formGroupName="address" class="well well-lg">
+        <h4>Address:</h4>
+        <div style="margin-left: 1em;">
+            <label>Street:
+                <input class="form-control" formControlName="street">
+            </label>
+            <br>
+            <label>City:
+                <input class="form-control" formControlName="city">
+            </label>
+            <br>
+            <label>State:
+                <select class="form-control" formControlName="state">
+                    <option *ngFor="let state of states" [value]="state">{{state}}</option>
+                </select>
+            </label>
+            <br>
+            <label>Zip Code:
+                <input class="form-control" formControlName="zip">
+            </label>
+        </div>
+    </div>
+    <!--buttons-->
+    <div style="margin-bottom: 1em">
+        <button type="submit">Save</button> &nbsp;
+        <button (click)="goBack()">Back</button>
+    </div>
+</form>
