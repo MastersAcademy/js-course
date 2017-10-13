@@ -1,7 +1,12 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit }                  from '@angular/core';
+import { ActivatedRoute, Params }             from '@angular/router';
+import { Location }                           from '@angular/common';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { Hero }             from '../../shared/hero';
-import { HeroService }      from '../../services/hero.service';
+import { Hero }        from '../../shared/hero';
+import { HeroService } from '../../services/hero.service';
+
+import 'rxjs/add/operator/switchMap';
 
 @Component({
     selector: 'hero-edit',
@@ -9,14 +14,44 @@ import { HeroService }      from '../../services/hero.service';
     styleUrls: ['hero-edit.component.scss']
 })
 
-export class HeroEditComponent {
-    @Input() hero: Hero;
-    @Output() save = new EventEmitter();
+export class HeroEditComponent implements OnInit {
+    hero: Hero;
+    form: FormGroup;
 
-    constructor(private heroService: HeroService) {}
+    constructor(private heroService: HeroService,
+                private route: ActivatedRoute,
+                private location: Location,
+                private fb: FormBuilder) {
+        this.createForm();
+    }
 
-    onSubmit(formValue: Hero): void {
-        this.heroService.update(formValue);
-        this.save.emit();
+    ngOnInit(): void {
+        this.route.params
+            .switchMap((params: Params) => this.heroService.getHero(+params['id']))
+            .subscribe(hero => {
+                this.hero = hero;
+                this.form.setValue({
+                    id: this.hero.id,
+                    name: this.hero.name,
+                    image: this.hero.image
+                });
+            });
+    }
+
+    createForm() {
+        this.form = this.fb.group({
+            id: [''],
+            name: ['', Validators.required],
+            image: ['', Validators.required]
+        });
+    }
+
+    save(): void {
+        this.heroService.update(this.form.value)
+            .then(() => this.goBack());
+    }
+
+    goBack(): void {
+        this.location.back();
     }
 }
