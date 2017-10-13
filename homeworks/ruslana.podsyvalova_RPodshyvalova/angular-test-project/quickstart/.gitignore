@@ -1,0 +1,11 @@
+node_modules
+dist
+jspm_packages
+npm-debug.log
+debug.log
+src/**/*.js
+*.js.map
+e2e/**/*.js
+e2e/**/*.js.map
+_test-output
+_temp

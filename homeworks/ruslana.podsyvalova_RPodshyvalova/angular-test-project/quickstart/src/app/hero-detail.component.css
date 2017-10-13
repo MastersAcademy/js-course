@@ -1,0 +1,22 @@
+label {
+  color: grey;  
+  font-weight: bold;  
+}
+
+h2 {
+  color: grey;  
+}
+
+img {
+  border: 1px solid lightgrey; 
+  margin: 20px;
+  width: 100px;
+}
+
+.hero_detail_section {
+  float: left;
+  width: 40%;
+  padding-left: 50px;
+  background-color: antiquewhite; 
+}
+

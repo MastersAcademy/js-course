@@ -1,0 +1,36 @@
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()"  novalidate>
+    <div class="form-group">
+        <label>Id:
+            <input class="form-control" formControlName="id" disabled>
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Name:
+            <input class="form-control" formControlName="name">
+            <div *ngIf="heroForm.controls['name'].invalid && heroForm.controls['name'].touched">
+                <span class="error-message">Name is required</span>
+            </div>
+        </label>
+    </div>
+    <div>
+        <label>Photo:
+            <img #photo src="{{hero?.photo}}"><br>
+            <a href="#" (click)="clearPhoto($event)">Remove photo</a> 
+            <input type="file" class="btn btn-success" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Antihero:
+            <select class="form-control" formControlName="antihero">
+                <option *ngFor="let antihero of antiheroes" [value]="antihero">{{antihero}}</option>
+            </select>
+        </label>
+    </div>
+    <div style="margin-bottom: 1em">
+        <button type="submit"
+            [disabled]="heroForm.pristine" class="btn btn-success">Save</button> &nbsp;
+        <button type="reset" (click)="revert()"
+            [disabled]="heroForm.pristine" class="btn btn-danger">Revert</button>
+    </div>
+</form>
+<p>heroForm value: {{ heroForm.value | json}}</p>

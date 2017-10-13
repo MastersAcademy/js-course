@@ -1,0 +1,19 @@
+<section class="hero_detail_section">    
+    <div *ngIf="hero">
+        <h2>{{hero.name}} details section!</h2>
+        <div>
+            <label>id:</label>{{hero.id}}
+        </div>
+        <div>
+            <label>name:</label>{{hero.name}}
+        </div>
+        <div>
+            <label>photo:</label><img src="{{hero.photo}}">
+        </div>
+        <div>
+            <label>anti-hero: </label>{{hero.antihero}}
+        </div>  
+    </div>
+    <hr/>
+    <button (click)="goBack()">Back</button>
+</section>  
