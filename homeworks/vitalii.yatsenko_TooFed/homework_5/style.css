@@ -1,0 +1,144 @@
+.wrap {
+  width: 1000;
+  height: 800;
+  margin:10px 50px 0 50px;
+  border:1px;
+  padding:10px;
+  overflow:hidden;
+  font-family: 'Merriweather', serif;
+}
+
+.geometry {
+  display: inline-table;
+  float: right;
+  overflow: hidden;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border: 1px;
+  border-radius: 150px;
+  float: right;
+  margin: 10px;
+}
+
+#grey {
+  float: left;
+  background: #ebebeb;
+}
+
+#black {
+  background: #222222;
+}
+
+.header {
+  font-size: 24px;
+  margin: 80px 0 0 0;
+  text-align: center;
+}
+
+.header a{
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid #5282A2;
+}
+
+.main {
+  margin: 70px 100px 150px 170px;
+  overflow: hidden;
+}
+
+.picture img{
+  overflow: hidden;
+ /* width: 400px;
+  height: 296px;*/
+  width: 45%;
+  height: 55%;
+  float: left;
+  margin-right: 70px;
+}
+
+.content {
+  border: 1px;
+}
+
+.content p{
+  line-height: 2;
+  font-size: 18px;
+}
+
+.content button {
+  border-radius: 2px;
+  background-color: #195c89;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.content h1{
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.content h3{
+  font-family: 'Inconsolata', monospace;
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #666666;
+  font-size: 24px;
+}
+
+.nav {
+  font-family: 'Inconsolata', monospace;
+  margin: 50px 100px 50px 100px;
+  text-align: center;
+}
+.nav ul{
+  list-style-type: none;
+}
+.nav ul li{
+  display: inline;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 26px;
+  color: #1b5c89;
+}
+
+.footer {
+  font-size: 18px;
+  text-align: center;
+  color: #C1C1C1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align:center;
+}

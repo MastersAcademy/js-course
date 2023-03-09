@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 5. Document Object Model</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400|Merriweather:400" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="gray">
+    <div class="wrap">
+        <header class="header">
+            <ul class="themes">
+                <li class="gray"></li>
+                <li class="black"></li>
+            </ul>
+        </header>
+        <main class="main-content">
+            <h2 class="title editable">About me</h2>
+            <article class="article">
+                <img class="article-img" src="img/me.jpg" alt="photo">
+                <div class="article-content">
+                    <h1 class="name editable"></h1>
+                    <span class="job editable"></span>
+                    <p class="description editable"></p>
+                    <button class="btn">Contact me</button>
+                </div>
+            </article>
+        </main>
+        <footer class="footer">
+            <ul class="contacts">
+                <li><a href="https://www.facebook.com/ihor.tkachuk.it">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="https://vk.com/ihor.tkachuk">Vkontakte</a></li>
+                <li><a href="mailto:fabri4eg@gmail.com">Email</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+            <p>&copy; <span class="year"></span> Ihor Tkachuk</p>
+        </footer>
+    </div>
+
+    <div class="popup-wrap">
+        <div class="contact popup">
+            <button class="popup-close">Close</button>
+            <div class="popup-header">
+                <h3>Contact me</h3>
+            </div>
+            <div class="popup-body">
+                <ul>
+                    <li>email</li>
+                    <li>phone</li>
+                    <li>address</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

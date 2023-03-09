@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="wrap" id="wrap">
+        <div class="header">
+            <h1>Lesson 4</h1>
+        </div>
+
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul class="js-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#todo">Todo</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
+        <div id="home" class="content">
+            <h2>Javascript</h2>
+            <p>Some text about some javascript code tags.</p>
+        </div>
+        <div id="todo" class="content hidden">
+            <h2>Todo</h2>
+            <ul class="todo-list"></ul>
+            <button id="new-todo-item">New</button>
+        </div>
+        <div id="contacts" class="content hidden">
+            <p><a href="mailto:fakemail@example.com">Contact us</a></p>
+        </div>
+    </div>
+
+    <!--<script src="js/tabs.js"></script>-->
+    <!--<script src="js/todo.js"></script>-->
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js-jq/tabs.js"></script>
+    <script src="js-jq/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e0ebeb;
+  font-family: 'Merriweather', serif;
+}
+
+.wrapp {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 0;
+
+}
+.black{
+  float: right;
+  margin: 40px 40px 0 20px;
+  padding: 27px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50%;
+  background: #1e2f2f;
+}
+
+.gray{
+  float: right;
+  margin: 40px 0 0 0;
+  padding: 27px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius:50% ;
+  background: #d0e1e1;
+}
+
+ header {
+  padding-top: 130px;
+  padding-bottom: 40px;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  border-bottom: 3px solid #1e5d87;
+  margin: 0 auto;
+}
+
+.myimage {
+  float: left;
+  width: 520px;
+  padding:0 40px 20px 0;
+}
+
+.general{
+
+  margin: 20px 12% 0 12%;
+  overflow: auto;  
+}
+
+.info {
+   
+  padding-left: 20px;     
+}
+.info textarea{
+  display: none;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-family: 'Inconsolata', monospace;
+  margin-top: -3px;
+  color: gray;
+}
+
+.text {  
+  margin-top: 15px;  
+}
+
+button {
+  margin-top: 20px;
+  width: 160px;
+  height: 43px;
+  background-color: #1e5d87;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  text-transform: uppercase;
+  font-size: 21px;
+  border: 1px solid #1e5d87;
+  border-radius: 2px;
+}
+
+.social{  
+  /*text-align: justify;*/
+  margin: 120px 12% 0 12%;
+  font-family: 'Inconsolata', monospace;
+  font-size: 28px;
+  /*white-space: pre-wrap;*/
+  /*display: inline-block;*/
+}
+
+.social ul li{
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.social a {
+  color: #045FB4;
+  padding: 0 40px;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: gray;
+  opacity: .7;
+}
+.b-popup{
+    display: none;
+    margin-left: 520px;       
+    overflow:hidden;
+    position:absolute;      
+}
+.b-popup .b-popup-content {
+    margin:0px auto 10px 10px;
+    width:300px;
+    height:150px;
+    padding:10px;
+    background-color: #d0e1e1;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px #000;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+   
+    
+}
+.b-popup-content a:link, .b-popup-content a:visited {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.b-popup-content a:hover, .b-popup-content a:active {
+    text-decoration: underline;
+    color: blue;
+}
+.b-popup-content ul{
+  list-style-type: none;
+
+}
+

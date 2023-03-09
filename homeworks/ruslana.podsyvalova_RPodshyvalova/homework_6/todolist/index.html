@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>TODO list</title>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="wrapper"> 
+            <header>
+                <h1>todo list</h1>
+            </header>
+            <main class="main">
+                <div class="list_wrap">
+                    <ul class="list" data-list>
+                        <li data-item>
+                            <div class="view"></div>
+                            <input type="text" class="content_of_task" data-content readonly> 
+                            <button class="action_button" data-add-task>+</button>
+                            <button class="action_button" data-remove-task>-</button>
+                            <input type="checkbox" class="state_of_task" data-state-task/>    
+                            <button class="action_button" data-move-down-btn>&#8595;</button>
+                            <button class="action_button" data-move-up-btn>&#8593;</button>
+                        </li>
+                    </ul>
+                </div>    
+                <div class="statistics">
+                    <div class="statistics_counters">
+                        <p>Executed tasks - <span data-executed-tasks-statistics></span></p>
+                        <p>Need to execute - <span data-not-executed-tasks-statistics></span></p>
+                    </div>    
+                    <div class="statistics_action">
+                        <button class="functional_button" data-delete-tasks-btn>Delete all tasks</button>
+                        <button class="functional_button" data-mark-tasks-executed>Mark all tasks like executed</button>
+                    </div>
+                    <div class="statistics_view">
+                        <input type="radio" name="group" data-all-tasks checked/> all tasks <br>
+                        <input type="radio" name="group" data-executed-tasks/> executed tasks <br>
+                        <input type="radio" name="group" data-not-executed-tasks/> not executed tasks <br>
+                    </div>
+                </div>
+            </main>    
+            <footer class="footer">
+                <p class="copyrightrecord">&copy;&nbsp;<span id="year">2017</span>&nbsp;Ruslana&nbsp;Podshyvalova</p>
+            </footer>   
+        </div>  
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="js/todolist.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

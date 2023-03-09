@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>To do list</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <h1 class="header-Name">ToDoList</h1>
+
+        <div class="header">
+            <input class="new-Task" id="input-Form-New-Task" placeholder="What needs to be done?">
+            <input class="checkbox-Expand-Turn" type="checkbox" id="checkbox-Expand-TurnTasks">
+        </div>
+
+        <div class="data">
+            <ul class="data-List" id="listElement"></ul>
+        </div>
+        <div class="footer">
+            <span class="todo-Left" id="unfinishedTasks">0 toDo left</span>
+            <ul class="filters">
+                <li><input type="button" value="All" id="show-All"></li>
+                <li><input type="button" value="Active" id="show-Active"></li>
+                <li><input type="button" value="Completed" id="show-Comleted"></li>
+            </ul>
+            <input class="clear-Complete" type="button" value="Clear complete" id="clear-Completed">
+        </div>
+
+        <h1 class="footer-Info">Created by <a target="_blank" href="https://github.com/LefkaLefka">Lefka</a></h1>
+        <script src="main.js"></script>
+    </body>
+</html>

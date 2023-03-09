@@ -1,0 +1,9 @@
+{
+  "name": "theory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Homework 5</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="myDIV" class="header">
+    <h2>To Do List</h2>
+    <input type="text" id="myInput" placeholder="Type in your plans">
+    <span class="addBtn">Add</span>
+</div>
+<ul id="myUL"></ul>
+<div id="buttons">
+    <button class="check-all" type="button">CHECK ALL</button>
+    <button class="delete-all" type="button">DELETE ALL</button>
+    <button class="show-all" type="button">SHOW ALL</button>
+    <button class="show-done" type="button">SHOW DONE</button>
+    <button class="show-last" type="button">SHOW LAST</button>
+</div>
+
+<div class="count">
+    <p>Table: todo list result</p>
+    <table>
+        <tr>
+            <th>Done</th>
+            <th>Last</th>
+            <th>All</th>
+        </tr>
+        <tr id="count">
+            <td id="done"></td>
+            <td id="last"></td>
+            <td id="all"></td>
+        </tr>
+    </table>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

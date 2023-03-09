@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather:400,700">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="elips">
+            <div class="elips-left"></div>
+            <div class="elips-right"></div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="about">
+            <h1>About me</h1>
+        </div>
+        <div class="avatar">
+            <img src="images/my_foto.png" alt="avatar" title="It's me!">
+        </div>
+        <div class="dev-data">
+            <h2>Igor Skyba</h2>
+            <span>I want to rule the world</span>
+            <p>It is hard to speak about myself as only people surrounding me can see me objectively. But I’ll try.
+                I am very active person. Every day I play table tennis, it’s really my great pleasure.
+                In summer I like play volleyball, because I can spend a little bit of my free time with friends.
+            </p>
+            <input id="contact-me" type="button" value="CONTACT ME">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="soc">
+            <ul>
+                <li><a href="https://www.facebook.com/imskyba" title="Go to Facebook">Facebook</a></li>
+                <li><a href="javascript:void(0);" class="empty-link" title="Go to Instagram">Instagram</a></li>
+                <li><a href="javascript:void(0);" class="empty-link" title="Go to Vkontakte">Vkontakte</a></li>
+                <li><a href="javascript:void(0);" id="email" title="imskyba@gmail.com">Email</a></li>
+                <li><a href="javascript:void(0);" class="empty-link" title="Go to Tviter">Twitter</a></li>
+            </ul>
+
+        </div>
+        <div class="avtor"><span>© 2016 Igor Skyba</span></div>
+    </div>
+</div>
+<script type="text/javascript">
+    var empty = document.getElementsByClassName("empty-link"),
+            email = document.getElementById('email'),
+            contact = document.getElementById('contact-me');
+
+    for (var key in empty) {
+        empty[key].onclick = function () {
+            alert('Only the Mail and Facebook!');
+        }
+    }
+
+    email.onclick = function () {
+        showEmail();
+    };
+
+    contact.onclick = function () {
+        showEmail();
+    };
+
+    function showEmail() {
+        alert('imskyba@gmail.com');
+    }
+
+</script>
+</body>
+</html>

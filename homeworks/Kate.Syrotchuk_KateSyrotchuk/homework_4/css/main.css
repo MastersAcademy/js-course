@@ -1,0 +1,151 @@
+body {
+  width: 760px;
+  margin: auto;
+  font-family: 'Merriweather', serif;
+  color: #1a1a1a;
+}
+
+header {
+  height: 70px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  margin: 24px 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  float: right;
+}
+.black {
+  background: #222222;
+}
+
+.gray {
+  background: #EBEBEB;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+
+.title span {
+  border-bottom: 2px solid #5284A6;
+  font-size: 21px;
+}
+
+.container > img:first-of-type {
+  float: left;
+  margin-top: 20px;
+  height: 260px;
+  width: 195px;
+}
+
+.about {
+  padding-left: 240px;
+}
+
+.about h2 {
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.about > span:first-of-type {
+  color: #8F8F8F;
+  font-family: 'Inconsolata', monospace;
+}
+
+.about p {
+  color: #484848;
+  padding-right: 40px;
+}
+
+.about button {
+  margin-top: 35px;
+  background-color: #195C89;
+  color: #DFE8EE;
+  height: 43px;
+  width: 143px;
+  border: none;
+  border-radius: 2px;
+}
+
+.social {
+  clear: both;
+  padding-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 25px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.social ul li {
+  font-family: 'Inconsolata', monospace;
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.social ul li a {
+  display: block;
+  padding: 8px;
+  color: #5082A5;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+footer {
+  padding-top: 30px;
+  text-align: center;
+  color: #B1B1B1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+textarea {
+  display: block;
+}

@@ -1,0 +1,147 @@
+.wrap {
+    width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #4169E1;
+}
+
+.button1 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+.button2 {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background: #C0C0C0;
+    border-radius: 25px;
+    margin: 20px auto;
+}
+
+.frame {
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.about {
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    margin: auto;
+    line-height: 0;
+    border-bottom: 2px solid #4169E1;
+}
+
+.image {
+    float: left;
+    margin: 50px 150px;
+}
+
+.header {
+    float: left;
+    width: 400px;
+    text-align: left;
+    line-height: 10px;
+    margin-top: 50px;
+    padding: auto;
+}
+
+#h1 {
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    color: #000;
+}
+
+#h2 {
+    font-size: 25px;
+    font-family: 'Inconsolata', monospace;
+    color: #696969;
+}
+
+.text {
+    float: left;
+    width: 500px;
+    text-align: left;
+    line-height: 2.0;
+    font-family: 'Merriweather', serif;
+    margin: auto;
+    padding: auto;
+}
+
+.contact {
+    float: left;
+    width: 150px;
+    background-color: #4169E1;
+    text-align: center;
+    font-size: large;
+    color: #FFFFFF;
+    font-family: 'Inconsolata', monospace;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
+ul.list {
+    list-style: none;
+    text-align: center;
+    margin-top: 450px;
+    padding: auto;
+}
+
+.list li {
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Inconsolata', monospace;
+    margin: 50px;
+}
+
+.copyright {
+    width: 230px;
+    text-align: center;
+    font-size: 15px;
+    color: #C0C0C0;
+    font-family: 'Merriweather', serif;
+    margin: 20px auto;
+}
+
+#popup_main {
+    display: none;
+    position: fixed;
+    opacity: 0.9;
+    background-color: #C0C0C0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#popup {
+    position: absolute;
+    font-family: 'Inconsolata', monospace;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-align: left;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    border: solid black;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+#close {
+    float: right;
+    text-align: center;
+}

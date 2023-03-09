@@ -1,0 +1,103 @@
+.wrap {
+  margin: 0 auto;
+  width: 1000px;
+}
+.circles {
+  margin: 40px 0 0 750px;
+  height: 40px;
+  width: 100px;
+}
+.grcircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  background: #EBEBEB;
+  float: left;
+}
+.blcircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #222;
+  float: left;
+  margin: 0 0 0 20px;
+}
+.about {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+.about a {
+  text-decoration: none;
+  color: #000;
+  font: 24px "Merriweather", serif;
+  border-bottom: 2px solid #195C89;
+}
+.main {
+  margin: 50px auto 0 auto;
+  height: 250px;
+  width: 650px;
+}
+.name {
+  font: 32px "Merriweather", serif;
+  color: #1A1A1A;
+}
+.myphoto {
+  float: left;
+  height: 249px; 
+  overflow: hidden;
+}
+.info {
+  width: 300px;
+  margin: 0 0 0 60px;
+  float: left;
+  overflow: hidden;
+}
+.info h1 {
+  margin: 0;
+  overflow: hidden;
+}
+.profession {
+  margin: 15px 0 0 0;
+  color: #666;
+  font: 18px "Inconsolata", sans-serif;
+}
+.aboutme {
+  font: 14px "Merriweather", serif;
+  color: #333;
+}
+.contactme {
+  height: 40px;
+  width: 140px;
+  float: left;
+  overflow: hidden;
+  background: #195B88;
+  border-radius: 2px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font: 14px Arial, sans-serif;
+}
+.footer {
+  margin: 80px 0 0 120px;
+}
+.social li {
+  display: inline;
+  float: left;
+  margin-left: 80px;
+  text-decoration: none;
+}
+.social li a {
+  text-decoration: none;
+  font: 18px "Inconsolata", sans-serif;
+  color: #165077;
+}
+.social li:first-child {margin-left: 0;}
+.social li:last-child {float: none;}
+.copiright {
+  float: left;
+  margin: 50px 0 0 300px;
+  color: #CDCDCD;
+  font: bold 16px "Merriweather", serif;
+}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>About me</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper"> 
+            <header>
+                <img src="src/img/blackball.png" alt="dark theme" class="theme" id="darktheme"/> 
+                <img src="src/img/grayball.png" alt="light theme" class="theme" id="lighttheme"/>  
+                <div class="titleofpage">
+                    <h2>About me</h2>
+                    <hr/>
+                </div>
+            </header>
+            <main class="main">
+                <div id="portretsection">
+                    <img src="src/img/photo.jpg" alt="Ruslana's portret" id="portret"/>
+                </div> 
+                <section id="articlesection">
+                    <article id="personalinfo">
+                        <h1>info from JSON</h1>
+                        <h3>info from JSON</h3>
+                        <p class="maintxt">info from JSON</p>
+    <!--                
+                        <h1>Ruslana Podshyvalova</h1>
+                        <h3>Full stack web developer</h3>
+                        <p class="maintxt">There are several words about me :) I live in Cherkasy all my life. 
+                            I am interested in front-end and Java back-end web development. 
+                            I like listening to music like house, lounge, jazz, classic. 
+                            I like jogging and bicycle riding. I spend online a lot of time, 
+                            but I prefer to communicate alive and spend weekends on the nature. 
+                            I am an open person to all new.   
+                        </p>
+    -->
+                        <div class="buttonposition">
+                            <a href="#" class="button">contact me</a>
+                        </div>    
+                    </article>    
+                </section>   
+                <nav class="navigation">
+                    <ul class="socialnetslinks">
+                        <li class="item" id="item_1"><a href="#" class="linktopage">info from JSON</a></li>
+                        <li class="item" id="item_2"><a href="#" class="linktopage">info from JSON</a></li>
+                        <li class="item" id="item_3"><a href="#" class="linktopage">info from JSON</a></li>
+                        <li class="item" id="item_4"><a href="#" class="linktopage">info from JSON</a></li>
+                        <li class="item" id="item_5"><a href="#" class="linktopage">info from JSON</a></li>
+                    </ul>
+    <!--                 
+                    <ul class="socialnetslinks">
+                        <li class="item"><a href="https://www.facebook.com/profile.php?id=100014070364052" class="linktopage">Facebook</a></li>
+                        <li class="item"><a href="#" class="linktopage">Instagram</a></li>
+                        <li class="item"><a href="#" class="linktopage">Vkontakte</a></li>
+                        <li class="item"><a href="mailto:pointContacts@gmail.com" class="linktopage">Email</a></li>
+                        <li class="item"><a href="#" class="linktopage">Twitter</a></li>
+                    </ul>
+    -->
+                </nav> 
+            </main>    
+            <footer class="footer">
+                <p class="copyrightrecord">&copy;&nbsp;<span id="year">?</span>&nbsp;Ruslana&nbsp;Podshyvalova</p>
+            </footer>   
+        </div>    
+
+        <script src="js/theme.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/currentYear.js"></script>
+        <script src="js/editElements.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="js/getInfoFromJSON.js"></script>
+        <script src="js/shareToSocialNet.js"></script>
+    </body>
+</html>

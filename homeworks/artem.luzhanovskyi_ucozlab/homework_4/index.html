@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My personal page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Merriweather+Sans:400,700" rel="stylesheet">
+</head>
+<body>
+<div class="page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="dots text-right">
+                <button class="dot dot--gray inline-block" onclick="app.changePageTheme('page--gray')"></button>
+                <button class="dot dot--black inline-block" onclick="app.changePageTheme('page--black')"></button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="text-center">
+                <h2 class="js-text-change">{{title}}</h2>
+            </div>
+            <div class="card table">
+                <div class="card-photo text-center table-cell">
+                    <img class="card-photo__img" src="./img/fotka.jpg" alt="{{name}}">
+                </div>
+                <div class="card-description table-cell">
+                    <h1 class="js-text-change">{{name}}</h1>
+                    <h3 class="monospace gray js-text-change">{{position}}</h3>
+                    <p class="card-description__text js-text-change js-text-change-textarea">{{description}}</p>
+                    <button onclick="app.popup('About me', '.card-description__text')">Contact Me</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="footer-clearfix"></div>
+</div>
+<footer class="footer text-center">
+    <div class="wrapper">
+        <ul class="contacts table">
+            <li class="table-cell"><a class="contact-link h3 monospace" href="https://github.com/ucozlab" target="_blank">Github</a></li>
+            <li class="table-cell"><a class="contact-link h3 monospace" href="https://www.facebook.com/profile.php?id=1804886652" target="_blank">Facebook</a></li>
+            <li class="table-cell"><a class="contact-link h3 monospace" href="https://vk.com/id12967029" target="_blank">Vkontakte</a></li>
+            <li class="table-cell"><a class="contact-link h3 monospace" href="https://ua.linkedin.com/in/artemluzhanovskyi" target="_blank">LinkedIn</a></li>
+            <li class="table-cell"><a class="contact-link h3 monospace" href="mailto:artem@ucoz-team.net" target="_blank">Email</a></li>
+        </ul>
+        <div class="copyright gray ">&copy; <span class="js-text-change">{{name}}</span> <span class="date-now">date now</span></div>
+    </div>
+</footer>
+<div class="fader" id="fader" style="display: none">
+    <div class="popup">
+        <div class="popup-head">
+            <span class="popup-head__title h3">some title</span>
+            <button class="popup-head__close" onclick="app.popupClose()">some text</button>
+        </div>
+        <div class="popup-body"></div>
+    </div>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>

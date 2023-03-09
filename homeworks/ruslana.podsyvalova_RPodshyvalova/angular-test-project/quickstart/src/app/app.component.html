@@ -1,0 +1,38 @@
+<section>
+    <h1>{{title}}</h1>
+    <h2>My Heroes</h2>
+    <ul class="heroes">
+        <li *ngFor="let hero of heroes"
+            [class.selected]="hero === selectedHero"
+            (click)="onSelect(hero)">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </li>
+    </ul>
+    <div *ngIf="selectedHero">
+        <h2>{{selectedHero.name}} details!</h2>
+        <div><label>id: </label>{{selectedHero.id}}</div>
+        <div>
+            <label>name: </label>
+            <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+            <div>
+                <label>photo: </label>
+                <img src="{{selectedHero.photo}}" style="width:100px">
+            </div>
+            <div>
+                <label>anti-hero: </label>
+                <select>
+                    <option value="Spawn">Spawn</option>
+                    <option value="Deadpool">Deadpool</option>
+                    <option value="Wolverine">Wolverine</option>
+                    <option value="Punisher">Punisher</option>
+                    <option value="Ghost Rider">Ghost Rider</option>
+                    <option value="Rorschach">Rorschach</option>
+                    <option value="Blade">Blade</option>
+                    <option value="Venom">Venom</option>
+                    <option value="Deathstroke">Deathstroke</option>
+                    <option value="John Constantine">John Constantine</option>
+                </select>
+            </div>    
+        </div>
+    </div>
+</section>    

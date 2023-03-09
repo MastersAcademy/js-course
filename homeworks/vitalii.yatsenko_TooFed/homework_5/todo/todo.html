@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata: 400,500|Merriweather: 400,500" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <span class="counter">test</span>
+            <p>ToDo List</p>
+        </header>
+        <main class="main">
+            <div class="head-table">
+                <input id="mark-all" type="checkbox" name="checkAll">
+                <span>Mark all</span>
+                <span class="radiobuttons">
+                <input type="radio" name="filter" value="all" checked="true" data-all>All
+                <input type="radio" name="filter" value="done" data-done>Done
+                <input type="radio" name="filter" value="not-done" data-not-done>Not done</span>
+            </div>
+            <table class="table" border="1" align="center">
+                <tr id="head"><th id="head-table">Tasks</th></tr>
+<!--            <tr><th><input type="checkbox" name="items"><span>1 item</span></th></tr>
+                <tr><th><input type="checkbox" name="items"><span>2 item</span></th></tr>
+                <tr><th><input type="checkbox" name="items"><span>3 item</span></th></tr>    --> 
+            </table>
+        </main>
+        <menu class="menu">
+            <ul>
+                <li><button id=add-item>Add task</button></li>
+                <li><button id=del-item>Delete task</button></li>
+                <li><button id=mark-done>Mark as done</button></li>
+                <li><button id=mark-not-done>Mark as not done</button></li><br>
+                <li><button id=save>Save</button></li>
+                <li><button id=clear>Clear storage</button></li>
+            </ul>
+            <div id="myModal" class="modal">
+            	<div class="modal-content">
+                	<h2>Write/edit task</h2>
+                	<input id="task" type="text" name="task"><br>
+                	<button id="submit">Ok</button>
+                	<button id="close_contact_button">CLOSE</button>
+            	</div>
+        	</div>
+        </menu>
+
+    </div>
+    <script src="js/localstorage.js"></script>
+    <script src="js/radiobuttons.js"></script>
+    <script src="js/menu-buttons.js"></script>
+    <script src="js/popup.js"></script>
+</body>
+</html>

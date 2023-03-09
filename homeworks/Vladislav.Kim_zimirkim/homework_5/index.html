@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata: 400,700|Merriweather: 400,700">
+</head>
+<body>
+    <div class="wrap">
+        <div class="figure">
+    	    <div class="circle" id="grey">
+                <p hidden>Light theme</p>   
+            </div>
+    	    <div class="circle" id="black">
+                <p hidden>Dark theme</p>   
+            </div>
+        </div>
+        <header class>
+    	    <p>About me</p>
+    	</header>
+    	<main class="main">
+    	    <div class="photo">
+    		    <img src="photo.jpg" width="350" height="275">
+    	    </div>
+    	    <div class="bio">
+    		    <h1>Name Sname</h1>
+    		    <h2>Objective Position</h2>
+    		    <p>About me</p>
+    		    <button class="contact_button" id="open_popup">CONTACT ME</button>      
+                <div id="popup_id" class="popup">
+                    <div class="popup_content">
+                        <p>
+                            Phone: +380967818791<br>
+                            E-mail: zimirkim@mail.ru<br>
+                            Address: Ukraine,Cherkassy, G.Dnipra.65
+                        </p>
+                        <button class="popup_button" id="close_popup">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+    	    </div>
+        </main>
+        <nav class="navigation">
+            <ul>
+    	        <li><a class="social_share fb" data-type="fb">Facebook(Share)</a><li>
+    	        <li><a href="https://www.linkedin.com/in/zimirkim" target="_blank">Linkedin</a><li>
+    	        <li><a href="https://www.instagram.com/zimirkim/" target="_blank">Instagram</a><li>
+    	        <li><a class="social_share gg" data-type="gg">Google+ (Share)</a><li>
+    	        <li><a class="social_share tw" data-type="tw">Twitter(Share)</a><li>
+            </ul>
+        <nav>
+        <footer>
+    	       <p></p>	
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/edit.js"></script>
+    <script src="js/pars_json.js"></script>
+    <script src="js/share.js"></script>
+    <script type="js/s_click.js"></script>
+    <script type="text/javascript">
+        $(document).on('click', '.social_share', function(){
+            Share.go(this);
+        });
+    </script>
+</body>
+</html>

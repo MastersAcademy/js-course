@@ -1,0 +1,26 @@
+<div class="wrap">
+  <h1>{{title}}</h1>
+  <h2>My Heroes</h2>
+  <div class="row">
+    <ul class="heroes col-md-6">
+      <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+        <span class="badge">{{hero.id}}</span>
+        <span>{{hero.name}}</span>
+        <!--<span class="edit" (click)="onEditSelect(hero)">X</span>-->
+        <button class="edit"
+                (click)="onEditSelect(hero); $event.stopPropagation()">x</button>
+      </li>
+    </ul>
+    <ul class="heroes col-md-6">
+      <li *ngFor="let villain of villains" (click)="onSelect(villain)" [class.selected]="villain === selectedHero" >
+        <span class="badge">{{villain.id}}</span>
+        <span>{{villain.name}}</span>
+        <button class="edit"
+                (click)="onEditSelect(villain); $event.stopPropagation()">x</button>
+      </li>
+    </ul>
+  </div>
+  <hero-detail class="hero col-md-6" [hero]="selectedHero"></hero-detail>
+  <hero-detail-edit  class="hero col-md-6" [hero]="selectedEditHero"></hero-detail-edit>
+
+</div>

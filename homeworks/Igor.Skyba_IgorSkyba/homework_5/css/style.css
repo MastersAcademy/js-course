@@ -1,0 +1,249 @@
+/*
+font-family: 'Inconsolata', monospace;
+font-family: 'Merriweather', serif;
+*/
+
+/* Global styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.elips {
+    float: right;
+}
+
+header {
+    height: 200px;
+    padding: 40px 0 0 0;
+}
+
+.elips-left {
+    border-radius: 50%;
+    background: lightgray;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-right: 25px;
+    float: left;
+}
+
+.elips-right {
+    border-radius: 50%;
+    background-color: black;
+    width: 50px;
+    cursor: pointer;
+    height: 50px;
+    float: right;
+}
+
+.elips-left.active, .elips-right.active {
+    border: 2px solid #1e5d87;
+    cursor: auto;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about .title-about {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    border-bottom: 3px solid #1e5d87;
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.avatar {
+    padding-top: 100px;
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+.avatar img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.dev-data {
+    padding-top: 100px;
+    width: 60%;
+    float: right;
+}
+
+.dev-data .title-me{
+    font-family: 'Merriweather', serif;
+    font-size: 42px;
+    margin-top: -10px;
+}
+
+.dev-data .want {
+    font-family: 'Inconsolata', monospace;
+    font-size: 24px;
+    color: gray;
+}
+
+.dev-data .text-content {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+#contact-me {
+    padding: 15px 30px;
+    background: #1e5d87;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    border: 1px solid #1e5d87;
+}
+
+#contact-me:hover {
+    background: white;
+    color: #1e5d87;
+}
+
+.footer {
+    clear: both;
+    padding: 100px 0 50px 0;
+}
+
+.soc {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.soc ul li {
+    display: inline-block;
+    margin: 0 55px;
+}
+
+.soc a {
+    font-family: 'Inconsolata', monospace;
+    font-size: 24px;
+    color: #1e5d87;
+    text-decoration: none;
+}
+
+.soc a:hover {
+    text-decoration: underline;
+}
+
+.avtor {
+    text-align: center;
+    margin-top: 75px;
+}
+
+.avtor span {
+    font-family: 'Merriweather', monospace;
+    font-size: 24px;
+    line-height: 1;
+    color: lightgray;
+}
+
+/* Popup styles*/
+.popup-wrap{
+    display: none;
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: 1px solid #1e5d87;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    border-radius: 7px;
+    background-color: white;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 10px;
+}
+
+.close-btn{
+    position: relative;
+    float: right;
+    margin: -20px -20px 0 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-family: monospace;
+    border: 1px solid #1e5d87;
+    border-radius: 50%;
+    color: white;
+    background: #1e5d87;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.close-btn:hover{
+    color: #1e5d87;
+    background: white;
+    cursor: pointer;
+}
+
+.popup-wrap.show{
+    display: block;
+}
+
+.popup-content .popup-info{
+    float: left;
+    width: 60%;
+}
+
+.popup-content strong{
+    float: left;
+    width: 40%;
+}
+
+.popup-content {
+    list-style: none;
+}
+
+/* Black Theme styles */
+body.black {
+    background-color: rgba(17, 16, 15, 0.57);
+    color: #C2BDF5;
+}
+
+body.black .dev-data span {
+    color: white;
+}
+
+/* Json input styles */
+.content input, .content textarea{
+    display: none;
+}
+
+.content input.active, .content textarea.active{
+    display: block;
+}
+
+.content textarea.active {
+    width: 100%;
+}
+
+.content input.always-visible {
+    display: block;
+}
+
+.hidden{
+    display: none;
+}

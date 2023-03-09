@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ToDo List Prototype</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="myDIV" class="header">
+    <h2>To Do List Prototype</h2>
+    <input type="text" id="myInput" placeholder="Type in your plans" data-input-text>
+    <span class="addBtn" data-add-button>Add</span>
+</div>
+<ul id="myUL" data-todolist>
+    <li data-todolist-item data-todolist-item-id draggable="true">
+        <span data-todolist-item-content>Empty Item</span>
+        <span class="close" data-todolist-item-close>&#215;</span>
+    </li>
+</ul>
+<div id="buttons">
+    <button class="check-all" type="button">CHECK ALL</button>
+    <button class="delete-all" type="button">DELETE ALL</button>
+    <button class="show-all" type="button">SHOW ALL</button>
+    <button class="show-done" type="button">SHOW DONE</button>
+    <button class="show-last" type="button">SHOW LAST</button>
+</div>
+
+<div class="count" data-table-count>
+    <p>Table: todo list result</p>
+    <table>
+        <tr>
+            <th>Done</th>
+            <th>Last</th>
+            <th>All</th>
+        </tr>
+        <tr id="count">
+            <td id="done" data-done></td>
+            <td id="last" data-last></td>
+            <td id="all" data-all></td>
+        </tr>
+    </table>
+</div>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="js/app/local-storage-manager.js"></script>
+<script src="js/app/input-adding.js"></script>
+<script src="js/app/todo-item.js"></script>
+<script src="js/app/todo-list.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

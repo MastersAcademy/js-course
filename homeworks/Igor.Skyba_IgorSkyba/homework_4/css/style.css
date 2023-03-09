@@ -1,0 +1,151 @@
+/*
+font-family: 'Inconsolata', monospace;
+font-family: 'Merriweather', serif;
+*/
+
+/* Global styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.elips {
+    float: right;
+}
+
+header {
+    height: 200px;
+    padding: 40px 0 0 0;
+}
+
+.elips-left {
+    border-radius: 50%;
+    background: lightgray;
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+    float: left;
+}
+
+.elips-right {
+    border-radius: 50%;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about h1 {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    border-bottom: 3px solid #1e5d87;
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.avatar {
+    padding-top: 100px;
+    float: left;
+    width: 40%;
+    text-align: center;
+}
+
+.avatar img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.dev-data {
+    padding-top: 100px;
+    width: 60%;
+    float: right;
+}
+
+.dev-data h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 42px;
+    margin-top: -10px;
+}
+
+.dev-data span {
+    font-family: 'Inconsolata', monospace;
+    font-size: 24px;
+    color: gray;
+}
+
+.dev-data p {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px 0;
+}
+
+#contact-me {
+    padding: 15px 30px;
+    background: #1e5d87;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    border: 1px solid #1e5d87;
+}
+
+#contact-me:hover {
+    background: white;
+    color: #1e5d87;
+}
+
+.footer {
+    clear: both;
+    padding: 100px 0 50px 0;
+}
+
+.soc {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.soc ul li {
+    display: inline-block;
+    margin: 0 55px;
+}
+
+.soc a {
+    font-family: 'Inconsolata', monospace;
+    font-size: 24px;
+    color: #1e5d87;
+    text-decoration: none;
+}
+
+.soc a:hover {
+    text-decoration: underline;
+}
+
+.avtor {
+    text-align: center;
+    margin-top: 75px;
+}
+
+.avtor span {
+    font-family: 'Merriweather', monospace;
+    font-size: 24px;
+    line-height: 1;
+    color: lightgray;
+}
